@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>com.microchip.mplab.nbide.embedded.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>mc_block_sl_fip_dspic33ck_mclv48v300w</name>
+            <name>dsPIC33-48V300W-BlockCommutationBEMF</name>
+            <name>dsPIC33-LVMC-BlockCommutationBEMF</name>
+            <name>dsPIC33-LVMC-BlockCommutationHALL</name>
+            <name>dsPIC33-LVMC-BlockCommutationHAL</name>
+            <name>dsPIC33-LVMC-BlockCommutation</name>
+            <creation-uuid>b4773840-2cd6-4db2-bdb9-152155633959</creation-uuid>
+            <make-project-type>0</make-project-type>
+            <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <make-dep-projects/>
+            <sourceRootList/>
+            <confList>
+                <confElem>
+                    <name>default</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
+        </data>
+    </configuration>
+</project>

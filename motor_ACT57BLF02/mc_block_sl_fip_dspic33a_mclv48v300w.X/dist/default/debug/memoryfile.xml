@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="dist/default/debug/mc_block_sl_fip_dspic33a_mclv48v300w.X.debug.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>16384</length>
+      <used>9744</used>
+      <free>6640</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>126976</length>
+      <used>27748</used>
+      <free>99228</free>
+    </memory>
+  </executable>
+</project>
