@@ -84,7 +84,7 @@ inline static bool MCAF_StallDetectActive(const MCAF_STALL_DETECT_T *pstallDetec
  */
 inline static void MCAF_StallDetectActivate(MCAF_STALL_DETECT_T *pstallDetect)
 {
-    pstallDetect->active = false;  //YA
+    pstallDetect->active = true;
 }
 
 /**

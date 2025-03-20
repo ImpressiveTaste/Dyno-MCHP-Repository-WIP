@@ -1,24 +1,24 @@
 motor:
   Tfr: 0.0143238350133147
   B: 3.9961462066960336E-5
-  Lq: 1.5477269802717996E-4
+  Lq: 3.5E-4
   poleCount: 8
-  rated_current: 7.0
-  J: 2.842855142191637E-5
+  rated_current: 2.0
+  J: 2.842855142191637E-4
   velocity:
-    nominal: 314.1592653589793
-    maximum: 471.23889803846896
+    nominal: 282.7433388230814
+    maximum: 314.1592653589793
     units: rad/s
-  L: 1.4350497615240668E-4
-  R: 0.2403143393995924
+  L: 3.25E-4
+  R: 0.5
   current:
     maximum:
-      continuous: 7.0
-      peak: 21.0
+      continuous: 2.0
+      peak: 3.0
     units: A
-  Ld: 1.322372542776334E-4
+  Ld: 3.0E-4
   Ke: 0.03727435242757741
-  id: act Motor
+  id: Rika Fan
 controller: {}
 metadata:
   data_model:
@@ -47,7 +47,7 @@ metadata:
         type: opa
       - name: OPA3
         type: opa
-    version: 5.7.0
+    version: 5.7.1
     peripheral_library:
       name: melody
       version: NA
@@ -77,16 +77,16 @@ scdata:
         value: 12.0
 autotune_result:
   current:
-    Kp: 0.2578517269531838
+    Kp: 0.5466774713086887
     phase_margin: 80.0
-    wc: 2148.8173550320835
-    Ki: 554.0762659019953
+    wc: 1826.719422310769
+    Ki: 998.6263545793197
     pi_phase_lag: 45.0
   velocity:
-    Kp: 0.048990303937471426
+    Kp: 0.40468332020262876
     phase_margin: 65.0
-    wc: 85.39235856767067
-    Ki: 0.7376458679406137
+    wc: 79.35981918434969
+    Ki: 5.662845920848236
     pi_phase_lag: 10.0
 drive:
   metadata:
@@ -387,7 +387,7 @@ drive:
 config:
   ui:
     content:
-      current_measure-method: triple_channel
+      current_measure-method: dual_channel
       current_measure-single_channel-minimumTime: 2.0
       current_measure-single_channel-sampleDelay: 0.0
       current_measure-opamp-full_input_range: true
@@ -397,9 +397,9 @@ config:
       estimator-active-atpll: false
       estimator-active-zsmt: false
       estimator-active-ideal: false
-      operation-min_velocity_ratio: 0.2
-      operation-startup_velocity_ratio: 0.27
-      operation-max_velocity_ratio: 0.8
+      operation-min_velocity_ratio: 0.25
+      operation-startup_velocity_ratio: 0.2744
+      operation-max_velocity_ratio: 1.25
       operation-fullscale_base_ratio: 1.5
       operation-outer_loop_type: velocity
       operation-saliency-threshold: 1.25
@@ -438,10 +438,10 @@ config:
       startup-t_rampup: 25.0
       startup-t_align: 0.0
       startup-min_total_accel_time: 250.0
-      startup-torque_scale_accel: 0.005
-      startup-torque_scale_slow_accel: 0.1
+      startup-torque_scale_accel: 0.15
+      startup-torque_scale_slow_accel: 0.2
       startup-t_hold: 0.0
-      startup-omega0: 1.0
+      startup-omega0: 0.2
       startup-theta_converge_rate: 1.0
       startup-method: classic
       startup-damping-Imax: 0.1

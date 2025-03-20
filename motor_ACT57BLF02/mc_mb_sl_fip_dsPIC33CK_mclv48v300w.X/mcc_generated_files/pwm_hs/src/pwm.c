@@ -9,13 +9,13 @@
  *
  * @skipline @version   Firmware Driver Version 1.1.6
  *
- * @skipline @version   PLIB Version 2.3.1
+ * @skipline @version   PLIB Version 2.4.3
  *
  * @skipline  Device : dsPIC33CK256MP508
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -119,7 +119,7 @@ void PWM_Initialize (void)
     PG1CLPCIH = 0x0;
     // PSS Tied to 0; PPS Not inverted; SWTERM disabled; PSYNC disabled; TERM Manual Terminate; AQPS Not inverted; AQSS None; TSYNCDIS PWM EOC; 
     PG1CLPCIL = 0x0;
-    // MSTEN disabled; TRIGMOD Single trigger mode; SOCS Self-trigger; UPDMOD SOC update; MPHSEL disabled; MPERSEL enabled; MDCSEL disabled; 
+    // MSTEN disabled; TRIGMOD Single trigger mode; SOCS Self-trigger; UPDMOD SOC; MPHSEL disabled; MPERSEL enabled; MDCSEL disabled; 
     PG1CONH = 0x4000;
     // DC1 0x0; 
     PG1DC = 0x0;
@@ -171,7 +171,7 @@ void PWM_Initialize (void)
     PG2CLPCIH = 0x0;
     // PSS Tied to 0; PPS Not inverted; SWTERM disabled; PSYNC disabled; TERM Manual Terminate; AQPS Not inverted; AQSS None; TSYNCDIS PWM EOC; 
     PG2CLPCIL = 0x0;
-    // MSTEN disabled; TRIGMOD Single trigger mode; SOCS Trigger output selected by PG1 or PG5; UPDMOD SOC update; MPHSEL disabled; MPERSEL enabled; MDCSEL disabled; 
+    // MSTEN disabled; TRIGMOD Single trigger mode; SOCS Trigger output selected by PG1 or PG5; UPDMOD SOC; MPHSEL disabled; MPERSEL enabled; MDCSEL disabled; 
     PG2CONH = 0x4001;
     // DC2 0x0; 
     PG2DC = 0x0;
@@ -223,7 +223,7 @@ void PWM_Initialize (void)
     PG3CLPCIH = 0x0;
     // PSS Tied to 0; PPS Not inverted; SWTERM disabled; PSYNC disabled; TERM Manual Terminate; AQPS Not inverted; AQSS None; TSYNCDIS PWM EOC; 
     PG3CLPCIL = 0x0;
-    // MSTEN disabled; TRIGMOD Single trigger mode; SOCS Trigger output selected by PG1 or PG5; UPDMOD SOC update; MPHSEL disabled; MPERSEL enabled; MDCSEL disabled; 
+    // MSTEN disabled; TRIGMOD Single trigger mode; SOCS Trigger output selected by PG1 or PG5; UPDMOD SOC; MPHSEL disabled; MPERSEL enabled; MDCSEL disabled; 
     PG3CONH = 0x4001;
     // DC3 0x0; 
     PG3DC = 0x0;

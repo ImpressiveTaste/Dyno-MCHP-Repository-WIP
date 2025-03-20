@@ -3,15 +3,12 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>mc_mb_sl_fip_dsPIC33CK_mclv48v300w</name>
-            <creation-uuid>e5f158a9-b4c9-4d57-8bf1-44bb668ee386</creation-uuid>
+            <name>MC_MB_RIKA</name>
+            <creation-uuid>63f0d7f8-c27b-4126-bfb7-aafd029ff516</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList>
-                <sourceRootElem>mcc_generated_files/X2Cscope</sourceRootElem>
-                <sourceRootElem>mcc_generated_files/motorBench/library/x2cscope</sourceRootElem>
-            </sourceRootList>
+            <sourceRootList/>
             <confList>
                 <confElem>
                     <name>default</name>

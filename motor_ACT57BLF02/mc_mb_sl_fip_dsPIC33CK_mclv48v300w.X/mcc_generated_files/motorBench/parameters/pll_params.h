@@ -50,13 +50,13 @@ extern "C" {
 #endif
 
 /* Estimator sampling time used for integrating electrical frequency to obtain electrical angle */
-#define MCAF_PLL_DT_ANGULAR                   983      // Q15(  0.03000) =  +49.99797 useconds    =  +50.00000 useconds    - 0.0041%
+#define MCAF_PLL_DT_ANGULAR                   885      // Q15(  0.02701) =  +50.01492 useconds    =  +50.00000 useconds    + 0.0298%
 /* Maximum rate of change of current dI/dt, used as limit at high velocity operating range */
-#define D_ILIMIT_HS                           983      // Q15(  0.03000) =  +26.45172 kA/s        =  +26.45280 kA/s        - 0.0041%
+#define D_ILIMIT_HS                           655      // Q15(  0.01999) =  +17.62551 kA/s        =  +17.63520 kA/s        - 0.0549%
 /* Maximum rate of change of current dI/dt, used as limit at low velocity operating range
  * (Note: this has a different scaling factor from D_ILIMIT_HS to account for the subsampling factor PLL_LOWSPEED_DIBYDT_PRESCALER)
  */
-#define D_ILIMIT_LS                          5243      // Q15(  0.16000) =  +17.63560 kA/s        =  +17.63520 kA/s        + 0.0023%
+#define D_ILIMIT_LS                          4719      // Q15(  0.14401) =  +15.87305 kA/s        =  +15.87168 kA/s        + 0.0086%
 /* Filter constant that is used for filtering the estimated 
  *                   BEMF, at nominal velocity
  */
@@ -72,9 +72,9 @@ extern "C" {
 /* Decimation speed threshold, below which velocity 
  *                   estimation is optimized for stability
  */
-#define DECIMATE_BASE_SPEED                  2185      // Q15(  0.06668) = +300.06409 RPM         = +300.00000 RPM         + 0.0214%
+#define DECIMATE_BASE_SPEED                  2185      // Q15(  0.06668) = +270.05768 RPM         = +270.00000 RPM         + 0.0214%
 /* Velocity filter threshold, below which a slow filter is used */
-#define MCAF_PLL_VELOCITY_FILTER_THRESHOLD      21845      // Q15(  0.66666) =   +2.99995 kRPM        =   +3.00000 kRPM        - 0.0015%
+#define MCAF_PLL_VELOCITY_FILTER_THRESHOLD      21845      // Q15(  0.66666) =   +2.69996 kRPM        =   +2.70000 kRPM        - 0.0015%
 /* Number of PLL execution steps per deltaI calculation.
  * This undersampling prescaler must be a power of two
  */

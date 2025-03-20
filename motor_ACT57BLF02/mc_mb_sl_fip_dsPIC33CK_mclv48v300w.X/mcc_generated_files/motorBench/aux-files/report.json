@@ -8,7 +8,7 @@
         {
             "desc": "motor ID",
             "key": "id",
-            "value": "act Motor"
+            "value": "Rika Fan"
         },
         {
             "desc": "number of poles",
@@ -24,49 +24,49 @@
             "desc": "stator resistance",
             "key": "R",
             "units": "ohms line-neutral",
-            "value": 0.2403143394
+            "value": 0.5
         },
         {
             "desc": "stator resistance",
             "key": "Rll",
             "units": "ohms line-line",
-            "value": 0.480628678799
+            "value": 1.0
         },
         {
             "desc": "stator inductance",
             "key": "L",
             "units": "H line-neutral",
-            "value": 0.000143504976152
+            "value": 0.000325
         },
         {
             "desc": "stator inductance",
             "key": "Lll",
             "units": "H line-line",
-            "value": 0.000287009952305
+            "value": 0.00065
         },
         {
             "desc": "d-axis stator inductance",
             "key": "Ld",
             "units": "H line-neutral",
-            "value": 0.000132237254278
+            "value": 0.0003
         },
         {
             "desc": "d-axis stator inductance",
             "key": "Ldll",
             "units": "H line-line",
-            "value": 0.000264474508555
+            "value": 0.0006
         },
         {
             "desc": "q-axis stator inductance",
             "key": "Lq",
             "units": "H line-neutral",
-            "value": 0.000154772698027
+            "value": 0.00035
         },
         {
             "desc": "q-axis stator inductance",
             "key": "Lqll",
             "units": "H line-line",
-            "value": 0.000309545396054
+            "value": 0.0007
         },
         {
             "desc": "back-EMF constant",
@@ -102,55 +102,55 @@
             "desc": "inertia",
             "key": "J",
             "units": "Nm/(rad/s^2)",
-            "value": 2.84285514219e-05
+            "value": 0.000284285514219
         },
         {
             "desc": "maximum velocity",
             "key": "omega_m_max",
             "units": "rad/s",
-            "value": 471.238898038
+            "value": 314.159265359
         },
         {
             "desc": "nominal (base) velocity",
             "key": "omega_m1",
             "units": "rad/s",
-            "value": 314.159265359
+            "value": 282.743338823
         },
         {
             "desc": "nominal electrical frequency",
             "key": "omega_e1",
             "units": "rad/s",
-            "value": 1256.63706144
+            "value": 1130.97335529
         },
         {
             "desc": "rated current",
             "key": "I1",
             "units": "A",
-            "value": 7.0
+            "value": 2.0
         },
         {
             "desc": "nominal voltage",
             "key": "V1",
             "units": "V line-neutral",
-            "value": 11.7100831754
+            "value": 10.5390748578
         },
         {
             "desc": "nominal voltage",
             "key": "V1ll",
             "units": "V line-line",
-            "value": 20.2824590206
+            "value": 18.2542131186
         },
         {
             "desc": "rated torque",
             "key": "T1",
             "units": "Nm",
-            "value": 0.39138070049
+            "value": 0.111823057283
         },
         {
             "desc": "rated power",
             "key": "P1",
             "units": "W",
-            "value": 122.955873341
+            "value": 31.6172245735
         }
     ]
 }

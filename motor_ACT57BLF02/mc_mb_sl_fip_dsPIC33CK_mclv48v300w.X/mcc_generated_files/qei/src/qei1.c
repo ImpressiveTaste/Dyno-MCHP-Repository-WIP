@@ -9,13 +9,13 @@
  *            
  * @skipline @version   Firmware Driver Version 1.2.3
  *
- * @skipline @version   PLIB Version 1.4.0
+ * @skipline @version   PLIB Version 1.4.1
  *            
  * @skipline  Device : PIC24/dspIC/PIC32MM
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -102,10 +102,6 @@ void QEI1_Initialize(void)
     QEI1GECL = 0x0;
     /* QEIGECH 0x0; */
     QEI1GECH = 0x0;
-    /* QEIGECL 0x0; */
-    QEI1ICL = 0x0;
-    /* QEIGECH 0x0; */
-    QEI1ICH = 0x0;
     /* QEILECL 0x0; */
     QEI1LECL = 0x0;
     /* QEILECH 0x0; */
@@ -133,8 +129,6 @@ void QEI1_Deinitialize(void)
     INDX1HLD = 0x0;
     QEI1GECL = 0x0;
     QEI1GECH = 0x0;
-    QEI1ICL = 0x0;
-    QEI1ICH = 0x0;
     QEI1LECL = 0x0;
     QEI1LECH = 0x0;
 }

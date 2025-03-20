@@ -70,7 +70,7 @@ inline static bool MCAF_FluxWeakEnabled(void)    { return false; }
 #define MCAF_SINGLE_CHANNEL_SUPPORT 0
 
 inline static bool MCAF_SingleChannelEnabled(void)    { return false; }
-inline static bool MCAF_TripleChannelEnabled(void)    { return true; }
+inline static bool MCAF_TripleChannelEnabled(void)    { return false; }
 
 typedef enum  {
     MCAF_CURRENT_LIMIT_RECTANGULAR = 0,

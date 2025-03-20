@@ -52,12 +52,12 @@
 extern "C" {
 #endif
 
-/* Current limit is 7A, we set the following thresholds as a percentage of this */
+/* Current limit is 2A, we set the following thresholds as a percentage of this */
 
 /* Threshold limit for current to exit saturation (velocity controller output) */
-#define CURRENT_SATURATION_THRESHOLD_DOWN       5051      // Q15(  0.15414) =   +6.79591 A           =   +6.79612 A           - 0.0030%
+#define CURRENT_SATURATION_THRESHOLD_DOWN       1443      // Q15(  0.04404) =   +1.94150 A           =   +1.94175 A           - 0.0129%
 /* Threshold limit for current to enter saturation (velocity controller output) */
-#define CURRENT_SATURATION_THRESHOLD_UP       5367      // Q15(  0.16379) =   +7.22108 A           =   +7.22087 A           + 0.0028%
+#define CURRENT_SATURATION_THRESHOLD_UP       1533      // Q15(  0.04678) =   +2.06259 A           =   +2.06311 A           - 0.0251%
 
 /* Threshold limits for voltage to enter and exit saturation,
  * normalized to fullscale voltage.
@@ -70,7 +70,7 @@ extern "C" {
 #define VOLTAGE_SATURATION_THRESHOLD_UP_CONSTANT      17027      // Q15(  0.51962) = +900.01310 mline-to-line = +900.00000 mline-to-line + 0.0015%
 
 /* Maximum current command to current controller */
-#define CURRENT_MAXIMUM_COMMAND              5203      // Q15(  0.15878) =   +7.00042 A           =   +7.00000 A           + 0.0060%
+#define CURRENT_MAXIMUM_COMMAND              1486      // Q15(  0.04535) =   +1.99935 A           =   +2.00000 A           - 0.0324%
 
     
 #ifdef __cplusplus

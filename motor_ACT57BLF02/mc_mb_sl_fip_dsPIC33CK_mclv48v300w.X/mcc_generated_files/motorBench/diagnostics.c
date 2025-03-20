@@ -44,8 +44,7 @@
  *
  * *****************************************************************************/
 
-#include "X2Cscope.h"
-#include "X2CscopeComm.h"
+#include "X2CScope.h"
 #include "hal.h"
 #include <stdint.h>
 
@@ -85,17 +84,17 @@ void MCAF_DiagnosticsInit(void)
 {
     HAL_UART_Initialize();
     
-    X2Cscope_Init();
+    X2CScope_Init();
 }
 
 void MCAF_DiagnosticsStepMain(void)
 {
-    X2Cscope_Communicate();
+    X2CScope_Communicate();
 }
 
 void MCAF_DiagnosticsStepIsr(void)
 {
-    X2Cscope_Update();
+    X2CScope_Update();
 }
 
 /* ---------- communication primitives used by X2CScope library ---------- */
@@ -122,10 +121,10 @@ static uint8_t X2CScope_isSendReady()
 
 void X2CScope_Init(void)
 {
-    X2Cscope_HookUARTFunctions(
+    X2CScope_HookUARTFunctions(
         X2CScope_sendSerial,
         X2CScope_receiveSerial,
         X2CScope_isReceiveDataAvailable,
         X2CScope_isSendReady);
-//    X2Cscope_Initialise(X2C_BUFFER_SIZE, );
+    X2CScope_Initialise(X2C_BUFFER,sizeof(X2C_BUFFER));
 }

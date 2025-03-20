@@ -1,0 +1,47 @@
+<!--WE DO NOT RECOMMEND MANUAL EDITING OF THIS FILE. THIS IS A GENERATED FILE. EDITING THIS FILE MAY CAUSE ITS IMPORT INTO motorBench® Development Suite TO FAIL WITHOUT ANY WARNING OR NOTIFICATION.-->
+<pmsm>
+<pmsmMotorState>
+   <handle>New Hurst300</handle>
+   <nickname>Rika Fan</nickname>
+   <mfrCompanyName>SPG Co. LTD</mfrCompanyName>
+   <mfrMotorName>DL-73820RIKA</mfrMotorName>
+   <mfrPartNumber>000</mfrPartNumber>
+   <mfrAdditionalInfo/>
+   <mchpDirectPartNumber>000</mchpDirectPartNumber>
+   <nameplate>
+      <namePlateRatedCurrentContinuous>2.0 A</namePlateRatedCurrentContinuous>
+      <namePlateRatedPeakCurrent>21.0 A</namePlateRatedPeakCurrent>
+      <namePlateRatedVoltage>24 V</namePlateRatedVoltage>
+      <namePlateBaseSpeed>282.743338823081379000 rad/s</namePlateBaseSpeed>
+      <namePlateRatedSpeed>314.159265358979310000 rad/s</namePlateRatedSpeed>
+   </nameplate>
+   <other>
+      <fullscaleBaseRatio>1.5 one</fullscaleBaseRatio>
+      <polePairs>4.0 one</polePairs>
+   </other>
+   <version>2.15</version>
+</pmsmMotorState>
+<motorParameters>
+   <Rs>
+      <active>0.50 Ω_line_to_neutral</active>
+   </Rs>
+   <Ld>
+      <active>0.000300 H_line_to_neutral</active>
+   </Ld>
+   <Lq>
+      <active>0.000350 H_line_to_neutral</active>
+   </Lq>
+   <Ke>
+      <active>13.521639347076416 Vppll_per_kRPM</active>
+   </Ke>
+   <B>
+      <active>0.000039961462066960336 one</active>
+   </B>
+   <Tf>
+      <active>0.0143238350133147 one</active>
+   </Tf>
+   <J>
+      <active>0.0002842855142191637 one</active>
+   </J>
+</motorParameters>
+</pmsm>

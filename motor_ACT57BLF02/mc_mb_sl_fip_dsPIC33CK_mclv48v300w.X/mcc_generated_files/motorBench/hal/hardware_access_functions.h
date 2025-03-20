@@ -122,8 +122,8 @@ extern "C" {
 /**
   Section: ISR helper macros
  */
-#define HAL_ADC_ISR                     _ADCAN16Interrupt
-#define MCAF_ADC_CHANNEL_USED_FOR_ISR   MCAF_ADC_PHASEC_CURRENT
+#define HAL_ADC_ISR                     _ADCAN15Interrupt
+#define MCAF_ADC_CHANNEL_USED_FOR_ISR   MCAF_ADC_DCLINK_VOLTAGE
 
 /** Interrupt priorities used in MCAF */
 enum {
@@ -982,7 +982,7 @@ inline static uint16_t HAL_ADC_ValueIphaseB(void)
  */
 inline static bool HAL_ADC_IsAvailableIphaseC(void)
 {
-    return true;
+    return false;
 }
 
 /**
@@ -991,11 +991,7 @@ inline static bool HAL_ADC_IsAvailableIphaseC(void)
  */
 inline static uint16_t HAL_ADC_ValueIphaseC(void)
 { 
-#ifdef MCC_MELODY
-    return MCC_ADC_ConversionResultGet(MCAF_ADC_PHASEC_CURRENT);
-#else
-    return ADC1_ConversionResultGet(MCAF_ADC_PHASEC_CURRENT);
-#endif
+    return 0;
 }
 
 /**
@@ -1579,7 +1575,7 @@ inline static void HAL_ADC_SignalsInit(void)
         PWM1_TRIGGER2 = 0x05    // DS70005349H page 322, trigger source used for reading single channel current
     };
 
-    trig_sources[16] = PWM1_TRIGGER1;  // MCAF_ADC_PHASEC_CURRENT
+    trig_sources[16] = NO_TRIGGER;  // MCAF_ADC_PHASEC_CURRENT
     trig_sources[12] = NO_TRIGGER;  // MCAF_ADC_PHASEC_VOLTAGE
     trig_sources[10] = NO_TRIGGER;  // MCAF_ADC_PHASEA_VOLTAGE
     trig_sources[11] = NO_TRIGGER;  // MCAF_ADC_PHASEB_VOLTAGE

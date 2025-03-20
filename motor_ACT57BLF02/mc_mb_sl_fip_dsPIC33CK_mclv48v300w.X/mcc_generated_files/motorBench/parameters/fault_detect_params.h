@@ -52,13 +52,13 @@ extern "C" {
 #endif
 
 /* overcurrent threshold (109.2% of rated allowable current) */
-#define THRESHOLD_OVERCURRENT_STALL_DETECT       5683      // Q15(  0.17343) =   +7.64624 A           =   +7.64563 A           + 0.0080%
+#define THRESHOLD_OVERCURRENT_STALL_DETECT       1624      // Q15(  0.04956) =   +2.18503 A           =   +2.18447 A           + 0.0256%
 
 /*
- * natural_freq_current:         341.995  Hz
+ * natural_freq_current:         290.731  Hz
  * current loop natural frequency
 
- * natural_freq_velocity:         13.591  Hz
+ * natural_freq_velocity:         12.631  Hz
  * velocity loop natural frequency
  */
 
@@ -73,33 +73,33 @@ extern "C" {
  * Coefficient a1 for 2 stage implementation of LPF. Equation used for calculation:
  * f3db*Ts*2*pi. f3db for second stage is 1/10th of the natural frequency, Ts is 1/200hz
  */
-#define DECIMATION_FILTER_LPF2_VARIANCE_DETECT_COEFFA1       1399      // Q15(  0.04269) =   +1.35900 Hz          =   +1.35906 Hz          - 0.0049%
+#define DECIMATION_FILTER_LPF2_VARIANCE_DETECT_COEFFA1       1300      // Q15(  0.03967) =   +1.26283 Hz          =   +1.26305 Hz          - 0.0178%
 /* 
  * LPF filter coefficient for over current detect. Equation used for calculation:
  * f3db*Ts*2*pi f3d is equal to natural frequency
  */
-#define FILTER_LPF_OVERCURRENT_DETECT         140      // Q15(  0.00427) =  +13.59967 Hz          =  +13.59062 Hz          + 0.0666%
+#define FILTER_LPF_OVERCURRENT_DETECT         130      // Q15(  0.00397) =  +12.62826 Hz          =  +12.63051 Hz          - 0.0178%
 /* 
  * LPF filter coefficient for negative Ed detect. Equation used for calculation:
  * f3db*Ts*2*pi f3d is equal to natural frequency
  */
-#define FILTER_LPF_NEGATIVE_ED_DETECT         140      // Q15(  0.00427) =  +13.59967 Hz          =  +13.59062 Hz          + 0.0666%
+#define FILTER_LPF_NEGATIVE_ED_DETECT         130      // Q15(  0.00397) =  +12.62826 Hz          =  +12.63051 Hz          - 0.0178%
 /* 
  * HPF filter coefficient for 16bit implementation of HPF.
  * f3db is 2x natural frequency.
  */
-#define FILTER_HPF_VARIANCE_DETECT            560      // Q16(  0.00854) =  +27.19933 Hz          =  +27.18123 Hz          + 0.0666%
+#define FILTER_HPF_VARIANCE_DETECT            520      // Q16(  0.00793) =  +25.25652 Hz          =  +25.26102 Hz          - 0.0178%
 /* 
  * Timer threshold to trigger low speed detect.
  * It is set to 3 times (1/natural frequency of velocity loop)
  */
-#define ACTIVE_TIMER_THRESHOLD_LOW_SPEED_DETECT       4415      // Q0(4415.00000) = +220.75000 ms          = +220.74055 ms          + 0.0043%
+#define ACTIVE_TIMER_THRESHOLD_LOW_SPEED_DETECT       4750      // Q0(4750.00000) = +237.50000 ms          = +237.52015 ms          - 0.0085%
 /* 
  * Inactive timer threshold for low speed detect.
  * It is set to (2.0/natural frequency of velocity loop),
  * in units of the ADC ISR period.
  */
-#define INACTIVE_TIMER_THRESHOLD_LOW_SPEED_DETECT       4415      // Q0(4415.00000) = +220.75000 ms          = +220.74055 ms          + 0.0043%
+#define INACTIVE_TIMER_THRESHOLD_LOW_SPEED_DETECT       4750      // Q0(4750.00000) = +237.50000 ms          = +237.52015 ms          - 0.0085%
 /* 
  * Overcurrent detector. Normally if the saturation limit was exceeded,
  * then we have a fault in the controllers.
@@ -107,32 +107,32 @@ extern "C" {
  * Timer threshold to trigger over currents detect.
  * It is set to 2 times (1/natural frequency of current loop)
  */
-#define TIMER_COUNTS_OVERCURRENT_DETECT        117      // Q0(117.00000)  =   +5.85000 ms          =   +5.84804 ms          + 0.0335%
+#define TIMER_COUNTS_OVERCURRENT_DETECT        138      // Q0(138.00000)  =   +6.90000 ms          =   +6.87920 ms          + 0.3023%
 /* 
  * Timer threshold to trigger negative Ed stall detect.
  * It is set to 5 times (1/natural frequency of velocity loop)
  */
-#define ACTIVE_TIMER_THRESHOLD_NEGATIVE_ED_DETECT       7358      // Q0(7358.00000) = +367.90000 ms          = +367.90091 ms          - 0.0002%
+#define ACTIVE_TIMER_THRESHOLD_NEGATIVE_ED_DETECT       7917      // Q0(7917.00000) = +395.85000 ms          = +395.86691 ms          - 0.0043%
 /* 
  * Timer threshold to trigger negative Ed stall detect.
  * It is set to 5 times (1/natural frequency of velocity loop)
  */
-#define INACTIVE_TIMER_THRESHOLD_NEGATIVE_ED_DETECT       7358      // Q0(7358.00000) = +367.90000 ms          = +367.90091 ms          - 0.0002%
+#define INACTIVE_TIMER_THRESHOLD_NEGATIVE_ED_DETECT       7917      // Q0(7917.00000) = +395.85000 ms          = +395.86691 ms          - 0.0043%
 /* 
  * Timer threshold to trigger stall detect based on torque angle.
  * It is set to 3 times (1/natural frequency of velocity loop)
  */
-#define ACTIVE_TIMER_THRESHOLD_TORQUE_ANGLE_DETECT       4415      // Q0(4415.00000) = +220.75000 ms          = +220.74055 ms          + 0.0043%
+#define ACTIVE_TIMER_THRESHOLD_TORQUE_ANGLE_DETECT       4750      // Q0(4750.00000) = +237.50000 ms          = +237.52015 ms          - 0.0085%
 /* 
  * Inactive Timer threshold for stall detect based on torque angle.
  * It is set to 3 times (1/natural frequency of velocity loop)
  */
-#define INACTIVE_TIMER_THRESHOLD_TORQUE_ANGLE_DETECT       4415      // Q0(4415.00000) = +220.75000 ms          = +220.74055 ms          + 0.0043%
+#define INACTIVE_TIMER_THRESHOLD_TORQUE_ANGLE_DETECT       4750      // Q0(4750.00000) = +237.50000 ms          = +237.52015 ms          - 0.0085%
 /* 
  * Timer threshold to trigger stall detect based on variance in Ed and Eq.
  * It is set to (1/natural frequency of velocity loop)
  */
-#define TIMER_COUNTS_VARIANCE_DETECT           15      // Q0( 15.00000)  =  +75.00000 ms          =  +73.58018 ms          + 1.9296%
+#define TIMER_COUNTS_VARIANCE_DETECT           16      // Q0( 16.00000)  =  +80.00000 ms          =  +79.17338 ms          + 1.0441%
 
 /* Threshold for under speed detect as a fixed fraction of minimum velocity */
 #define THRESHOLD_UNDERSPEED_STALL_DETECT  ((int16_t)(0.333*MCAF_VELOCITY_COMMAND_MIN))
@@ -140,19 +140,19 @@ extern "C" {
 #define THRESHOLD_ED_STALL_DETECT               4      // Q15(  0.00012) =   +9.26514 mV          =  +10.00000 mV          - 7.3486%
 
 /*
- * max error from modified polynomial approximation 0.04767
+ * max error from modified polynomial approximation 0.057424
  * limited normalized frequency omega_c1 = 0.1
- * max error above omega_c1 = 0.018216
+ * max error above omega_c1 = 0.015182
  */
 /* torque angle threshold polynomial, constant term */
-#define STALL_DETECT_TORQUE_ANGLE_COEFF0       6395      // Q15(  0.19516) = +195.15991 m           = +195.16582 m           - 0.0030%
+#define STALL_DETECT_TORQUE_ANGLE_COEFF0       4029      // Q15(  0.12296) = +122.95532 m           = +122.95995 m           - 0.0038%
 /* torque angle threshold polynomial, linear term */
-#define STALL_DETECT_TORQUE_ANGLE_COEFF1      23702      // Q15(  0.72333) = +723.32764 m           = +723.32387 m           + 0.0005%
+#define STALL_DETECT_TORQUE_ANGLE_COEFF1      27335      // Q15(  0.83420) = +834.19800 m           = +834.19363 m           + 0.0005%
 /* torque angle threshold polynomial, quadratic term */
-#define STALL_DETECT_TORQUE_ANGLE_COEFF2       2343      // Q15(  0.07150) =  +71.50269 m           =  +71.51031 m           - 0.0107%
-#define STALL_DETECT_TORQUE_ANGLE_K         11884      // Q15(  0.36267) = +362.67090 m           = +362.65771 m           + 0.0036%
+#define STALL_DETECT_TORQUE_ANGLE_COEFF2       1076      // Q15(  0.03284) =  +32.83691 m           =  +32.84642 m           - 0.0289%
+#define STALL_DETECT_TORQUE_ANGLE_K         12511      // Q15(  0.38181) = +381.80542 m           = +381.80599 m           - 0.0002%
 /* Maximum velocity for torque angle stall detection (we inhibit at faster speeds) */
-#define STALL_DETECT_TORQUE_ANGLE_VELOCITY_THRESHOLD       8738      // Q15(  0.26666) = +125.66179 rad/s       = +125.66371 rad/s       - 0.0015%
+#define STALL_DETECT_TORQUE_ANGLE_VELOCITY_THRESHOLD       8738      // Q15(  0.26666) = +113.09561 rad/s       = +113.09734 rad/s       - 0.0015%
 
 /* overvoltage fault threshold */
 #define VDC_OVERVOLTAGE_THRESHOLD           21586      // Q15(  0.65875) =  +49.99931 V           =  +50.00000 V           - 0.0014%

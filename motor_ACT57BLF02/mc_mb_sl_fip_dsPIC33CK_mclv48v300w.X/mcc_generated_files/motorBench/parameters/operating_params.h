@@ -57,52 +57,52 @@ extern "C" {
 /**** parameters for speed reference ***/
 
 /* Maximum velocity command */
-#define MCAF_VELOCITY_COMMAND_MAX           17476      // Q15(  0.53333) =   +2.39996 kRPM        =   +2.40000 kRPM        - 0.0015%
+#define MCAF_VELOCITY_COMMAND_MAX           24273      // Q15(  0.74075) =   +3.00005 kRPM        =   +3.00000 kRPM        + 0.0017%
 /* Minimum velocity command */
-#define MCAF_VELOCITY_COMMAND_MIN            4369      // Q15(  0.13333) = +599.99084 RPM         = +600.00000 RPM         - 0.0015%
+#define MCAF_VELOCITY_COMMAND_MIN            5461      // Q15(  0.16666) = +674.95880 RPM         = +675.00000 RPM         - 0.0061%
 /* Nominal velocity (base speed): nominal no-load speed at nominal supply voltage with no flux weakening */
-#define MCAF_VELOCITY_NOMINAL               21845      // Q15(  0.66666) =   +2.99995 kRPM        =   +3.00000 kRPM        - 0.0015%
+#define MCAF_VELOCITY_NOMINAL               21845      // Q15(  0.66666) =   +2.69996 kRPM        =   +2.70000 kRPM        - 0.0015%
 
 /* --- Miscellaneous operating velocity parameters --- */
 
 /*
- * velocity_fullscale:           471.239  rad/s
- *                                 4.500 kRPM
- * velocity_maximum:             251.327  rad/s
- *                                 2.400 kRPM
- * velocity_minimum:              62.832  rad/s
- *                               600.000  RPM
- * velocity_nominal:             314.159  rad/s
+ * velocity_fullscale:           424.115  rad/s
+ *                                 4.050 kRPM
+ * velocity_maximum:             314.159  rad/s
  *                                 3.000 kRPM
+ * velocity_minimum:              70.686  rad/s
+ *                               675.000  RPM
+ * velocity_nominal:             282.743  rad/s
+ *                                 2.700 kRPM
  * rho_xi_thresh:                0.111111  
  * ilimit                                 
- *   ipeak:                        7.000  A
+ *   ipeak:                        2.000  A
  * run                                    
- *   slewrate_accel:               6.632 krad/s^2
- *                                63.328 kRPM/s
- *   slewrate_decel:             592.175  rad/s^2
- *                                 5.655 kRPM/s
- *   t_coastdown:                662.123 ms
+ *   slewrate_accel:             177.006  rad/s^2
+ *                                 1.690 kRPM/s
+ *   slewrate_decel:              60.322  rad/s^2
+ *                               576.028  RPM/s
+ *   t_coastdown:                  5.007  s
  *   closedLoopStopping                   
  *     time:                     500.000 ms
- *     speed:                     15.708  rad/s
- *                               150.000  RPM
+ *     speed:                     14.137  rad/s
+ *                               135.000  RPM
  */
 
 /* Minimum time for achieving a closed-loop stop below the speed threshold */
 #define MCAF_CLOSED_LOOP_STOPPING_TIME      10000      // Q0(10000.00000) = +500.00000 ms          = +500.00000 ms          + 0.0000%
 /* Speed threshold for a closed-loop stop */
-#define MCAF_CLOSED_LOOP_STOPPING_SPEED       1092      // Q15(  0.03333) =  +15.70413 rad/s       =  +15.70796 rad/s       - 0.0244%
+#define MCAF_CLOSED_LOOP_STOPPING_SPEED       1092      // Q15(  0.03333) =  +14.13372 rad/s       =  +14.13717 rad/s       - 0.0244%
 
 #define VELOCITY_SLEWRATE_LIMIT1 32000
 /* slew rate limit for velocity commands during acceleration */
-#define VELOCITY_SLEWRATE_LIMIT_ACCEL         461      // Q15(  0.01407) =   +6.62967 rad/s       =   +6.63166 rad/s       - 0.0299%
+#define VELOCITY_SLEWRATE_LIMIT_ACCEL          14      // Q15(  0.00043) = +181.20148 mrad/s      = +177.00647 mrad/s      + 2.3700%
 /* slew rate limit for velocity commands during deceleration */
-#define VELOCITY_SLEWRATE_LIMIT_DECEL          41      // Q15(  0.00125) = +589.62387 mrad/s      = +592.17536 mrad/s      - 0.4309%
+#define VELOCITY_SLEWRATE_LIMIT_DECEL           5      // Q15(  0.00015) =  +64.71481 mrad/s      =  +60.32156 mrad/s      + 7.2831%
 /* estimate of worst-case time needed to decelerate to a stop */
-#define VELOCITY_COASTDOWN_TIME             13242      // Q0(13242.00000) = +662.10000 ms          = +662.12313 ms          - 0.0035%
+#define VELOCITY_COASTDOWN_TIME            100136      // Q0(100136.00000) =   +5.00680 s           =   +5.00680 s           - 0.0000%
 
-#define RATED_MOTOR_IPEAK                            7 // (A)        rated allowable current of motor (peak amplitude)
+#define RATED_MOTOR_IPEAK                            2 // (A)        rated allowable current of motor (peak amplitude)
 
 /**** Motor saliency ****/
 

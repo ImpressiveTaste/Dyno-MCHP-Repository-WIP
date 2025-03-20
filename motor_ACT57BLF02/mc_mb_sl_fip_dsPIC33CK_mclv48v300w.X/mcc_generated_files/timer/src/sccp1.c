@@ -7,15 +7,15 @@
  * 
  * @brief     This is the generated driver source file for SCCP1-TIMER driver
  *
- * @skipline @version   Firmware Driver Version 1.5.1
+ * @skipline @version   Firmware Driver Version 1.6.0
  *
- * @skipline @version   PLIB Version 1.6.2
+ * @skipline @version   PLIB Version 1.6.4
  *
  * @skipline  Device : dsPIC33CK256MP508
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -74,7 +74,7 @@ const struct TIMER_INTERFACE MCC_TMR_TICK = {
 
 void SCCP1_Timer_Initialize(void)
 {
-    // MOD ; CCSEL disabled; TMR32 16 Bit; TMRPS 1:4; CLKSEL FOSC/2; TMRSYNC disabled; CCPSLP disabled; CCPSIDL disabled; CCPON disabled; 
+    // MOD 16-Bit/32-Bit Timer; CCSEL disabled; TMR32 16 Bit; TMRPS 1:4; CLKSEL FOSC/2; TMRSYNC disabled; CCPSLP disabled; CCPSIDL disabled; CCPON disabled; 
     CCP1CON1L = 0x40; //The module is disabled, till other settings are configured
     //SYNC None; ALTSYNC disabled; ONESHOT disabled; TRIGEN disabled; IOPS Each Time Base Period Match; RTRGEN disabled; OPSRC Timer Interrupt Event; 
     CCP1CON1H = 0x0;

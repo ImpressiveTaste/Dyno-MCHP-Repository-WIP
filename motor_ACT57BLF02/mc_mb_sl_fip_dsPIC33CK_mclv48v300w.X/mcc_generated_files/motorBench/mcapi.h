@@ -124,7 +124,7 @@ static inline void MCAPI_MotorStop(volatile MCAPI_MOTOR_DATA *pMotor)
 static inline void MCAPI_VelocityReferenceSet(volatile MCAPI_MOTOR_DATA *pMotor, int16_t velocity)
 {
     pMotor->apiBusy = true;
-    pMotor->velocityReference = velocity; // YA
+    pMotor->velocityReference = velocity;
     pMotor->apiBusy = false;
 }
 

@@ -58,35 +58,35 @@ extern "C" {
 //// Current loop
 // phase margin = 80 deg
 // PI phase at crossover = 45.000 deg
-// crossover frequency = 2.149 k rad/s (341.995 Hz)
+// crossover frequency = 1.827 k rad/s (290.731 Hz)
 /* Current loop proportional gain */
-#define KIP                                 17654      // Q14(  1.07751) =   +1.85500 V/A         =   +1.85498 V/A         + 0.0011%
-#define KIP_Q                                  14
+#define KIP                                 10405      // Q15(  0.31754) = +546.65526 mV/A        = +546.67747 mV/A        - 0.0041%
+#define KIP_Q                                  15
 /* Current loop integral gain */
-#define KII                                  1993      // Q15(  0.06082) =   +2.09415 kV/A/s      =   +2.09456 kV/A/s      - 0.0195%
+#define KII                                   950      // Q15(  0.02899) = +998.21719 V/A/s       = +998.62635 V/A/s       - 0.0410%
 #define KII_Q                                  15
 //// Velocity loop
-// phase margin = 5 deg
-// PI phase at crossover = 5.000 deg
-// crossover frequency = 78.287 rad/s (12.460 Hz)
+// phase margin = 65 deg
+// PI phase at crossover = 10.000 deg
+// crossover frequency = 79.360 rad/s (12.631 Hz)
 /* Velocity loop proportional gain */
-#define KWP                                 32000      // Q15(  0.69525) =  +97.56913 mA/(rad/s)  =  +97.56787 mA/(rad/s)  + 0.0013%
-#define KWP_Q                                  15  //YA
+#define KWP                                 15946      // Q12(  3.89307) = +404.69568 mA/(rad/s)  = +404.68332 mA/(rad/s)  + 0.0031%
+#define KWP_Q                                  12
 /* Velocity loop integral gain */
-#define KWI                                   25      // Q15(  0.00476) = +668.10572 mA/rad      = +668.26792 mA/rad      - 0.0243%
-#define KWI_Q                                  15 //YA
+#define KWI                                  1785      // Q15(  0.05447) =   +5.66272 A/rad       =   +5.66285 A/rad       - 0.0022%
+#define KWI_Q                                  15
 
 //// Voltage loop (if applicable)
 /* Voltage loop proportional gain */
-#define MCAF_CONTROL_GAIN_KVP               11737      // Q14(  0.71637) = +416.11731 mA/V        = +416.12165 mA/V        - 0.0010%
-#define MCAF_CONTROL_GAIN_KVP_Q                14
+#define MCAF_CONTROL_GAIN_KVP               11282      // Q15(  0.34430) = +199.99299 mA/V        = +200.00000 mA/V        - 0.0035%
+#define MCAF_CONTROL_GAIN_KVP_Q                15
 /* Voltage loop integral gain */
-#define MCAF_CONTROL_GAIN_KVI                 235      // Q15(  0.00717) =   +4.16578 A/Vs        =   +4.16122 A/Vs        + 0.1097%
+#define MCAF_CONTROL_GAIN_KVI                 113      // Q15(  0.00345) =   +2.00312 A/Vs        =   +2.00000 A/Vs        + 0.1560%
 #define MCAF_CONTROL_GAIN_KVI_Q                15
 /* Pole of voltage loop low-pass filter */
 #define MCAF_FILTER_COEFF_VQ                 1638      // Q16(  0.02499) = +499.87793 rad/s       = +500.00000 rad/s       - 0.0244%
 /* Gain from velocity reference to voltage */
-#define MCAF_VELOCITY_TO_VOLTAGE_GAIN        7583      // Q15(  0.23141) =  +37.27278 mV/(rad/s)  =  +37.27435 mV/(rad/s)  - 0.0042%
+#define MCAF_VELOCITY_TO_VOLTAGE_GAIN        6825      // Q15(  0.20828) =  +37.27442 mV/(rad/s)  =  +37.27435 mV/(rad/s)  + 0.0002%
 
 /*
  * For the two output limits below, 
