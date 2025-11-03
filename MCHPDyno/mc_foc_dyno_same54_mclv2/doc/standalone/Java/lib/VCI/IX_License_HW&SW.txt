@@ -1,0 +1,755 @@
+*****************************************************************
+HMS Industrial Networks AB 
+Stationsgatan 37   ·   302 50 Halmstad   ·   Sweden
+www.ixxat.com                                www.hms-networks.com
+*****************************************************************
+
+Version 3.6 as per February 3, 2017
+
+[German version below]
+
+*****************************************************************
+Terms and Conditions for Delivery of Hardware and appendant Soft-
+ware and End User License Agreement for IXXAT Software Products  
+*****************************************************************
+
+This software license agreement (following named "Agreement") is 
+a legal agreement between you and your company ("Customer") and 
+HMS Industrial Networks AB ("HMS"). 
+By using the software program(s) and/or components included in 
+the software or hardware delivery in any type of software-package 
+("Software"), Customer agrees to be bound by the terms of this 
+Agreement. If Customer does not agree to the terms of this 
+Agreement, Software and the accompanying items (including any 
+printed materials, binders or other containers) shall be promptly
+un-installed and deleted or destroyed.
+
+I.   Delivery of Hardware and appendant Software
+
+ § 1 Scope of Delivery
+
+ 1.1 The hardware and the appendant software shall
+     operate as described in their product description 
+     and more detailed in their user documentation. 
+     In respect of hardware or software, which is 
+     defined in the contract as third party products, 
+     HMS does not warrant that these comply with the 
+     product description of their manufacturers, nor 
+     that they are free of other errors.
+     The products shall embody all legal and other 
+     provisions related to their use.
+
+ 1.2 The programs shall be delivered in a machine-
+     readable format (object code). If HMS's programs 
+     have interfaces for interoperability with other 
+     programs, HMS shall, at Customer's request, provide 
+     required information to use such interfaces, subject 
+     to reimbursement of expenses. Customer may disclose 
+     such information to other contractors as necessary. 
+
+ 1.3 The user documentation for the hardware and the 
+     appendant programs will be delivered stored on 
+     machine-readable media or as printed hardcopy.
+
+ 1.4 Until payment has been made in full, the hardware 
+     and the media containing the programs shall remain 
+     HMS's property and shall not be pledged nor 
+     assigned as a collateral security. 
+
+ § 2 Right to Use the Programs
+
+ 2.1 HMS grants to Customer the right to use the acquired 
+     programs to the extent agreed on in the contract. 
+     Customer may use the programs for its own purposes and 
+     for the purposes of Customer's group of companies.
+
+ 2.2 Customer agrees to use the appendant software only in 
+     combination with such hardware that HMS has declared to be 
+     compatible with these programs. Use of the software with 
+     products, which are in direct competition with IXXAT 
+     products or services offered and advertised by HMS is 
+     explicitly excluded from the right of use.
+
+ 2.4 Customer may transfer the right to use the programs in 
+     machine-readable format (object code, not source 
+     code) to another user, if Customer confirms to 
+     discontinue the use of the programs and the new user, 
+     before receiving the media, accepts in writing 
+     towards HMS to take over all obligations to protect 
+     the programs and to comply with the agreed 
+     restrictions of the right to use. 
+     An explicit exception is software, which is provided by HMS
+     free of charge - whether individually or as component of 
+     another product - to enable the integration of HMS hardware 
+     and/or HMS software in the customer application. This 
+     software may be provided by customer to other users, as long
+     as customer ensures that the other user is bound to the 
+     Terms and Conditions of HMS and existing copyright marks 
+     shall not be altered or removed in any way. Examples for 
+     such software include the IXXAT VCI, IXXAT ECI and 
+     associated example applications.
+
+ § 3 Performance
+
+ 3.1 At Customer's request, HMS shall install all products 
+     at Customer's premises. In this case, Customer shall 
+     timely establish the conditions for the installation 
+     of the products, in particular install the local 
+     network as needed. In case it is agreed in the 
+     contract that HMS shall install the programs, 
+     Customer shall ensure that its personnel is capable of 
+     handling the programs at the moment of installation 
+     at the latest. HMS recommends that Customer’s 
+     personnel shall have received extended training 
+     before the installation of the programs.
+     HMS shall check, before starting the installation 
+     of the products, whether or not the network works 
+     properly. Customer shall confirm the successful 
+     installation of the programs in writing. 
+     Customer shall follow the instructions for 
+     installation of the hardware as defined by the 
+     manufacturer. At Customer's request, HMS shall 
+     consult Customer how to prepare the conditions for 
+     installation. 
+
+ 3.2 Customer shall be responsible for the implementation 
+     of the programs, Customer shall also be responsible 
+     for testing the programs under the conditions they 
+     shall be used under productively, before using them 
+     productively. At Customer's request, HMS shall 
+     provide support (i.e. consultancy, installation 
+     support, demonstration of proper installation, brief 
+     or extended training) on the basis of time consumed.
+
+ 3.3 Customer shall test HMS's deliveries for defects 
+     without delay in the ordinary course of business. 
+
+ 3.4 All support (including specifically installation, 
+     consultancy, brief or extended training, acceptance 
+     test support) shall be reimbursed separately on the 
+     basis of time consumed, unless otherwise agreed.
+
+ 3.5 HMS shall name a consultant, Customer shall name a 
+     representative. Both shall have the authority to 
+     make the necessary decisions or shall obtain 
+     authorization for them in a timely manner. HMS´s 
+     consultant shall put decisions in writing. Customer’s 
+     representative shall provide all required 
+     information. HMS’s consultant shall contact 
+     Customer’s representative as is required to ensure 
+     the proper performance of the mutual obligations.
+
+ § 4 Customer's Responsibilities for Software Protection
+
+ 4.1 Customer acknowledges that the programs and the 
+     related documentation - including future versions 
+     - are copyrighted, and represent confidential 
+     information and trade secrets, proprietary to HMS 
+     or to HMS’s supplier. Customer shall take all 
+     necessary steps to prevent the misuse of the programs 
+     and their related documentation.
+     If programs are delivered in source-code, Customer 
+     shall make them available to any third party only 
+     with HMS's prior written permission. Customer’s 
+     obligation shall be permanent. The permission may 
+     not be unreasonably withheld, but it need not be 
+     given to enable Customer to obtain maintenance from 
+     a third party. 
+
+ 4.2 Customer may copy the programs only for back-up 
+     purposes, for replacement or - if source-code has 
+     been delivered - in order to search for defects. 
+     Customer shall attach to every media containing a copy 
+     of a program the same copyright and proprietary 
+     notices as are attached to the media delivered by 
+     HMS. Customer may make copies of the user 
+     documentation for internal purposes only and only 
+     to the extent which is admissible in accordance with 
+     Customer´s right of use. 
+
+II.  General Terms and Conditions
+
+ § 5 Charges and Payments
+
+ 5.1 Prices for hardware are ex factory. Accessories, 
+     such as media, signal amplifier, data cables or 
+     power supply cables, are only included in the price, 
+     if so stated in the contract. If HMS installs and 
+     implements such equipment, this work shall be 
+     charged on the basis of time consumed.
+
+ 5.2 HMS is entitled to change it's prices at it sole discretion
+     at any time.
+
+ 5.3 In as far as it is agreed to remunerate HMS on the 
+     basis of time consumed, hourly rates, travel 
+     expenses and incidental expenses shall be paid in 
+     accordance with HMS's current standard rates 
+     (price list), unless other rates are agreed on.
+
+ 5.4 Payments for the products shall be billed after the 
+     installation, if carried out by HMS, otherwise 
+     after delivery. 
+ 
+ 5.5 Payments shall be effected without deductions within 
+     thirty days after invoicing. Customer shall be in 
+     default of payment after this period of time without 
+     reminder.
+
+ 5.6 Duties, taxes and levies including VAT - if 
+     applicable - shall be paid by Customer on all charges.
+
+ 5.7 Customer has no right of retention, in particular no 
+     right to withhold payment. Customer may set off only 
+     those sums owed by Contractor which are unappealable 
+     or uncontested against sums owed by Customer.
+
+ § 6 Framework Contracts
+ 
+ 6.1 When concluding a framework contract on the purchase 
+     of a certain quantity of a product in a defined period of 
+     time, the framework contract defines the quantity, the 
+     period of time, the minimum quantity per delivery, and the 
+     price per piece.
+
+ 6.2 When ordering a framework, the customer receives from 
+     HMS an electronically produced framework contract. This 
+     framework contract is valid without a signature. The 
+     framework contract has to be checked immediately by the 
+     customer for accuracy with any errors reported immediately. 
+     A complaint by the customer must be made within 5 working 
+     days of receipt of the framework contract.
+
+ 6.3 With acknowledgment of the framework contract, the 
+     customer is obliged to fulfill the purchase of the quantity 
+     of products defined in the framework contract within the 
+     defined period of time.
+
+ 6.4 If the customer at the end of the defined period of 
+     time has not purchased the entire agreed quantity, HMS 
+     is entitled to deliver and invoice the outstanding 
+     quantity of the product/ products.
+
+ § 7 HMS's Claims, HMS's Delay
+
+ 7.1 In the event of any circumstances for which HMS 
+     is not responsible, and which adversely affect the 
+     performance of the contractual obligations, including
+     strike and lock-out, HMS is entitled to an 
+     appropriate adaptation of the terms of the contract, 
+     in particular to an appropriate extension of the 
+     delivery date. If the cause is attributable to 
+     Customer and results in additional efforts to HMS, 
+     HMS is also entitled to additional compensation. 
+
+ § 8 Removal of Defects
+
+ 8.1 If Customer finds, in the course of correct use of the 
+     programs, what Customer believes to be a defect in a 
+     product, Customer shall provide HMS with reasonably 
+     specific information as to the nature of the defect 
+     and the conditions under which it occurs, in writing, 
+     if so requested by HMS. 
+     Customer is only entitled to raise claims if Customer 
+     can reproduce the defect or demonstrate it by using 
+     computer output. 
+     Upon request, Customer shall give all necessary 
+     support to HMS, and in particular provide a copy 
+     of the relevant program being used when the defect 
+     appeared. Customer shall provide testing time on 
+     Customer's IT-system and install corrections delivered 
+     by HMS.
+
+ 8.2 HMS shall, within a reasonable period of time and 
+     at no cost to Customer, remove the defect, at HMS´s 
+     choice, either by replacing the defective product or 
+     by correction of defects (subsequent performance). 
+     If a defect substantially restricts the use of an 
+     application program, HMS shall provide a workaround 
+     (temporary solution), if needed, so that the defect 
+     is not substantial any longer. 
+     HMS may deliver the correction of other defects 
+     by delivering a new version as soon as is adequate 
+     subject to a reasonable policy of further development. 
+     HMS shall develop workarounds insofar as these are 
+     technically and at acceptable costs to HMS feasible. 
+     With respect to programs, which are defined as third 
+     party programs, HMS can only use its best endeavors 
+     to obtain and transfer corrective measures and, if 
+     appropriate, provide workarounds.
+
+ 8.3 All claims against HMS shall be expressly excluded 
+     for those products, which Customer modifies or 
+     manipulates in any other way, unless Customer proves, 
+     when reporting a defect, that the defect did not 
+     result from any such modification or manipulation. 
+
+ 8.4 HMS is entitled to reimbursement of costs if Customer
+     reports what Customer believes to be a defect without 
+     being able to prove it to be so.
+
+ § 9 HMS's Liability
+     The legal provisions shall apply with the following 
+     amendments:
+
+ 9.1 Defects shall be removed according to § 8. 
+
+ 9.2 HMS - including any person engaged in performing 
+     any obligation under this contract - shall be liable 
+     for damages under any claim based on normal negligence 
+     only if HMS breaches a basic obligation under this 
+     contract. In this event, HMS's liability shall be 
+     restricted to the higher of the following amounts: 
+
+     - EUR 100,000.00,
+     - the contract value, or 
+     - the characteristic and foreseeable damages.
+
+     Customer is entitled to claim for a higher maximum, but 
+     HMS may then require a surcharge for the aggravated risk. 
+     
+     The restrictions shall not apply to the extent the 
+     damages are covered under HMS's business liability 
+     insurance and provided the insurance company has 
+     effected payment to HMS. HMS agrees to maintain 
+     the coverage of the business liability insurance as 
+     provided at the time of the execution of the contract.
+
+     Claims for personal injury and claims based on the 
+     German Product Liability Act shall remain untouched.
+
+ 9.3 If Customer is entitled to rescind the contract and/or 
+     claim for damages, HMS is entitled to set a period 
+     within which Customer must declare whether or not 
+     Customer still requests primary or subsequent 
+     performance. If Customer does not request primary or 
+     subsequent performance timely, Customer cannot claim 
+     for it any longer.
+
+ 9.4 The period of warranty (the limitation period for 
+     claims based on defects) shall be 12 months. It 
+     shall commence with installation, if carried out by 
+     HMS, otherwise one month after delivery.
+
+ § 10 Confidentiality
+
+ 10.1 HMS shall keep confidential Customer's trade and 
+     business secrets, and all other information 
+     designated in writing as confidential by Customer, 
+     obtained under or in connection with this contract. 
+     HMS shall have no obligation with respect to any 
+     information that is already in its possession, is 
+     independently developed or becomes publicly known 
+     through no wrongful act of HMS. This obligation 
+     shall survive the contract in the case of its 
+     rescission.
+
+ 10.2 HMS is not obligated to keep confidential any 
+     ideas, concepts, know-how or techniques related to 
+     the development of software.
+
+ 10.3 HMS shall require its employees to adhere to the 
+     obligations stipulated in § 10.1.
+
+ 10.4 HMS may enter Customer's name into its list of 
+     customers together with a short description of the 
+     HMS's performance.
+     All other references that Customer is HMS's customer 
+     are subject to Customer’s prior approval.
+
+ § 11 Miscellaneous
+
+ 11.1 The contract shall constitute the entire agreement 
+      between the parties and shall not be altered, 
+      amended or cancelled, except in writing and with 
+      the consent and signature of all parties concerned. 
+
+ 11.2 The law of the Federal Republic of Germany shall apply 
+      exclusively. The application of the United Nations 
+      Convention on Contracts for the International Sale of 
+      Goods (CISG) shall explicitly be excluded.
+	  
+ 11.3 The place of jurisdiction for any dispute related to 
+      the License Agreement, these contractual terms and the 
+      services performed under the application thereof shall 
+      be the corporate seat of the Licensor or, at the 
+      Licensor's option, the Stuttgart Regional Court's 
+      division having jurisdiction over IT or software matters
+      or the court competent for the Customer's registered office.
+
+
+
+
+
+
+[Deutsche Version]
+
+*****************************************************************
+Vertragsbedingungen für die Lieferung von Hardware und 
+dazugehöriger Software sowie Lizenzvereinbarung für 
+IXXAT Softwareprodukte
+*****************************************************************
+
+Diese Lizenzvereinbarung (im Folgenden "Vereinbarung") ist ein 
+rechtlich gültiger Vertrag zwischen Ihnen, Ihrer Firma ("Kunde") 
+und dem HMS Industrial Networks AB ("HMS"). 
+Durch die Nutzung der IXXAT Softwareprodukte und/oder Teilen 
+hiervon, welche im Rahmen des Softwarpakets ("software") dem 
+Kunden zugehen, verpflichtet sich der Kunde sich an die 
+Regelungen dieser Vereinbarung zu binden. Falls der Kunde nicht 
+den Regelungen dieser Vereinbarung zustimmt, müssen die Software 
+sowie beigelegte Teile (inklusive gedruckten Materialien, Heftern
+oder Ordnern) umgehend de-installiert, gelöscht oder vernichtet 
+werden.
+
+I.   Lieferung von Hardware und dazugehöriger Software
+
+ § 1 Gegenstand der Lieferungen
+
+ 1.1 Die Eigenschaften der Hardware und der dazugehörigen 
+     Software ergeben sich aus den Produktbeschreibungen, 
+     ergänzend aus der Benutzerdokumentation. 
+     Für solche Produkte, die im Vertrag als Produkte von 
+     Vorlieferanten gekennzeichnet sind, steht HMS für 
+     Angaben in den Produktbeschreibungen der jeweiligen 
+     Hersteller und für die Freiheit von sonstigen Fehlern 
+     nicht ein.
+     Gesetzliche Vorschriften oder für den Kunden ähnlich 
+     zwingende Vorgaben werden eingehalten.
+
+ 1.2 Alle Softwarepakete werden in ausführbarer Form 
+     (Objektcode) geliefert. HMS ist verpflichtet, 
+     soweit in der Software Schnittstellen zu nicht 
+     von ihr zu liefernden Softwarepaketen bestehen, die 
+     erforderlichen Informationen über die Schnittstellen 
+     dem Kunden gegen Vergütung des Aufwands für die 
+     Lieferung zur Verfügung zu stellen. Der Kunde darf 
+     diese Informationen bei Bedarf anderen 
+     Auftragnehmern bekannt geben.
+
+ 1.3 Die Benutzerdokumentation für die Hardware und die 
+     dazugehörige Software wird in elektronischer Form 
+     auf Datenträger oder in gedruckter Form geliefert. 
+
+ 1.4 Bis zur vollständigen Bezahlung des Kaufpreises 
+     bleiben die Hardware und die Datenträger mit der 
+     Software Eigentum von HMS und dürfen weder 
+     verpfändet noch zur Sicherheit übereignet werden.
+
+ § 2 Benutzungsrecht an der Software
+
+ 2.1 HMS räumt dem Kunden das Recht ein, die erworbene 
+     Software in dem im Vertrag festgelegten Umfang zu 
+     benutzen, und zwar für eigene Zwecke und für Zwecke 
+     der zur Unternehmensgruppe des Kunden gehörenden 
+     Unternehmen.
+
+ 2.2 Der Kunde darf die Software nur mit solcher Hardware 
+     einsetzen, für die HMS diese freigegeben hat. Eine 
+     Verwendung der Software mit Produkten, welche im direkten 
+     Wettbewerb zu von HMS angebotenen und beworbenen IXXAT 
+     Produkten stehen, ist explizit vom Nutzungsrecht 
+     ausgeschlossen.
+
+ 2.3 Der Kunde darf das Benutzungsrecht je Software in 
+     ausführbarer Form (Objektprogramme, nicht Quellprogramme) 
+     an einen anderen Anwender weiterveräußern, wenn er auf die 
+     Benutzung der Software verzichtet und der andere vor Erhalt 
+     der Datenträger mit der Software durch Erklärung gegenüber 
+     HMS sich zum Softwareschutz schriftlich verpflichtet und den
+     vereinbarten Umfang des Benutzungsrechts an der Software 
+     anerkennt.
+     Explizit ausgenommen hiervon ist Software, welche von HMS 
+     unentgeltlich - ob einzeln oder als Teil eines weiteren 
+     Produktes - zur Integration von HMS Hardware und/oder HMS 
+     Software in eine Kundenanwendung zur Verfügung stellt. 
+     Diese Software darf vom Kunden an andere Anwender 
+     weiterveräußert werden, solgange der Kunde dafür Sorge 
+     trägt, dass der weitere Anwender an die Lizenzbedingungen 
+     von HMS gebunden ist und vorhandene Copyright-Hinweise 
+     nicht verändert oder entfernt werden. Beispiele für solche 
+     Software sind die IXXAT VCI, IXXAT ECI und zugehörige 
+     Beispielanwendungen.
+
+ § 3 Leistungserbringung
+
+ 3.1 Auf Wunsch des Kunden installiert HMS Hardware 
+     und Software vor Ort. In diesem Fall wird der 
+     Kunde die Installationsvoraussetzungen rechtzeitig 
+     schaffen, insbesondere das ggf. erforderliche lokale 
+     Netz bereitstellen. Der Kunde sorgt dafür, dass 
+     spätestens im Zeitpunkt der Installation 
+     fachkundiges Bedienungspersonal zur Verfügung steht. 
+     HMS wird das Netz vor Beginn der Installation auf 
+     dessen Funktionsfähigkeit überprüfen. Der Kunde wird 
+     den erfolgreichen Abschluss der Installation 
+     schriftlich bestätigen.
+     Die Installationsvoraussetzungen ergeben sich aus 
+     den Richtlinien des jeweiligen Herstellers der 
+     Hardware. HMS wird den Kunden auf Wunsch bei der 
+     Schaffung der Installationsvoraussetzungen beraten.
+
+ 3.2 Es ist Sache des Kunden, die Software in Betrieb zu 
+     nehmen. Dazu gehört auch, dass der Kunde diese unter 
+     seinen Einsatzbedingungen überprüft, bevor er sie 
+     produktiv einsetzt. HMS ist bereit, ihn auch dabei 
+     auf Verlangen gegen Vergütung nach Aufwand zu 
+     unterstützen.
+
+ 3.3 Der Kunde wird alle Leistungen von HMS unverzüglich 
+     auf Fehlerfreiheit untersuchen, soweit das im 
+     ordnungsgemäßen Geschäftsgang angebracht ist.
+
+ 3.4 Alle Unterstützungsleistungen (insb. Installation, 
+     Einsatzvorbereitung und Demonstration der 
+     Betriebsbereitschaft, Einweisung, Schulung oder 
+     Beratung) werden gesondert nach Aufwand vergütet, 
+     sofern nichts anderes vereinbart wird.
+
+ 3.5 HMS benennt einen Kundenberater, der Kunde einen 
+     Ansprechpartner. Diese können Entscheidungen treffen 
+     oder unverzüglich herbeiführen. Der Kundenberater 
+     soll Entscheidungen schriftlich festhalten. Der 
+     Ansprechpartner steht HMS für notwendige 
+     Informationen zur Verfügung. HMS ist verpflichtet, 
+     den Ansprechpartner einzuschalten, soweit die 
+     Durchführung des Vertrags dies erfordert.
+
+ § 4 Pflichten des Kunden zum Softwareschutz
+
+ 4.1 Der Kunde anerkennt, dass die Software samt 
+     Benutzerdokumentation und weiterer Unterlagen 
+     - auch in künftigen Versionen - urheberrechtlich 
+     geschützt und Betriebsgeheimnis von HMS oder des 
+     jeweiligen Herstellers ist. Er trifft zeitlich 
+     unbegrenzt Vorsorge, dass diese vor missbräuchlicher 
+     Nutzung geschützt wird. 
+     Soweit Quellprogramme geliefert werden, darf der 
+     Kunde diese Dritten nur mit Zustimmung von HMS 
+     zugänglich machen. Die Zustimmung darf nicht gegen 
+     Treu und Glauben verweigert werden; sie braucht 
+     nicht dafür gegeben zu werden, dass ein Dritter 
+     die Pflege übernimmt.
+
+ 4.2 Der Kunde darf Vervielfältigungsstücke (Kopien) nur 
+     zu Sicherungszwecken, als Ersatz oder - im Falle 
+     der Lieferung von Quellprogrammen - zur Fehlersuche 
+     erstellen. Der Vermerk auf dem gelieferten 
+     Datenträger über Softwarebezeichung, Urheberrechtsinhaber 
+     und Lieferant ist auch auf Datenträger mit Kopien 
+     anzubringen.
+     Der Kunde darf die Benutzerdokumentation für den 
+     eigenen zulässigen Gebrauch vervielfältigen.
+
+II.  Allgemeine Bedingungen
+
+ § 5 Vergütung, Zahlungen
+
+ 5.1 Die Preise für Hardware verstehen sich ab Werk. 
+     Zubehör - wie Datenträger, Leitungsverstärker, 
+     Daten- und Stromleitungen - ist im Lieferumfang 
+     nur soweit im Vertrag angegeben enthalten. HMS 
+     ist bereit, auf Wunsch des Kunden die Installation 
+     und Inbetriebnahme gegen Vergütung nach Aufwand zu 
+     übernehmen.
+
+ 5.2 HMS ist berechtigt, seine Preise nach eigenem Ermessen 
+     jederzeit zu ändern.
+
+ 5.3 Soweit nach Aufwand vergütet wird, richten sich 
+     Stundensätze, Reisekosten und Nebenkosten nach der 
+     jeweils gültigen Preisliste von HMS, sofern 
+     nichts anderes vereinbart ist. HMS kann monatlich 
+     abrechnen.
+
+ 5.4 Der Kaufpreis wird nach Installation fällig, wenn 
+     HMS diese durchführt, sonst mit Lieferung.
+
+ 5.5 Zahlungen sind innerhalb von dreißig Tagen nach 
+     Rechnungsstellung ohne Abzug zu leisten. Der Kunde 
+     kommt nach Ablauf dieser Frist ohne Mahnung in 
+     Verzug.
+
+ 5.6 Alle Preise verstehen sich zuzüglich der 
+     gesetzlichen Mehrwertsteuer.
+
+ 5.7 Der Kunde ist - unbeschadet seines Rechts, Zahlungen 
+     wegen unvollständiger oder fehlerhafter Leistung 
+     seitens HMS zu verweigern - nicht befugt, 
+     Zahlungen zurückzuhalten. Er kann nur mit 
+     Forderungen aufrechnen, die rechtskräftig 
+     festgestellt, entscheidungsreif oder die von HMS 
+     anerkannt worden sind.
+
+ § 6 Rahmenverträge
+
+ 6.1 Bei Abschluss eines Rahmenvertrags über die Abnahme 
+     einer bestimmten Menge eines Produkts in einem definierten 
+     Zeitraum wird in dem Rahmenvertrag die Menge, der 
+     Abnahmezeitraum, die Mindestliefermenge pro Abruf sowie 
+     der Preis pro Stück festgelegt.
+
+ 6.2 Bei Bestellung eines Rahmens erhält der Kunde von 
+     HMS einen maschinell erstellen Rahmenvertrag. Dieser ist 
+     ohne Unterschrift gültig. Der Rahmenvertrag ist vom Kunden 
+     unverzüglich auf Richtigkeit zu prüfen und im Fall von 
+     falschen Daten unverzüglich zu reklamieren. Eine Reklamation 
+     durch den Kunden hat spätestens 5 Arbeitstage nach Zugang 
+     des Rahmenvertrags zu erfolgen.
+
+ 6.3 Mit Anerkennung des Rahmenvertrags verpflichtet 
+     sich der Kunde die in dem Rahmenvertrag definierten 
+     Stückzahlen der Produkte innerhalb des definierten Zeitraums 
+     abzurufen.
+
+ 6.4 Hat der Kunde bei Ende des im Rahmenvertrag 
+     definierten Zeitraums die vereinbarte Stückzahl nicht 
+     vollständig abgerufen, so ist HMS berechtigt die noch 
+     ausstehende Stückzahl des Produkts / der Produkte zu 
+     liefern und in Rechnung zu stellen.
+
+ § 7 Störungen bei der Leistungserbringung, Verzug
+
+ 7.1 Soweit eine Ursache, die HMS nicht zu vertreten 
+     hat, einschließlich Streik oder Aussperrung, die 
+     Termineinhaltung beeinträchtigt, kann HMS eine 
+     angemessene Verschiebung der Termine verlangen. 
+     Erhöht sich der Aufwand aufgrund einer Ursache im 
+     Verantwortungsbereich des Kunden, kann HMS auch 
+     die Vergütung des eigenen Mehraufwands verlangen.
+
+ § 8 Vereinbarungen zur Mängelbeseitigung
+
+ 8.1 Treten bei vertragsmäßiger Benutzung Mängel auf, 
+     hat der Kunde diese in nachvollziehbarer Form unter 
+     Angabe der für die Mängelerkennung zweckdienlichen 
+     Informationen zu melden, und zwar auf Verlangen von 
+     HMS schriftlich. 
+     Voraussetzung für alle Ansprüche gegen HMS ist, 
+     dass der Mangel reproduzierbar ist oder durch 
+     maschinell erzeugte Ausgaben aufgezeigt werden kann.
+     Der Kunde hat HMS im Rahmen des Zumutbaren bei der 
+     Beseitigung von Mängeln zu unterstützen, insb. 
+     auf Wunsch von HMS die Software, wie diese bei 
+     Auftreten des Mangels benutzt wurde, zu übersenden 
+     und Maschinenzeit zur Verfügung zu stellen sowie 
+     Korrekturmaßnahmen, die HMS bereitstellt, 
+     einzuspielen.
+
+ 8.2 HMS erbringt die Nacherfüllung nach eigener Wahl 
+     durch Mängelbeseitigung oder durch Ersatzlieferung 
+     in angemessener Frist. HMS wird bei Mängeln, die 
+     den Einsatz einer Software schwerwiegend 
+     beeinträchtigen, bei Bedarf eine Umgehungslösung vor 
+     der endgültigen Nacherfüllung bereitstellen. 
+     HMS braucht andere Mängel erst zu dem Zeitpunkt 
+     zu beseitigen, zu dem HMS das im Rahmen 
+     sachgerechter Versionspflege einplant. HMS wird 
+     auch für solche Mängel Umgehungslösungen 
+     bereitstellen, soweit das für HMS zumutbar ist. 
+     Bei Software, die ausdrücklich als solche von 
+     Vorlieferanten gekennzeichnet ist, braucht HMS 
+     das nur zu tun, soweit HMS dazu technisch in der 
+     Lage ist und das HMS zu finanziell akzeptablen 
+     Konditionen möglich ist. HMS wird aber 
+     Korrekturmaßnahmen, die beim Vorlieferanten bereits 
+     vorhanden sind, bereitstellen.
+
+ 8.3 Alle Ansprüche gegen HMS erlöschen für solche 
+     Produkte, die der Kunde ändert oder in die er sonst 
+     wie eingreift, es sei denn, dass der Kunde im 
+     Zusammenhang mit der Mängelmeldung nachweist, dass 
+     der Eingriff für den Mangel nicht ursächlich ist.
+
+ 8.4 HMS kann die Vergütung des eigenen Aufwands 
+     verlangen, soweit HMS auf Grund einer 
+     Mängelmeldung tätig geworden ist, ohne dass der 
+     Kunde einen Mangel nachgewiesen hat.
+
+ § 9 Haftung von HMS
+
+ 9.1 Kommt HMS mit der Erfüllung (durch Lieferung) bzw. 
+     Nacherfüllung (durch Mängelbeseitigung oder 
+     Ersatzlieferung) in Verzug, kann der Kunde eine 
+     angemessene Frist für die Erfüllung oder die 
+     Nacherfüllung setzen. Verstreicht die Frist 
+     erfolglos oder schlägt die Erfüllung oder die 
+     Nacherfüllung sonst wie endgültig fehl, kann der 
+     Kunde seine gesetzlichen Ansprüche geltend machen, 
+     Schadensersatz im Rahmen von § 9.3. HMS kann dem 
+     Kunden eine angemessene Frist für die Erklärung 
+     setzen, ob dieser noch Erfüllung/Nacherfüllung 
+     verlangt. Nach erfolglosem Ablauf dieser 
+     Erklärungsfrist ist der Anspruch des Kunden auf 
+     Erfüllung/Nacherfüllung ausgeschlossen.
+
+ 9.2 Die Verjährungsfrist für Ansprüche wegen Mängeln 
+     („Gewährleistungsfrist“) beträgt 12 Monate. 
+ 
+ 9.3 Schadensersatzansprüche - gleich aus welchem 
+     Rechtsgrund - gegen HMS (einschl. deren 
+     Erfüllungsgehilfen), die leichte Fahrlässigkeit 
+     voraussetzen, bestehen nur, wenn eine wesentliche 
+     Vertragspflicht/Kardinalpflicht verletzt worden ist. 
+
+     Schadensersatzansprüche sind in diesem Fall auf den 
+     höheren der folgenden Werte beschränkt:
+
+     - EUR 100.000,00,
+     - Auftragswert, oder 
+     - auf den typischen und vorhersehbaren Schaden.
+
+     Der Kunde kann eine weitergehende Haftung gegen Zahlung 
+     eines Risikozuschlags verlangen.
+
+     Die Einschränkungen gelten nicht, soweit die Schäden 
+     durch die Betriebshaftpflichtversicherung von HMS 
+     gedeckt sind und vorausgesetzt, der Versicherer hat an 
+     HMS gezahlt. HMS verpflichtet sich, die bei 
+     Vertragsabschluss bestehende Deckung aufrechtzuerhalten. 
+
+     Ansprüche wegen Körperschäden sowie Ansprüche auf der 
+     Grundlage des Produkthaftungsgesetzes bleiben unberührt.
+
+ § 10 Vertraulichkeit
+
+ 10.1 HMS verpflichtet sich, alle im Rahmen des 
+     Vertragsverhältnisses erlangten Kenntnisse von 
+     Betriebs- und Geschäftsgeheimnissen und von 
+     schriftlich als vertraulich bezeichneten 
+     Informationen nur zur Durchführung des Vertrags 
+     zu verwenden und zeitlich unbegrenzt vertraulich 
+     zu behandeln.
+
+ 10.2 Die Verpflichtung zur vertraulichen Behandlung gilt 
+     nicht für Ideen, Konzeptionen, Know-how und 
+     Techniken, die sich auf Software-Erstellung beziehen, 
+     sowie für Daten, die HMS bereits bekannt sind 
+     oder außerhalb dieses Vertrages bekannt waren oder 
+     bekannt werden.
+
+ 10.3 HMS verpflichtet ihre Mitarbeiter zur Wahrung der 
+     Vertraulichkeit.
+
+ 10.4 HMS darf den Namen des Kunden und eine 
+     Kurzbeschreibung der erbrachten Leistung in eine 
+     Referenzliste aufnehmen. Alle anderen Werbehinweise 
+     auf den Kunden werden vorab mit ihm abgesprochen.
+
+ § 11 Schriftform, Gerichtsstand
+
+ 11.1 Der Vertrag und seine Änderungen bedürfen der 
+      Schriftform.
+
+ 11.2 Es gilt ausschließlich das Recht der Bundesrepublik
+      Deutschland. Die Anwendung des UN-Kaufrechts (CISG)
+      wird ausdrücklich ausgeschlossen.
+	  
+ 11.3 Gerichtsstand für alle Streitigkeiten, die mit dem
+      Lizenzvertrag, diesen Vertragsbedingungen und den 
+      unter ihrer Geltung vorgenommenen Leistungen 
+      zusammenhängen, ist der Sitz des Lizenzgebers oder
+      nach dessen Wahl die für IT- bzw. Software-
+      Angelegenheiten zuständige Kammer des Landgerichts 
+      Stuttgart oder das für den Sitz des Kunden 
+      zuständige Gericht.

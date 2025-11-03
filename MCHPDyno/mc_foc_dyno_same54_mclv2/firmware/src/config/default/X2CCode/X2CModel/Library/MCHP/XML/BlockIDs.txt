@@ -1,0 +1,48 @@
+Block	Impl.	ID
+--------------------------
+BEMF_calc	1312
+	FiP16	0
+	FiP32	1
+	Float32 2
+Park_Clark_inv	1311
+	FiP16	0
+	FiP32	1
+	Float32 2
+Clark_Park	1310
+	FiP16	0
+	FiP32	1
+	Float32 2
+		
+Clark		1304
+	FiP16	0
+	FiP32	1
+	Float32 2
+
+Clark_inv	1306
+	FiP16	0
+	FiP32	1
+	Float32 2
+
+Park		1305
+	FiP16	0
+	FiP32	1
+	Float32 2
+
+Park_inv	1307
+	FiP16	0
+	FiP32	1
+	Float32 2
+
+SVM		1308
+	FiP16	0
+	FiP32	1
+	Float32 2
+
+reset_qei	1302
+	FiP16	0
+
+sawthooth	1303
+	FiP16	0
+
+timer		1301
+	FiP16	0

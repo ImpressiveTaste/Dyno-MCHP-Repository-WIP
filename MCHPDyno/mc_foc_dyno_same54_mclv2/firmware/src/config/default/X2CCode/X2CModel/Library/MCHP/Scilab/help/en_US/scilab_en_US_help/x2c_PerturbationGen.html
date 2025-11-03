@@ -1,0 +1,90 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>x2c_PerturbationGen</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="x2c_Park_inv_MCHP.html">&lt;&lt; x2c_Park_inv_MCHP</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_8d7b739f52261aad914a408c2d08a3ef.html">MCHP</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="x2c_RandomGen.html">x2c_RandomGen &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">X2C MCHP Library</a> &gt;&gt; <a href="section_8d7b739f52261aad914a408c2d08a3ef.html">MCHP</a> &gt; x2c_PerturbationGen</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">x2c_PerturbationGen</h1>
+        <p class="refpurpose">X2C Perturbation Generator</p></div>
+
+    <div class="refsection"><p class="para"><span><div style='text-align:center'>
+<img src='./PerturbationGen.png' />
+</div></span></p></div>
+
+    <div class="refsection"><h3 class="title">Description</h3>
+        <p class="para">Generation of a square wave with amplitude (A) and frequency (f) with different slew rates..</p></div>
+
+    <div class="refsection"><h3 class="title">Inports</h3>
+        <ul class="itemizedlist"><li class="member"><b>f:</b> Frequency</li>
+            <li class="member"><b>dc:</b> Duty Cycle</li>
+            <li class="member"><b>S_in:</b> Signal in</li></ul></div>
+
+    <div class="refsection"><h3 class="title">Outports</h3>
+        <ul class="itemizedlist"><li class="member"><b>u:</b> Square wave output</li>
+            <li class="member"><b>S_out:</b> Signal out (= Signal in)</li></ul></div>
+
+    <div class="refsection"><h3 class="title">Mask Parameters</h3>
+        <ul class="itemizedlist"><li class="member"><b>fmax:</b> Maximum Frequency in Hz</li>
+            <li class="member"><b>LL:</b> Output Low Level</li>
+            <li class="member"><b>LH:</b> Output High Level</li>
+            <li class="member"><b>Tr:</b> Rising time in seconds. Slew rate will be 1/Tr.</li>
+            <li class="member"><b>Tf:</b> Falling time in seconds. Slew rate will be 1/Tf.</li>
+            <li class="member"><b>ts_fact:</b> Multiplication factor of base sampling time (in integer format).</li></ul></div>
+
+    <div class="refsection"><h3 class="title">Implementations</h3>
+
+        <ul class="itemizedlist"><li class="member"><b>FiP16:</b> 16 Bit Fixed Point</li>
+            <li class="member"><b>FiP32:</b> 32 Bit Fixed Point</li>
+            <li class="member"><b>Float32:</b> 32 Bit Floating Point</li>
+            <li class="member"><b>Float64:</b> 64 Bit Floating Point</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="x2c_Park_inv_MCHP.html">&lt;&lt; x2c_Park_inv_MCHP</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_8d7b739f52261aad914a408c2d08a3ef.html">MCHP</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="x2c_RandomGen.html">x2c_RandomGen &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

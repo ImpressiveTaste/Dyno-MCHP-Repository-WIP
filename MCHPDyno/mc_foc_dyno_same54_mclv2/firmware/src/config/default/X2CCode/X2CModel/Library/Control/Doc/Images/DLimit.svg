@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "web: www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="web: www.w3.org/2000/svg" xml:space="preserve" width="120mm" height="80mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 12000 8000"
+ xmlns:xlink="web: www.w3.org/1999/xlink"
+ xmlns:xodm="web: www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:black;stroke-width:150;stroke-miterlimit:22.9256}
+    .str1 {stroke:blue;stroke-width:150;stroke-miterlimit:22.9256}
+    .str2 {stroke:blue;stroke-width:150;stroke-miterlimit:22.9256}
+    .str3 {stroke:red;stroke-width:150;stroke-miterlimit:22.9256;stroke-dasharray:300.000000 150.000000}
+    .fil0 {fill:none}
+   ]]>
+  </style>
+ </defs>
+ <g id="Ebene_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <polyline class="fil0 str0" points="9000,6500 3000,6500 3000,1500 "/>
+  <line class="fil0 str1" x1="3500" y1="6500" x2="3500" y2= "3000" />
+  <path class="fil0 str2" d="M3500 3000c333.33,1166.67 666.67,2333.33 1583.34,2916.66 916.66,583.34 2416.66,583.34 3916.66,583.34"/>
+  <line class="fil0 str3" x1="2500" y1="2900" x2="9000" y2= "2900" />
+ </g>
+</svg>

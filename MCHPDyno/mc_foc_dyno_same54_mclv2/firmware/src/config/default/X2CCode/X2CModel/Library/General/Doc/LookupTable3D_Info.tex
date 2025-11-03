@@ -1,0 +1,66 @@
+%
+% $LastChangedRevision: 2077 $
+% $LastChangedDate:: 2020-10-23 09:47:52 +0200#$
+%
+% This file is part of X2C. http://x2c.lcm.at/
+%
+% Copyright (c) 2020, Linz Center of Mechatronics GmbH (LCM) http://www.lcm.at/
+% All rights reserved.
+%
+%
+% This file is licensed according to the BSD 3-clause license as follows:
+%
+% Redistribution and use in source and binary forms, with or without
+% modification, are permitted provided that the following conditions are met:
+%     * Redistributions of source code must retain the above copyright
+%       notice, this list of conditions and the following disclaimer.
+%     * Redistributions in binary form must reproduce the above copyright
+%       notice, this list of conditions and the following disclaimer in the
+%       documentation and/or other materials provided with the distribution.
+%     * Neither the name of the "Linz Center of Mechatronics GmbH" and "LCM" nor
+%       the names of its contributors may be used to endorse or promote products
+%       derived from this software without specific prior written permission.
+%
+% THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+% ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+% WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+% IN NO EVENT SHALL "Linz Center of Mechatronics GmbH" BE LIABLE FOR ANY
+% DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+% (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+% LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+% ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+% (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+% SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+%
+The table of the LookupTable3D block must contain DimX times DimY times DimZ data points and they have to be arranged as
+
+\begin{align*}
+\textrm{TableData} =& [f(x_1, y_1, z_1),\; f(x_2, y_1, z_1),\; ...\; f(x_{n-1}, y_1, z_1),\; f(x_{n},y_1, z_1),\\
+                                 &  \phantom{[}\;f(x_1, y_2, z_1),\; f(x_2, y_2, z_1),\; ...\; f(x_{n-1}, y_2, z_1),\; f(x_{n},y_2, z_1),\\
+								 &  \phantom{[}\;...\\
+                                 &  \phantom{[}\;f(x_1, y_{m-1}, z_1),\; f(x_2, y_{m-1}, z_1),\; ... \;f(x_{n-1}, y_{m-1}, z_1),\; f(x_{n},y_{m-1}, z_1),\\
+                                 &  \phantom{[}\;f(x_1, y_{m}, z_1),\; f(x_2, y_{m}, z_1),\; ...\; f(x_{n-1}, y_{m}, z_1),\; f(x_{n},y_{m}, z_1)\\
+								 &  \phantom{[}\;f(x_1, y_1, z_2),\; f(x_2, y_1, z_2),\; ...\; f(x_{n-1}, y_1, z_2),\; f(x_{n},y_1, z_2),\\
+								 &  \phantom{[}\;f(x_1, y_2, z_2),\; f(x_2, y_2, z_2),\; ...\; f(x_{n-1}, y_2, z_2),\; f(x_{n},y_2, z_2),\\
+                                 &  \phantom{[}\;...\\
+                                 &  \phantom{[}\;f(x_1, y_{m-1}, z_{k}),\; f(x_2, y_{m-1}, z_{k}),\; ... \;f(x_{n-1}, y_{m-1}, z_{k}),\; f(x_{n},y_{m-1}, z_{k}),\\
+                                 &  \phantom{[}\;f(x_1, y_{m}, z_{k}),\; f(x_2, y_{m}, z_{k}),\; ...\; f(x_{n-1}, y_{m}, z_{k}),\; f(x_{n},y_{m}, z_{k})]
+\end{align*}
+with n as selected DimX, m as selected DimY and k as selected DimZ values.
+
+For interpolation of the data, the trilinear interpolation method is used. The interpolation is implemented as
+\begin{eqnarray*}
+f(x,y,z) =& c_0 + c_1\Delta x + c_2\Delta y + c_3\Delta z + c_4\Delta x\Delta y + c_5\Delta y\Delta z + c_6\Delta z\Delta x + c_7\Delta x\Delta y\Delta z
+\end{eqnarray*}
+with $\Delta x$, $\Delta y$, $\Delta z$ as relative distances to the starting point $f_{000}$ and with the coefficients 
+\begin{eqnarray*}
+c_0 &=& f_{000}\\
+c_1 &=& f_{100} - f_{000}\\
+c_2 &=& f_{010} - f_{000}\\
+c_3 &=& f_{001} - f_{000}\\
+c_4 &=& f_{110} - f_{010} - f_{100} + f_{000}\\
+c_5 &=& f_{011} - f_{001} - f_{010} + f_{000}\\
+c_6 &=& f_{101} - f_{001} - f_{100} + f_{000}\\
+c_7 &=& f_{111} - f_{011} - f_{101} - f_{110} + f_{100} + f_{001} + f_{010} - f_{000}\\
+\end{eqnarray*}
+derived from the lattice points relative to the starting point. 

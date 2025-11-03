@@ -8,5 +8,9 @@
             <file>file:/C:/MASTERs/24052_MC2/LAB3_BC_BEMF.X/hal/pwm.c</file>
             <file>file:/C:/MASTERs/24052_MC2/LAB3_BC_BEMF.X/hal/port_config.c</file>
         </group>
+        <group name="general">
+            <file>file:/C:/_GIT/miniDyno_mclv48v300w/motor_ACT57BLF02/mc_block_sl_fip_dspic33a_mclv48v300w.X/main.c</file>
+        </group>
+        <group name="standard"/>
     </open-files>
 </project-private>

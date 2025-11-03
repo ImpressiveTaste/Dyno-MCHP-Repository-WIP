@@ -1,0 +1,159 @@
+\XtoCVerification{LookupTable3D FiP16 CPU XMC4800-F144K2048}
+\begin{tabular}{l l}
+\textbf{Date of Test} & 2024-03-28 \tabularnewline
+\textbf{Target controller} & XMC4800-F144K2048 \tabularnewline
+\end{tabular}
+\vspace{1ex}
+\XtoCTestCase{Inport test}{1}
+Inport test for General block LookupTable3D.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & 3 & 4 & ... & 19 \tabularnewline \hline
+\textbf{CPU cycles} & 416 & 322 & 342 & 336 & ... & 335 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Inputs}} \tabularnewline \hline
+\textbf{x (DSP)} & -32768 & -29127 & -25486 & -21845 & ... & 32767 \tabularnewline \hline
+\textbf{y (DSP)} & -29491 & -26396 & -23302 & -20207 & ... & 26214 \tabularnewline \hline
+\textbf{z (DSP)} & -26214 & -23484 & -20753 & -18022 & ... & 22938 \tabularnewline \hline
+\textbf{x} & -1 & -0.889 & -0.778 & -0.667 & ... & 1 \tabularnewline \hline
+\textbf{y} & -0.9 & -0.806 & -0.711 & -0.617 & ... & 0.8 \tabularnewline \hline
+\textbf{z} & -0.8 & -0.717 & -0.633 & -0.55 & ... & 0.7 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Parameters}} \tabularnewline \hline
+\textbf{TableData} & \multicolumn{6}{c|}{[1x765]} \tabularnewline \hline
+\textbf{DimX} & \multicolumn{6}{c|}{9} \tabularnewline \hline
+\textbf{x\_min} & \multicolumn{6}{c|}{-0.8} \tabularnewline \hline
+\textbf{x\_max} & \multicolumn{6}{c|}{0.7} \tabularnewline \hline
+\textbf{DimY} & \multicolumn{6}{c|}{17} \tabularnewline \hline
+\textbf{y\_max} & \multicolumn{6}{c|}{0.9} \tabularnewline \hline
+\textbf{y\_min} & \multicolumn{6}{c|}{-0.6} \tabularnewline \hline
+\textbf{DimZ} & \multicolumn{6}{c|}{5} \tabularnewline \hline
+\textbf{z\_min} & \multicolumn{6}{c|}{-0.9} \tabularnewline \hline
+\textbf{z\_max} & \multicolumn{6}{c|}{0.95} \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Outputs}} \tabularnewline \hline
+\textbf{Out} & 0.56 & 0.502 & 0.436 & 0.348 & ... & 0.525 \tabularnewline \hline
+\textbf{Exp. Out} & 0.56 & 0.502 & 0.436 & 0.348 & ... & 0.525 \tabularnewline \hline
+\textbf{Out (DSP)} & 18346 & 16435 & 14292 & 11410 & ... & 17198 \tabularnewline \hline
+\textbf{Exp. Out (DSP)} & 18350 & 16439 & 14297 & 11414 & ... & 17203 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance Out & $\pm$3,0518e-04 ($\pm$10 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 319 \tabularnewline \hline
+Max CPU cycles & 416 \tabularnewline \hline
+Avg CPU cycles & 338 \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion test}{1}
+Conversion test for General block LookupTable3D.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|>{\centering\arraybackslash}X|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 \tabularnewline \hline
+\multicolumn{2}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{TableData} & [1x135] \tabularnewline \hline
+\textbf{DimX} & 5 \tabularnewline \hline
+\textbf{x\_min} & -0.8 \tabularnewline \hline
+\textbf{x\_max} & 0.7 \tabularnewline \hline
+\textbf{DimY} & 9 \tabularnewline \hline
+\textbf{y\_max} & 0.9 \tabularnewline \hline
+\textbf{y\_min} & -0.6 \tabularnewline \hline
+\textbf{DimZ} & 3 \tabularnewline \hline
+\textbf{z\_min} & -0.9 \tabularnewline \hline
+\textbf{z\_max} & 0.95 \tabularnewline \hline
+\multicolumn{2}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{maskY} & 8191 \tabularnewline \hline
+\textbf{maskX} & 16383 \tabularnewline \hline
+\textbf{maskZ} & 32767 \tabularnewline \hline
+\textbf{maxZ} & 31130 \tabularnewline \hline
+\textbf{maxY} & 29491 \tabularnewline \hline
+\textbf{maxX} & 22938 \tabularnewline \hline
+\textbf{sfrX} & 14 \tabularnewline \hline
+\textbf{sfrZ} & 15 \tabularnewline \hline
+\textbf{sfrY} & 13 \tabularnewline \hline
+\textbf{offsetX} & -1638 \tabularnewline \hline
+\textbf{offsetZ} & 819 \tabularnewline \hline
+\textbf{offsetY} & 4915 \tabularnewline \hline
+\textbf{gainXsfr} & 14 \tabularnewline \hline
+\textbf{gainZsfr} & 14 \tabularnewline \hline
+\textbf{gainX} & 21845 \tabularnewline \hline
+\textbf{gainZ} & 17712 \tabularnewline \hline
+\textbf{Table} & [1x135] \tabularnewline \hline
+\textbf{gainY} & 21845 \tabularnewline \hline
+\textbf{sizeX} & 5 \tabularnewline \hline
+\textbf{minY} & -19661 \tabularnewline \hline
+\textbf{minX} & -26214 \tabularnewline \hline
+\textbf{minZ} & -29491 \tabularnewline \hline
+\textbf{idxOffsetY} & 4 \tabularnewline \hline
+\textbf{idxOffsetX} & 2 \tabularnewline \hline
+\textbf{sizeY} & 9 \tabularnewline \hline
+\textbf{idxOffsetZ} & 1 \tabularnewline \hline
+\textbf{sizeXY} & 45 \tabularnewline \hline
+\textbf{gainYsfr} & 14 \tabularnewline \hline
+\textbf{Exp. maskY} & 8191 \tabularnewline \hline
+\textbf{Exp. maskX} & 16383 \tabularnewline \hline
+\textbf{Exp. maskZ} & 32767 \tabularnewline \hline
+\textbf{Exp. maxZ} & 31130 \tabularnewline \hline
+\textbf{Exp. maxY} & 29491 \tabularnewline \hline
+\textbf{Exp. maxX} & 22938 \tabularnewline \hline
+\textbf{Exp. sfrX} & 14 \tabularnewline \hline
+\textbf{Exp. sfrZ} & 15 \tabularnewline \hline
+\textbf{Exp. sfrY} & 13 \tabularnewline \hline
+\textbf{Exp. offsetX} & -1638 \tabularnewline \hline
+\textbf{Exp. offsetZ} & 819 \tabularnewline \hline
+\textbf{Exp. offsetY} & 4915 \tabularnewline \hline
+\textbf{Exp. gainXsfr} & 14 \tabularnewline \hline
+\textbf{Exp. gainZsfr} & 14 \tabularnewline \hline
+\textbf{Exp. gainX} & 21845 \tabularnewline \hline
+\textbf{Exp. gainZ} & 17712 \tabularnewline \hline
+\textbf{Exp. Table} & [1x135] \tabularnewline \hline
+\textbf{Exp. gainY} & 21845 \tabularnewline \hline
+\textbf{Exp. sizeX} & 5 \tabularnewline \hline
+\textbf{Exp. minY} & -19661 \tabularnewline \hline
+\textbf{Exp. minX} & -26214 \tabularnewline \hline
+\textbf{Exp. minZ} & -29491 \tabularnewline \hline
+\textbf{Exp. idxOffsetY} & 4 \tabularnewline \hline
+\textbf{Exp. idxOffsetX} & 2 \tabularnewline \hline
+\textbf{Exp. sizeY} & 9 \tabularnewline \hline
+\textbf{Exp. idxOffsetZ} & 1 \tabularnewline \hline
+\textbf{Exp. sizeXY} & 45 \tabularnewline \hline
+\textbf{Exp. gainYsfr} & 14 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance maskY & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance maskX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance maskZ & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance maxZ & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance maxY & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance maxX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance sfrX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance sfrZ & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance sfrY & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance offsetX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance offsetZ & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance offsetY & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance gainXsfr & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance gainZsfr & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance gainX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance gainZ & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance Table & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance gainY & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance sizeX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance minY & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance minX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance minZ & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance idxOffsetY & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance idxOffsetX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance sizeY & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance idxOffsetZ & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance sizeXY & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance gainYsfr & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+\end{XtoCtabular}

@@ -1,0 +1,22 @@
+// 57BLF02
+
+//VDC = 24;
+//M = 0.4;
+//rpm = 3000;
+//Pel = 125;
+//BEMF = 6.3;     // V/krpm
+
+// blender AU
+VDC = 18;
+M = 0.133;
+rpm = 21000;
+Pel = 125;
+BEMF = 6.3;     // V/krpm
+
+P=M*2*%pi*rpm/60;
+
+
+1.65/
+
+
+

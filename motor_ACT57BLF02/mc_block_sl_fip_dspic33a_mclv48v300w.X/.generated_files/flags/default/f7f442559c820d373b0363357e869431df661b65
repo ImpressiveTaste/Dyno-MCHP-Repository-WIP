@@ -1,0 +1,1 @@
+ -c -mcpu=$(MP_PROCESSOR_OPTION)        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"C:\_GIT\miniDyno_mclv48v300w\motor_ACT57BLF02\mc_block_sl_fip_dspic33a_mclv48v300w.X\hal\timer1.c

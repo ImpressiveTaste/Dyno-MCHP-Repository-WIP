@@ -1,0 +1,145 @@
+\XtoCBlock{TDSystemO2}
+\label{block:TDSystemO2}
+\begin{figure}[H]\includegraphics{TDSystemO2}\end{figure} 
+
+\begin{XtoCtabular}{Inports}
+In1 & Input \#1\tabularnewline
+\hline
+In2 & Input \#2\tabularnewline
+\hline
+\end{XtoCtabular}
+
+
+\begin{XtoCtabular}{Outports}
+Out1 & Output \#1\tabularnewline
+\hline
+Out2 & Output \#2\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCMaskParamTabular}{Mask Parameters}
+\cellcolor[gray]{0.8}\textbf{Name} & \cellcolor[gray]{0.8}\textbf{ID} & \cellcolor[gray]{0.8}\textbf{Description}\tabularnewline
+\hline
+A & 1 & State matrix A\tabularnewline
+\hline
+B & 2 & Input matrix B\tabularnewline
+\hline
+\end{XtoCMaskParamTabular}
+
+\subsubsection*{Description:}
+2nd order time discrete system with two inputs and two outputs.
+
+% include optional documentation file
+\InputIfFileExists{\XcHomePath/Library/Control/Doc/TDSystemO2_Info.tex}{\vspace{1ex}}{}
+
+\subsubsection*{Implementations:}
+\begin{tabular}{l l}
+\textbf{FiP8} & 8 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP16} & 16 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP32} & 32 Bit Fixed Point Implementation\tabularnewline
+\textbf{Float32} & 32 Bit Floating Point Implementation\tabularnewline
+\textbf{Float64} & 64 Bit Floating Point Implementation\tabularnewline
+\end{tabular}
+
+\XtoCImplementation{FiP8}
+\nopagebreak[0]
+
+8 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In1 & int8\tabularnewline
+\hline
+In2 & int8\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out1 & int8\tabularnewline
+\hline
+Out2 & int8\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP16}
+\nopagebreak[0]
+
+16 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In1 & int16\tabularnewline
+\hline
+In2 & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out1 & int16\tabularnewline
+\hline
+Out2 & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP32}
+\nopagebreak[0]
+
+32 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In1 & int32\tabularnewline
+\hline
+In2 & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out1 & int32\tabularnewline
+\hline
+Out2 & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{Float32}
+\nopagebreak[0]
+
+32 Bit Floating Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In1 & float32\tabularnewline
+\hline
+In2 & float32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out1 & float32\tabularnewline
+\hline
+Out2 & float32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{Float64}
+\nopagebreak[0]
+
+64 Bit Floating Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In1 & float64\tabularnewline
+\hline
+In2 & float64\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out1 & float64\tabularnewline
+\hline
+Out2 & float64\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\ifdefined \AddTestReports
+\InputIfFileExists{\XcHomePath/Library/Control/Doc/Test-Results/Test_TDSystemO2_FiP8.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/Control/Doc/Test-Results/Test_TDSystemO2_FiP16.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/Control/Doc/Test-Results/Test_TDSystemO2_FiP32.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/Control/Doc/Test-Results/Test_TDSystemO2_Float32.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/Control/Doc/Test-Results/Test_TDSystemO2_Float64.tex}{}{}
+\fi

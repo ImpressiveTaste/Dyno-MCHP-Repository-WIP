@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><!--V.0.29--><IoBlock BlockId="32" BlockName="Inport" LibraryName="General" Revision="1.1" Order="0" SampleTimeFactor="1" TexFile="" LibraryType="INTERNAL" PreNameSpace="at.lcm.x2c" DirectFeedThrough="true" ParameterId="0" IsStaticId="false" DataType=""><BlockLicense Type="LCM-free"><CopyrightStatement>Copyright (c) 2018, Linz Center of Mechatronics GmbH (LCM), web: www.lcm.at
+All rights reserved.</CopyrightStatement><LicenseStatement>This file is licensed according to the BSD 3-clause license as follows:
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of the "Linz Center of Mechatronics GmbH" and "LCM" nor
+      the names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL "Linz Center of Mechatronics GmbH" BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</LicenseStatement><Header>This file is part of X2C. web: x2c.lcm.at
+$LastChangedRevision: 3474 $
+$LastChangedDate:: 2024-11-06 18:00:53 +0100#$</Header></BlockLicense><Description>X2C Inport block</Description><Mask Name="Mask"><InportContainer></InportContainer><OutportContainer><MaskOutport Name="Out"><Description>Outport</Description></MaskOutport></OutportContainer><ParameterContainer><MaskParameter Name="DataType" Prompt="Data type"><Description>Implementation data type</Description><MaskComboBox><Value><String>int16</String></Value><DefaultValue><String>int16</String></DefaultValue><Content><Item><String>bool</String></Item><Item><String>int8</String></Item><Item><String>int16</String></Item><Item><String>int32</String></Item><Item><String>int64</String></Item><Item><String>uint8</String></Item><Item><String>uint16</String></Item><Item><String>uint32</String></Item><Item><String>uint64</String></Item><Item><String>float32</String></Item><Item><String>float64</String></Item></Content></MaskComboBox></MaskParameter><MaskParameter Name="ts_fact" Prompt="Sample Time Multiplier"><Description>Sample time multiplier</Description><MaskDouble><Value><Numeric>1.0</Numeric></Value><DefaultValue><Numeric>1.0</Numeric></DefaultValue></MaskDouble></MaskParameter></ParameterContainer><Visualizations><Visualization Name="Matlab" Type="VisualizationMatlab"><Command><Item>disp('IN')</Item><Item>plot(0.3*cos([-pi/2:0.01:pi/2])+0.7, 0.5*sin([-pi/2:0.01:pi/2])+0.5)</Item><Item>plot(0.3-0.3*cos([-pi/2:0.01:pi/2]), 0.5*sin([-pi/2:0.01:pi/2])+0.5)</Item><Item>plot([0.3 0.7], [1 1])</Item><Item>plot([0.3 0.7], [0 0])</Item></Command></Visualization></Visualizations></Mask><IoSimulationParameters><Gain>1.0</Gain><Offset>0.0</Offset></IoSimulationParameters></IoBlock>

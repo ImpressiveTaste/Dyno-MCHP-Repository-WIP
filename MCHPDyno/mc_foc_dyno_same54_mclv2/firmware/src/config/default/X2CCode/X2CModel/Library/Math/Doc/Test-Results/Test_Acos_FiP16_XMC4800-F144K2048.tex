@@ -1,0 +1,35 @@
+\XtoCVerification{Acos FiP16 CPU XMC4800-F144K2048}
+\begin{tabular}{l l}
+\textbf{Date of Test} & 2024-03-28 \tabularnewline
+\textbf{Target controller} & XMC4800-F144K2048 \tabularnewline
+\end{tabular}
+\vspace{1ex}
+\XtoCTestCase{Inport test}{1}
+Inport test for Math block Acos.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & 3 & 4 & ... & 133 \tabularnewline \hline
+\textbf{CPU cycles} & 117 & 101 & 101 & 101 & ... & 94 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Inputs}} \tabularnewline \hline
+\textbf{In (DSP)} & -32768 & -32272 & -31775 & -31279 & ... & 32767 \tabularnewline \hline
+\textbf{In} & -1 & -0.985 & -0.97 & -0.955 & ... & 1 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Outputs}} \tabularnewline \hline
+\textbf{Out} & 1 & 0.945 & 0.921 & 0.904 & ... & 0 \tabularnewline \hline
+\textbf{Exp. Out} & 1 & 0.945 & 0.921 & 0.904 & ... & 0 \tabularnewline \hline
+\textbf{Out (DSP)} & 32760 & 30952 & 30194 & 29612 & ... & 7 \tabularnewline \hline
+\textbf{Exp. Out (DSP)} & 32767 & 30950 & 30194 & 29611 & ... & 0 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance Out & $\pm$2,4414e-04 ($\pm$8 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 94 \tabularnewline \hline
+Max CPU cycles & 117 \tabularnewline \hline
+Avg CPU cycles & 97 \tabularnewline \hline
+\end{XtoCtabular}

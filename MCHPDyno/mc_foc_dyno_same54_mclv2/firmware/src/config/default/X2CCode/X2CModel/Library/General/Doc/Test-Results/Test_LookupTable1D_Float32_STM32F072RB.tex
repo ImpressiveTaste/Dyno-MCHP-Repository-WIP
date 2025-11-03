@@ -1,0 +1,71 @@
+\XtoCVerification{LookupTable1D Float32 CPU STM32F072RB}
+\begin{tabular}{l l}
+\textbf{Date of Test} & 2024-03-28 \tabularnewline
+\textbf{Target controller} & STM32F072RB \tabularnewline
+\end{tabular}
+\vspace{1ex}
+\XtoCTestCase{Inport test}{1}
+Inport test for General block LookupTable1D.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 67 \tabularnewline \hline
+\textbf{CPU cycles} & 497 & 501 & ... & 625 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Inputs}} \tabularnewline \hline
+\textbf{x (DSP)} & -1.2 & -1.164 & ... & 1.2 \tabularnewline \hline
+\textbf{x} & -1.2 & -1.164 & ... & 1.2 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Parameters}} \tabularnewline \hline
+\textbf{TableData} & \multicolumn{4}{c|}{[1x257]} \tabularnewline \hline
+\textbf{DimX} & \multicolumn{4}{c|}{257} \tabularnewline \hline
+\textbf{x\_min} & \multicolumn{4}{c|}{-0.8} \tabularnewline \hline
+\textbf{x\_max} & \multicolumn{4}{c|}{0.7} \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Outputs}} \tabularnewline \hline
+\textbf{Out} & 1.04 & 1.04 & ... & -0.91 \tabularnewline \hline
+\textbf{Exp. Out} & 1.04 & 1.04 & ... & -0.91 \tabularnewline \hline
+\textbf{Out (DSP)} & 1.04 & 1.04 & ... & -0.91 \tabularnewline \hline
+\textbf{Exp. Out (DSP)} & 1.04 & 1.04 & ... & -0.91 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance Out & $\pm$1,8626e-07 ($\pm$400 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 490 \tabularnewline \hline
+Max CPU cycles & 1381 \tabularnewline \hline
+Avg CPU cycles & 1035 \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion test}{1}
+Conversion test for General block LookupTable1D.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+\hline
+\multicolumn{4}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & 3 \tabularnewline \hline
+\multicolumn{4}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{TableData} & [1x17] & [1x33] & [1x65] \tabularnewline \hline
+\textbf{DimX} & 17 & 33 & 65 \tabularnewline \hline
+\textbf{x\_min} & -0.8 & -0.8 & -0.8 \tabularnewline \hline
+\textbf{x\_max} & 0.7 & 0.7 & 0.7 \tabularnewline \hline
+\multicolumn{4}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{gainX} & 10.667 & 21.333 & 42.667 \tabularnewline \hline
+\textbf{offsetX} & -0.8 & -0.8 & -0.8 \tabularnewline \hline
+\textbf{Table} & [1x17] & [1x33] & [1x65] \tabularnewline \hline
+\textbf{dimX} & 16 & 32 & 64 \tabularnewline \hline
+\textbf{Exp. gainX} & 10.667 & 21.333 & 42.667 \tabularnewline \hline
+\textbf{Exp. offsetX} & -0.8 & -0.8 & -0.8 \tabularnewline \hline
+\textbf{Exp. Table} & [1x17] & [1x33] & [1x65] \tabularnewline \hline
+\textbf{Exp. dimX} & 16 & 32 & 64 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance gainX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance offsetX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance Table & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance dimX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+\end{XtoCtabular}

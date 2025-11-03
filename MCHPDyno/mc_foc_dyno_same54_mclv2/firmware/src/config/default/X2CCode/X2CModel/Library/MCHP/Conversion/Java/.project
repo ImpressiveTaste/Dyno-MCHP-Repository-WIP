@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+<!-- CODEGEN-BEGIN:LIBRARY-NAME -->
+	<name>X2C-Library MCHP</name>
+<!-- CODEGEN-END:LIBRARY-NAME -->
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>lib</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>lib/Core.jar</name>
+			<type>1</type>
+			<locationURI>X2C_ROOT/System/Java/Core.jar</locationURI>
+		</link>
+		<link>
+			<name>lib/Hardware.jar</name>
+			<type>1</type>
+			<locationURI>X2C_ROOT/System/Java/lib/Communication/Hardware.jar</locationURI>
+		</link>
+		<link>
+			<name>lib/general.jar</name>
+			<type>1</type>
+			<locationURI>X2C_ROOT/System/Java/lib/General/general.jar</locationURI>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>X2C_ROOT</name>
+<!-- CODEGEN-BEGIN:X2C-ROOT-DIR -->
+			<value>file:/C:/LCM/X2C/v6.2.1908/</value>
+<!-- CODEGEN-END:X2C-ROOT-DIR -->
+		</variable>
+	</variableList>
+</projectDescription>

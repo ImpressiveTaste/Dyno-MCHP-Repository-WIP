@@ -1,0 +1,50 @@
+\XtoCVerification{Constant Int32 CPU TM4C123GH6}
+\begin{tabular}{l l}
+\textbf{Date of Test} & 2024-03-28 \tabularnewline
+\textbf{Target controller} & TM4C123GH6 \tabularnewline
+\end{tabular}
+\vspace{1ex}
+\XtoCTestCase{Conversion test}{1}
+Conversion test for General block Constant.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 17 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Value} & 3300000000 & 2147483648 & ... & -3300000000 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{K} & 2147483647 & 2147483647 & ... & -2147483647 \tabularnewline \hline
+\textbf{Exp. K} & 2147483647 & 2147483647 & ... & -2147483647 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance K & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion-on-Target test}{1}
+Conversion-on-Target test for General block Constant.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 17 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Value} & 3300000000 & 2147483648 & ... & -3300000000 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{K} & 2147483647 & 2147483647 & ... & -2147483647 \tabularnewline \hline
+\textbf{Exp. K} & 2147483647 & 2147483647 & ... & -2147483647 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance K & $\pm$3,0000e+00 ($\pm$2147483647 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 671 \tabularnewline \hline
+Max CPU cycles & 891 \tabularnewline \hline
+Avg CPU cycles & 859 \tabularnewline \hline
+\end{XtoCtabular}

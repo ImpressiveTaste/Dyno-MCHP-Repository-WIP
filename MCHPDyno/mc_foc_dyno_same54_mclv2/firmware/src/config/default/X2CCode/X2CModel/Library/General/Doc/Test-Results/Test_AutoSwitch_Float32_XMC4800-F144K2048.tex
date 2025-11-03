@@ -1,0 +1,130 @@
+\XtoCVerification{AutoSwitch Float32 CPU XMC4800-F144K2048}
+\begin{tabular}{l l}
+\textbf{Date of Test} & 2024-03-28 \tabularnewline
+\textbf{Target controller} & XMC4800-F144K2048 \tabularnewline
+\end{tabular}
+\vspace{1ex}
+\XtoCTestCase{Inport test}{1}
+Inport test for General block AutoSwitch.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 137 \tabularnewline \hline
+\textbf{CPU cycles} & 80 & 62 & ... & 62 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Inputs}} \tabularnewline \hline
+\textbf{In1 (DSP)} & -1 & -0.986 & ... & 0.986 \tabularnewline \hline
+\textbf{Switch (DSP)} & 0.916 & 0.859 & ... & 0.44 \tabularnewline \hline
+\textbf{In3 (DSP)} & 1 & 0.986 & ... & -0.986 \tabularnewline \hline
+\textbf{In1} & -1 & -0.986 & ... & 0.986 \tabularnewline \hline
+\textbf{Switch} & 0.916 & 0.859 & ... & 0.44 \tabularnewline \hline
+\textbf{In3} & 1 & 0.986 & ... & -0.986 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Parameters}} \tabularnewline \hline
+\textbf{Thresh\_up} & \multicolumn{4}{c|}{0.3} \tabularnewline \hline
+\textbf{Thresh\_down} & \multicolumn{4}{c|}{-0.1} \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Outputs}} \tabularnewline \hline
+\textbf{Out} & -1 & -0.986 & ... & 0.986 \tabularnewline \hline
+\textbf{Exp. Out} & -1 & -0.986 & ... & 0.986 \tabularnewline \hline
+\textbf{Out (DSP)} & -1 & -0.986 & ... & 0.986 \tabularnewline \hline
+\textbf{Exp. Out (DSP)} & -1 & -0.986 & ... & 0.986 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance Out & $\pm$3,0268e-08 ($\pm$65 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 62 \tabularnewline \hline
+Max CPU cycles & 80 \tabularnewline \hline
+Avg CPU cycles & 65 \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Inport test}{1}
+Inport test for General block AutoSwitch.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 137 \tabularnewline \hline
+\textbf{CPU cycles} & 80 & 62 & ... & 62 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Inputs}} \tabularnewline \hline
+\textbf{In1 (DSP)} & -1 & -0.986 & ... & 0.986 \tabularnewline \hline
+\textbf{Switch (DSP)} & 0.916 & 0.859 & ... & 0.44 \tabularnewline \hline
+\textbf{In3 (DSP)} & 1 & 0.986 & ... & -0.986 \tabularnewline \hline
+\textbf{In1} & -1 & -0.986 & ... & 0.986 \tabularnewline \hline
+\textbf{Switch} & 0.916 & 0.859 & ... & 0.44 \tabularnewline \hline
+\textbf{In3} & 1 & 0.986 & ... & -0.986 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Parameters}} \tabularnewline \hline
+\textbf{Thresh\_up} & \multicolumn{4}{c|}{0} \tabularnewline \hline
+\textbf{Thresh\_down} & \multicolumn{4}{c|}{0} \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Outputs}} \tabularnewline \hline
+\textbf{Out} & -1 & -0.986 & ... & 0.986 \tabularnewline \hline
+\textbf{Exp. Out} & -1 & -0.986 & ... & 0.986 \tabularnewline \hline
+\textbf{Out (DSP)} & -1 & -0.986 & ... & 0.986 \tabularnewline \hline
+\textbf{Exp. Out (DSP)} & -1 & -0.986 & ... & 0.986 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance Out & $\pm$3,0268e-08 ($\pm$65 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 62 \tabularnewline \hline
+Max CPU cycles & 80 \tabularnewline \hline
+Avg CPU cycles & 65 \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion test}{1}
+Conversion test for General block AutoSwitch.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 11 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Thresh\_up} & 0 & 0.1 & ... & -1.1 \tabularnewline \hline
+\textbf{Thresh\_down} & 0 & 0.1 & ... & -1.1 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{Thresh\_down} & 0 & 0.1 & ... & -1.1 \tabularnewline \hline
+\textbf{Thresh\_up} & 0 & 0.1 & ... & -1.1 \tabularnewline \hline
+\textbf{Exp. Thresh\_down} & 0 & 0.1 & ... & -1.1 \tabularnewline \hline
+\textbf{Exp. Thresh\_up} & 0 & 0.1 & ... & -1.1 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance Thresh\_down & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance Thresh\_up & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion-on-Target test}{1}
+Conversion-on-Target test for General block AutoSwitch.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 11 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Thresh\_up} & 0 & 0.1 & ... & -1.1 \tabularnewline \hline
+\textbf{Thresh\_down} & 0 & 0.1 & ... & -1.1 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{Thresh\_down} & 0 & 0.1 & ... & -1.1 \tabularnewline \hline
+\textbf{Thresh\_up} & 0 & 0.1 & ... & -1.1 \tabularnewline \hline
+\textbf{Exp. Thresh\_down} & 0 & 0.1 & ... & -1.1 \tabularnewline \hline
+\textbf{Exp. Thresh\_up} & 0 & 0.1 & ... & -1.1 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance Thresh\_down & $\pm$3,0000e-08 ($\pm$64 LSB) \tabularnewline \hline
+Tolerance Thresh\_up & $\pm$3,0000e-08 ($\pm$64 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 543 \tabularnewline \hline
+Max CPU cycles & 679 \tabularnewline \hline
+Avg CPU cycles & 555 \tabularnewline \hline
+\end{XtoCtabular}

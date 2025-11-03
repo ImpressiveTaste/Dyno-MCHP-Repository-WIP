@@ -1,0 +1,30 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: X2C Model}
+children:
+- type: Symbols
+  children:
+  - type: String
+    attributes: {id: X2C_MODEL_PERIPH_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: X2C Model, value: SERCOM2_USART}
+- type: Attachments
+  children:
+  - type: DirectDependency
+    attributes: {id: x2cModelUartDependency}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: sercom2}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: SERCOM2_UART}
+- type: ElementPosition
+  attributes: {x: '495', y: '171', id: X2C Model}

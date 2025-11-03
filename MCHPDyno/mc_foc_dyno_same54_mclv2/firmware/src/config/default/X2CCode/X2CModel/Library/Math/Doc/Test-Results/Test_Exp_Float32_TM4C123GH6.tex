@@ -1,0 +1,35 @@
+\XtoCVerification{Exp Float32 CPU TM4C123GH6}
+\begin{tabular}{l l}
+\textbf{Date of Test} & 2024-03-28 \tabularnewline
+\textbf{Target controller} & TM4C123GH6 \tabularnewline
+\end{tabular}
+\vspace{1ex}
+\XtoCTestCase{Inport test}{1}
+Inport test for Math block Exp.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 133 \tabularnewline \hline
+\textbf{CPU cycles} & 165 & 165 & ... & 165 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Inputs}} \tabularnewline \hline
+\textbf{In (DSP)} & -1 & -0.985 & ... & 1 \tabularnewline \hline
+\textbf{In} & -1 & -0.985 & ... & 1 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Outputs}} \tabularnewline \hline
+\textbf{Out} & 0.368 & 0.373 & ... & 2.718 \tabularnewline \hline
+\textbf{Exp. Out} & 0.368 & 0.373 & ... & 2.718 \tabularnewline \hline
+\textbf{Out (DSP)} & 0.368 & 0.373 & ... & 2.718 \tabularnewline \hline
+\textbf{Exp. Out (DSP)} & 0.368 & 0.373 & ... & 2.718 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance Out & $\pm$2,3283e-07 ($\pm$500 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 89 \tabularnewline \hline
+Max CPU cycles & 165 \tabularnewline \hline
+Avg CPU cycles & 155 \tabularnewline \hline
+\end{XtoCtabular}

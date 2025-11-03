@@ -1,0 +1,92 @@
+\XtoCVerification{ILimit Float32 CPU PIC32MX170F256}
+\begin{tabular}{l l}
+\textbf{Date of Test} & 2024-03-27 \tabularnewline
+\textbf{Target controller} & PIC32MX170F256 \tabularnewline
+\end{tabular}
+\vspace{1ex}
+\XtoCTestCase{Inport test}{1}
+Inport test for Control block ILimit.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 201 \tabularnewline \hline
+\textbf{CPU cycles} & 57 & 57 & ... & 210 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Inputs}} \tabularnewline \hline
+\textbf{In (DSP)} & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{I0 (DSP)} & 0.11 & 0.11 & ... & 0.11 \tabularnewline \hline
+\textbf{max (DSP)} & 0.8 & 0.8 & ... & 0.8 \tabularnewline \hline
+\textbf{min (DSP)} & 0.15 & 0.15 & ... & 0.15 \tabularnewline \hline
+\textbf{Enable (DSP)} & 0 & 0 & ... & 1 \tabularnewline \hline
+\textbf{In} & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{I0} & 0.11 & 0.11 & ... & 0.11 \tabularnewline \hline
+\textbf{max} & 0.8 & 0.8 & ... & 0.8 \tabularnewline \hline
+\textbf{min} & 0.15 & 0.15 & ... & 0.15 \tabularnewline \hline
+\textbf{Enable} & 0 & 0 & ... & 1 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Parameters}} \tabularnewline \hline
+\textbf{Ki} & \multicolumn{4}{c|}{2500} \tabularnewline \hline
+\textbf{ts\_fact} & \multicolumn{4}{c|}{1} \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Outputs}} \tabularnewline \hline
+\textbf{Out} & 0 & 0 & ... & 0.15 \tabularnewline \hline
+\textbf{Exp. Out} & 0 & 0 & ... & 0.15 \tabularnewline \hline
+\textbf{Out (DSP)} & 0 & 0 & ... & 0.15 \tabularnewline \hline
+\textbf{Exp. Out (DSP)} & 0 & 0 & ... & 0.15 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance Out & $\pm$9,3132e-07 ($\pm$2000 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 57 \tabularnewline \hline
+Max CPU cycles & 295 \tabularnewline \hline
+Avg CPU cycles & 243 \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion test}{1}
+Conversion test for Control block ILimit.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 37 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Ki} & -11 & -10.389 & ... & 11 \tabularnewline \hline
+\textbf{ts\_fact} & 1 & 2 & ... & 37 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{b0} & -0.001 & -0.002 & ... & 0.041 \tabularnewline \hline
+\textbf{Exp. b0} & -0.001 & -0.002 & ... & 0.041 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance b0 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion-on-Target test}{1}
+Conversion-on-Target test for Control block ILimit.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 37 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Ki} & -11 & -10.389 & ... & 11 \tabularnewline \hline
+\textbf{ts\_fact} & 1 & 2 & ... & 37 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{b0} & -0.001 & -0.002 & ... & 0.041 \tabularnewline \hline
+\textbf{Exp. b0} & -0.001 & -0.002 & ... & 0.041 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance b0 & $\pm$1,0000e-08 ($\pm$21 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 581 \tabularnewline \hline
+Max CPU cycles & 603 \tabularnewline \hline
+Avg CPU cycles & 598 \tabularnewline \hline
+\end{XtoCtabular}

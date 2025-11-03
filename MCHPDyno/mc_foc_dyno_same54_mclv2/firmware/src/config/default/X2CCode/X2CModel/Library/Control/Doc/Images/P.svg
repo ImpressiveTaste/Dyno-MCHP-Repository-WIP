@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "web: www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="web: www.w3.org/2000/svg" xml:space="preserve" width="120mm" height="80mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 12000 8000"
+ xmlns:xlink="web: www.w3.org/1999/xlink"
+ xmlns:xodm="web: www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:black;stroke-width:150;stroke-miterlimit:22.9256}
+    .str1 {stroke:blue;stroke-width:150;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+   ]]>
+  </style>
+ </defs>
+ <g id="Ebene_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <polyline class="fil0 str0" points="9000,6500 3000,6500 3000,1500 "/>
+  <polyline class="fil0 str1" points="3500,6500 3500,5000 3500,2000 9000,2000 "/>
+ </g>
+</svg>

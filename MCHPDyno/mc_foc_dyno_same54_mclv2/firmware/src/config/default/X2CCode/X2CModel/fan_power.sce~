@@ -1,0 +1,8 @@
+clf
+scale = 1/120000^3
+x = [0:100:120000]';
+plot(x, scale*x^3)
+
+x1 = 88000^3*scale
+x2 = 96000^3*scale
+x3 = 110000^3*scale

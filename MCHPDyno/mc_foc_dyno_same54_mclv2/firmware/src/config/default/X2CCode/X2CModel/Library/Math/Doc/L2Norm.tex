@@ -1,0 +1,124 @@
+\XtoCBlock{L2Norm}
+\label{block:L2Norm}
+\begin{figure}[H]\includegraphics{L2Norm}\end{figure} 
+
+\begin{XtoCtabular}{Inports}
+u1 & Input u1\tabularnewline
+\hline
+u2 & Input u2\tabularnewline
+\hline
+\end{XtoCtabular}
+
+
+\begin{XtoCtabular}{Outports}
+Out & Euclidean norm of u1 and u2\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\subsubsection*{Description:}
+Calculation of L2-norm (euclidean norm).
+
+% include optional documentation file
+\InputIfFileExists{\XcHomePath/Library/Math/Doc/L2Norm_Info.tex}{\vspace{1ex}}{}
+
+\subsubsection*{Implementations:}
+\begin{tabular}{l l}
+\textbf{FiP8} & 8 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP16} & 16 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP32} & 32 Bit Fixed Point Implementation\tabularnewline
+\textbf{Float32} & 32 Bit Floating Point Implementation\tabularnewline
+\textbf{Float64} & 64 Bit Floating Point Implementation\tabularnewline
+\end{tabular}
+
+\XtoCImplementation{FiP8}
+\nopagebreak[0]
+
+8 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+u1 & int8\tabularnewline
+\hline
+u2 & int8\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int8\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP16}
+\nopagebreak[0]
+
+16 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+u1 & int16\tabularnewline
+\hline
+u2 & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP32}
+\nopagebreak[0]
+
+32 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+u1 & int32\tabularnewline
+\hline
+u2 & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{Float32}
+\nopagebreak[0]
+
+32 Bit Floating Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+u1 & float32\tabularnewline
+\hline
+u2 & float32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & float32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{Float64}
+\nopagebreak[0]
+
+64 Bit Floating Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+u1 & float64\tabularnewline
+\hline
+u2 & float64\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & float64\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\ifdefined \AddTestReports
+\InputIfFileExists{\XcHomePath/Library/Math/Doc/Test-Results/Test_L2Norm_FiP8.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/Math/Doc/Test-Results/Test_L2Norm_FiP16.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/Math/Doc/Test-Results/Test_L2Norm_FiP32.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/Math/Doc/Test-Results/Test_L2Norm_Float32.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/Math/Doc/Test-Results/Test_L2Norm_Float64.tex}{}{}
+\fi

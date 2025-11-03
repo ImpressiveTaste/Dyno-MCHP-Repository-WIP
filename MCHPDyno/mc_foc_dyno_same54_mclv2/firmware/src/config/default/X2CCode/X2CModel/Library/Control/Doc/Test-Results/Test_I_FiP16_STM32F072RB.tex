@@ -1,0 +1,94 @@
+\XtoCVerification{I FiP16 CPU STM32F072RB}
+\begin{tabular}{l l}
+\textbf{Date of Test} & 2024-03-28 \tabularnewline
+\textbf{Target controller} & STM32F072RB \tabularnewline
+\end{tabular}
+\vspace{1ex}
+\XtoCTestCase{Inport test}{1}
+Inport test for Control block I.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & 3 & 4 & ... & 201 \tabularnewline \hline
+\textbf{CPU cycles} & 64 & 64 & 64 & 102 & ... & 110 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Inputs}} \tabularnewline \hline
+\textbf{In (DSP)} & 0 & 0 & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{I0 (DSP)} & 3604 & 3604 & 3604 & 3604 & ... & 3604 \tabularnewline \hline
+\textbf{Enable (DSP)} & 0 & 0 & 0 & 1 & ... & 1 \tabularnewline \hline
+\textbf{In} & 0 & 0 & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{I0} & 0.11 & 0.11 & 0.11 & 0.11 & ... & 0.11 \tabularnewline \hline
+\textbf{Enable} & 0 & 0 & 0 & 1 & ... & 1 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Parameters}} \tabularnewline \hline
+\textbf{Ki} & \multicolumn{6}{c|}{2500} \tabularnewline \hline
+\textbf{ts\_fact} & \multicolumn{6}{c|}{1} \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Outputs}} \tabularnewline \hline
+\textbf{Out} & 0 & 0 & 0 & 0.11 & ... & -1 \tabularnewline \hline
+\textbf{Exp. Out} & 0 & 0 & 0 & 0.11 & ... & -1 \tabularnewline \hline
+\textbf{Out (DSP)} & 0 & 0 & 0 & 3604 & ... & -32767 \tabularnewline \hline
+\textbf{Exp. Out (DSP)} & 0 & 0 & 0 & 3604 & ... & -32768 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance Out & $\pm$3,0518e-04 ($\pm$10 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 64 \tabularnewline \hline
+Max CPU cycles & 168 \tabularnewline \hline
+Avg CPU cycles & 109 \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion test}{1}
+Conversion test for Control block I.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & 3 & 4 & ... & 37 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Ki} & -11 & -10.389 & -9.778 & -9.167 & ... & 11 \tabularnewline \hline
+\textbf{ts\_fact} & 1 & 2 & 3 & 4 & ... & 37 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{b0} & -36 & -68 & -96 & -120 & ... & 1334 \tabularnewline \hline
+\textbf{sfr} & 15 & 15 & 15 & 15 & ... & 15 \tabularnewline \hline
+\textbf{Exp. b0} & -36 & -68 & -96 & -120 & ... & 1334 \tabularnewline \hline
+\textbf{Exp. sfr} & 15 & 15 & 15 & 15 & ... & 15 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance b0 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance sfr & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion-on-Target test}{1}
+Conversion-on-Target test for Control block I.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & 3 & 4 & ... & 37 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Ki} & -11 & -10.389 & -9.778 & -9.167 & ... & 11 \tabularnewline \hline
+\textbf{ts\_fact} & 1 & 2 & 3 & 4 & ... & 37 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{b0} & -36 & -68 & -96 & -120 & ... & 1333 \tabularnewline \hline
+\textbf{sfr} & 15 & 15 & 15 & 15 & ... & 15 \tabularnewline \hline
+\textbf{Exp. b0} & -36 & -68 & -96 & -120 & ... & 1334 \tabularnewline \hline
+\textbf{Exp. sfr} & 15 & 15 & 15 & 15 & ... & 15 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance b0 & $\pm$1,0000e+00 ($\pm$32767 LSB) \tabularnewline \hline
+Tolerance sfr & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 2636 \tabularnewline \hline
+Max CPU cycles & 3108 \tabularnewline \hline
+Avg CPU cycles & 3032 \tabularnewline \hline
+\end{XtoCtabular}

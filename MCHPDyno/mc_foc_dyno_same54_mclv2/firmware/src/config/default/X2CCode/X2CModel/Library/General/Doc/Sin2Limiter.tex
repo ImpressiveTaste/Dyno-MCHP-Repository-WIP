@@ -1,0 +1,140 @@
+\XtoCBlock{Sin2Limiter}
+\label{block:Sin2Limiter}
+\begin{figure}[H]\includegraphics{Sin2Limiter}\end{figure} 
+
+\begin{XtoCtabular}{Inports}
+In & \tabularnewline
+\hline
+Init & Value which is loaded at rising flanke of enable signal\tabularnewline
+\hline
+Enable & Enable == 0: Deactivation of block; Out is set to zero.
+
+Enable != 0: Activation of block; Out is rate limited.
+
+Enable 0->1: Preloading of output; Out is set to value of Init input\tabularnewline
+\hline
+\end{XtoCtabular}
+
+
+\begin{XtoCtabular}{Outports}
+Out & \tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCMaskParamTabular}{Mask Parameters}
+\cellcolor[gray]{0.8}\textbf{Name} & \cellcolor[gray]{0.8}\textbf{ID} & \cellcolor[gray]{0.8}\textbf{Description}\tabularnewline
+\hline
+Tr & 1 & Rising time in seconds. Slew rate will be 1/Tr\tabularnewline
+\hline
+Tf & 2 & Falling time in seconds. Slew rate will be 1/Tf\tabularnewline
+\hline
+ts\_fact & 3 & Multiplication factor of base sampling time (in integer format)\tabularnewline
+\hline
+\end{XtoCMaskParamTabular}
+
+\subsubsection*{Description:}
+Limitation of rising and falling rate with sin\textasciicircum{}2 characteristic.
+
+    Note: A running limitation process can not be interrupted!
+
+    Function of Enable:
+
+        0:       rate limiting disabled, signal is set to zero
+
+        1:       rate limiting enabled, signal is rate limited
+
+        0->1: preload of output with value from init input
+
+% include optional documentation file
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Sin2Limiter_Info.tex}{\vspace{1ex}}{}
+
+\subsubsection*{Implementations:}
+\begin{tabular}{l l}
+\textbf{FiP16} & 16 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP32} & 32 Bit Fixed Point Implementation\tabularnewline
+\textbf{Float32} & 32 Bit Floating Point Implementation\tabularnewline
+\textbf{Float64} & 64 Bit Floating Point Implementation\tabularnewline
+\end{tabular}
+
+\XtoCImplementation{FiP16}
+\nopagebreak[0]
+
+16 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int16\tabularnewline
+\hline
+Init & int16\tabularnewline
+\hline
+Enable & bool\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP32}
+\nopagebreak[0]
+
+32 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int32\tabularnewline
+\hline
+Init & int32\tabularnewline
+\hline
+Enable & bool\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{Float32}
+\nopagebreak[0]
+
+32 Bit Floating Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & float32\tabularnewline
+\hline
+Init & float32\tabularnewline
+\hline
+Enable & bool\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & float32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{Float64}
+\nopagebreak[0]
+
+64 Bit Floating Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & float64\tabularnewline
+\hline
+Init & float64\tabularnewline
+\hline
+Enable & bool\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & float64\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\ifdefined \AddTestReports
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_Sin2Limiter_FiP16.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_Sin2Limiter_FiP32.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_Sin2Limiter_Float32.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_Sin2Limiter_Float64.tex}{}{}
+\fi

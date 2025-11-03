@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:lang="en"
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:ns3="http://www.w3.org/1999/xhtml"
+    xmlns:mml="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+    <refnamediv xml:id="x2c_PerturbationGen">
+        <refname>x2c_PerturbationGen</refname>
+        <refpurpose>X2C Perturbation Generator</refpurpose>
+    </refnamediv>
+
+    <refsection>
+        <para>
+            <inlinemediaobject>
+                <imageobject>
+                <imagedata fileref="../../Icons/PerturbationGen.png" align="center" valign="middle"/>
+                </imageobject>
+            </inlinemediaobject>
+        </para>
+    </refsection>
+
+    <refsection>
+        <title>Description</title>
+        <para>Generation of a square wave with amplitude (A) and frequency (f) with different slew rates..</para>
+    </refsection>
+
+    <refsection>
+        <title>Inports</title>
+        <simplelist type="vert">
+            <member><emphasis role="bold">f:</emphasis> Frequency
+</member>
+            <member><emphasis role="bold">dc:</emphasis> Duty Cycle</member>
+            <member><emphasis role="bold">S_in:</emphasis> Signal in</member>
+        </simplelist>
+    </refsection>
+
+    <refsection>
+        <title>Outports</title>
+        <simplelist type="vert">
+            <member><emphasis role="bold">u:</emphasis> Square wave output</member>
+            <member><emphasis role="bold">S_out:</emphasis> Signal out (= Signal in)</member>
+        </simplelist>
+    </refsection>
+
+    <refsection>
+        <title>Mask Parameters</title>
+        <simplelist type="vert">
+            <member><emphasis role="bold">fmax:</emphasis> Maximum Frequency in Hz</member>
+            <member><emphasis role="bold">LL:</emphasis> Output Low Level</member>
+            <member><emphasis role="bold">LH:</emphasis> Output High Level</member>
+            <member><emphasis role="bold">Tr:</emphasis> Rising time in seconds. Slew rate will be 1/Tr.</member>
+            <member><emphasis role="bold">Tf:</emphasis> Falling time in seconds. Slew rate will be 1/Tf.</member>
+            <member><emphasis role="bold">ts_fact:</emphasis> Multiplication factor of base sampling time (in integer format).</member>
+        </simplelist>
+    </refsection>
+
+    <refsection>
+        <title>Implementations</title>
+
+        <simplelist type="vert">
+            <member><emphasis role="bold">FiP16:</emphasis> 16 Bit Fixed Point</member>
+            <member><emphasis role="bold">FiP32:</emphasis> 32 Bit Fixed Point</member>
+            <member><emphasis role="bold">Float32:</emphasis> 32 Bit Floating Point</member>
+            <member><emphasis role="bold">Float64:</emphasis> 64 Bit Floating Point</member>
+        </simplelist>
+    </refsection>
+
+</refentry>

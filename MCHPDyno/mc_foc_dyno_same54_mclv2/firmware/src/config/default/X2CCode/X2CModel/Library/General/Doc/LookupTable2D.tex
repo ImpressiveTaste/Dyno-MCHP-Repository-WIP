@@ -1,0 +1,128 @@
+\XtoCBlock{LookupTable2D}
+\label{block:LookupTable2D}
+\begin{figure}[H]\includegraphics{LookupTable2D}\end{figure} 
+
+\begin{XtoCtabular}{Inports}
+x & Table index in x direction\tabularnewline
+\hline
+y & Table index in y direction\tabularnewline
+\hline
+\end{XtoCtabular}
+
+
+\begin{XtoCtabular}{Outports}
+Out & Table output\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCMaskParamTabular}{Mask Parameters}
+\cellcolor[gray]{0.8}\textbf{Name} & \cellcolor[gray]{0.8}\textbf{ID} & \cellcolor[gray]{0.8}\textbf{Description}\tabularnewline
+\hline
+TableData & 1 & Look-up table data\tabularnewline
+\hline
+DimX & 2 & Number of data points in x-direction\tabularnewline
+\hline
+x\_min & 3 & Minimum input value of x-dimension for look-up table\tabularnewline
+\hline
+x\_max & 4 & Maximum input value of x-dimension for look-up table\tabularnewline
+\hline
+DimY & 5 & Number of data points in y-direction\tabularnewline
+\hline
+y\_min & 6 & Minimum input value of y-dimension for look-up table\tabularnewline
+\hline
+y\_max & 7 & Maximum input value of y-dimension for look-up table\tabularnewline
+\hline
+\end{XtoCMaskParamTabular}
+
+\subsubsection*{Description:}
+Two dimensional look-up table with selectable number of data points.
+
+  Table data must be an array of size DimX*DimY.
+
+  If input is out of specified range, output will be cut off (no extrapolation).
+
+% include optional documentation file
+\InputIfFileExists{\XcHomePath/Library/General/Doc/LookupTable2D_Info.tex}{\vspace{1ex}}{}
+
+\subsubsection*{Implementations:}
+\begin{tabular}{l l}
+\textbf{FiP16} & 16 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP32} & 32 Bit Fixed Point Implementation\tabularnewline
+\textbf{Float32} & 32 Bit Floating Point Implementation\tabularnewline
+\textbf{Float64} & 64 Bit Floating Point Implementation\tabularnewline
+\end{tabular}
+
+\XtoCImplementation{FiP16}
+\nopagebreak[0]
+
+16 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+x & int16\tabularnewline
+\hline
+y & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP32}
+\nopagebreak[0]
+
+32 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+x & int32\tabularnewline
+\hline
+y & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{Float32}
+\nopagebreak[0]
+
+32 Bit Floating Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+x & float32\tabularnewline
+\hline
+y & float32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & float32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{Float64}
+\nopagebreak[0]
+
+64 Bit Floating Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+x & float64\tabularnewline
+\hline
+y & float64\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & float64\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\ifdefined \AddTestReports
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_LookupTable2D_FiP16.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_LookupTable2D_FiP32.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_LookupTable2D_Float32.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_LookupTable2D_Float64.tex}{}{}
+\fi

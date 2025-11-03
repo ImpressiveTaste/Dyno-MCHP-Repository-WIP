@@ -1,0 +1,109 @@
+\XtoCVerification{D FiP16 CPU TMS320F28335}
+\begin{tabular}{l l}
+\textbf{Date of Test} & 2024-03-28 \tabularnewline
+\textbf{Target controller} & TMS320F28335 \tabularnewline
+\end{tabular}
+\vspace{1ex}
+\XtoCTestCase{Inport test}{1}
+Inport test for Control block D.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & 3 & 4 & ... & 201 \tabularnewline \hline
+\textbf{CPU cycles} & 71 & 71 & 71 & 118 & ... & 113 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Inputs}} \tabularnewline \hline
+\textbf{In (DSP)} & 0 & 0 & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{D0 (DSP)} & 655 & 655 & 655 & 655 & ... & 655 \tabularnewline \hline
+\textbf{Enable (DSP)} & 0 & 0 & 0 & 1 & ... & 1 \tabularnewline \hline
+\textbf{In} & 0 & 0 & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{D0} & 0.02 & 0.02 & 0.02 & 0.02 & ... & 0.02 \tabularnewline \hline
+\textbf{Enable} & 0 & 0 & 0 & 1 & ... & 1 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Parameters}} \tabularnewline \hline
+\textbf{Kd} & \multicolumn{6}{c|}{0.003} \tabularnewline \hline
+\textbf{fc} & \multicolumn{6}{c|}{200} \tabularnewline \hline
+\textbf{ts\_fact} & \multicolumn{6}{c|}{1} \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Outputs}} \tabularnewline \hline
+\textbf{Out} & 0 & 0 & 0 & -0.075 & ... & 0.002 \tabularnewline \hline
+\textbf{Exp. Out} & 0 & 0 & 0 & -0.075 & ... & 0.002 \tabularnewline \hline
+\textbf{Out (DSP)} & 0 & 0 & 0 & -2470 & ... & 61 \tabularnewline \hline
+\textbf{Exp. Out (DSP)} & 0 & 0 & 0 & -2471 & ... & 58 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance Out & $\pm$3,0518e-04 ($\pm$10 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 71 \tabularnewline \hline
+Max CPU cycles & 118 \tabularnewline \hline
+Avg CPU cycles & 112 \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion test}{1}
+Conversion test for Control block D.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & 3 & 4 & ... & 37 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Kd} & -10 & -9.444 & -8.889 & -8.333 & ... & 10 \tabularnewline \hline
+\textbf{fc} & 0 & 13.889 & 27.778 & 41.667 & ... & 500 \tabularnewline \hline
+\textbf{ts\_fact} & 1 & 1 & 1 & 1 & ... & 1 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{sfrd} & 15 & 5 & 4 & 3 & ... & 0 \tabularnewline \hline
+\textbf{b1d} & 0 & -26374 & -24822 & -17453 & ... & 31416 \tabularnewline \hline
+\textbf{a0d} & -32767 & -32483 & -32201 & -31921 & ... & -23934 \tabularnewline \hline
+\textbf{b0d} & 0 & 26374 & 24822 & 17453 & ... & -31416 \tabularnewline \hline
+\textbf{Exp. sfrd} & 15 & 5 & 4 & 3 & ... & 0 \tabularnewline \hline
+\textbf{Exp. b1d} & 0 & -26374 & -24822 & -17453 & ... & 31416 \tabularnewline \hline
+\textbf{Exp. a0d} & -32767 & -32483 & -32201 & -31921 & ... & -23934 \tabularnewline \hline
+\textbf{Exp. b0d} & 0 & 26374 & 24822 & 17453 & ... & -31416 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance sfrd & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance b1d & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance a0d & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance b0d & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion-on-Target test}{1}
+Conversion-on-Target test for Control block D.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & 3 & 4 & ... & 37 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Kd} & -10 & -9.444 & -8.889 & -8.333 & ... & 10 \tabularnewline \hline
+\textbf{fc} & 0 & 13.889 & 27.778 & 41.667 & ... & 500 \tabularnewline \hline
+\textbf{ts\_fact} & 1 & 1 & 1 & 1 & ... & 1 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{sfrd} & 15 & 5 & 4 & 3 & ... & 0 \tabularnewline \hline
+\textbf{b1d} & 0 & -26373 & -24822 & -17453 & ... & 31415 \tabularnewline \hline
+\textbf{a0d} & -32767 & -32483 & -32201 & -31921 & ... & -23933 \tabularnewline \hline
+\textbf{b0d} & 0 & 26373 & 24822 & 17453 & ... & -31415 \tabularnewline \hline
+\textbf{Exp. sfrd} & 15 & 5 & 4 & 3 & ... & 0 \tabularnewline \hline
+\textbf{Exp. b1d} & 0 & -26374 & -24822 & -17453 & ... & 31416 \tabularnewline \hline
+\textbf{Exp. a0d} & -32767 & -32483 & -32201 & -31921 & ... & -23934 \tabularnewline \hline
+\textbf{Exp. b0d} & 0 & 26374 & 24822 & 17453 & ... & -31416 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance sfrd & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance b1d & $\pm$1,0000e+00 ($\pm$32767 LSB) \tabularnewline \hline
+Tolerance a0d & $\pm$1,0000e+00 ($\pm$32767 LSB) \tabularnewline \hline
+Tolerance b0d & $\pm$1,0000e+00 ($\pm$32767 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 3062 \tabularnewline \hline
+Max CPU cycles & 14146 \tabularnewline \hline
+Avg CPU cycles & 12469 \tabularnewline \hline
+\end{XtoCtabular}

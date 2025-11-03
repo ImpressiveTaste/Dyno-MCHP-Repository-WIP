@@ -1,0 +1,194 @@
+\XtoCBlock{TypeConv}
+\label{block:TypeConv}
+\begin{figure}[H]\includegraphics{TypeConv}\end{figure} 
+
+\begin{XtoCtabular}{Inports}
+In & \tabularnewline
+\hline
+\end{XtoCtabular}
+
+
+\begin{XtoCtabular}{Outports}
+Out & \tabularnewline
+\hline
+\end{XtoCtabular}
+
+\subsubsection*{Description:}
+Data Type Conversion
+
+\subsubsection*{Implementations:}
+\begin{tabular}{l l}
+\textbf{FiP8\_16} & 8 to 16 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP8\_32} & 8 to 32 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP16\_8} & 16 to 8 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP16\_32} & 16 to 32 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP32\_8} & 32 to 8 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP32\_16} & 32 to 16 Bit Fixed Point Implementation\tabularnewline
+\textbf{Bool\_FiP16} & Boolean to 16 Bit Fixed Point Implementation\tabularnewline
+\textbf{Bool\_FiP32} & Boolean to 32 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP16\_Bool} & 16 Bit Fixed Point to Boolean Implementation\tabularnewline
+\textbf{FiP32\_Bool} & 32 Bit Fixed Point to Boolean Implementation\tabularnewline
+\end{tabular}
+
+\XtoCImplementation{FiP8\_16}
+\nopagebreak[0]
+
+8 to 16 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int8\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP8\_32}
+\nopagebreak[0]
+
+8 to 32 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int8\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP16\_8}
+\nopagebreak[0]
+
+16 to 8 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int8\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP16\_32}
+\nopagebreak[0]
+
+16 to 32 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP32\_8}
+\nopagebreak[0]
+
+32 to 8 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int8\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP32\_16}
+\nopagebreak[0]
+
+32 to 16 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{Bool\_FiP16}
+\nopagebreak[0]
+
+Boolean to 16 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & bool\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{Bool\_FiP32}
+\nopagebreak[0]
+
+Boolean to 32 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & bool\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP16\_Bool}
+\nopagebreak[0]
+
+16 Bit Fixed Point to Boolean Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & bool\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP32\_Bool}
+\nopagebreak[0]
+
+32 Bit Fixed Point to Boolean Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & bool\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\ifdefined \AddTestReports
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_TypeConv_FiP8_16.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_TypeConv_FiP8_32.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_TypeConv_FiP16_8.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_TypeConv_FiP16_32.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_TypeConv_FiP32_8.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_TypeConv_FiP32_16.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_TypeConv_Bool_FiP16.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_TypeConv_Bool_FiP32.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_TypeConv_FiP16_Bool.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_TypeConv_FiP32_Bool.tex}{}{}
+\fi

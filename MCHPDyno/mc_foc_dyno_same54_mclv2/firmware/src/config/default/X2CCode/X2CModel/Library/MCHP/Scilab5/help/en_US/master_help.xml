@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+<!--Begin Entities-->
+<!ENTITY adb8ec33d5e1665a9e8b667d8c4aaee50 SYSTEM "file:///C:/LCM/X2C/v6.3.2504/Library/MCHP/Scilab5/help/en_US/x2c_BEMF_MCHP.xml">
+<!ENTITY a06118a3ca3105ba8d537df5bc6315a1b SYSTEM "file:///C:/LCM/X2C/v6.3.2504/Library/MCHP/Scilab5/help/en_US/x2c_Clarke_MCHP.xml">
+<!ENTITY a6e6a07cac811c9caed93735fda8fe10e SYSTEM "file:///C:/LCM/X2C/v6.3.2504/Library/MCHP/Scilab5/help/en_US/x2c_Clarke_Park_MCHP.xml">
+<!ENTITY a114ac4cfbcb657910b6fab7f45ec00ce SYSTEM "file:///C:/LCM/X2C/v6.3.2504/Library/MCHP/Scilab5/help/en_US/x2c_Clarke_inv_MCHP.xml">
+<!ENTITY aaca69ebe93290b8227b4474b35d157d5 SYSTEM "file:///C:/LCM/X2C/v6.3.2504/Library/MCHP/Scilab5/help/en_US/x2c_Park_Clarke_inv_SVM_MCHP.xml">
+<!ENTITY ac29fb327430901cc666a69a272cff00d SYSTEM "file:///C:/LCM/X2C/v6.3.2504/Library/MCHP/Scilab5/help/en_US/x2c_Park_MCHP.xml">
+<!ENTITY ab73202623b6fd85cb07004658c6d72be SYSTEM "file:///C:/LCM/X2C/v6.3.2504/Library/MCHP/Scilab5/help/en_US/x2c_Park_inv_MCHP.xml">
+<!ENTITY ac9d4677c9c911b17809d8ea565b53521 SYSTEM "file:///C:/LCM/X2C/v6.3.2504/Library/MCHP/Scilab5/help/en_US/x2c_PerturbationGen.xml">
+<!ENTITY a7651558a03b2b78e2c3ffb97400c50e2 SYSTEM "file:///C:/LCM/X2C/v6.3.2504/Library/MCHP/Scilab5/help/en_US/x2c_RandomGen.xml">
+<!ENTITY a7309fe4280168d9055cd52e4598cab09 SYSTEM "file:///C:/LCM/X2C/v6.3.2504/Library/MCHP/Scilab5/help/en_US/x2c_SVM_MCHP.xml">
+<!ENTITY a60897eb69295efdfeb9cd5560f3815ca SYSTEM "file:///C:/LCM/X2C/v6.3.2504/Library/MCHP/Scilab5/help/en_US/x2c_SquareGen.xml">
+<!--End Entities-->
+]>
+<book version="5.0-subset Scilab" xml:lang="en_US"
+      xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info xml:id='x2c_mchp_library_manual'>
+    <title>X2C MCHP Library</title>
+  </info>
+
+<part xml:id='section_806e5d94512759a4f68237fa7d443dad'>
+<title>MCHP</title>
+&adb8ec33d5e1665a9e8b667d8c4aaee50;
+&a06118a3ca3105ba8d537df5bc6315a1b;
+&a6e6a07cac811c9caed93735fda8fe10e;
+&a114ac4cfbcb657910b6fab7f45ec00ce;
+&aaca69ebe93290b8227b4474b35d157d5;
+&ac29fb327430901cc666a69a272cff00d;
+&ab73202623b6fd85cb07004658c6d72be;
+&ac9d4677c9c911b17809d8ea565b53521;
+&a7651558a03b2b78e2c3ffb97400c50e2;
+&a7309fe4280168d9055cd52e4598cab09;
+&a60897eb69295efdfeb9cd5560f3815ca;
+</part>
+</book>

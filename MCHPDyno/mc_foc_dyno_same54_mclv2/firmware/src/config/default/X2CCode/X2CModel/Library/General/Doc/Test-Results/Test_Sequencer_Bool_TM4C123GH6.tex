@@ -1,0 +1,126 @@
+\XtoCVerification{Sequencer Bool CPU TM4C123GH6}
+\begin{tabular}{l l}
+\textbf{Date of Test} & 2024-04-18 \tabularnewline
+\textbf{Target controller} & TM4C123GH6 \tabularnewline
+\end{tabular}
+\vspace{1ex}
+\XtoCTestCase{Inport test}{1}
+Inport test for General block Sequencer.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & 3 & 4 & ... & 16 \tabularnewline \hline
+\textbf{CPU cycles} & 53 & 77 & 77 & 77 & ... & 53 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Inputs}} \tabularnewline \hline
+\textbf{Start (DSP)} & 0 & 1 & 1 & 1 & ... & 0 \tabularnewline \hline
+\textbf{Start} & 0 & 1 & 1 & 1 & ... & 0 \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Parameters}} \tabularnewline \hline
+\textbf{Delay1} & \multicolumn{6}{c|}{0} \tabularnewline \hline
+\textbf{Delay2} & \multicolumn{6}{c|}{0} \tabularnewline \hline
+\textbf{Delay3} & \multicolumn{6}{c|}{0.001} \tabularnewline \hline
+\textbf{Delay4} & \multicolumn{6}{c|}{0} \tabularnewline \hline
+\textbf{ts\_fact} & \multicolumn{6}{c|}{1} \tabularnewline \hline
+\multicolumn{7}{|l|}{\cellcolor[gray]{0.9}\textit{Outputs}} \tabularnewline \hline
+\textbf{Out1} & 0 & 0 & 1 & 1 & ... & 0 \tabularnewline \hline
+\textbf{Out2} & 0 & 0 & 0 & 1 & ... & 0 \tabularnewline \hline
+\textbf{Out3} & 0 & 0 & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{Out4} & 0 & 1 & 1 & 1 & ... & 0 \tabularnewline \hline
+\textbf{Exp. Out1} & 0 & 0 & 1 & 1 & ... & 0 \tabularnewline \hline
+\textbf{Exp. Out2} & 0 & 0 & 0 & 1 & ... & 0 \tabularnewline \hline
+\textbf{Exp. Out3} & 0 & 0 & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{Exp. Out4} & 0 & 1 & 1 & 1 & ... & 0 \tabularnewline \hline
+\textbf{Out1 (DSP)} & 0 & 0 & 1 & 1 & ... & 0 \tabularnewline \hline
+\textbf{Out2 (DSP)} & 0 & 0 & 0 & 1 & ... & 0 \tabularnewline \hline
+\textbf{Out3 (DSP)} & 0 & 0 & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{Out4 (DSP)} & 0 & 1 & 1 & 1 & ... & 0 \tabularnewline \hline
+\textbf{Exp. Out1 (DSP)} & 0 & 0 & 1 & 1 & ... & 0 \tabularnewline \hline
+\textbf{Exp. Out2 (DSP)} & 0 & 0 & 0 & 1 & ... & 0 \tabularnewline \hline
+\textbf{Exp. Out3 (DSP)} & 0 & 0 & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{Exp. Out4 (DSP)} & 0 & 1 & 1 & 1 & ... & 0 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance Out1 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance Out2 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance Out3 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance Out4 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 53 \tabularnewline \hline
+Max CPU cycles & 77 \tabularnewline \hline
+Avg CPU cycles & 74 \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion test}{1}
+Conversion test for General block Sequencer.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+\hline
+\multicolumn{4}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & 3 \tabularnewline \hline
+\multicolumn{4}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Delay1} & 0.1 & 0.1 & 0.1 \tabularnewline \hline
+\textbf{Delay2} & 0.2 & 0.2 & 0.2 \tabularnewline \hline
+\textbf{Delay3} & 1 & 1 & 1 \tabularnewline \hline
+\textbf{Delay4} & 1.7 & 1.7 & 1.7 \tabularnewline \hline
+\textbf{ts\_fact} & 1 & 2 & 10 \tabularnewline \hline
+\multicolumn{4}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{delay3} & 10000 & 5000 & 1000 \tabularnewline \hline
+\textbf{delay4} & 17000 & 8500 & 1700 \tabularnewline \hline
+\textbf{delay1} & 1000 & 500 & 100 \tabularnewline \hline
+\textbf{delay2} & 2000 & 1000 & 200 \tabularnewline \hline
+\textbf{Exp. delay3} & 10000 & 5000 & 1000 \tabularnewline \hline
+\textbf{Exp. delay4} & 17000 & 8500 & 1700 \tabularnewline \hline
+\textbf{Exp. delay1} & 1000 & 500 & 100 \tabularnewline \hline
+\textbf{Exp. delay2} & 2000 & 1000 & 200 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance delay3 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance delay4 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance delay1 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance delay2 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion-on-Target test}{1}
+Conversion-on-Target test for General block Sequencer.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+\hline
+\multicolumn{4}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & 3 \tabularnewline \hline
+\multicolumn{4}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Delay1} & 0.1 & 0.1 & 0.1 \tabularnewline \hline
+\textbf{Delay2} & 0.2 & 0.2 & 0.2 \tabularnewline \hline
+\textbf{Delay3} & 1 & 1 & 1 \tabularnewline \hline
+\textbf{Delay4} & 1.7 & 1.7 & 1.7 \tabularnewline \hline
+\textbf{ts\_fact} & 1 & 2 & 10 \tabularnewline \hline
+\multicolumn{4}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{delay3} & 10000 & 5000 & 1000 \tabularnewline \hline
+\textbf{delay4} & 17000 & 8500 & 1700 \tabularnewline \hline
+\textbf{delay1} & 1000 & 500 & 100 \tabularnewline \hline
+\textbf{delay2} & 2000 & 1000 & 200 \tabularnewline \hline
+\textbf{Exp. delay3} & 10000 & 5000 & 1000 \tabularnewline \hline
+\textbf{Exp. delay4} & 17000 & 8500 & 1700 \tabularnewline \hline
+\textbf{Exp. delay1} & 1000 & 500 & 100 \tabularnewline \hline
+\textbf{Exp. delay2} & 2000 & 1000 & 200 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance delay3 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance delay4 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance delay1 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance delay2 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 1211 \tabularnewline \hline
+Max CPU cycles & 1211 \tabularnewline \hline
+Avg CPU cycles & 1211 \tabularnewline \hline
+\end{XtoCtabular}

@@ -1,0 +1,90 @@
+\XtoCBlock{LookupTable}
+\label{block:LookupTable}
+\begin{figure}[H]\includegraphics{LookupTable}\end{figure} 
+
+\begin{XtoCtabular}{Inports}
+In & Table index\tabularnewline
+\hline
+\end{XtoCtabular}
+
+
+\begin{XtoCtabular}{Outports}
+Out & Table output\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCMaskParamTabular}{Mask Parameters}
+\cellcolor[gray]{0.8}\textbf{Name} & \cellcolor[gray]{0.8}\textbf{ID} & \cellcolor[gray]{0.8}\textbf{Description}\tabularnewline
+\hline
+Lookup & 1 & Look-up Table\tabularnewline
+\hline
+\end{XtoCMaskParamTabular}
+
+\subsubsection*{Description:}
+Look-up Table with 256+1 values.
+
+
+
+  Note: 257th value is used for preventing index overflow during interpolation.
+
+      -> for periodic signals the 257th value should be set equal to 1st value
+
+      -> for non-periodic signals the 257th value should be set equal to 256th value
+
+\subsubsection*{Implementations:}
+\begin{tabular}{l l}
+\textbf{FiP8} & 8 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP16} & 16 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP32} & 32 Bit Fixed Point Implementation\tabularnewline
+\end{tabular}
+
+\XtoCImplementation{FiP8}
+\nopagebreak[0]
+
+8 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int8\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int8\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP16}
+\nopagebreak[0]
+
+16 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP32}
+\nopagebreak[0]
+
+32 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\ifdefined \AddTestReports
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_LookupTable_FiP8.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_LookupTable_FiP16.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/General/Doc/Test-Results/Test_LookupTable_FiP32.tex}{}{}
+\fi

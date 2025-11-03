@@ -1,0 +1,89 @@
+\XtoCVerification{P FiP32 CPU TMS320F28379D}
+\begin{tabular}{l l}
+\textbf{Date of Test} & 2024-03-28 \tabularnewline
+\textbf{Target controller} & TMS320F28379D \tabularnewline
+\end{tabular}
+\vspace{1ex}
+\XtoCTestCase{Inport test}{1}
+Inport test for Control block P.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 201 \tabularnewline \hline
+\textbf{CPU cycles} & 40 & 40 & ... & 127 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Inputs}} \tabularnewline \hline
+\textbf{In (DSP)} & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{Enable (DSP)} & 0 & 0 & ... & 1 \tabularnewline \hline
+\textbf{In} & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{Enable} & 0 & 0 & ... & 1 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Parameters}} \tabularnewline \hline
+\textbf{Kp} & \multicolumn{4}{c|}{2} \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Outputs}} \tabularnewline \hline
+\textbf{Out} & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{Exp. Out} & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{Out (DSP)} & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{Exp. Out (DSP)} & 0 & 0 & ... & 0 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance Out & $\pm$4,6566e-10 ($\pm$1 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 40 \tabularnewline \hline
+Max CPU cycles & 127 \tabularnewline \hline
+Avg CPU cycles & 125 \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion test}{1}
+Conversion test for Control block P.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 37 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Kp} & -10 & -9.444 & ... & 10 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{sfrb1} & 27 & 27 & ... & 27 \tabularnewline \hline
+\textbf{b1} & -1342177280 & -1267611876 & ... & 1342177280 \tabularnewline \hline
+\textbf{Exp. sfrb1} & 27 & 27 & ... & 27 \tabularnewline \hline
+\textbf{Exp. b1} & -1342177280 & -1267611876 & ... & 1342177280 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance sfrb1 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance b1 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion-on-Target test}{1}
+Conversion-on-Target test for Control block P.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 37 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Kp} & -10 & -9.444 & ... & 10 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{sfrb1} & 27 & 27 & ... & 27 \tabularnewline \hline
+\textbf{b1} & -1342177280 & -1267611904 & ... & 1342177280 \tabularnewline \hline
+\textbf{Exp. sfrb1} & 27 & 27 & ... & 27 \tabularnewline \hline
+\textbf{Exp. b1} & -1342177280 & -1267611876 & ... & 1342177280 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance sfrb1 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance b1 & $\pm$1,0000e+02 ($\pm$2147483647 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 1369 \tabularnewline \hline
+Max CPU cycles & 3951 \tabularnewline \hline
+Avg CPU cycles & 3044 \tabularnewline \hline
+\end{XtoCtabular}

@@ -6,5 +6,6 @@
         <group name="test"/>
         <group/>
         <group name="standard"/>
+        <group name="general"/>
     </open-files>
 </project-private>

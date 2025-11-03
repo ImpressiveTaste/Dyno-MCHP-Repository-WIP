@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:lang="en"
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:ns3="http://www.w3.org/1999/xhtml"
+    xmlns:mml="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+    <refnamediv xml:id="x2c_BEMF_PLL_MCHP">
+        <refname>x2c_BEMF_PLL_MCHP</refname>
+        <refpurpose>calculates angle and speed from back electromotive force</refpurpose>
+    </refnamediv>
+
+    <refsection>
+        <para>
+            <inlinemediaobject>
+                <imageobject>
+                <imagedata fileref="../../Icons/BEMF_PLL_MCHP.png" align="center" valign="middle"/>
+                </imageobject>
+            </inlinemediaobject>
+        </para>
+    </refsection>
+
+    <refsection>
+        <title>Description</title>
+        <para>- calc stator fixed back electromotive force
+BEMFalpha=Va-Rs0*Ia-Ls0*deltaIa
+BEMFbeta=Vb-Rs0*Ib-Ls0*deltaIb
+FIP:
+Rs0 = Rs*(I0/U0)
+Ls0 = Ls*(I0/U0)
+Float:
+Rs0 = Rs
+Ls0 = Ls
+
+- calcs park transform into rotor fixed reference frame (with delayed angle)
+- calcs speed from bemf q-component
+- calcs angle from speed</para>
+    </refsection>
+
+    <refsection>
+        <title>Inports</title>
+        <simplelist type="vert">
+            <member><emphasis role="bold">Ialpha:</emphasis> Clarke transformed A phase current</member>
+            <member><emphasis role="bold">Ibeta:</emphasis> Clarke transformed B phase current</member>
+            <member><emphasis role="bold">Valpha:</emphasis> Clarke transformed Output A phase voltage</member>
+            <member><emphasis role="bold">Vbeta:</emphasis> Clarke transformed Output B phase voltage</member>
+            <member><emphasis role="bold">theta0:</emphasis> initial angle</member>
+            <member><emphasis role="bold">Enable:</emphasis> Enable == 0: Deactivation of block; Out is set to 0.
+Enable 0-&gt;1: Preload of angle with value from Init input.
+Enable == 1: Activation of block.</member>
+        </simplelist>
+    </refsection>
+
+    <refsection>
+        <title>Outports</title>
+        <simplelist type="vert">
+            <member><emphasis role="bold">theta:</emphasis> sensorless electric angle</member>
+            <member><emphasis role="bold">speed:</emphasis> sensorless speed</member>
+        </simplelist>
+    </refsection>
+
+    <refsection>
+        <title>Mask Parameters</title>
+        <simplelist type="vert">
+            <member><emphasis role="bold">Ls:</emphasis> Motor phase inductance for Y connection (MilliHenry)</member>
+            <member><emphasis role="bold">Rs:</emphasis> Motor phase resistance for Y connection (Ohm)</member>
+            <member><emphasis role="bold">U0:</emphasis> U0: DC link voltage (Only in Fip implementation)</member>
+            <member><emphasis role="bold">I0:</emphasis> The maximum peak current per phase (Only in Fip implementation)</member>
+            <member><emphasis role="bold">CurrentSampleFactor:</emphasis> Division factor for current sample. (in integer format)
+Current sample = ModelSampleTime/CurrentSampleFactor</member>
+            <member><emphasis role="bold">n:</emphasis> Number of points to be averaged over.</member>
+            <member><emphasis role="bold">Gain:</emphasis> Gain factor in floating point format.</member>
+            <member><emphasis role="bold">p:</emphasis> Number of pole pairs</member>
+            <member><emphasis role="bold">n_max:</emphasis> Maximum revolutions per minute
+(Not used by floating point implementations)</member>
+            <member><emphasis role="bold">ts_fact:</emphasis> Multiplication factor of base sampling time (in integer format).</member>
+        </simplelist>
+    </refsection>
+
+    <refsection>
+        <title>Implementations</title>
+
+        <simplelist type="vert">
+            <member><emphasis role="bold">FiP16:</emphasis> 16 Bit Fixed Point</member>
+            <member><emphasis role="bold">FiP32:</emphasis> 32 Bit Fixed Point</member>
+            <member><emphasis role="bold">Float32:</emphasis> 32 Bit Floating Point</member>
+        </simplelist>
+    </refsection>
+
+</refentry>

@@ -1,0 +1,100 @@
+\XtoCVerification{LookupTable2D Float32 CPU XMC4800-F144K2048}
+\begin{tabular}{l l}
+\textbf{Date of Test} & 2024-03-28 \tabularnewline
+\textbf{Target controller} & XMC4800-F144K2048 \tabularnewline
+\end{tabular}
+\vspace{1ex}
+\XtoCTestCase{Inport test}{1}
+Inport test for General block LookupTable2D.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 67 \tabularnewline \hline
+\textbf{CPU cycles} & 220 & 167 & ... & 167 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Inputs}} \tabularnewline \hline
+\textbf{x (DSP)} & -1.1 & -1.067 & ... & 1.1 \tabularnewline \hline
+\textbf{y (DSP)} & 1.2 & 1.161 & ... & -1.35 \tabularnewline \hline
+\textbf{x} & -1.1 & -1.067 & ... & 1.1 \tabularnewline \hline
+\textbf{y} & 1.2 & 1.161 & ... & -1.35 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Parameters}} \tabularnewline \hline
+\textbf{TableData} & \multicolumn{4}{c|}{[1x561]} \tabularnewline \hline
+\textbf{DimX} & \multicolumn{4}{c|}{17} \tabularnewline \hline
+\textbf{x\_min} & \multicolumn{4}{c|}{-0.8} \tabularnewline \hline
+\textbf{x\_max} & \multicolumn{4}{c|}{0.7} \tabularnewline \hline
+\textbf{DimY} & \multicolumn{4}{c|}{33} \tabularnewline \hline
+\textbf{y\_min} & \multicolumn{4}{c|}{-0.6} \tabularnewline \hline
+\textbf{y\_max} & \multicolumn{4}{c|}{0.9} \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Outputs}} \tabularnewline \hline
+\textbf{Out} & 0.155 & 0.155 & ... & 0.155 \tabularnewline \hline
+\textbf{Exp. Out} & 0.155 & 0.155 & ... & 0.155 \tabularnewline \hline
+\textbf{Out (DSP)} & 0.155 & 0.155 & ... & 0.155 \tabularnewline \hline
+\textbf{Exp. Out (DSP)} & 0.155 & 0.155 & ... & 0.155 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance Out & $\pm$4,6566e-07 ($\pm$1000 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 167 \tabularnewline \hline
+Max CPU cycles & 220 \tabularnewline \hline
+Avg CPU cycles & 171 \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion test}{1}
+Conversion test for General block LookupTable2D.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|>{\centering\arraybackslash}X|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 \tabularnewline \hline
+\multicolumn{2}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{TableData} & [1x561] \tabularnewline \hline
+\textbf{DimX} & 33 \tabularnewline \hline
+\textbf{x\_min} & -0.8 \tabularnewline \hline
+\textbf{x\_max} & 0.7 \tabularnewline \hline
+\textbf{DimY} & 17 \tabularnewline \hline
+\textbf{y\_min} & -0.6 \tabularnewline \hline
+\textbf{y\_max} & 0.9 \tabularnewline \hline
+\multicolumn{2}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{gainX} & 21.333 \tabularnewline \hline
+\textbf{offsetX} & -0.8 \tabularnewline \hline
+\textbf{Table} & [1x561] \tabularnewline \hline
+\textbf{gainY} & 10.667 \tabularnewline \hline
+\textbf{offsetY} & -0.6 \tabularnewline \hline
+\textbf{minY} & -0.6 \tabularnewline \hline
+\textbf{minX} & -0.8 \tabularnewline \hline
+\textbf{maxY} & 0.9 \tabularnewline \hline
+\textbf{maxX} & 0.7 \tabularnewline \hline
+\textbf{dimY} & 16 \tabularnewline \hline
+\textbf{dimX} & 32 \tabularnewline \hline
+\textbf{Exp. gainX} & 21.333 \tabularnewline \hline
+\textbf{Exp. offsetX} & -0.8 \tabularnewline \hline
+\textbf{Exp. Table} & [1x561] \tabularnewline \hline
+\textbf{Exp. gainY} & 10.667 \tabularnewline \hline
+\textbf{Exp. offsetY} & -0.6 \tabularnewline \hline
+\textbf{Exp. minY} & -0.6 \tabularnewline \hline
+\textbf{Exp. minX} & -0.8 \tabularnewline \hline
+\textbf{Exp. maxY} & 0.9 \tabularnewline \hline
+\textbf{Exp. maxX} & 0.7 \tabularnewline \hline
+\textbf{Exp. dimY} & 16 \tabularnewline \hline
+\textbf{Exp. dimX} & 32 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance gainX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance offsetX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance Table & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance gainY & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance offsetY & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance minY & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance minX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance maxY & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance maxX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance dimY & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance dimX & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+\end{XtoCtabular}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:lang="en"
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:ns3="http://www.w3.org/1999/xhtml"
+    xmlns:mml="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+    <refnamediv xml:id="x2c_Clarke_Park_MCHP">
+        <refname>x2c_Clarke_Park_MCHP</refname>
+        <refpurpose>MHCP Clarke and Park Merged Transform</refpurpose>
+    </refnamediv>
+
+    <refsection>
+        <para>
+            <inlinemediaobject>
+                <imageobject>
+                <imagedata fileref="../../Icons/Clarke_Park_MCHP.png" align="center" valign="middle"/>
+                </imageobject>
+            </inlinemediaobject>
+        </para>
+    </refsection>
+
+    <refsection>
+        <title>Description</title>
+        <para>Merged Clark and park transform.
+d=a*cos(theta)+((a*2b)*1.732)*sin(theta)
+q=-a*sin(theta)+((a*2b)*1.732)*cos(theta)
+Moves a three-axis, two-dimensional
+coordinate system, referenced to the stator, onto a
+two-axis system, keeping the same reference.
+The two-axis orthogonal system with the axis called
+alpha-beta transform into another two-axis
+system that is rotating with the rotor flux.
+Two-axis rotating coordinate system is
+called the d-q axis.
+Theta represents the rotor angle.
+
+</para>
+    </refsection>
+
+    <refsection>
+        <title>Inports</title>
+        <simplelist type="vert">
+            <member><emphasis role="bold">a:</emphasis> A phase current</member>
+            <member><emphasis role="bold">b:</emphasis> B phase current</member>
+            <member><emphasis role="bold">theta:</emphasis> Rotating position</member>
+        </simplelist>
+    </refsection>
+
+    <refsection>
+        <title>Outports</title>
+        <simplelist type="vert">
+            <member><emphasis role="bold">d:</emphasis> d steady axis (typically flux)</member>
+            <member><emphasis role="bold">q:</emphasis> q steady axis (typically torque)</member>
+            <member><emphasis role="bold">alpha:</emphasis> Shifted A phase current</member>
+            <member><emphasis role="bold">beta:</emphasis> Shifted B phase current</member>
+        </simplelist>
+    </refsection>
+
+    <refsection>
+        <title>Mask Parameters</title>
+        <para>None</para>
+    </refsection>
+
+    <refsection>
+        <title>Implementations</title>
+
+        <simplelist type="vert">
+            <member><emphasis role="bold">FiP16:</emphasis> 16 Bit Fixed Point</member>
+            <member><emphasis role="bold">FiP32:</emphasis> 32 Bit Fixed Point</member>
+            <member><emphasis role="bold">Float32:</emphasis> 32 Bit Floating Point</member>
+        </simplelist>
+    </refsection>
+
+</refentry>

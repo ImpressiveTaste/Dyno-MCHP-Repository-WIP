@@ -1,0 +1,125 @@
+\XtoCVerification{PIDLimit Float32 CPU STM32G474RE}
+\begin{tabular}{l l}
+\textbf{Date of Test} & 2024-03-28 \tabularnewline
+\textbf{Target controller} & STM32G474RE \tabularnewline
+\end{tabular}
+\vspace{1ex}
+\XtoCTestCase{Inport test}{1}
+Inport test for Control block PIDLimit.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 201 \tabularnewline \hline
+\textbf{CPU cycles} & 77 & 77 & ... & 167 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Inputs}} \tabularnewline \hline
+\textbf{In (DSP)} & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{Init (DSP)} & 0.11 & 0.11 & ... & 0.11 \tabularnewline \hline
+\textbf{max (DSP)} & 0.8 & 0.8 & ... & 0.8 \tabularnewline \hline
+\textbf{min (DSP)} & 0.15 & 0.15 & ... & 0.15 \tabularnewline \hline
+\textbf{Enable (DSP)} & 0 & 0 & ... & 1 \tabularnewline \hline
+\textbf{In} & 0 & 0 & ... & 0 \tabularnewline \hline
+\textbf{Init} & 0.11 & 0.11 & ... & 0.11 \tabularnewline \hline
+\textbf{max} & 0.8 & 0.8 & ... & 0.8 \tabularnewline \hline
+\textbf{min} & 0.15 & 0.15 & ... & 0.15 \tabularnewline \hline
+\textbf{Enable} & 0 & 0 & ... & 1 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Parameters}} \tabularnewline \hline
+\textbf{Kp} & \multicolumn{4}{c|}{2} \tabularnewline \hline
+\textbf{Ki} & \multicolumn{4}{c|}{2500} \tabularnewline \hline
+\textbf{Kd} & \multicolumn{4}{c|}{0.003} \tabularnewline \hline
+\textbf{fc} & \multicolumn{4}{c|}{200} \tabularnewline \hline
+\textbf{ts\_fact} & \multicolumn{4}{c|}{1} \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Outputs}} \tabularnewline \hline
+\textbf{Out} & 0 & 0 & ... & 0.152 \tabularnewline \hline
+\textbf{Exp. Out} & 0 & 0 & ... & 0.152 \tabularnewline \hline
+\textbf{Out (DSP)} & 0 & 0 & ... & 0.152 \tabularnewline \hline
+\textbf{Exp. Out (DSP)} & 0 & 0 & ... & 0.152 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance Out & $\pm$9,3132e-06 ($\pm$20000 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 77 \tabularnewline \hline
+Max CPU cycles & 194 \tabularnewline \hline
+Avg CPU cycles & 159 \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion test}{1}
+Conversion test for Control block PIDLimit.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 37 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Kp} & -10 & -9.444 & ... & 10 \tabularnewline \hline
+\textbf{Ki} & -11 & -10.389 & ... & 11 \tabularnewline \hline
+\textbf{Kd} & -10 & -9.444 & ... & 10 \tabularnewline \hline
+\textbf{fc} & 0 & 13.889 & ... & 500 \tabularnewline \hline
+\textbf{ts\_fact} & 1 & 1 & ... & 1 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{b1d} & 0 & -824.183 & ... & 31415.927 \tabularnewline \hline
+\textbf{a0d} & -1 & -0.991 & ... & -0.73 \tabularnewline \hline
+\textbf{b0d} & 0 & 824.183 & ... & -31415.927 \tabularnewline \hline
+\textbf{b0} & -0.001 & -0.001 & ... & 0.001 \tabularnewline \hline
+\textbf{b1} & -10 & -9.444 & ... & 10 \tabularnewline \hline
+\textbf{Exp. b1d} & 0 & -824.183 & ... & 31415.927 \tabularnewline \hline
+\textbf{Exp. a0d} & -1 & -0.991 & ... & -0.73 \tabularnewline \hline
+\textbf{Exp. b0d} & 0 & 824.183 & ... & -31415.927 \tabularnewline \hline
+\textbf{Exp. b0} & -0.001 & -0.001 & ... & 0.001 \tabularnewline \hline
+\textbf{Exp. b1} & -10 & -9.444 & ... & 10 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance b1d & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance a0d & $\pm$1,0000e-15 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance b0d & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance b0 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance b1 & $\pm$0,0000e+00 ($\pm$0 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+\XtoCTestCase{Conversion-on-Target test}{1}
+Conversion-on-Target test for Control block PIDLimit.
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{|c|c|c|>{\centering\arraybackslash}X|c|}
+\hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.8}\textbf{Test results}} \tabularnewline \hline
+\textbf{Time step} & 1 & 2 & ... & 37 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Mask parameters}} \tabularnewline \hline
+\textbf{Kp} & -10 & -9.444 & ... & 10 \tabularnewline \hline
+\textbf{Ki} & -11 & -10.389 & ... & 11 \tabularnewline \hline
+\textbf{Kd} & -10 & -9.444 & ... & 10 \tabularnewline \hline
+\textbf{fc} & 0 & 13.889 & ... & 500 \tabularnewline \hline
+\textbf{ts\_fact} & 1 & 1 & ... & 1 \tabularnewline \hline
+\multicolumn{5}{|l|}{\cellcolor[gray]{0.9}\textit{Controller parameters}} \tabularnewline \hline
+\textbf{b1d} & 0 & -824.183 & ... & 31415.928 \tabularnewline \hline
+\textbf{a0d} & -1 & -0.991 & ... & -0.73 \tabularnewline \hline
+\textbf{b0d} & 0 & 824.183 & ... & -31415.928 \tabularnewline \hline
+\textbf{b0} & -0.001 & -0.001 & ... & 0.001 \tabularnewline \hline
+\textbf{b1} & -10 & -9.444 & ... & 10 \tabularnewline \hline
+\textbf{Exp. b1d} & 0 & -824.183 & ... & 31415.927 \tabularnewline \hline
+\textbf{Exp. a0d} & -1 & -0.991 & ... & -0.73 \tabularnewline \hline
+\textbf{Exp. b0d} & 0 & 824.183 & ... & -31415.927 \tabularnewline \hline
+\textbf{Exp. b0} & -0.001 & -0.001 & ... & 0.001 \tabularnewline \hline
+\textbf{Exp. b1} & -10 & -9.444 & ... & 10 \tabularnewline \hline
+\end{tabularx}
+\vspace{1ex}
+
+\begin{XtoCtabular}{Test settings}
+Tolerance b1d & $\pm$3,0000e-03 ($\pm$6442451 LSB) \tabularnewline \hline
+Tolerance a0d & $\pm$1,0000e-07 ($\pm$215 LSB) \tabularnewline \hline
+Tolerance b0d & $\pm$3,0000e-03 ($\pm$6442451 LSB) \tabularnewline \hline
+Tolerance b0 & $\pm$1,0000e-10 ($\pm$0 LSB) \tabularnewline \hline
+Tolerance b1 & $\pm$1,0000e-06 ($\pm$2147 LSB) \tabularnewline \hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Test statistics}
+Min CPU cycles & 1556 \tabularnewline \hline
+Max CPU cycles & 1687 \tabularnewline \hline
+Avg CPU cycles & 1625 \tabularnewline \hline
+\end{XtoCtabular}

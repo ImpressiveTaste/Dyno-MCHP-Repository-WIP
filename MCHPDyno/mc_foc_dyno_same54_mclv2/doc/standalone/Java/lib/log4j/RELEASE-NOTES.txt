@@ -1,0 +1,43 @@
+
+              Apache Log4j 2.3.2 RELEASE NOTES
+
+The Apache Log4j 2 team is pleased to announce the Log4j 2.3.2 release!
+
+Apache log4j is a well known framework for logging application behavior. Log4j 2 is an upgrade to
+Log4j that provides significant improvements over its predecessor, Log4j 1.x, and provides
+many other modern features such as support for Markers, property substitution using Lookups, and asynchronous
+Loggers. In addition, Log4j 2 will not lose events while reconfiguring.
+
+The major changes contained in this release include:
+
+* Address CVE-2021-45046 and CVE-2021-45105 by disabling recursive evaluation of Lookups during log event processing. Recursive evaluation is still allowed while generating the configuration.
+* Adddress CVE-2021-44882 by removing processing of Lookups in the Message Pattern Converter of the Pattern Layout and
+preventing JNDI operations to use any protocols other than java.
+* The JndiLookup, JndiContextSelector, and JMSAppender now require individual system properties to be enabled.
+
+The JNDI components are now disabled by default and may separately be enabled with three individual properties; log4j2.enableJndiContextSelector, log4j2.enableJndiJms, and log4j2.enableJndiLookup.
+
+GA Release 2.3.2
+
+Changes in this version include:
+
+
+Fixed Bugs:
+o LOG4J2-3293:  JDBC Appender should use JNDI Manager and JNDI access should be limited.
+        Backport fix for CVE-2021-44832. 
+o LOG4J2-2819:  Add support for specifying an SSL configuration for SmtpAppender.
+        Backport fix for CVE-2020-9488 to allow SSL/TLS hostname verification. 
+
+
+
+Apache Log4j 2.3.2 requires a minimum of Java 6 to build and run. It is not expected that any future Java 6
+releases will be provided.
+
+Basic compatibility with Log4j 1.x is provided through the log4j-1.2-api component, however it does not implement some of the
+very implementation specific classes and methods. The package names and Maven groupId have been changed to
+org.apache.logging.log4j to avoid any conflicts with log4j 1.x.
+
+For complete information on Apache Log4j 2, including instructions on how to submit bug reports,
+patches, or suggestions for improvement, see the Apache Apache Log4j 2 website:
+
+http://logging.apache.org/log4j/2.x/

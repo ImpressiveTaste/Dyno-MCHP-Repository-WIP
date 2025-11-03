@@ -1,0 +1,151 @@
+\XtoCBlock{uI}
+\label{block:uI}
+\begin{figure}[H]\includegraphics{uI}\end{figure} 
+
+\begin{XtoCtabular}{Inports}
+In & Control error input\tabularnewline
+\hline
+Init & Value which is loaded at initialization function call\tabularnewline
+\hline
+Enable & Enable == 0: Deactivation of block; Out is set to 0.
+
+Enable 0->1: Preload of integral part.
+
+Enable == 1: Activation of block\tabularnewline
+\hline
+\end{XtoCtabular}
+
+
+\begin{XtoCtabular}{Outports}
+Out & Integrator output\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCMaskParamTabular}{Mask Parameters}
+\cellcolor[gray]{0.8}\textbf{Name} & \cellcolor[gray]{0.8}\textbf{ID} & \cellcolor[gray]{0.8}\textbf{Description}\tabularnewline
+\hline
+Ki & 1 & Integral Factor\tabularnewline
+\hline
+ts\_fact & 2 & Multiplication factor of base sampling time (in integer format)\tabularnewline
+\hline
+\end{XtoCMaskParamTabular}
+
+\subsubsection*{Description:}
+Integrator for angle signals:
+
+    G(s) = Ki/s = 1/(Ti*s)
+
+% include optional documentation file
+\InputIfFileExists{\XcHomePath/Library/Control/Doc/uI_Info.tex}{\vspace{1ex}}{}
+
+\subsubsection*{Implementations:}
+\begin{tabular}{l l}
+\textbf{FiP8} & 8 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP16} & 16 Bit Fixed Point Implementation\tabularnewline
+\textbf{FiP32} & 32 Bit Fixed Point Implementation\tabularnewline
+\textbf{Float32} & 32 Bit Floating Point Implementation\tabularnewline
+\textbf{Float64} & 64 Bit Floating Point Implementation\tabularnewline
+\end{tabular}
+
+\XtoCImplementation{FiP8}
+\nopagebreak[0]
+
+8 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int8\tabularnewline
+\hline
+Init & int8\tabularnewline
+\hline
+Enable & bool\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int8\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP16}
+\nopagebreak[0]
+
+16 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int16\tabularnewline
+\hline
+Init & int16\tabularnewline
+\hline
+Enable & bool\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int16\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{FiP32}
+\nopagebreak[0]
+
+32 Bit Fixed Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & int32\tabularnewline
+\hline
+Init & int32\tabularnewline
+\hline
+Enable & bool\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & int32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{Float32}
+\nopagebreak[0]
+
+32 Bit Floating Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & float32\tabularnewline
+\hline
+Init & float32\tabularnewline
+\hline
+Enable & bool\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & float32\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\XtoCImplementation{Float64}
+\nopagebreak[0]
+
+64 Bit Floating Point Implementation
+
+\begin{XtoCtabular}{Inports Data Type}
+In & float64\tabularnewline
+\hline
+Init & float64\tabularnewline
+\hline
+Enable & bool\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\begin{XtoCtabular}{Outports Data Type}
+Out & float64\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\ifdefined \AddTestReports
+\InputIfFileExists{\XcHomePath/Library/Control/Doc/Test-Results/Test_uI_FiP8.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/Control/Doc/Test-Results/Test_uI_FiP16.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/Control/Doc/Test-Results/Test_uI_FiP32.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/Control/Doc/Test-Results/Test_uI_Float32.tex}{}{}
+\InputIfFileExists{\XcHomePath/Library/Control/Doc/Test-Results/Test_uI_Float64.tex}{}{}
+\fi

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+<!--Begin Entities-->
+<!ENTITY a626e6944a60cef9fdcc674ef8d6cfcd7 SYSTEM "file:///C:/LCM/X2C/v6.4.2770/Library/MCHP/Scilab/help/en_US/x2c_BEMF_MCHP.xml">
+<!ENTITY a480d5a6aee0bd66adaeccddf97c201c7 SYSTEM "file:///C:/LCM/X2C/v6.4.2770/Library/MCHP/Scilab/help/en_US/x2c_BEMF_PLL_MCHP.xml">
+<!ENTITY ac43ca0d8f3f8e905e331d1bd9979ceac SYSTEM "file:///C:/LCM/X2C/v6.4.2770/Library/MCHP/Scilab/help/en_US/x2c_Clarke_MCHP.xml">
+<!ENTITY a1f9e50916b11822c0495ea332a01b720 SYSTEM "file:///C:/LCM/X2C/v6.4.2770/Library/MCHP/Scilab/help/en_US/x2c_Clarke_Park_MCHP.xml">
+<!ENTITY a65d2cfd54fe8235b4d31a2be28543e27 SYSTEM "file:///C:/LCM/X2C/v6.4.2770/Library/MCHP/Scilab/help/en_US/x2c_Clarke_inv_MCHP.xml">
+<!ENTITY ace589384c8f4368cc0d57422a7c14d51 SYSTEM "file:///C:/LCM/X2C/v6.4.2770/Library/MCHP/Scilab/help/en_US/x2c_Park_Clarke_inv_SVM_MCHP.xml">
+<!ENTITY a88b5af4d7eee7707efb1189e1f1f58c1 SYSTEM "file:///C:/LCM/X2C/v6.4.2770/Library/MCHP/Scilab/help/en_US/x2c_Park_MCHP.xml">
+<!ENTITY aebb93d9d2a00272a92ac8c252351dff1 SYSTEM "file:///C:/LCM/X2C/v6.4.2770/Library/MCHP/Scilab/help/en_US/x2c_Park_inv_MCHP.xml">
+<!ENTITY a7acc0f4e75e82e5c4f8a585339cba6c6 SYSTEM "file:///C:/LCM/X2C/v6.4.2770/Library/MCHP/Scilab/help/en_US/x2c_PerturbationGen.xml">
+<!ENTITY af718edab712477c21925533b11d1c72a SYSTEM "file:///C:/LCM/X2C/v6.4.2770/Library/MCHP/Scilab/help/en_US/x2c_RandomGen.xml">
+<!ENTITY a0269f46ac74ea584885faef273f3c0ce SYSTEM "file:///C:/LCM/X2C/v6.4.2770/Library/MCHP/Scilab/help/en_US/x2c_SVM_MCHP.xml">
+<!ENTITY a24ca63d3ecd7ddaec760f66b6fa2ce2a SYSTEM "file:///C:/LCM/X2C/v6.4.2770/Library/MCHP/Scilab/help/en_US/x2c_SquareGen.xml">
+<!--End Entities-->
+]>
+<book version="5.0-subset Scilab" xml:lang="en_US"
+      xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info xml:id='x2c_mchp_library_manual'>
+    <title>X2C MCHP Library</title>
+  </info>
+
+<part xml:id='section_8d7b739f52261aad914a408c2d08a3ef'>
+<title>MCHP</title>
+&a626e6944a60cef9fdcc674ef8d6cfcd7;
+&a480d5a6aee0bd66adaeccddf97c201c7;
+&ac43ca0d8f3f8e905e331d1bd9979ceac;
+&a1f9e50916b11822c0495ea332a01b720;
+&a65d2cfd54fe8235b4d31a2be28543e27;
+&ace589384c8f4368cc0d57422a7c14d51;
+&a88b5af4d7eee7707efb1189e1f1f58c1;
+&aebb93d9d2a00272a92ac8c252351dff1;
+&a7acc0f4e75e82e5c4f8a585339cba6c6;
+&af718edab712477c21925533b11d1c72a;
+&a0269f46ac74ea584885faef273f3c0ce;
+&a24ca63d3ecd7ddaec760f66b6fa2ce2a;
+</part>
+</book>

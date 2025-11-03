@@ -1,0 +1,36 @@
+\XtoCBlock{Outport}
+\label{block:Outport}
+\begin{figure}[H]\includegraphics{Outport}\end{figure} 
+
+\begin{XtoCtabular}{Outports}
+OUT & Signal to frame program\tabularnewline
+\hline
+\end{XtoCtabular}
+
+
+\begin{XtoCtabular}{Mask Parameters}
+ts\_fact & Multiplication factor of base sampling time (in integer format)\tabularnewline
+\hline
+Gain & Gain value used in simulation\tabularnewline
+\hline
+Offset & Offset value used in simulation\tabularnewline
+\hline
+\end{XtoCtabular}
+
+\subsubsection*{Description:}
+Serves as interface to the frame program. The output of this block is intended for simulation purposes and can be left unconnected if not used. Also the parameters \textit{Gain}, and \textit{Offset} are only used during simulation. The schematic for simulation can be seen in the figure below. The Unit Delay block is only used during simulation and should reflect the time delay caused by a discrete controller.
+
+\textbf{Note:} Currently, \textit{Gain} and \textit{Offset} parameters are only available in Matlab/Simulink.
+\begin{figure}[H]
+  \includegraphics{Outport_Schematic}
+\end{figure}
+
+\subsubsection*{Data Types:}
+\begin{tabular}{l l}
+\textbf{bool} & Boolean\tabularnewline
+\textbf{int8} & 8 Bit Fixed Point\tabularnewline
+\textbf{int16} & 16 Bit Fixed Point\tabularnewline
+\textbf{int32} & 32 Bit Fixed Point\tabularnewline
+\textbf{float32} & 32 Bit Floating Point\tabularnewline
+\textbf{float64} & 64 Bit Floating Point\tabularnewline
+\end{tabular}
