@@ -8,7 +8,7 @@ The system supports both standalone operation (HEX-only, no toolchain required) 
 
 ---
 
-<img src="HighLevel-BlockDiagram.jpg" alt="High-Level-Block-Diagram" width="60%">
+<img src="HighLevel-BlockDiagram.jpg" alt="High-Level-Block-Diagram" width="30%">
 
 
 ## What MCHP-Dyno Is
