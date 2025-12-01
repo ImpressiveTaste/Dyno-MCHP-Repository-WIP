@@ -202,10 +202,3 @@ Printing recommendations:
 - MCLV-48V-300W port  
 
 ---
-
-## License & Copyright
-
-© 2025 Microchip Technology Inc. and its subsidiaries  
-All rights reserved.
-
----
