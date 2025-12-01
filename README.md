@@ -144,9 +144,6 @@ This mode allows you to modify model parameters, load tables, and control algori
 6 = Broken bearing (GainT6, ConstT6)
 7 = Triangle (GainT7, ConstT7)
 
-yaml
-Copy code
-
 ---
 
 ## Motor Mode Parameters
@@ -156,8 +153,6 @@ Copy code
 1 = Constant speed (const_speed)
 2 = Trapezoidal speed profile
 
-yaml
-Copy code
 
 Additional controls:
 motor_torquemode
@@ -168,8 +163,7 @@ DynoMotor
 1 = Dyno mode
 0 = Motor mode
 
-yaml
-Copy code
+
 
 ---
 
