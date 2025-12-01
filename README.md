@@ -55,6 +55,7 @@ The goal is to allow firmware engineers to test motor algorithms quickly—witho
 
 ## Repository Layout
 
+```
 miniDyno-2.0/
 ├── README.md <-- you are here
 ├── doc/
@@ -63,7 +64,7 @@ miniDyno-2.0/
 │ └── ...
 ├── firmware/ <-- SAME54 dyno firmware (reference)
 └── ...
-
+```
 
 
 ---
