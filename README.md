@@ -1,14 +1,14 @@
-# miniDyno 2.0 – Motor Control Dynamometer  
+# MCHP-Dyno – Motor Control Dynamometer  
 Last updated: December 2025
 
-miniDyno 2.0 is a compact, X2C-enabled motor dynamometer designed for load testing, algorithm validation, sensorless control development, and AI/ML data capture.  
+MCHP-Dyno is a compact, X2C-enabled motor dynamometer designed for load testing, algorithm validation, sensorless control development, and AI/ML data capture.  
 This repository documents the setup, firmware workflow, load profiles, and usage instructions for running the miniDyno 2.0 on Microchip motor-control platforms.
 
 The system supports both standalone operation (HEX-only, no toolchain required) and full SCILAB/X2C model-based workflows. It is compatible with MCLV-2 hardware and ATSAME54 PIMs.
 
 ---
 
-## What miniDyno 2.0 Is
+## What MCHP-Dyno Is
 
 A ready-to-use motor dyno environment supporting:
 
@@ -111,7 +111,7 @@ Generator mode requires a valid power path to dissipate energy.
    - Press **Connect**  
    - Switch to the **Model** tab  
 
-You're now running miniDyno in standalone mode.
+You're now running MCHP-Dyno in standalone mode.
 
 ---
 
