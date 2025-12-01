@@ -61,14 +61,10 @@ miniDyno-2.0/
 │ ├── standalone/ <-- HEX + startup scripts for standalone mode
 │ ├── 3Dparts/ <-- OpenSCAD + STL universal motor bracket
 │ └── ...
-├── firmware/ <-- SAME54 dyno firmware (Bitbucket reference)
+├── firmware/ <-- SAME54 dyno firmware (reference)
 └── ...
 
-yaml
-Copy code
 
-Firmware is hosted on Microchip Bitbucket:  
-https://bitbucket.microchip.com/projects/X2C/repos/mc_foc_dyno_same54_mclv2/
 
 ---
 
