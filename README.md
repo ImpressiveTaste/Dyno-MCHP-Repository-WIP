@@ -8,7 +8,7 @@ The system supports both standalone operation (HEX-only, no toolchain required) 
 
 ---
 
-![MCHP-Dyno-Flyer](MCHP-Dyno-Flyer.jpg)
+![High-Level-Block-Diagram](HighLevel-BlockDiagram.jpg)
 
 
 ## What MCHP-Dyno Is
