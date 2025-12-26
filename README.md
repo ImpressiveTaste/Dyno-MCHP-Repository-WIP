@@ -1,4 +1,4 @@
-# MCHP-Dyno – Motor Control Dynamometer  
+# MCHP-Dyno: Motor Control Dynamometer  
 Last updated: December 2025
 
 MCHP-Dyno is a compact, X2C-enabled motor dynamometer designed for load testing, algorithm validation, sensorless control development, and AI/ML data capture.  
