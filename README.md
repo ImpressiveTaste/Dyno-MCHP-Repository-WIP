@@ -23,7 +23,7 @@ A ready-to-use motor dyno environment supporting:
 - Real-time monitoring via X2C Scope
 - Standalone operation without Scilab/X2C if desired
 
-The goal is to allow firmware engineers to test motor algorithms quickly—without building a custom mechanical setup.
+The goal is to allow anyone to test motor algorithms quickly—without building or buying a custom, often expensive, setup.
 
 ---
 
