@@ -36,6 +36,7 @@
 *.x86_64
 *.hex
 !docs/source/_downloads/*.hex
+!MCHPDyno/igat_ev14c17a/doc/standalone/*.hex
 
 # Debug files
 *.dSYM/
