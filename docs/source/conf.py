@@ -19,7 +19,7 @@ html_static_path = ['_static']
 html_css_files = ['custom.css']
 
 # Optional: logo (file may be added later)
-html_logo = '_static/images/mchp_dyno_logo.png'
+html_logo = '_static/images/mchp_dyno_logo_froce_refresh.png'
 html_theme_options = {
     'logo_only': True,
     'display_version': True,
