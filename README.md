@@ -4,7 +4,7 @@ Last updated: December 2025
 MCHP-Dyno is a compact, X2C-enabled motor dynamometer designed for load testing, algorithm validation, sensorless control development, and AI/ML data capture.  
 This repository documents the setup, firmware workflow, load profiles, and usage instructions for running the MCHP-Dyno on Microchip motor-control platforms.
 
-Documentation website (HTML build): [docs/_build/html/index.html](docs/_build/html/index.html)
+Documentation website (HTML build): [https://impressivetaste.github.io/Dyno-MCHP-Repository-WIP/](https://impressivetaste.github.io/Dyno-MCHP-Repository-WIP/)
 
 The system supports both standalone operation (HEX-only, no toolchain required) and full SCILAB/X2C model-based workflows.  
 It is compatible with the following hardware platforms:
