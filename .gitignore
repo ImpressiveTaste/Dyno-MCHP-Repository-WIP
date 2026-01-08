@@ -56,8 +56,3 @@ dkms.conf
 
 .venv/
 docs/_build/
-!docs/_build/
-!docs/_build/html/
-!docs/_build/html/**
-docs/_build/html/.buildinfo
-docs/_build/html/.doctrees/
