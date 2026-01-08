@@ -16,13 +16,13 @@ HEX Location
 Downloads
 ---------
 
-- :download:`Single-shunt (dsPIC33AK128MC106 DIM) <_downloads/dsPIC33AK128MC106_MCHP_Dyno_08_01_2026_SingleShunt_DIM.hex>`
----------
+.. container:: motor-dim-downloads
 
-- :download:`ZS/MT (dsPIC33CK256MP508 DIM) <_downloads/dsPIC33CK256MP508_MCHP_Dyno_08_01_2026_ZSMT_DIM.hex>`
----------
+   :download:`Single-shunt (dsPIC33AK128MC106 DIM) <_downloads/dsPIC33AK128MC106_MCHP_Dyno_08_01_2026_SingleShunt_DIM.hex>`
 
-- :download:`X2C (dsPIC33CK256MP508 DIM) <_downloads/dsPIC33CK256MP508_MCHP_Dyno_08_01_2026_X2C_DIM.hex>`
+   :download:`ZS/MT (dsPIC33CK256MP508 DIM) <_downloads/dsPIC33CK256MP508_MCHP_Dyno_08_01_2026_ZSMT_DIM.hex>`
+
+   :download:`X2C (dsPIC33CK256MP508 DIM) <_downloads/dsPIC33CK256MP508_MCHP_Dyno_08_01_2026_X2C_DIM.hex>`
 
 Algorithm Notes
 ---------------

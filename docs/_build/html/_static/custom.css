@@ -12,3 +12,11 @@ a.reference.download:hover {
   background: #155a9c;
   color: #fff;
 }
+
+.motor-dim-downloads p {
+  margin: 0 0 0.9rem 0;
+}
+
+.motor-dim-downloads p:last-child {
+  margin-bottom: 0;
+}
