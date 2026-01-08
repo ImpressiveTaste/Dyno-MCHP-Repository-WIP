@@ -5,6 +5,11 @@ MCHP-Dyno is a compact, X2C-enabled motor dynamometer for load testing, algorith
 
 This documentation provides an overview of the system, setup steps, and usage examples.
 
+.. image:: _static/images/HighLevel-BlockDiagram.jpg
+   :alt: High-level block diagram
+
+
+
 Sections
 --------
 
