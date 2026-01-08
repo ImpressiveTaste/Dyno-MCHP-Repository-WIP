@@ -37,6 +37,7 @@
 *.hex
 !docs/source/_downloads/*.hex
 !MCHPDyno/igat_ev14c17a/doc/standalone/*.hex
+!motor_ACT57BLF02/mclv48v300w_dim_hex/doc/standalone/*.hex
 
 # Debug files
 *.dSYM/
@@ -55,3 +56,8 @@ dkms.conf
 
 .venv/
 docs/_build/
+!docs/_build/
+!docs/_build/html/
+!docs/_build/html/**
+docs/_build/html/.buildinfo
+docs/_build/html/.doctrees/

@@ -128,6 +128,10 @@ You're now running MCHP-Dyno in standalone mode.
 Optional IGaT display (EV14C17A): program the display HEX separately from
 `MCHPDyno/igat_ev14c17a/doc/standalone/`.
 
+Motor-side DIM firmware (MCLV-48V-300W): program one of the DIM HEX files from
+`motor_ACT57BLF02/mclv48v300w_dim_hex/doc/standalone/` to showcase different
+algorithms (Single-Shunt, ZS/MT, or X2C-enabled).
+
 ---
 
 ## Using miniDyno with SCILAB + X2C
