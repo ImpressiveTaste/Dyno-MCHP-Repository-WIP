@@ -1,0 +1,24 @@
+Installation & Setup
+====================
+
+This section explains how to get from hardware on the bench to a running dyno.
+
+You can adapt and expand this later to match the repository README.
+
+Standalone Mode (no Scilab / no X2C)
+------------------------------------
+
+Quick steps:
+
+1. Program the dyno HEX onto the SAME54 PIM:
+   ``MCHPDyno/mc_foc_dyno_same54_mclv2/doc/standalone/MC_FOC_DYNO_SAME54_MCLV2.X.production.hex``
+2. Optional IGaT display (EV14C17A): program the display HEX in
+   ``MCHPDyno/igat_ev14c17a/doc/standalone/`` (see :doc:`igat`).
+3. Power the system and run the GUI via ``start.bat`` in the standalone folder.
+
+Model-Based Mode (Scilab + X2C)
+-------------------------------
+
+Summarise the required tools and the basic workflow:
+- Scilab, X2C, MPLAB X, programmer
+- Where to find the model files in the repository

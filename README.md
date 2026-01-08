@@ -4,6 +4,8 @@ Last updated: December 2025
 MCHP-Dyno is a compact, X2C-enabled motor dynamometer designed for load testing, algorithm validation, sensorless control development, and AI/ML data capture.  
 This repository documents the setup, firmware workflow, load profiles, and usage instructions for running the MCHP-Dyno on Microchip motor-control platforms.
 
+Documentation website (HTML build): [docs/_build/html/index.html](docs/_build/html/index.html)
+
 The system supports both standalone operation (HEX-only, no toolchain required) and full SCILAB/X2C model-based workflows.  
 It is compatible with the following hardware platforms:
 
@@ -14,7 +16,7 @@ It is compatible with the following hardware platforms:
 ---
 
 <p align="center">
-  <img src="HighLevel-BlockDiagram.jpg" alt="High-Level-Block-Diagram" width="30%">
+  <img src="docs/source/_static/images/HighLevel-BlockDiagram.jpg" alt="High-Level-Block-Diagram" width="30%">
 </p>
 
 ## What MCHP-Dyno Is
@@ -28,7 +30,7 @@ A ready-to-use motor dyno environment supporting:
 - Real-time monitoring via X2C Scope
 - Standalone operation without Scilab/X2C if desired
 
-The goal is to allow anyone to test motor algorithms quickly—without building or buying a custom, often expensive, setup.
+The goal is to allow anyone to test motor algorithms quickly, without building or buying a custom, often expensive, setup.
 
 ---
 
@@ -122,6 +124,9 @@ Generator mode requires a valid power path to dissipate energy.
    - Switch to the **Model** tab  
 
 You're now running MCHP-Dyno in standalone mode.
+
+Optional IGaT display (EV14C17A): program the display HEX separately from
+`MCHPDyno/igat_ev14c17a/doc/standalone/`.
 
 ---
 
