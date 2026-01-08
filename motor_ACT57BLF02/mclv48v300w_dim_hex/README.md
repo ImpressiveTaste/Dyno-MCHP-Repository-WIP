@@ -14,6 +14,7 @@ HEX location:
 ## Included Firmware
 
 - `dsPIC33AK128MC106_MCHP_Dyno_08_01_2026_SingleShunt_DIM.hex`
+  - Target DIM: dsPIC33AK128MC106.
   - MCAF R8 single-shunt current measurement demo.
   - Uses DC-link shunt reconstruction with two samples per PWM period.
   - Requires a dedicated, high-priority ADC ISR that triggers twice per PWM
@@ -22,13 +23,26 @@ HEX location:
     Aligned PWM mode.
 
 - `dsPIC33CK256MP508_MCHP_Dyno_08_01_2026_ZSMT_DIM.hex`
-  - MCAF R8 Zero-Speed / Maximum Torque (ZS/MT) estimator demo.
-  - Intrusive, high-frequency signal injection for zero-speed position sensing.
-  - Best with IPMSM motors (requires rotor saliency, Lq != Ld).
-  - Uses ZS/MT + initial position correction (IPC) at startup; commonly paired
-    with a high-speed back-EMF estimator in hybrid mode.
+  - Target DIM: dsPIC33CK256MP508.
+  - Zero-Speed / Maximum Torque (ZS/MT) Estimator
+  - ZS/MT is a sensorless position and speed estimation algorithm specifically
+    designed to operate where back-EMF based estimators fail, at zero and
+    ultra-low speeds.
+  - Operating Principle - High-Frequency Signal Injection:
+    ZS/MT injects a high-frequency excitation voltage into the stator and
+    measures the motor response to determine rotor angle at standstill.
+  - Motor Requirements (Saliency):
+    Requires significant Ld != Lq saliency, intended for IPMSM machines.
+  - Startup Sequence - IPC for Zero-Speed Torque Production:
+    Uses "ZS/MT + Initial Position Correction (IPC)" to align the stator field
+    before motion begins.
+  - Hybrid Operation - Low-Speed to High-Speed Transition:
+    Uses ZS/MT at low speed and a back-EMF estimator (for example, PLL) at
+    higher speed due to voltage headroom limits.
+  - Tuning and Configuration Parameters
 
 - `dsPIC33CK256MP508_MCHP_Dyno_08_01_2026_X2C_DIM.hex`
+  - Target DIM: dsPIC33CK256MP508.
   - X2C-enabled variant for real-time monitoring and tuning.
 
 ## Programming (Standalone)

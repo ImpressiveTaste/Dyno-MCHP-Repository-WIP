@@ -98,13 +98,18 @@ motor-control algorithms on the dyno.</p>
 <section id="downloads">
 <h2>Downloads<a class="headerlink" href="#downloads" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p><a class="reference download internal" download="" href="_downloads/b6a5a4d197a20faa673374a14564d9d3/dsPIC33AK128MC106_MCHP_Dyno_08_01_2026_SingleShunt_DIM.hex"><code class="xref download docutils literal notranslate"><span class="pre">Single-shunt</span> <span class="pre">DIM</span> <span class="pre">HEX</span></code></a></p></li>
-<li><p><a class="reference download internal" download="" href="_downloads/1f8528738d04f05b37dbf118aa23125e/dsPIC33CK256MP508_MCHP_Dyno_08_01_2026_ZSMT_DIM.hex"><code class="xref download docutils literal notranslate"><span class="pre">ZS/MT</span> <span class="pre">DIM</span> <span class="pre">HEX</span></code></a></p></li>
-<li><p><a class="reference download internal" download="" href="_downloads/718bb0fe2ea27cfe50477e14177416e4/dsPIC33CK256MP508_MCHP_Dyno_08_01_2026_X2C_DIM.hex"><code class="xref download docutils literal notranslate"><span class="pre">X2C</span> <span class="pre">DIM</span> <span class="pre">HEX</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="_downloads/b6a5a4d197a20faa673374a14564d9d3/dsPIC33AK128MC106_MCHP_Dyno_08_01_2026_SingleShunt_DIM.hex"><code class="xref download docutils literal notranslate"><span class="pre">Single-shunt</span> <span class="pre">(dsPIC33AK128MC106</span> <span class="pre">DIM)</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="_downloads/1f8528738d04f05b37dbf118aa23125e/dsPIC33CK256MP508_MCHP_Dyno_08_01_2026_ZSMT_DIM.hex"><code class="xref download docutils literal notranslate"><span class="pre">ZS/MT</span> <span class="pre">(dsPIC33CK256MP508</span> <span class="pre">DIM)</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="_downloads/718bb0fe2ea27cfe50477e14177416e4/dsPIC33CK256MP508_MCHP_Dyno_08_01_2026_X2C_DIM.hex"><code class="xref download docutils literal notranslate"><span class="pre">X2C</span> <span class="pre">(dsPIC33CK256MP508</span> <span class="pre">DIM)</span></code></a></p></li>
 </ul>
 </section>
 <section id="algorithm-notes">
 <h2>Algorithm Notes<a class="headerlink" href="#algorithm-notes" title="Link to this heading"></a></h2>
+<p>DIM mapping:</p>
+<ul class="simple">
+<li><p>Single-shunt demo runs on the dsPIC33AK128MC106 DIM.</p></li>
+<li><p>ZS/MT and X2C demos run on the dsPIC33CK256MP508 DIM.</p></li>
+</ul>
 <p>Single-shunt current measurement (MCAF R8):</p>
 <ul class="simple">
 <li><p>Samples the DC-link current twice in a single PWM period and reconstructs
@@ -114,14 +119,32 @@ window (t_sample + dead time).</p></li>
 <li><p>For estimators other than ZS/MT, use single update in Dual Edge Center
 Aligned PWM mode.</p></li>
 </ul>
-<p>Zero-Speed / Maximum Torque (ZS/MT) estimator (MCAF R8):</p>
+<p>Zero-Speed / Maximum Torque (ZS/MT) Estimator</p>
+<p>ZS/MT is a sensorless position and speed estimation algorithm specifically
+designed to operate where back-EMF based estimators fail, at zero and ultra-low
+speeds.</p>
+<p>Operating Principle - High-Frequency Signal Injection</p>
+<p>Unlike PLL-type estimators, ZS/MT is intrusive: it injects a high-frequency
+excitation voltage into the stator and measures the motor’s response. This
+leverages motor saliency to determine rotor angle even at standstill.</p>
+<p>Motor Requirements (Saliency)</p>
+<p>ZS/MT requires a motor with significant Ld != Lq saliency. It is thus primarily
+intended for IPMSM machines, where q-axis inductance is notably higher than
+d-axis inductance.</p>
+<p>Startup Sequence - IPC for Zero-Speed Torque Production</p>
+<p>To deliver torque from standstill, ZS/MT uses a startup procedure termed
+“ZS/MT + Initial Position Correction (IPC)”, allowing the controller to
+correctly align the stator field before any mechanical motion begins.</p>
+<p>Hybrid Operation - Low-Speed to High-Speed Transition</p>
+<p>Because the injected signal consumes voltage headroom, ZS/MT cannot achieve the
+absolute maximum speed by itself. In practice, it is combined with a back-EMF
+estimator (for example, PLL) using a hybrid scheme (for example, “Minotaur
+hard-switch”) to allow:</p>
 <ul class="simple">
-<li><p>Intrusive estimator that injects a high-frequency voltage signal to estimate
-rotor position at zero or near-zero speed.</p></li>
-<li><p>Requires rotor saliency (IPMSM, Lq != Ld) and uses ZS/MT + IPC at startup.</p></li>
-<li><p>Typically used in hybrid mode (ZS/MT at low speed, back-EMF estimator at
-higher speed).</p></li>
+<li><p>ZS/MT for 0-to-low-speed operation</p></li>
+<li><p>PLL for mid-to-high-speed operation</p></li>
 </ul>
+<p>Tuning and Configuration Parameters</p>
 <p>Reference hardware:
 <a class="reference external" href="https://www.microchip.com/en-us/development-tool/ev18h47a">https://www.microchip.com/en-us/development-tool/ev18h47a</a></p>
 </section>
