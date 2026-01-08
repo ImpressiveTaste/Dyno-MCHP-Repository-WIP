@@ -1,0 +1,14 @@
+a.reference.download {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border-radius: 4px;
+  background: #1b6ec2;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a.reference.download:hover {
+  background: #155a9c;
+  color: #fff;
+}

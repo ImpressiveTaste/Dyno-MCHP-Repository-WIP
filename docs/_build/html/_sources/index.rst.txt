@@ -1,0 +1,40 @@
+MCHP-Dyno
+=========
+
+MCHP-Dyno is a compact, X2C-enabled motor dynamometer for load testing, algorithm validation, sensorless control development, and AI/ML data capture.
+
+This documentation provides an overview of the system, setup steps, and usage examples.
+
+.. image:: _static/images/HighLevel-BlockDiagram.jpg
+   :alt: High-level block diagram
+
+
+
+Sections
+--------
+
+* What MCHP-Dyno is
+* How to set it up
+* How to run DYNO and MOTOR modes
+* How to use X2C Scope for real-time monitoring
+
+Contents
+--------
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+
+   install
+   igat
+   motor_dim
+   usage
+   modes
+   x2c_scope
+   hardware
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`
