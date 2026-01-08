@@ -16,6 +16,7 @@ exclude_patterns = []
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+html_css_files = ['custom.css']
 
 # Optional: logo (file may be added later)
 html_logo = '_static/images/mchp_dyno_logo.png'
