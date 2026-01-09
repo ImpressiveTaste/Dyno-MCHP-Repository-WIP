@@ -32,7 +32,6 @@ A ready-to-use motor dyno environment supporting:
 
 The goal is to allow anyone to test motor algorithms quickly, without building or buying a custom, often expensive, setup.
 
----
 
 ## Key Features
 
@@ -62,8 +61,6 @@ The goal is to allow anyone to test motor algorithms quickly, without building o
 - Optional Magtrol TS105/011 torque sensor  
 - 3D-printable universal bracket (OpenSCAD)
 
----
-
 ## Repository Layout
 
 ```
@@ -77,8 +74,6 @@ miniDyno-2.0/
 └── ...
 ```
 
-
----
 
 ## Requirements
 
@@ -104,7 +99,6 @@ miniDyno-2.0/
 Ensure the DYNO board power is physically connected to the motor board.  
 Generator mode requires a valid power path to dissipate energy.
 
----
 
 ## Standalone Usage (No Scilab / No X2C)
 
@@ -132,7 +126,6 @@ Motor-side DIM firmware (MCLV-48V-300W): program one of the DIM HEX files from
 `motor_ACT57BLF02/mclv48v300w_dim_hex/doc/standalone/` to showcase different
 algorithms (Single-Shunt, ZS/MT, or X2C-enabled).
 
----
 
 ## Using miniDyno with SCILAB + X2C
 
@@ -144,7 +137,6 @@ algorithms (Single-Shunt, ZS/MT, or X2C-enabled).
 
 This mode allows you to modify model parameters, load tables, and control algorithms using X2C’s model-based workflow.
 
----
 
 ## DYNO Torque Profiles
 
@@ -158,7 +150,6 @@ This mode allows you to modify model parameters, load tables, and control algori
 6 = Broken bearing (GainT6, ConstT6)
 7 = Triangle (GainT7, ConstT7)
 
----
 
 ## Motor Mode Parameters
 
@@ -179,7 +170,6 @@ DynoMotor
 
 
 
----
 
 ## X2C Scope
 
@@ -189,8 +179,6 @@ DynoMotor
 4. Press **Sample**  
 
 Signals stream in real time for debugging load/torque profiles, speed control, angle behaviour, and anomalies.
-
----
 
 ## 3D Printable Bracket
 
@@ -203,7 +191,6 @@ Printing recommendations:
 - 60% infill  
 - Adjustable motor spacing  
 
----
 
 ## Future Enhancements
 
@@ -214,5 +201,10 @@ Printing recommendations:
 - Power measurement (in/out)  
 - MCHV-2/3 support  
 - MCLV-48V-300W port  
+
+
+## Want to contribute?
+This project is open source and contributions are welcome. 
+If you are new to GitHub, Github pages, and so on... don't worry, here is a small video that tries to explain how to get a setup for contributions ready: https://youtu.be/irQH9ktzQAw
 
 ---
