@@ -80,23 +80,24 @@
              
   <section id="mchp-dyno">
 <h1>MCHP-Dyno<a class="headerlink" href="#mchp-dyno" title="Link to this heading"></a></h1>
-<p>The MCHP-Dyno is an open project that includes both software and hardware to enable anyone
+<p>The <strong>MCHP-Dyno</strong> is an <strong>open</strong> project that includes both software and hardware to enable anyone
 to build their own motor dynamometer for testing and tuning motor-control algorithms.
 The project supports both high-voltage and low-voltage configurations on the dyno side,
-and can test virtually any electric motor on the DUT (Device-Under-Test) side.</p>
+and can test virtually <strong>any electric motor</strong> on the DUT (Device-Under-Test) side.</p>
 <div class="admonition-by-the-way admonition">
 <p class="admonition-title">By the way…</p>
 <p>“Dyno” is short for <em>dynamometer</em>. In this project the dyno is implemented using a
-PMSM motor with an encoder connected to a control board (e.g., MCLV-2 or MCHV-3).
+<strong>PMSM motor</strong> which must have an encoder. This motor is connected to a control board
+running the MCHP-Dyno software, and the control board, is connected to a <strong>PC running Scilab/XCOS</strong>
+or external an controller (for example the <a class="reference internal" href="igat.html"><span class="doc">IGAT</span></a>) for interfacing with it.
 In a motor-dyno setup, the motor is the device that <em>produces</em> mechanical power,
 while the dyno is the machine that <em>absorbs</em> mechanical power and measures the motor’s performance.
 Using this configuration you can apply a controllable mechanical load to the motor-under-test
 and observe its response (torque, speed, power, efficiency, thermal behavior, etc.).
-For basic characterization a dedicated torque sensor is not required. Because the dyno is “smart”
-(motor-as-brake), you can simulate different load profiles and dynamic conditions, enabling more
+For basic characterization a dedicated torque sensor is not required. Because the <strong>dyno is “smart”</strong>
+(motor-as-brake), you can simulate <strong>different load profiles</strong> and dynamic conditions, enabling more
 meaningful testing than with simple passive loads.</p>
 </div>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a>` :contentReference[oaicite:2]{index=2}</p>
 <img alt="High-level block diagram" src="_images/HighLevel-BlockDiagram.jpg" />
 <section id="sections">
 <h2>Sections<a class="headerlink" href="#sections" title="Link to this heading"></a></h2>
