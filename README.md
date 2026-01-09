@@ -207,4 +207,12 @@ Printing recommendations:
 This project is open source and contributions are welcome. 
 If you are new to GitHub, Github pages, and so on... don't worry, here is a small video that tries to explain how to get a setup for contributions ready: https://youtu.be/irQH9ktzQAw
 
----
+----------------------------------------------------------------------
+REFERENCE & DISCLAIMER
+----------------------------------------------------------------------
+
+This project, including all hardware designs, documentation, images, and configuration examples, is provided for reference and evaluation purposes only.
+
+It is supplied “AS IS”, without any express, implied, or statutory warranties, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement. The information is intended to assist with experimentation, learning, and prototyping and does not constitute a certified or production-ready design.
+
+The author assumes no responsibility or liability for any errors, omissions, hardware damage, data loss, personal injury, or other consequences arising from the use, reproduction, modification, or deployment of this material. Users are solely responsible for verifying correctness, safety, electrical compliance, and suitability for their specific application
