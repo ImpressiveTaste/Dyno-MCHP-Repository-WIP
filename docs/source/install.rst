@@ -1,26 +1,51 @@
-Installation & Setup
-====================
+Make Your MCHP-Dyno
+===================
 
-This section explains how to get from hardware on the bench to a running dyno.
+.. contents::
+   :local:
+   :depth: 2
 
-You can adapt and expand this later to match the repository README.
+1. Introduction
+---------------
 
-Standalone Mode (no Scilab / no X2C)
-------------------------------------
+This page intent is to guide you on the creation of your first MCHP-Dyno project.
+The MCHP-Dyno proposed here, is the cheapest and easiest assembly that can be done
+to get a working MCHP-Dyno setup.
+You can use this page as a guide even if you have a different motor, a different
+controller board and different motor holders. 
 
-Quick steps:
+.. tip::
 
-1. Program the dyno HEX onto the SAME54 PIM:
-   ``MCHPDyno/mc_foc_dyno_same54_mclv2/doc/standalone/MC_FOC_DYNO_SAME54_MCLV2.X.production.hex``
-2. Optional IGaT display (EV14C17A): program the display HEX in
-   ``MCHPDyno/igat_ev14c17a/doc/standalone/`` (see :doc:`igat`).
-3. Motor-side DIM (MCLV-48V-300W): program one of the DIM HEX files in
-   ``motor_ACT57BLF02/mclv48v300w_dim_hex/doc/standalone/`` (see :doc:`motor_dim`).
-4. Power the system and run the GUI via ``start.bat`` in the standalone folder.
+   In some instances you will find **tip** blocks like these... in here you
+   will find tips and tricks on how to improve or "hack" the MCHP-Dyno for your
+   specific needs.
 
-Model-Based Mode (Scilab + X2C)
--------------------------------
+1.1 Tools needed
+~~~~~~~~~~~~~~~~
 
-Summarise the required tools and the basic workflow:
-- Scilab, X2C, MPLAB X, programmer
-- Where to find the model files in the repository
+Placeholder: list required tools (hand tools, programmer, etc.).
+
+1.2 Suggested hardware
+~~~~~~~~~~~~~~~~~~~~~~
+
+Placeholder: list reference hardware and alternatives.
+
+1.3 Software needed
+~~~~~~~~~~~~~~~~~~~
+
+Placeholder: list required software and versions.
+
+2. Assembling the hardware
+--------------------------
+
+Placeholder: step-by-step assembly overview.
+
+2.1 Subsection title
+~~~~~~~~~~~~~~~~~~~~
+
+Placeholder: add the first assembly subsection here.
+
+2.2 Subsection title
+~~~~~~~~~~~~~~~~~~~~
+
+Placeholder: add the second assembly subsection here.

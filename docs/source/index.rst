@@ -54,7 +54,7 @@ motors and mechanics.
      - High-voltage inverter + PMSM test bench
      - Differential coupling for cheap torque measurement
      - Low Votlage Dyno but High Voltage DUT
-     - Echibition Ready Demo
+     - Exhibition Ready Demo
 
 
 --------
