@@ -20,6 +20,12 @@ controller board and different motor holders.
    will find tips and tricks on how to improve or "hack" the MCHP-Dyno for your
    specific needs.
 
+.. warning::
+
+   Warning blocks are not decoration. If you ignore them, your MCHP-Dyno may
+   respond with mysterious smoke. Read carefully—future-you will thank present-you.
+   This warning has already saved several MCHP-Dyno projects...
+   
 1.1 Tools needed
 ~~~~~~~~~~~~~~~~
 
