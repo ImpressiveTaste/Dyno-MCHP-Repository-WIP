@@ -1,3 +1,7 @@
+.. image:: _static/images/HighLevel-BlockDiagram.jpg
+   :align: right
+   :width: 300px
+
 MCHP-Dyno
 =========
 
@@ -20,8 +24,29 @@ and can test virtually **any electric motor** on the DUT (Device-Under-Test) sid
    (motor-as-brake), you can simulate **different load profiles** and dynamic conditions, enabling more
    meaningful testing than with simple passive loads.
 
-.. image:: _static/images/HighLevel-BlockDiagram.jpg
-   :alt: High-level block diagram
+
+Get Inspired & Build Something Awesome
+--------------------------------------
+
+Here are a few example builds to spark ideas. Use MCHP-Dyno as a base and adapt it to your own
+motors and mechanics.
+
+.. list-table::
+   :widths: 33 33 33
+   :align: center
+
+   * - .. image:: _static/images/build_desktop_dyno.jpg
+         :width: 220px
+         :alt: Desktop MCHP-Dyno build
+     - .. image:: _static/images/build_hv_rack.jpg
+         :width: 220px
+         :alt: High-voltage rack dyno
+     - .. image:: _static/images/build_3d_printed_fixture.jpg
+         :width: 220px
+         :alt: 3D-printed motor fixture
+   * - Desktop BLDC dyno for low-voltage testing
+     - High-voltage inverter + PMSM test bench
+     - 3D-printed adapters and fixtures for different motors
 
 
 
