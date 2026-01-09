@@ -20,3 +20,7 @@ a.reference.download:hover {
 .motor-dim-downloads p:last-child {
   margin-bottom: 0;
 }
+
+.wy-side-nav-search {
+  background-color: #303030;
+}
