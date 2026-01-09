@@ -25,7 +25,7 @@ and can test virtually **any electric motor** on the DUT (Device-Under-Test) sid
    meaningful testing than with simple passive loads.
 
 
-Get Inspired & Build Something Awesome
+Get Inspired & Build your onw MCHP-Dyno
 --------------------------------------
 
 Here are a few example builds to spark ideas. Use MCHP-Dyno as a base and adapt it to your own
