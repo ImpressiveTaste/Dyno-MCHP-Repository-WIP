@@ -57,17 +57,6 @@ motors and mechanics.
      - Echibition Ready Demo
 
 
-
-
-Sections
---------
-
-* What MCHP-Dyno is
-* How to set it up
-* How to run DYNO and MOTOR modes
-* How to use X2C Scope for real-time monitoring
-
-
 --------
 
 .. toctree::
@@ -81,9 +70,3 @@ Sections
    modes
    x2c_scope
    hardware
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
