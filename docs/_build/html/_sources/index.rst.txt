@@ -26,13 +26,13 @@ and can test virtually **any electric motor** on the DUT (Device-Under-Test) sid
 
 
 Get Inspired & Build your own MCHP-Dyno
---------------------------------------
+---------------------------------------
 
 Here are a few example builds to spark ideas. Use MCHP-Dyno as a base and adapt it to your own
 motors and mechanics.
 
 .. list-table::
-   :widths: 33 33 33 33 33
+   :widths: 33 33 33 33 33 33
    :align: center
 
    * - .. image:: _static/images/build_desktop_dyno.jpg
@@ -50,11 +50,15 @@ motors and mechanics.
      - .. image:: _static/images/DemoRedAssembly.jpg
          :width: 220px
          :alt: Differential Coupling Torque Sensor Dyno
+     - .. image:: _static/images/SuitcaseDyno.png
+         :width: 220px
+         :alt: Suitcase MCHP-Dyno build
    * - Desktop BLDC dyno for low-voltage testing
      - High-voltage inverter + PMSM test bench
      - Differential coupling for cheap torque measurement
      - Low Votlage Dyno but High Voltage DUT
      - Exhibition Ready Demo
+     - Suitcase MCHP-Dyno build
 
 
 --------

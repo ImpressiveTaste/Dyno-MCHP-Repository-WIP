@@ -6,7 +6,8 @@ This repository documents the setup, firmware workflow, load profiles, and usage
 
 Documentation website (HTML build): [https://impressivetaste.github.io/Dyno-MCHP-Repository-WIP/](https://impressivetaste.github.io/Dyno-MCHP-Repository-WIP/)
 
-The system supports both standalone operation (HEX-only, no toolchain required) and full SCILAB/X2C model-based workflows.  
+The system supports both standalone operation (HEX-only, no toolchain required) and full SCILAB/X2C model-based workflow that allows to set torque and behaviour directly clicking on the model designed through model based design.  
+
 It is compatible with the following hardware platforms:
 
 - [MCLV-2](https://www.microchip.com/en-us/development-tool/dm330021-2)  
@@ -139,7 +140,7 @@ Generator mode requires a valid power path to dissipate energy.
 - MPLAB X or IPE
 
 ### Steps
-1. Navigate to `doc/standalone` in the Bitbucket project.
+1. Navigate to `MCHPDyno/mc_foc_dyno_same54_mclv2/doc/standalone` in the Github project.
 2. Program the file:  
    **MC_FOC_DYNO_SAME54_MCLV2.X.production.hex**
 3. Disconnect programmer and reset the MCLV-2.
@@ -173,32 +174,33 @@ This mode allows you to modify model parameters, load tables, and control algori
 ## DYNO Torque Profiles
 
 ### torque_mode
-0 = Constant (potentiometer)
-1 = Constant (const_torque)
-2 = Trapezoid (freq, high, low, Tr, Tf)
-3 = Fan load (fan_gain)
-4 = Sine (A, f, fmax, Offset)
-5 = Unbalanced (GainT5, ConstT5)
-6 = Broken bearing (GainT6, ConstT6)
-7 = Triangle (GainT7, ConstT7)
+- 0 = Constant (potentiometer)
+- 1 = Constant (const_torque)
+- 2 = Trapezoid (freq, high, low, Tr, Tf)
+- 3 = Fan load (fan_gain)
+- 4 = Sine (A, f, fmax, Offset)
+- 5 = Unbalanced (GainT5, ConstT5)
+- 6 = Broken bearing (GainT6, ConstT6)
+- 7 = Triangle (GainT7, ConstT7)
 
 
 ## Motor Mode Parameters
 
-### speed_mode
-0 = Constant speed (potentiometer)
-1 = Constant speed (const_speed)
-2 = Trapezoidal speed profile
+#### speed_mode
+- 0 = Constant speed (potentiometer)
+- 1 = Constant speed (const_speed)
+- 2 = Trapezoidal speed profile
 
 
-Additional controls:
-motor_torquemode
-1 = speed control
-0 = torque control
+### Additional controls:
 
-DynoMotor
-1 = Dyno mode
-0 = Motor mode
+#### motor_torquemode
+- 1 = speed control
+- 0 = torque control
+
+#### DynoMotor
+- 1 = Dyno mode
+- 0 = Motor mode
 
 
 
@@ -212,17 +214,16 @@ DynoMotor
 
 Signals stream in real time for debugging load/torque profiles, speed control, angle behaviour, and anomalies.
 
-## 3D Printable Bracket
+## 3D Printable Brackets
 
-OpenSCAD design for unified motor mounting:  
-Location: `3Dparts`
+For making the MCHP-Dyno, there is a need of brakets to fix the motors, and allow for the connection between the rotor shafts guaranteeing alignment. To do so, in the location: `3Dparts` of this repository, both STL and openSCAD 3D models are made avaialble to allow to use standard brakets for some specific motors. 
 
-Printing recommendations:
-- PLA  
-- 0.2 mm layers  
-- 60% infill  
-- Adjustable motor spacing  
+If you are using a different motor, you can use the [openSCAD](https://openscad.org) files to create your own motor braket parametrically. If you make a new motor, feel free to share in this repository. 
 
+Printing recommendations in a standard FDM printer:
+- PLA or PETG (PETG preferrable)  
+- 0.2 mm layer height  
+- 100% infill  
 
 ## Future Enhancements
 
