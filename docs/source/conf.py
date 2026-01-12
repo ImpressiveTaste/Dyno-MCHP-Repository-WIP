@@ -22,5 +22,4 @@ html_css_files = ['custom.css']
 html_logo = '_static/images/mchp_dyno_logo_big.png'
 html_theme_options = {
     'logo_only': True,
-    'display_version': True,
 }
