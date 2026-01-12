@@ -66,11 +66,12 @@ The goal is to allow anyone to test motor algorithms quickly, without building o
 ```
 miniDyno-2.0/
 ├── README.md <-- you are here
-├── doc/
-│ ├── standalone/ <-- HEX + startup scripts for standalone mode
-│ ├── 3Dparts/ <-- OpenSCAD + STL universal motor bracket
+├── 3Dparts/ <-- OpenSCAD + STL universal motor bracket
+├── MCHPDyno/
+│ ├── mc_foc_dyno_same54_mclv2/
+│ │ └── doc/ <-- project docs + standalone assets
 │ └── ...
-├── firmware/ <-- SAME54 dyno firmware (reference)
+├── docs/ <-- rendered docs + static assets
 └── ...
 ```
 
@@ -214,7 +215,7 @@ Signals stream in real time for debugging load/torque profiles, speed control, a
 ## 3D Printable Bracket
 
 OpenSCAD design for unified motor mounting:  
-Location: `doc/3Dparts`
+Location: `3Dparts`
 
 Printing recommendations:
 - PLA  
