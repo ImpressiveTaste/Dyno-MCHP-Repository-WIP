@@ -86,10 +86,23 @@ No other particular tools are needed.
 2. Assembling the hardware
 --------------------------
 
-Placeholder: step-by-step assembly overview.
+In this section the steps to build a MCHP-Dyno will be described. 
+This is the easiest possible MCHP-Dyno you can make, but as you saw in the home page, you are free to play around
+and make the MCHP-Dyno that best suits your needs.
 
-2.1 Subsection title
-~~~~~~~~~~~~~~~~~~~~
+Before starting this guide, you will need to navigate to the file section `3Dparts <../../../3Dparts/>`_
+and 3D print the motor mounts for the motors used, in this case, the ACT57BLF02 motors (so the file needed will be the ACT_57BLF0x_unified_V1_00.stl). 
+You'll need to print one of these per
+motor. You can also find the openSCAD files for the brackets
+in there, so if you would like to modify this model to fit a different motor, you're welcome to do so. 
+
+You can print this model in PLA or PETG and make sure to set the infill to 100%. 
+You don't need to enable any supports.
+
+
+
+2.1 Organzie the hardware
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Placeholder: add the first assembly subsection here.
 
@@ -102,4 +115,4 @@ Placeholder: add the second assembly subsection here.
 --------------------
 
 4. Run the MCHP-Dyno - step-by-step
---------------------
+-----------------------------------

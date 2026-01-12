@@ -101,8 +101,8 @@ You don't need to enable any supports.
 
 
 
-2.1 Organzie the hardeare
-~~~~~~~~~~~~~~~~~~~~
+2.1 Organzie the hardware
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Placeholder: add the first assembly subsection here.
 
@@ -115,4 +115,4 @@ Placeholder: add the second assembly subsection here.
 --------------------
 
 4. Run the MCHP-Dyno - step-by-step
---------------------
+-----------------------------------
