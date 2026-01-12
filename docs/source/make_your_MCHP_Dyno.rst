@@ -91,7 +91,7 @@ This is the **easiest possible MCHP-Dyno** you can make, but as you saw in the h
 and make the MCHP-Dyno that best suits your needs.
 
 Before starting this guide, you will need to navigate to the file section `3Dparts <https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/tree/main/3Dparts>`_
-and **3D print the motor mounts** for the motors used, in this case, the **ACT57BLF02** motors (so the file needed will be the ACT_57BLF0x_unified_V1_00.stl). 
+and **3D print the motor mounts** for the motors used, in this case, the `ACT57BLF02 <https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/blob/main/3Dparts/STL/ACT_57BLF0x_unified_V1_00.stl>`_  motors (so the file needed will be the ACT_57BLF0x_unified_V1_00.stl). 
 You'll need to print one of these per
 motor. You can also find the openSCAD files for the brackets
 in there, so if you would like to modify this model to fit a different motor, you're welcome to do so. 
