@@ -55,7 +55,7 @@ No other particular tools are needed.
 - One `3A 24V Power Supply <https://www.microchipdirect.com/dev-tools/AC002013>`_
 - Flexible aluminum jaw shaft coupling (if the above suggested motors are used, then 8mm bore should be selected).
 - Eight M4 × 10 mm hex-socket screws
-- 3D printed brackets, which can be found in the `3Dparts <../../../3Dparts/>`_ folder (OpenSCAD + STL).
+- 3D printed brackets, which can be found in the `3Dparts <https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/tree/main/3Dparts>`_ folder (OpenSCAD + STL).
 - Wood mounting base or 4 (20×20) T-slot aluminum profiles, minimum length 500 mm
 - For T-slot mounting Eight M5 socket-head cap screws (M5 SHCS) - 16 mm
 - For T-slot mounting Eight M5 T-slot nuts
@@ -87,11 +87,11 @@ No other particular tools are needed.
 --------------------------
 
 In this section the steps to build a MCHP-Dyno will be described. 
-This is the easiest possible MCHP-Dyno you can make, but as you saw in the home page, you are free to play around
+This is the **easiest possible MCHP-Dyno** you can make, but as you saw in the home page, you are free to play around
 and make the MCHP-Dyno that best suits your needs.
 
-Before starting this guide, you will need to navigate to the file section `3Dparts <../../../3Dparts/>`_
-and 3D print the motor mounts for the motors used, in this case, the ACT57BLF02 motors (so the file needed will be the ACT_57BLF0x_unified_V1_00.stl). 
+Before starting this guide, you will need to navigate to the file section `3Dparts <https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/tree/main/3Dparts>`_
+and **3D print the motor mounts** for the motors used, in this case, the **ACT57BLF02** motors (so the file needed will be the ACT_57BLF0x_unified_V1_00.stl). 
 You'll need to print one of these per
 motor. You can also find the openSCAD files for the brackets
 in there, so if you would like to modify this model to fit a different motor, you're welcome to do so. 
