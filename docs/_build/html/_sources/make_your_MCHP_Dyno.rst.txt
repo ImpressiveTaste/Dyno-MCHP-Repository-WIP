@@ -39,7 +39,7 @@ where the legacy files will be organized by date when they where out-commissione
 1.1 Suggested tools
 ~~~~~~~~~~~~~~~~~~~
 
-You will need the screwdriver for the screws, nuts and shaft coupling.
+You will need the right size screwdrivers for the screws, nuts and shaft coupling.
 
 No other particular tools are needed.
 
@@ -99,6 +99,12 @@ in there, so if you would like to modify this model to fit a different motor, yo
 You can print this model in PLA or PETG and make sure to set the infill to 100%. 
 You don't need to enable any supports.
 
+.. figure:: _static/images/ACT57BLF02-Sliced-Bambu.png
+   :alt: ACT57BLF02 bracket slicing preview
+   :align: center
+   :width: 80%
+
+   ACT57BLF02 bracket — slicing preview (PLA, 100% infill).
 
 
 2.1 Organzie the hardware
