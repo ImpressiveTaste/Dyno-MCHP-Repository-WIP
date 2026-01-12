@@ -5,6 +5,8 @@ The Integrated Graphics and Touch (IGaT) Curiosity Evaluation Kit (EV14C17A)
 is used as an optional standalone display alongside the Dyno. It runs on a
 SAM E51 MCU and is programmed independently from the dyno controller.
 
+Here is a small video showing the capabilities of the board: https://youtu.be/NBVHWmz8veU
+
 Firmware Location
 -----------------
 

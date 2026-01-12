@@ -67,7 +67,7 @@ motors and mechanics.
    :maxdepth: 1
    :caption: Contents:
 
-   install
+   make_your_MCHP_Dyno
    igat
    motor_dim
    usage
