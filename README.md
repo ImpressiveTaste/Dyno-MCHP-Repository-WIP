@@ -79,7 +79,7 @@ miniDyno-2.0/
 Project names use underscore-separated "placeholder" in a fixed order:
 `<topic>_<algorithm>_<S/SL>_<datatype>_<device>_<feature>_<demo-board>_<customer>`
 
-The projects only keep the "placeholders" that apply.
+The projects only keeps the "placeholders" that apply.
 
 "placeholder" options (from the motor control naming list):
 - topic (project area): MC, BLINKY, PWR, SENS
@@ -96,9 +96,9 @@ The projects only keep the "placeholders" that apply.
 - algorithm: FOC = Field Oriented Control; BLOCK = Block commutation (six-step commutation); MB = motorBench-generated code; H3 = MPLAB Harmony 3 generated code; QSPIN = MPLAB Harmony QuickSpin generated code; LEG = Legacy (hand-authored) code.
 - S/SL: S = sensored; SL = sensorless; SSL = sensorless single-shunt; DYNO = dynamometer (dyno) project; ZSMT = Zero-Speed/Maximum-Torque (ZS/MT) algorithm ([Microchip ZSMT overview](https://www.microchip.com/en-us/tools-resources/configure/mplab-harmony/quickspin/zsmt-algorithm)); ZSMTLF = ZS/MT low-frequency variant.
 - datatype: FIP = fixed-point (usually 16-bit); FIP32 = 32-bit fixed-point; FLOAT = floating-point; DOUBLE = double-precision floating-point.
-- feature: PLL = Phase-Locked Loop ([AN1292](https://ww1.microchip.com/downloads/en/AppNotes/01292A.pdf)); SMO = Sliding Mode Observer; PFC = Power Factor Correction ([AN4398](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU32/ApplicationNotes/ApplicationNotes/Sensorless-Field-Oriented-Control-for-a-Permanent-Magnet-Synchronous-Motor-Using-Sliding-Mode-DS00004398.pdf)).
+- feature: PLL = Phase-Locked Loop ([AN1292](https://ww1.microchip.com/downloads/en/AppNotes/01292A.pdf)); SMO = Sliding Mode Observer ([AN4398](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU32/ApplicationNotes/ApplicationNotes/Sensorless-Field-Oriented-Control-for-a-Permanent-Magnet-Synchronous-Motor-Using-Sliding-Mode-DS00004398.pdf)); PFC = Power Factor Correction([AN1208](https://ww1.microchip.com/downloads/en/appnotes/01208a.pdf)).
 - demo board: [MCLV2](https://www.microchip.com/en-us/development-tool/dm330021-2), [MCHV2](https://www.microchip.com/en-us/tools-resources/reference-designs/aircon-board), [MCHV3](https://www.microchip.com/en-us/development-tool/dm330023-3), [MCLV48V300W](https://www.microchip.com/en-us/development-tool/ev18h47a), [MCHV230VAC1.5KW](https://www.microchip.com/en-us/development-tool/ev78u65a), [LVMC](https://www.microchip.com/en-us/solutions/technologies/motor-control-and-drive/hardware-development-tools).
-- customer: SA = Stream Analyze (AI/data collection).
+- customer: SA = Stream Analyze (AI/data collection)([Documentation](https://studio.streamanalyze.com/docs/guides/general-guides/intro)).
 
 Examples:
 - `mc_foc_dyno_same54_mclv2` (MC + FOC + DYNO + SAME54 + MCLV2)
