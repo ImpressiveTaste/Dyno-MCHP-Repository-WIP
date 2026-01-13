@@ -36,14 +36,7 @@ The content might be updated over time. Legacy code will still be available in t
 where the legacy files will be organized by date when they where out-commissioned.
 
 
-1.1 Suggested tools
-~~~~~~~~~~~~~~~~~~~
-
-You will need the right size screwdrivers for the screws, nuts and shaft coupling.
-
-No other particular tools are needed.
-
-1.2 Suggested hardware
+1.1 Suggested hardware
 ~~~~~~~~~~~~~~~~~~~~~~
 
 **Required hardware**
@@ -75,7 +68,7 @@ No other particular tools are needed.
    - Two `MCLV-48V-300W Development Board <https://www.microchip.com/en-us/development-tool/ev18h47a>`_.
    - Two `ACT57BLF02 Motor <https://www.act-motor.com/brushless-dc-motor-57blf-product/>`_
 
-1.3 Software needed
+1.2 Software needed
 ~~~~~~~~~~~~~~~~~~~
 
 - Scilab 6.1.1 (installation directory: https://www.scilab.org/download/previous-versions); newer versions will not work  
@@ -107,10 +100,15 @@ You don't need to enable any supports.
    ACT57BLF02 bracket — slicing preview (PLA, 100% infill).
 
 
-2.1 Organzie the hardware
-~~~~~~~~~~~~~~~~~~~~~~~~~
+2.1 Step 1: Mount Motors to 3D printed braket
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Placeholder: add the first assembly subsection here.
+As a first step, mount the motors in the **mounting brackets** that you have 3D printed.
+If you are using different motors be sure to make the brackets in such a way that the motor
+shafts are aligned. This is very important. 
+
+The shaft coupler can handle some small misalignment but will add unnecessary force to the Motor
+shafts, making the control not reliable.
 
 2.2 Subsection title
 ~~~~~~~~~~~~~~~~~~~~
