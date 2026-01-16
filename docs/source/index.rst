@@ -32,7 +32,7 @@ Here are a few example builds to spark ideas. Use MCHP-Dyno as a base and adapt 
 motors and mechanics.
 
 .. list-table::
-   :widths: 33 33 33 33 33 33
+   :widths: 33 33 33 33 33 33 33
    :align: center
 
    * - .. image:: _static/images/build_desktop_dyno.jpg
@@ -53,12 +53,16 @@ motors and mechanics.
      - .. image:: _static/images/SuitcaseDyno.png
          :width: 220px
          :alt: Suitcase MCHP-Dyno build
+     - .. image:: _static/images/DynoExample-WithTorqueSensor.png
+         :width: 220px
+         :alt: Example with Torque Sensor
    * - Desktop BLDC dyno for low-voltage testing
      - High-voltage inverter + PMSM test bench
      - Differential coupling for cheap torque measurement
      - Low Votlage Dyno but High Voltage DUT
      - Exhibition Ready Demo
      - Suitcase MCHP-Dyno build
+     - Example with Torque Sensor
 
 
 --------
