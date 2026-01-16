@@ -233,8 +233,8 @@ MCLV-48V-300W to share the DC-Link and guaranteeing not being able to dissipate 
 
 For the MCLV-48V-300W you should follow the conenction shown below. 
 
-Note that, since this is the Device-Under-Test side, you can choose to put different **DIM** boards with Different
-software loaded to test different motor control algorithms. 
+Note that, since this is the Device-Under-Test side, you can choose to put different **DIM** boards with different
+software loaded to test different motor control algorithms (see :doc:`Motor DIM HEX (MCLV-48V-300W) <motor_dim>`).
 
 .. tip::
 
