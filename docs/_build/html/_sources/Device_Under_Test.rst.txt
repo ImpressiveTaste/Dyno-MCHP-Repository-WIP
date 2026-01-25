@@ -9,6 +9,15 @@ motor-control algorithms on the dyno.
 
 To view motor behavior on the DUT side, you can use `pyX2Cscope <https://x2cscope.github.io/pyx2cscope/>`_ through Python.
 There are also standalone apps you can download and run directly without installing anything beyond the app itself.
+To download the Standlaone App this is the up-to-date link: `pyX2Cscope releases <https://github.com/X2Cscope/pyx2cscope/releases>`_.
+
+.. tip::
+
+   To actually being able to monitor the board, you will need to load to pyX2Cscope the *.elf* file related to the project that is loaded to the board.
+   You can find the *.elf* files in the *production* *dist* folder for the project currently loaded on the board.
+   All motor control examples by Microchip are already compatible with X2Cscope, so the only thing you need to do is program the board, and load the *.elf* file.
+   
+   Here is a good video showing how to use *X2Cscope* with some code: `Video Tutorial Example using motorBench® Development Suite <https://youtu.be/Znv0quaTxXc?si=lDy2cfnZS-tfgaD6>`_.
 
 .. list-table::
    :widths: 50 50
