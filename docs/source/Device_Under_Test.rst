@@ -1,9 +1,40 @@
-Motor DIM HEX (MCLV-48V-300W)
-=============================
+Motor Side (Device Under Test)
+==============================
 
 These HEX files target the motor-side control DIM installed on the
 MCLV-48V-300W Development Board (EV18H47A). They are used to showcase different
 motor-control algorithms on the dyno.
+
+**2.2.5 Monitor motor behavior with pyX2Cscope**
+
+To view motor behavior on the DUT side, you can use `pyX2Cscope <https://x2cscope.github.io/pyx2cscope/>`_ through Python.
+There are also standalone apps you can download and run directly without installing anything beyond the app itself.
+
+.. list-table::
+   :widths: 50 50
+   :align: center
+
+   * - .. figure:: _static/images/pyX2CscopeStandalone-WebInterface.png
+          :alt: pyX2Cscope Standalone Web Interface
+          :width: 95%
+
+          pyX2Cscope Standalone Web Interface
+     - .. figure:: _static/images/pyX2Cscope-Standalone-App.png
+          :alt: pyX2Cscope Standalone App
+          :width: 95%
+
+          pyX2Cscope Standalone App
+   * - .. figure:: _static/images/DownloadingAndUsingpyX2CscopeStandalone.png
+          :alt: Downloading and using pyX2Cscope Standalone
+          :width: 95%
+
+          Downloading and using pyX2Cscope Standalone
+     - .. figure:: _static/images/DownloadingAndUsingpyX2CscopeStandalone2.png
+          :alt: Downloading and using pyX2Cscope Standalone (2)
+          :width: 95%
+
+          Downloading and using pyX2Cscope Standalone (2)
+
 
 Example DIM: dsPIC33CK256MP508 Motor Control DIM (EV62P66A)
 https://www.microchip.com/en-us/development-tool/ev62p66a

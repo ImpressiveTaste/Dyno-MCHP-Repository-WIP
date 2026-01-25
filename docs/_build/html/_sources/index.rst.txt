@@ -73,7 +73,7 @@ motors and mechanics.
 
    make_your_MCHP_Dyno
    igat
-   motor_dim
+   Device_Under_Test
    usage
    modes
    x2c_scope

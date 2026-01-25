@@ -234,7 +234,8 @@ MCLV-48V-300W to share the DC-Link and guaranteeing not being able to dissipate 
 For the MCLV-48V-300W you should follow the conenction shown below. 
 
 Note that, since this is the Device-Under-Test side, you can choose to put different **DIM** boards with different
-software loaded to test different motor control algorithms (see :doc:`Motor DIM HEX (MCLV-48V-300W) <motor_dim>`).
+software loaded to test different motor control algorithms. The motor-side HEX downloads are listed on the
+:doc:`Motor Side (Device Under Test) <Device_Under_Test>` page.
 
 .. tip::
 
@@ -249,6 +250,37 @@ software loaded to test different motor control algorithms (see :doc:`Motor DIM 
    :width: 70%
 
    MCLV-48V-300W board configuration
+
+**2.2.5 Monitor motor behavior with pyX2Cscope**
+
+To view motor behavior on the DUT side, you can use `pyX2Cscope <https://x2cscope.github.io/pyx2cscope/>`_ through Python.
+There are also standalone apps you can download and run directly without installing anything beyond the app itself. 
+To download the Standlaone App this is the up-to-date link: `pyX2Cscope releases <https://github.com/X2Cscope/pyx2cscope/releases>`_.
+
+.. list-table::
+   :widths: 50 50
+   :align: center
+
+   * - .. figure:: _static/images/pyX2CscopeStandalone-WebInterface.png
+          :alt: pyX2Cscope Standalone Web Interface
+          :width: 95%
+
+          pyX2Cscope Standalone Web Interface
+     - .. figure:: _static/images/pyX2Cscope-Standalone-App.png
+          :alt: pyX2Cscope Standalone App
+          :width: 95%
+
+          pyX2Cscope Standalone App
+   * - .. figure:: _static/images/DownloadingAndUsingpyX2CscopeStandalone.png
+          :alt: Downloading and using pyX2Cscope Standalone
+          :width: 95%
+
+          Downloading and using pyX2Cscope Standalone
+     - .. figure:: _static/images/DownloadingAndUsingpyX2CscopeStandalone2.png
+          :alt: Downloading and using pyX2Cscope Standalone (2)
+          :width: 95%
+
+          Downloading and using pyX2Cscope Standalone (2)
 
 
 3. Load the software
