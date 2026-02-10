@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Basic Usage &mdash; MC-Dyno 0.1.0 documentation</title>
+  <title>Procedure for using the MC-Dyno: &mdash; MC-Dyno 0.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=2662e04f" />
@@ -49,8 +49,14 @@
 <li class="toctree-l1"><a class="reference internal" href="make_your_MC_Dyno.html">Make Your MC-Dyno</a></li>
 <li class="toctree-l1"><a class="reference internal" href="igat.html">IGaT Display (EV14C17A)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Device_Under_Test.html">Motor Side (Device Under Test)</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#example-flow">Example Flow</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Procedure for using the MC-Dyno:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#purpose">1. Purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#checklist-before-starting-up-the-mc-dyno-hardware-and-files">2. Checklist before starting up the MC-Dyno (Hardware and Files)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#power-safety-must-read">3. Power / Safety (Must-Read)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#start-up-procedure-order-is-important">4. Start-up Procedure (Order Is Important)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#x2c-scope-pyx2cscope-usage-data-and-visualization">6. X2C-scope / pyX2Cscope Usage (Data and Visualization)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shutdown-procedure-in-order">7. Shutdown Procedure (In Order)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common-problems-and-fixes">8. Common Problems and Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="modes.html">DYNO &amp; MOTOR Modes</a></li>
@@ -72,7 +78,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Basic Usage</li>
+      <li class="breadcrumb-item active">Procedure for using the MC-Dyno:</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/usage.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -82,18 +88,124 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="basic-usage">
-<h1>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading"></a></h1>
-<p>Here you describe the basic workflows: starting the dyno, loading a profile, monitoring signals, etc.</p>
-<section id="example-flow">
-<h2>Example Flow<a class="headerlink" href="#example-flow" title="Link to this heading"></a></h2>
+  <section id="procedure-for-using-the-mc-dyno">
+<h1>Procedure for using the MC-Dyno:<a class="headerlink" href="#procedure-for-using-the-mc-dyno" title="Link to this heading"></a></h1>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#purpose" id="id1">1. Purpose</a></p></li>
+<li><p><a class="reference internal" href="#checklist-before-starting-up-the-mc-dyno-hardware-and-files" id="id2">2. Checklist before starting up the MC-Dyno (Hardware and Files)</a></p></li>
+<li><p><a class="reference internal" href="#power-safety-must-read" id="id3">3. Power / Safety (Must-Read)</a></p></li>
+<li><p><a class="reference internal" href="#start-up-procedure-order-is-important" id="id4">4. Start-up Procedure (Order Is Important)</a></p></li>
+<li><p><a class="reference internal" href="#x2c-scope-pyx2cscope-usage-data-and-visualization" id="id5">6. X2C-scope / pyX2Cscope Usage (Data and Visualization)</a></p></li>
+<li><p><a class="reference internal" href="#shutdown-procedure-in-order" id="id6">7. Shutdown Procedure (In Order)</a></p></li>
+<li><p><a class="reference internal" href="#common-problems-and-fixes" id="id7">8. Common Problems and Fixes</a></p></li>
+</ul>
+</nav>
+<section id="purpose">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">1. Purpose</a><a class="headerlink" href="#purpose" title="Link to this heading"></a></h2>
+<p>Step-by-step operator checklist to prepare, run, present, and safely shut down the
+DUT + MC-Dyno.</p>
+</section>
+<section id="checklist-before-starting-up-the-mc-dyno-hardware-and-files">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">2. Checklist before starting up the MC-Dyno (Hardware and Files)</a><a class="headerlink" href="#checklist-before-starting-up-the-mc-dyno-hardware-and-files" title="Link to this heading"></a></h2>
+<p><strong>Hardware</strong></p>
+<ul class="simple">
+<li><p>PC, power, keyboard/mouse.</p></li>
+<li><p>Two MCLV boards mounted with printed brackets (use the STL brackets), motor and dyno physically connected.</p></li>
+<li><p><strong>Single DC power supply connected to both boards</strong>.</p></li>
+<li><p>USB cable connected to the two boards for getting data in and out.</p></li>
+</ul>
+<p><strong>Software</strong></p>
+<ul class="simple">
+<li><p>Scilab installed (tested version is OK; recommended 2024.1.0 but 6.1.1 works).</p></li>
+<li><p>X2C (X2C blocks in Scilab) installed and visible in Scilab on startup.</p></li>
+<li><p>pyX2Cscope / X2C-scope app (standalone) or web-interface app to be used for the DUT side. Can be downlaoded here: <a class="reference external" href="https://github.com/X2Cscope/pyx2cscope/releases">https://github.com/X2Cscope/pyx2cscope/releases</a></p></li>
+</ul>
+</section>
+<section id="power-safety-must-read">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">3. Power / Safety (Must-Read)</a><a class="headerlink" href="#power-safety-must-read" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p><strong>Use one DC power supply only</strong>. Do NOT power the motor board and dyno board with separate supplies.
+Link + / - terminals so both boards share the same supply.</p></li>
+<li><p>Fault / safety LED: All MCLV-48V-300W boards have a hardware safety switch (“fault” / overcurrent protection).
+If that LED is ON the PWMs are disconnected (no power to gate drivers). Press the small fault-reset button
+(one press) to clear and re-enable the power stage.</p></li>
+<li><p>Never press mechanical switches on the Dyno Side while the motor is running. If behavior becomes uncontrollable:
+STOP the DUT side (switch1), reset fault if lights up, then restart.</p></li>
+</ul>
+</div>
+</section>
+<section id="start-up-procedure-order-is-important">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">4. Start-up Procedure (Order Is Important)</a><a class="headerlink" href="#start-up-procedure-order-is-important" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Power up the MCLV-2 + DYNO hardware.</p></li>
-<li><p>Connect the RS232/USB.</p></li>
-<li><p>Start the GUI or X2C Scope.</p></li>
-<li><p>Select the desired operating mode (DYNO or MOTOR).</p></li>
-<li><p>Apply a simple constant load or speed setpoint.</p></li>
+<li><p>Turn on power only after cabling is verified.</p></li>
+<li><p>Start Scilab.</p></li>
+<li><p>Confirm X2C is loaded in Scilab (X2C menu appears). If X2C does not initialize on Scilab startup,
+run the X2C init script.</p></li>
+<li><p>In the Scilab file browser, right-click <code class="docutils literal notranslate"><span class="pre">init_project.sce</span></code> and Execute.
+Wait for XCOS to open with the MC-Dyno model.</p></li>
+<li><p>Double-click “Transform model” to generate the runtime model for the communicator.</p></li>
+<li><p>Leave the Communicator window open. Check the communicator window title: model name should appear
+(for example, <code class="docutils literal notranslate"><span class="pre">MC_FOC_Dyno</span></code>). If it matches, proceed.</p></li>
+<li><p>Open Windows Device Manager -&gt; Ports to see COM assignments.
+If unsure which COM is which, unplug the motor-side USB to identify dyno vs motor port.
+Typical mapping used in testing: Dyno = <code class="docutils literal notranslate"><span class="pre">COM5</span></code>, Motor = <code class="docutils literal notranslate"><span class="pre">COM4</span></code> – verify locally.</p></li>
+<li><p>In the Scilab model: double-click Start Communicator -&gt; Setup -&gt; select the COM port and refresh ports.
+Connect. If COM error appears, choose the other COM and try again.</p></li>
+<li><p>In the Scilab model: set torque mode (double-click torque-mode selector).
+IN here you can choose different torque mdoes, such as trapezoidal dynamic loads (safer for long running) or constant torque for a simple demo. For a quick demo:
+use constant torque, then switch to trapezoidal or unbalanced load to analyze effects.</p></li>
 </ol>
+</section>
+<section id="x2c-scope-pyx2cscope-usage-data-and-visualization">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">6. X2C-scope / pyX2Cscope Usage (Data and Visualization)</a><a class="headerlink" href="#x2c-scope-pyx2cscope-usage-data-and-visualization" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Launch the pyX2Cscope / X2C-scope app (standalone) or open the web-interface app. Can be downlaoded here: <a class="reference external" href="https://github.com/X2Cscope/pyx2cscope/releases">https://github.com/X2Cscope/pyx2cscope/releases</a></p></li>
+<li><p>Select the ELF file associated to the code that is running in the DUT (this lets the scope map variable names to MCU memory). You can find the elf file in <em>production/dist</em>, inside the project folder.</p></li>
+<li><p>Select the port (auto-connect tries COM ports; if it chooses wrong, manually select the COM).</p></li>
+<li><p>Add variables to view (if you are running an MCAF based prject):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">motor.IDQ.Q</span></code> (quadrature current -&gt; torque)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">motor.IDQ.D</span></code> (direct current)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IABC.IA</span></code> (phase current IA)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">motor.OmegaElectrical</span></code> (or <code class="docutils literal notranslate"><span class="pre">OmegaMechanical</span></code> / velocity scaled to RPM)</p></li>
+</ul>
+</li>
+<li><p>If you are running fixed point code copy gain values into each variable’s “gain” field (this is optional but usefull since numeric changes are helpful to show RPM/current in real units).</p></li>
+<li><p>Sample time factor:</p>
+<ul class="simple">
+<li><p>For slow trapezoidal loads and long runs: use Sample Time Factor ~ 50</p></li>
+<li><p>For dynamic/transient viewing of current/IDQ: reduce factor (5 or 1) for higher time resolution</p></li>
+<li><p>If scope is noisy, increase factor (longer time window) or pick appropriate variables</p></li>
+</ul>
+</li>
+<li><p>Press SAMPLE to display live traces.</p></li>
+</ol>
+</section>
+<section id="shutdown-procedure-in-order">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">7. Shutdown Procedure (In Order)</a><a class="headerlink" href="#shutdown-procedure-in-order" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Stop motor (switch1).</p></li>
+<li><p>In X2C scope: press STOP, disconnect.</p></li>
+<li><p>In Scilab: stop communicator, close model windows. When prompted to save, select DO NOT SAVE
+(prevents accidental model changes).</p></li>
+<li><p>Close Scilab.</p></li>
+<li><p>Power down boards.</p></li>
+</ol>
+</section>
+<section id="common-problems-and-fixes">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">8. Common Problems and Fixes</a><a class="headerlink" href="#common-problems-and-fixes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Two separate power supplies:</strong> do NOT use two supplies. Link green terminals and use single supply –
+otherwise regenerative braking can raise voltage and damage boards.</p></li>
+<li><p><strong>Motor cogging / erratic below ~50 RPM:</strong> encoder resolution limits low-speed smoothness. Keep demo speeds
+above ~50-100 RPM or use 0-speed torque cautiously. If controller locks / spins fast unexpectedly: STOP motor,
+press switch1 to reset, restart.</p></li>
+<li><p><strong>Scope shows unexpected values or no values:</strong> verify ELF-file loaded in scope, correct COM port, and that the
+Communicator model matches the model name in the communicator window.</p></li>
+</ul>
 </section>
 </section>
 
