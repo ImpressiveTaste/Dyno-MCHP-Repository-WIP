@@ -159,8 +159,11 @@ the screws needded to guarantee the best alignment possible.
 
 .. warning::
 
-   To avoid the Dynamometer to destroy itself, it's mandatory to have a power sink 
-   for the DC-link voltage. Best way is to connect both DC link boards together.
+   To avoid the Dynamometer to destroy itself, it's **mandatory** to have a power sink 
+   for the DC-link voltage. Best way is to **connect both DC link boards together**. 
+   **If you are doing a default MC-Dyno configuration, only use one power supply and then connect the two boards
+   together to share the power from the power supply, this will allow for sink of exceeding power in the motor that
+   requires energy and keep the DC-Link voltage regulated.**
 
 
 .. figure:: _static/images/ConnectDClinkTogether.png

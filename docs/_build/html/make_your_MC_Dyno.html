@@ -260,8 +260,11 @@ shafts, making the control not reliable, for this reason try to ensure shaft ali
 <h3><a class="toc-backref" href="#id27" role="doc-backlink">2.2 Setup Boards and wire them to the motors</a><a class="headerlink" href="#setup-boards-and-wire-them-to-the-motors" title="Link to this heading"></a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>To avoid the Dynamometer to destroy itself, it’s mandatory to have a power sink
-for the DC-link voltage. Best way is to connect both DC link boards together.</p>
+<p>To avoid the Dynamometer to destroy itself, it’s <strong>mandatory</strong> to have a power sink
+for the DC-link voltage. Best way is to <strong>connect both DC link boards together</strong>.
+<strong>If you are doing a default MC-Dyno configuration, only use one power supply and then connect the two boards
+together to share the power from the power supply, this will allow for sink of exceeding power in the motor that
+requires energy and keep the DC-Link voltage regulated.</strong></p>
 </div>
 <figure class="align-center" id="id15">
 <a class="reference internal image-reference" href="_images/ConnectDClinkTogether.png"><img alt="DC Link connection requirements" src="_images/ConnectDClinkTogether.png" style="width: 70%;" />
