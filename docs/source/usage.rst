@@ -11,8 +11,8 @@ Procedure for using the MC-Dyno:
 Step-by-step operator checklist to prepare, run, present, and safely shut down the
 DUT + MC-Dyno. 
 
-2. Checklist before starting up the MC-Dyno (Hardware and Files)
-----------------------------------------------------------------
+2. Checklist before starting up the MC-Dyno
+-------------------------------------------
 
 **Hardware**
 
