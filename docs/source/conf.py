@@ -12,7 +12,11 @@ extensions = [
 ]
 
 templates_path = ['_templates']
-exclude_patterns = []
+exclude_patterns = [
+    'hardware.rst',
+    'modes.rst',
+    'x2c_scope.rst',
+]
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']

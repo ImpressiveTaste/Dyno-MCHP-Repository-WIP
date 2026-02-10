@@ -72,9 +72,7 @@ motors and mechanics.
    :caption: Contents:
 
    make_your_MC_Dyno
-   igat
    Device_Under_Test
+   theory
+   igat
    usage
-   modes
-   x2c_scope
-   hardware

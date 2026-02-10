@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Theory behind the MC-Dyno &mdash; MC-Dyno 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=2662e04f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="IGaT Display (EV14C17A)" href="igat.html" />
+    <link rel="prev" title="Motor Side (Device Under Test)" href="Device_Under_Test.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/mc_dyno_logo_big.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="make_your_MC_Dyno.html">Make Your MC-Dyno</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Device_Under_Test.html">Motor Side (Device Under Test)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Theory behind the MC-Dyno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">1. Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dyno-vs-dut-roles">1.1 Dyno vs DUT Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#energy-flow-and-the-dc-link">1.2 Energy Flow and the DC Link</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#control-concepts">2. Control Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#closed-loop-control">2.1 Closed-Loop Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#load-profiles">2.2 Load Profiles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#what-the-demo-shows">3. What the Demo Shows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#observability-and-scaling">4. Observability and Scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operating-envelope-and-safety">5. Operating Envelope and Safety</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="igat.html">IGaT Display (EV14C17A)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Procedure for using the MC-Dyno:</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MC-Dyno</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">The Theory behind the MC-Dyno</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/theory.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-theory-behind-the-mc-dyno">
+<h1>The Theory behind the MC-Dyno<a class="headerlink" href="#the-theory-behind-the-mc-dyno" title="Link to this heading"></a></h1>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#overview" id="id1">1. Overview</a></p>
+<ul>
+<li><p><a class="reference internal" href="#dyno-vs-dut-roles" id="id2">1.1 Dyno vs DUT Roles</a></p></li>
+<li><p><a class="reference internal" href="#energy-flow-and-the-dc-link" id="id3">1.2 Energy Flow and the DC Link</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#control-concepts" id="id4">2. Control Concepts</a></p>
+<ul>
+<li><p><a class="reference internal" href="#closed-loop-control" id="id5">2.1 Closed-Loop Control</a></p></li>
+<li><p><a class="reference internal" href="#load-profiles" id="id6">2.2 Load Profiles</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#what-the-demo-shows" id="id7">3. What the Demo Shows</a></p></li>
+<li><p><a class="reference internal" href="#observability-and-scaling" id="id8">4. Observability and Scaling</a></p></li>
+<li><p><a class="reference internal" href="#operating-envelope-and-safety" id="id9">5. Operating Envelope and Safety</a></p></li>
+</ul>
+</nav>
+<section id="overview">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">1. Overview</a><a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The MC-Dyno is a motor dynamometer built from two motor-control systems coupled
+shaft-to-shaft: a motor-under-test (DUT) and a dynamometer motor that applies a
+controlled load. The dyno motor acts as an active brake, allowing you to command
+load profiles and observe how the DUT responds in speed, torque, and current.</p>
+<section id="dyno-vs-dut-roles">
+<h3><a class="toc-backref" href="#id2" role="doc-backlink">1.1 Dyno vs DUT Roles</a><a class="headerlink" href="#dyno-vs-dut-roles" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>DUT side:</strong> runs the control algorithm you want to test (speed or torque control).</p></li>
+<li><p><strong>Dyno side:</strong> applies a controllable mechanical load to the DUT motor.</p></li>
+<li><p><strong>Mechanical coupling:</strong> transfers torque between the two machines so the dyno can
+load the DUT and absorb power.</p></li>
+</ul>
+</section>
+<section id="energy-flow-and-the-dc-link">
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">1.2 Energy Flow and the DC Link</a><a class="headerlink" href="#energy-flow-and-the-dc-link" title="Link to this heading"></a></h3>
+<p>In a typical setup both control boards share a single DC power supply. When the
+DUT motor produces power, the dyno side absorbs that mechanical energy and the
+system returns electrical energy to the shared DC link. Using a single supply and
+shared DC link keeps the bus voltage stable during regenerative operation.</p>
+</section>
+</section>
+<section id="control-concepts">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">2. Control Concepts</a><a class="headerlink" href="#control-concepts" title="Link to this heading"></a></h2>
+<section id="closed-loop-control">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">2.1 Closed-Loop Control</a><a class="headerlink" href="#closed-loop-control" title="Link to this heading"></a></h3>
+<p>The demo uses closed-loop control to regulate speed and torque. On the DUT side
+this shows how the controller reacts to commanded setpoints and load changes. On
+the dyno side it provides the load torque profile that the DUT must overcome.</p>
+<p>For the closed loop control it uses a FOC scheme.</p>
+<p>Here are some details on some of the different blocks:</p>
+<p><strong>Speed_pi block</strong></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/SpeedPiBlock.png"><img alt="Speed PI block diagram" src="_images/SpeedPiBlock.png" style="width: 80%;" />
+</a>
+</figure>
+<p>This diagram represents the speed regulation block through a PI (Proportional-Integral) controller. The main function
+of this block is to keep the speed of the permanent magnet motor (PMSM) compliant with the reference value,
+compensating for any differences.</p>
+<p>Input:</p>
+<ul class="simple">
+<li><p>Reference speed (<code class="docutils literal notranslate"><span class="pre">omega_ref</span></code>): the desired speed command.</p></li>
+<li><p>Real speed (<code class="docutils literal notranslate"><span class="pre">omega_real</span></code>): measured actual motor speed.</p></li>
+<li><p>Speed error (<code class="docutils literal notranslate"><span class="pre">omega_ref</span> <span class="pre">-</span> <span class="pre">omega_real</span></code>): the error used by the PI controller to compute corrective action.</p></li>
+</ul>
+<p>Output:</p>
+<ul class="simple">
+<li><p>Control signal (<code class="docutils literal notranslate"><span class="pre">Tcmd</span></code>): PI output sent to the motor to correct speed by adjusting torque-producing current.</p></li>
+</ul>
+<p><strong>Startup Block</strong></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/StartUpBlockDiagram.png"><img alt="Startup block diagram" src="_images/StartUpBlockDiagram.png" style="width: 80%;" />
+</a>
+</figure>
+<p>The diagram shows the block that manages the start of the engine control system. Its main function is to ensure
+safe engine start, verifying that all conditions are ready before activating the FOC (Field-Oriented Control) control in
+normal mode.</p>
+<p>Input:</p>
+<ul class="simple">
+<li><p>Startup signal: indicates when the system should start operating, activating the startup process.</p></li>
+<li><p>Initial rotor position: required to correctly initialize the control.</p></li>
+<li><p>Voltage and current parameters: used to monitor the motor status and confirm it is ready to start.</p></li>
+</ul>
+<p>Output:</p>
+<ul class="simple">
+<li><p>FOC enable signal: sent when startup is complete to enable normal control.</p></li>
+<li><p>Starting current: a suitable current to start the motor without overcurrent or instability.</p></li>
+</ul>
+<p><strong>Superblock Subsystem</strong></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/RampUpGeneratorSubsystem.png"><img alt="Ramp up generator subsystem" src="_images/RampUpGeneratorSubsystem.png" style="width: 80%;" />
+</a>
+</figure>
+<p>The subsystem shown in the image manages the generation of a ramp up signal for controlling the position or speed
+of the motor. It is used to obtain a gradual and controlled start. The detailed operation of the main blocks is described
+below:</p>
+<ul class="simple">
+<li><p>Sign and Multiplier Block: input signal 2 passes through a Sign block to determine its sign, then is multiplied by a
+constant (1.0) to maintain the correct direction.</p></li>
+<li><p>Ramp Generator: produces a signal increasing linearly over time, with an enable parameter to activate or deactivate it.</p></li>
+<li><p>Ramp Up Position Generator: creates a controlled position profile for engine start, reducing sudden movements.</p></li>
+<li><p>Initializations and Conversions: input 1 is converted and initialized to zero to establish an initial reference condition.</p></li>
+<li><p>System Protection: the Saturation block limits signal values to prevent overloads and dangerous movements.</p></li>
+<li><p>Output: the generated control signal used for controlling a motor or mechanical system.</p></li>
+</ul>
+<p><strong>Clarke_Park_MCHP Block</strong></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/Clarke_Park_MCHP-Blocks.png"><img alt="Clarke Park MCHP block diagram" src="_images/Clarke_Park_MCHP-Blocks.png" style="width: 80%;" />
+</a>
+</figure>
+<p>This diagram represents the Clarke-Park transformation block, which performs two important
+mathematical conversions for the vector control of the motor. Its role is fundamental to go from
+ABC coordinates (three-phase) to dq coordinates (synchronized with the rotor), facilitating the
+control of torque and magnetic flux.</p>
+<p>Input:</p>
+<ul class="simple">
+<li><p>Three-phase currents (<code class="docutils literal notranslate"><span class="pre">Ia</span></code>, <code class="docutils literal notranslate"><span class="pre">Ib</span></code>, <code class="docutils literal notranslate"><span class="pre">Ic</span></code>): measured motor phase currents, transformed for FOC control.</p></li>
+<li><p>Rotor angle (<code class="docutils literal notranslate"><span class="pre">theta</span></code>): rotor position angle required for the Park transform, synchronizing control with the rotor.</p></li>
+</ul>
+<p>Output:</p>
+<ul class="simple">
+<li><p>Currents in dq coordinates (<code class="docutils literal notranslate"><span class="pre">Id</span></code>, <code class="docutils literal notranslate"><span class="pre">Iq</span></code>): allow direct control of magnetic flux (<code class="docutils literal notranslate"><span class="pre">Id</span></code>) and torque (<code class="docutils literal notranslate"><span class="pre">Iq</span></code>).</p></li>
+</ul>
+</section>
+<section id="load-profiles">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">2.2 Load Profiles</a><a class="headerlink" href="#load-profiles" title="Link to this heading"></a></h3>
+<p>Load profiles are used to demonstrate dynamic behavior. Examples include:</p>
+<ul class="simple">
+<li><p><strong>Constant torque</strong> for a steady load.</p></li>
+<li><p><strong>Trapezoidal load</strong> for time-varying torque changes.</p></li>
+<li><p><strong>Unbalanced / disturbance cases</strong> to highlight transient response.</p></li>
+</ul>
+</section>
+</section>
+<section id="what-the-demo-shows">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">3. What the Demo Shows</a><a class="headerlink" href="#what-the-demo-shows" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Stable closed-loop control in speed and torque.</p></li>
+<li><p>The DUT response to dynamic load profiles.</p></li>
+<li><p>How current changes under added disturbance (useful for predictive-maintenance
+concepts and anomaly detection demonstrations).</p></li>
+</ul>
+</section>
+<section id="observability-and-scaling">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">4. Observability and Scaling</a><a class="headerlink" href="#observability-and-scaling" title="Link to this heading"></a></h2>
+<p>The system exposes internal signals (currents, torque, speed) through the scope
+interface. Use the model report scaling factors to convert fixed-point values to
+real units when presenting data.</p>
+<p><strong>Typical signals to watch</strong></p>
+<ul class="simple">
+<li><p>Quadrature current (torque-producing current)</p></li>
+<li><p>Direct current (flux component)</p></li>
+<li><p>Phase current</p></li>
+<li><p>Electrical or mechanical speed</p></li>
+<li><p>Dyno torque (if available in the model)</p></li>
+</ul>
+</section>
+<section id="operating-envelope-and-safety">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">5. Operating Envelope and Safety</a><a class="headerlink" href="#operating-envelope-and-safety" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Keep within the board and motor ratings.</p></li>
+<li><p>Maintain proper shaft alignment to minimize mechanical stress.</p></li>
+<li><p>Use a single DC supply and shared DC link to avoid overvoltage during braking.</p></li>
+<li><p>Apply disturbances only at low speed and under controlled conditions.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Device_Under_Test.html" class="btn btn-neutral float-left" title="Motor Side (Device Under Test)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="igat.html" class="btn btn-neutral float-right" title="IGaT Display (EV14C17A)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
