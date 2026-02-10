@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MCHP-Dyno &mdash; MCHP-Dyno 0.1.0 documentation</title>
+  <title>MC-Dyno &mdash; MC-Dyno 0.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=2662e04f" />
@@ -20,7 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Make Your MCHP-Dyno" href="make_your_MCHP_Dyno.html" /> 
+    <link rel="next" title="Make Your MC-Dyno" href="make_your_MCHP_Dyno.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,7 +45,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="make_your_MCHP_Dyno.html">Make Your MCHP-Dyno</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make_your_MCHP_Dyno.html">Make Your MC-Dyno</a></li>
 <li class="toctree-l1"><a class="reference internal" href="igat.html">IGaT Display (EV14C17A)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Device_Under_Test.html">Motor Side (Device Under Test)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Basic Usage</a></li>
@@ -60,7 +60,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">MCHP-Dyno</a>
+          <a href="#">MC-Dyno</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -68,7 +68,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">MCHP-Dyno</li>
+      <li class="breadcrumb-item active">MC-Dyno</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -80,9 +80,9 @@
              
   <a class="reference internal image-reference" href="_images/HighLevel-BlockDiagram.jpg"><img alt="_images/HighLevel-BlockDiagram.jpg" class="align-right" src="_images/HighLevel-BlockDiagram.jpg" style="width: 300px;" />
 </a>
-<section id="mchp-dyno">
-<h1>MCHP-Dyno<a class="headerlink" href="#mchp-dyno" title="Link to this heading"></a></h1>
-<p>The <strong>MCHP-Dyno</strong> is an <strong>open</strong> project that includes both software and hardware to enable anyone
+<section id="mc-dyno">
+<h1>MC-Dyno<a class="headerlink" href="#mc-dyno" title="Link to this heading"></a></h1>
+<p>The <strong>MC-Dyno</strong> is an <strong>open</strong> project that includes both software and hardware to enable anyone
 to build their own motor dynamometer for testing and tuning motor-control algorithms.
 The project supports both high-voltage and low-voltage configurations on the dyno side,
 and can test virtually <strong>any electric motor</strong> on the DUT (Device-Under-Test) side.</p>
@@ -90,7 +90,7 @@ and can test virtually <strong>any electric motor</strong> on the DUT (Device-Un
 <p class="admonition-title">By the way…</p>
 <p>“Dyno” is short for <em>dynamometer</em>. In this project the dyno is implemented using a
 <strong>PMSM motor</strong> which must have an encoder. This motor is connected to a control board
-running the MCHP-Dyno software, and the control board, is connected to a <strong>PC running Scilab/XCOS</strong>
+running the MC-Dyno software, and the control board, is connected to a <strong>PC running Scilab/XCOS</strong>
 or external an controller (for example the <a class="reference internal" href="igat.html"><span class="doc">IGAT</span></a>) for interfacing with it.
 In a motor-dyno setup, the motor is the device that <em>produces</em> mechanical power,
 while the dyno is the machine that <em>absorbs</em> mechanical power and measures the motor’s performance.
@@ -100,9 +100,9 @@ For basic characterization a dedicated torque sensor is not required. Because th
 (motor-as-brake), you can simulate <strong>different load profiles</strong> and dynamic conditions, enabling more
 meaningful testing than with simple passive loads.</p>
 </div>
-<section id="get-inspired-build-your-own-mchp-dyno">
-<h2>Get Inspired &amp; Build your own MCHP-Dyno<a class="headerlink" href="#get-inspired-build-your-own-mchp-dyno" title="Link to this heading"></a></h2>
-<p>Here are a few example builds to spark ideas. Use MCHP-Dyno as a base and adapt it to your own
+<section id="get-inspired-build-your-own-mc-dyno">
+<h2>Get Inspired &amp; Build your own MC-Dyno<a class="headerlink" href="#get-inspired-build-your-own-mc-dyno" title="Link to this heading"></a></h2>
+<p>Here are a few example builds to spark ideas. Use MC-Dyno as a base and adapt it to your own
 motors and mechanics.</p>
 <table class="docutils align-center">
 <colgroup>
@@ -115,7 +115,7 @@ motors and mechanics.</p>
 <col style="width: 14.3%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><a class="reference internal image-reference" href="_images/build_desktop_dyno.jpg"><img alt="Desktop MCHP-Dyno build" src="_images/build_desktop_dyno.jpg" style="width: 220px;" />
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_images/build_desktop_dyno.jpg"><img alt="Desktop MC-Dyno build" src="_images/build_desktop_dyno.jpg" style="width: 220px;" />
 </a>
 </td>
 <td><a class="reference internal image-reference" href="_images/build_hv_rack.jpg"><img alt="High-voltage rack dyno" src="_images/build_hv_rack.jpg" style="width: 220px;" />
@@ -130,7 +130,7 @@ motors and mechanics.</p>
 <td><a class="reference internal image-reference" href="_images/DemoRedAssembly.jpg"><img alt="Differential Coupling Torque Sensor Dyno" src="_images/DemoRedAssembly.jpg" style="width: 220px;" />
 </a>
 </td>
-<td><a class="reference internal image-reference" href="_images/SuitcaseDyno.png"><img alt="Suitcase MCHP-Dyno build" src="_images/SuitcaseDyno.png" style="width: 220px;" />
+<td><a class="reference internal image-reference" href="_images/SuitcaseDyno.png"><img alt="Suitcase MC-Dyno build" src="_images/SuitcaseDyno.png" style="width: 220px;" />
 </a>
 </td>
 <td><a class="reference internal image-reference" href="_images/DynoExample-WithTorqueSensor.png"><img alt="Example with Torque Sensor" src="_images/DynoExample-WithTorqueSensor.png" style="width: 220px;" />
@@ -142,7 +142,7 @@ motors and mechanics.</p>
 <td><p>Differential coupling for cheap torque measurement</p></td>
 <td><p>Low Votlage Dyno but High Voltage DUT</p></td>
 <td><p>Exhibition Ready Demo</p></td>
-<td><p>Suitcase MCHP-Dyno build</p></td>
+<td><p>Suitcase MC-Dyno build</p></td>
 <td><p>Example with Torque Sensor</p></td>
 </tr>
 </tbody>
@@ -151,7 +151,7 @@ motors and mechanics.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="make_your_MCHP_Dyno.html">Make Your MCHP-Dyno</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make_your_MCHP_Dyno.html">Make Your MC-Dyno</a></li>
 <li class="toctree-l1"><a class="reference internal" href="igat.html">IGaT Display (EV14C17A)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Device_Under_Test.html">Motor Side (Device Under Test)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Basic Usage</a></li>
@@ -167,7 +167,7 @@ motors and mechanics.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="make_your_MCHP_Dyno.html" class="btn btn-neutral float-right" title="Make Your MCHP-Dyno" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="make_your_MCHP_Dyno.html" class="btn btn-neutral float-right" title="Make Your MC-Dyno" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

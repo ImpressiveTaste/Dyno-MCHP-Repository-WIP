@@ -21,6 +21,6 @@ Currently the IGAT is only used as a display, but feel free to modify the code, 
 
 ![IGaT display final result](readme_images/igat_final_result.png)
 
-The logos represent the different tools used for making the MCHP-Dyno. 
+The logos represent the different tools used for making the MC-Dyno. 
 
 More info on the kit: https://www.microchip.com/en-us/development-tool/ev14c17a

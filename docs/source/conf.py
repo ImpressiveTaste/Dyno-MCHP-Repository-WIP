@@ -2,7 +2,7 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('../..'))
 
-project = 'MCHP-Dyno'
+project = 'MC-Dyno'
 author = 'Marco Trevisan / Microchip Technology'
 release = '0.1.0'
 

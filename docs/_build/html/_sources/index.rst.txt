@@ -2,10 +2,10 @@
    :align: right
    :width: 300px
 
-MCHP-Dyno
+MC-Dyno
 =========
 
-The **MCHP-Dyno** is an **open** project that includes both software and hardware to enable anyone 
+The **MC-Dyno** is an **open** project that includes both software and hardware to enable anyone 
 to build their own motor dynamometer for testing and tuning motor-control algorithms.
 The project supports both high-voltage and low-voltage configurations on the dyno side, 
 and can test virtually **any electric motor** on the DUT (Device-Under-Test) side.
@@ -14,7 +14,7 @@ and can test virtually **any electric motor** on the DUT (Device-Under-Test) sid
 
    “Dyno” is short for *dynamometer*. In this project the dyno is implemented using a 
    **PMSM motor** which must have an encoder. This motor is connected to a control board
-   running the MCHP-Dyno software, and the control board, is connected to a **PC running Scilab/XCOS**
+   running the MC-Dyno software, and the control board, is connected to a **PC running Scilab/XCOS**
    or external an controller (for example the :doc:`IGAT <igat>`) for interfacing with it. 
    In a motor-dyno setup, the motor is the device that *produces* mechanical power, 
    while the dyno is the machine that *absorbs* mechanical power and measures the motor’s performance.
@@ -25,10 +25,10 @@ and can test virtually **any electric motor** on the DUT (Device-Under-Test) sid
    meaningful testing than with simple passive loads.
 
 
-Get Inspired & Build your own MCHP-Dyno
+Get Inspired & Build your own MC-Dyno
 ---------------------------------------
 
-Here are a few example builds to spark ideas. Use MCHP-Dyno as a base and adapt it to your own
+Here are a few example builds to spark ideas. Use MC-Dyno as a base and adapt it to your own
 motors and mechanics.
 
 .. list-table::
@@ -37,7 +37,7 @@ motors and mechanics.
 
    * - .. image:: _static/images/build_desktop_dyno.jpg
          :width: 220px
-         :alt: Desktop MCHP-Dyno build
+         :alt: Desktop MC-Dyno build
      - .. image:: _static/images/build_hv_rack.jpg
          :width: 220px
          :alt: High-voltage rack dyno
@@ -52,7 +52,7 @@ motors and mechanics.
          :alt: Differential Coupling Torque Sensor Dyno
      - .. image:: _static/images/SuitcaseDyno.png
          :width: 220px
-         :alt: Suitcase MCHP-Dyno build
+         :alt: Suitcase MC-Dyno build
      - .. image:: _static/images/DynoExample-WithTorqueSensor.png
          :width: 220px
          :alt: Example with Torque Sensor
@@ -61,7 +61,7 @@ motors and mechanics.
      - Differential coupling for cheap torque measurement
      - Low Votlage Dyno but High Voltage DUT
      - Exhibition Ready Demo
-     - Suitcase MCHP-Dyno build
+     - Suitcase MC-Dyno build
      - Example with Torque Sensor
 
 

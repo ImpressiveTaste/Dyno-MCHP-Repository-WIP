@@ -1,8 +1,8 @@
-# MCHP-Dyno: Motor Control Dynamometer  
+# MC-Dyno: Motor Control Dynamometer  
 Last updated: December 2025
 
-MCHP-Dyno is a compact, X2C-enabled motor dynamometer designed for load testing, algorithm validation, sensorless control development, and AI/ML data capture.  
-This repository documents the setup, firmware workflow, load profiles, and usage instructions for running the MCHP-Dyno on Microchip motor-control platforms.
+MC-Dyno is a compact, X2C-enabled motor dynamometer designed for load testing, algorithm validation, sensorless control development, and AI/ML data capture.  
+This repository documents the setup, firmware workflow, load profiles, and usage instructions for running the MC-Dyno on Microchip motor-control platforms.
 
 Documentation website (HTML build): [https://impressivetaste.github.io/Dyno-MCHP-Repository-WIP/](https://impressivetaste.github.io/Dyno-MCHP-Repository-WIP/)
 
@@ -20,7 +20,7 @@ It is compatible with the following hardware platforms:
   <img src="docs/source/_static/images/HighLevel-BlockDiagram.jpg" alt="High-Level-Block-Diagram" width="30%">
 </p>
 
-## What MCHP-Dyno Is
+## What MC-Dyno Is
 
 A ready-to-use motor dyno environment supporting:
 
@@ -150,7 +150,7 @@ Generator mode requires a valid power path to dissipate energy.
    - Press **Connect**  
    - Switch to the **Model** tab  
 
-You're now running MCHP-Dyno in standalone mode.
+You're now running MC-Dyno in standalone mode.
 
 Optional IGaT display (EV14C17A): program the display HEX separately from
 `MCHPDyno/igat_ev14c17a/doc/standalone/`.
@@ -216,7 +216,7 @@ Signals stream in real time for debugging load/torque profiles, speed control, a
 
 ## 3D Printable Brackets
 
-For making the MCHP-Dyno, there is a need of brakets to fix the motors, and allow for the connection between the rotor shafts guaranteeing alignment. To do so, in the location: `3Dparts` of this repository, both STL and openSCAD 3D models are made avaialble to allow to use standard brakets for some specific motors. 
+For making the MC-Dyno, there is a need of brakets to fix the motors, and allow for the connection between the rotor shafts guaranteeing alignment. To do so, in the location: `3Dparts` of this repository, both STL and openSCAD 3D models are made avaialble to allow to use standard brakets for some specific motors. 
 
 If you are using a different motor, you can use the [openSCAD](https://openscad.org) files to create your own motor braket parametrically. If you make a new motor, feel free to share in this repository. 
 

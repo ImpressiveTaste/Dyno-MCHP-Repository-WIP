@@ -1,4 +1,4 @@
-Make Your MCHP-Dyno
+Make Your MC-Dyno
 ===================
 
 .. contents::
@@ -8,23 +8,23 @@ Make Your MCHP-Dyno
 1. Introduction
 ---------------
 
-This page intent is to guide you on the creation of your first MCHP-Dyno project.
-The MCHP-Dyno proposed here, is the cheapest and easiest assembly that can be done
-to get a working MCHP-Dyno setup.
+This page intent is to guide you on the creation of your first MC-Dyno project.
+The MC-Dyno proposed here, is the cheapest and easiest assembly that can be done
+to get a working MC-Dyno setup.
 You can use this page as a guide even if you have a different motor, a different
 controller board and/or different motor holders. 
 
 .. tip::
 
    In some instances you will find **tip** blocks like these... in here you
-   will find tips and tricks on how to improve or "hack" the MCHP-Dyno for your
+   will find tips and tricks on how to improve or "hack" the MC-Dyno for your
    specific needs.
 
 .. warning::
 
-   Warning blocks are not decoration. If you ignore them, your MCHP-Dyno may
+   Warning blocks are not decoration. If you ignore them, your MC-Dyno may
    respond with mysterious smoke. Read carefully—future-you will thank present-you.
-   This warning has already saved several MCHP-Dyno projects...
+   This warning has already saved several MC-Dyno projects...
    
 All of the files and links that are required during the built are available here. 
 These are mainly 3D models and source code.
@@ -39,15 +39,15 @@ where the legacy files will be organized by date when they where out-commissione
 1.1 Hardware
 ~~~~~~~~~~~~
 
-.. admonition:: For a smooth MCHP-Dyno build...
+.. admonition:: For a smooth MC-Dyno build...
 
-   If you want the most up-to-date hardware, that is currently used in the majority of the **MCHP-Dyno projects** is: 
+   If you want the most up-to-date hardware, that is currently used in the majority of the **MC-Dyno projects** is: 
 
    - One `MCLV-48V-300W Development Board <https://www.microchip.com/en-us/development-tool/ev18h47a>`_ for the Device-Under-Test side
    - One `ACT57BLF02 Motor <https://www.act-motor.com/brushless-dc-motor-57blf-product/>`_ for the Device-Under-Test side
    - One `MCLV-2 Development Board <https://www.microchip.com/en-us/development-tool/dm330021-2>`_ for the Dynamometer side
    - One `AC300022 - 24V 3-PHASE BRUSHLESS DC MOTOR WITH ENCODER <https://www.microchip.com/en-us/development-tool/ac300022>`_ for the Dynamometer side
-   - If you use the `MCLV-2 Development Board <https://www.microchip.com/en-us/development-tool/dm330021-2>`_, for communicating with the pc, reading data and controlling the dynamometer, an USB to RS232 board is suggested, this is the one used in the amjority of the MCHP-Dyno Projects: `MCP2200 USB TO RS232 DEMO BOARD <https://www.microchip.com/en-us/development-tool/mcp2200ev-vcp>`_
+   - If you use the `MCLV-2 Development Board <https://www.microchip.com/en-us/development-tool/dm330021-2>`_, for communicating with the pc, reading data and controlling the dynamometer, an USB to RS232 board is suggested, this is the one used in the amjority of the MC-Dyno Projects: `MCP2200 USB TO RS232 DEMO BOARD <https://www.microchip.com/en-us/development-tool/mcp2200ev-vcp>`_
 
 
 **Required hardware**
@@ -85,9 +85,9 @@ where the legacy files will be organized by date when they where out-commissione
 2. Assembling the hardware
 --------------------------
 
-In this section the steps to build a MCHP-Dyno will be described. 
-This is the **easiest possible MCHP-Dyno** you can make, but as you saw in the home page, you are free to play around
-and make the MCHP-Dyno that best suits your needs.
+In this section the steps to build a MC-Dyno will be described. 
+This is the **easiest possible MC-Dyno** you can make, but as you saw in the home page, you are free to play around
+and make the MC-Dyno that best suits your needs.
 
 Before starting this guide, navigate to the file section `3Dparts <https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/tree/main/3Dparts>`_ 
 and **3D print the motor mounts** for the motors used. For the Device‑Under‑Test (DUT) side, use 
@@ -255,5 +255,5 @@ software loaded to test different motor control algorithms. The motor-side HEX d
 3. Load the software
 --------------------
 
-4. Run the MCHP-Dyno - step-by-step
+4. Run the MC-Dyno - step-by-step
 -----------------------------------
