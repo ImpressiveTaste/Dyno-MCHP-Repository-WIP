@@ -71,7 +71,7 @@ motors and mechanics.
    :maxdepth: 1
    :caption: Contents:
 
-   make_your_MCHP_Dyno
+   make_your_MC_Dyno
    igat
    Device_Under_Test
    usage

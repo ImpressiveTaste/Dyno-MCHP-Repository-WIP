@@ -12,12 +12,12 @@ Firmware Location
 
 The display HEX lives in:
 
-``MCHPDyno/igat_ev14c17a/doc/standalone/ATSAME51J20A_MCHP_Dyno_08_01_2026_IGAT.hex``
+``MCDyno/igat_ev14c17a/doc/standalone/ATSAME51J20A_MC_Dyno_08_01_2026_IGAT.hex``
 
 Download
 --------
 
-:download:`Download IGaT HEX <_downloads/ATSAME51J20A_MCHP_Dyno_08_01_2026_IGAT.hex>`
+:download:`Download IGaT HEX <_downloads/ATSAME51J20A_MC_Dyno_08_01_2026_IGAT.hex>`
 
 Programming Steps
 -----------------

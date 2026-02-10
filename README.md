@@ -68,7 +68,7 @@ The goal is to allow anyone to test motor algorithms quickly, without building o
 miniDyno-2.0/
 ├── README.md <-- you are here
 ├── 3Dparts/ <-- OpenSCAD + STL universal motor bracket
-├── MCHPDyno/
+├── MCDyno/
 │ ├── mc_foc_dyno_same54_mclv2/
 │ │ └── doc/ <-- project docs + standalone assets
 │ └── ...
@@ -140,7 +140,7 @@ Generator mode requires a valid power path to dissipate energy.
 - MPLAB X or IPE
 
 ### Steps
-1. Navigate to `MCHPDyno/mc_foc_dyno_same54_mclv2/doc/standalone` in the Github project.
+1. Navigate to `MCDyno/mc_foc_dyno_same54_mclv2/doc/standalone` in the Github project.
 2. Program the file:  
    **MC_FOC_DYNO_SAME54_MCLV2.X.production.hex**
 3. Disconnect programmer and reset the MCLV-2.
@@ -153,7 +153,7 @@ Generator mode requires a valid power path to dissipate energy.
 You're now running MC-Dyno in standalone mode.
 
 Optional IGaT display (EV14C17A): program the display HEX separately from
-`MCHPDyno/igat_ev14c17a/doc/standalone/`.
+`MCDyno/igat_ev14c17a/doc/standalone/`.
 
 Motor-side DIM firmware (MCLV-48V-300W): program one of the DIM HEX files from
 `motor_ACT57BLF02/mclv48v300w_dim_hex/doc/standalone/` to showcase different

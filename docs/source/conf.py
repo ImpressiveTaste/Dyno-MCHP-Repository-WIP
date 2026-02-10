@@ -19,7 +19,7 @@ html_static_path = ['_static']
 html_css_files = ['custom.css']
 
 # Optional: logo (file may be added later)
-html_logo = '_static/images/mchp_dyno_logo_big.png'
+html_logo = '_static/images/mc_dyno_logo_big.png'
 html_theme_options = {
     'logo_only': True,
 }

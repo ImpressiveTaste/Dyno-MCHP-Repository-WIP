@@ -58,15 +58,15 @@ Downloads
 
 .. container:: motor-dim-downloads
 
-   :download:`Single-shunt (dsPIC33AK128MC106 DIM) <_downloads/dsPIC33AK128MC106_MCHP_Dyno_08_01_2026_SingleShunt_DIM.hex>`
+   :download:`Single-shunt (dsPIC33AK128MC106 DIM) <_downloads/dsPIC33AK128MC106_MC_Dyno_08_01_2026_SingleShunt_DIM.hex>`
 
-   :download:`ZS/MT (dsPIC33CK256MP508 DIM) <_downloads/dsPIC33CK256MP508_MCHP_Dyno_08_01_2026_ZSMT_DIM.hex>`
+   :download:`ZS/MT (dsPIC33CK256MP508 DIM) <_downloads/dsPIC33CK256MP508_MC_Dyno_08_01_2026_ZSMT_DIM.hex>`
 
-   :download:`X2C (dsPIC33CK256MP508 DIM) <_downloads/dsPIC33CK256MP508_MCHP_Dyno_08_01_2026_X2C_DIM.hex>`
+   :download:`X2C (dsPIC33CK256MP508 DIM) <_downloads/dsPIC33CK256MP508_MC_Dyno_08_01_2026_X2C_DIM.hex>`
 
-   :download:`QuickSpin (ATSAME54P20A DIM) <_downloads/ATSAME54P20A_MCHP_Dyno_08_01_2026_QuickSpin_DIM.hex>`
+   :download:`QuickSpin (ATSAME54P20A DIM) <_downloads/ATSAME54P20A_MC_Dyno_08_01_2026_QuickSpin_DIM.hex>`
 
-   :download:`StreamAnalyze (ATSAME54P20A DIM) <_downloads/ATSAME54P20A_MCHP_Dyno_08_01_2026_StreamAnalyze_DIM.hex>`
+   :download:`StreamAnalyze (ATSAME54P20A DIM) <_downloads/ATSAME54P20A_MC_Dyno_08_01_2026_StreamAnalyze_DIM.hex>`
 
 
 Algorithm Notes

@@ -13,7 +13,7 @@ HEX location:
 
 ## Included Firmware
 
-- `dsPIC33AK128MC106_MCHP_Dyno_08_01_2026_SingleShunt_DIM.hex`
+- `dsPIC33AK128MC106_MC_Dyno_08_01_2026_SingleShunt_DIM.hex`
   - Target DIM: dsPIC33AK128MC106.
   - MCAF R8 single-shunt current measurement demo.
   - Uses DC-link shunt reconstruction with two samples per PWM period.
@@ -22,7 +22,7 @@ HEX location:
   - For estimators other than ZS/MT, use single update in Dual Edge Center
     Aligned PWM mode.
 
-- `dsPIC33CK256MP508_MCHP_Dyno_08_01_2026_ZSMT_DIM.hex`
+- `dsPIC33CK256MP508_MC_Dyno_08_01_2026_ZSMT_DIM.hex`
   - Target DIM: dsPIC33CK256MP508.
   - Zero-Speed / Maximum Torque (ZS/MT) Estimator
   - ZS/MT is a sensorless position and speed estimation algorithm specifically
@@ -41,7 +41,7 @@ HEX location:
     higher speed due to voltage headroom limits.
   - Tuning and Configuration Parameters
 
-- `dsPIC33CK256MP508_MCHP_Dyno_08_01_2026_X2C_DIM.hex`
+- `dsPIC33CK256MP508_MC_Dyno_08_01_2026_X2C_DIM.hex`
   - Target DIM: dsPIC33CK256MP508.
   - X2C-enabled variant for real-time monitoring and tuning.
 
