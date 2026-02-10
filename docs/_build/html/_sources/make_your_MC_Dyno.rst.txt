@@ -70,17 +70,18 @@ where the legacy files will be organized by date when they where out-commissione
 
 - For High Voltage Motor Testing - One `MCHV-230V-1.5kW Development Board <https://www.microchip.com/en-us/development-tool/ev78u65a>`_ for the dynamometer side.
 - `MCLV-2 Development Board <https://www.microchip.com/en-us/development-tool/dm330021-2>`_ can be used instead of the MCLV-48V-300W for the dynamometer side, performance is very similar. 
-- An alternative motor that can be used for the Dynamometer side is the `ACT57BLF02 Motor <https://www.act-motor.com/brushless-dc-motor-57blf-product/>`_.
+- An alternative motor that can be used for the Dynamometer side is the `ACT57BLF02 Motor <https://www.act-motor.com/brushless-dc-motor-57blf-product/>`_, actually any motor that has a QEI/ABZ Encoder can be used by then doing the correct modificaiton to the code to support it.
 
 
 
 1.2 Software needed
 ~~~~~~~~~~~~~~~~~~~
 
-- Scilab 6.1.1 (installation directory: https://www.scilab.org/download/previous-versions); newer versions will not work  
+- Scilab 6.1.1 (installation directory: https://www.scilab.org/download/previous-versions); newer versions will not work. (Scilab 2023.1.0 should also work).
 - X2C 6.4 (Installation tutorial: https://www.youtube.com/watch?v=H_EVY1D95eY)  
 - MPLAB X IDE and MPLAB X IPE (installation: https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide)
 - XC-DSC 3.21, which you can install during process of installation of MPLAB X
+- MPLAB XC32 5.00 , which you can install during process of installation of MPLAB X
 
 2. Assembling the hardware
 --------------------------
@@ -207,7 +208,7 @@ Other than that you will need to configure the board like shown in the picture b
    MCLV-2 board configuration
 
 In this case, we are connecting the 24Volt power source to this board, and then going out with two cables (positive and negative) from the MCLV-2 board to the DUT board
-to share the DC-Link and guaranteeing not being able to dissipate the energy created while braking the motor.
+to share the DC-Link and guaranteeing not being able to dissipate the energy created while braking the motor. The same done here, **has to be done** also with the MCLV-48V-300W board.
 
 3. Load the software
 --------------------
