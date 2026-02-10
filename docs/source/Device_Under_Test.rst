@@ -1,15 +1,143 @@
 Motor Side (Device Under Test)
 ==============================
 
-These HEX files target the motor-side control DIM installed on the
-MCLV-48V-300W Development Board (EV18H47A). They are used to showcase different
-motor-control algorithms on the dyno.
+This page covers the motor-side (DUT) hardware, assembly, and control firmware.
+For the dynamometer side, see :doc:`Make Your MC-Dyno <make_your_MC_Dyno>`.
 
-**2.2.5 Monitor motor behavior with pyX2Cscope**
+.. contents::
+   :local:
+   :depth: 2
+
+1. Hardware
+-----------
+
+.. admonition:: For a smooth MC-Dyno build...
+
+   If you want the most up-to-date DUT-side hardware that is currently used in the majority
+   of the MC-Dyno projects is:
+
+   - One `MCLV-48V-300W Development Board <https://www.microchip.com/en-us/development-tool/ev18h47a>`_ for the Device-Under-Test side
+   - One `ACT57BLF02 Motor <https://www.act-motor.com/brushless-dc-motor-57blf-product/>`_ for the Device-Under-Test side
+
+
+**Required hardware (DUT side)**
+
+- One `MCLV-48V-300W Development Board <https://www.microchip.com/en-us/development-tool/ev18h47a>`_ for the DUT side.
+- One `ACT57BLF02 Motor <https://www.act-motor.com/brushless-dc-motor-57blf-product/>`_ for the DUT side.
+- One `3A 24V Power Supply <https://www.microchipdirect.com/dev-tools/AC002013>`_ (shared with the dyno side).
+- Flexible aluminum jaw shaft coupling (if the above suggested motors are used, then 8mm bore should be selected).
+- Eight M4 x 10 mm hex-socket screws
+- 3D printed brackets, which can be found in the `3Dparts <https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/tree/main/3Dparts>`_ folder (OpenSCAD + STL).
+- Wood mounting base or 4 (20x20) T-slot aluminum profiles, minimum length 500 mm
+- For T-slot mounting Eight M5 socket-head cap screws (M5 SHCS) - 16 mm
+- For T-slot mounting Eight M5 T-slot nuts
+- Windows PC running Windows 10.
+
+**Alternative Hardware (DUT side)**
+
+- For High Voltage Motor Testing - One `MCHV-230V-1.5kW Development Board <https://www.microchip.com/en-us/development-tool/ev78u65a>`_ for the DUT side.
+- An alternative motor that can be used for the DUT side is the `AC300022 - 24V 3-PHASE BRUSHLESS DC MOTOR WITH ENCODER <https://www.microchip.com/en-us/development-tool/ac300022>`_.
+
+2. Assembling the hardware
+--------------------------
+
+In this section the steps to build the MC-Dyno motor side (DUT) will be described.
+
+Before starting this guide, navigate to the file section `3Dparts <https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/tree/main/3Dparts>`_
+and **3D print the motor mounts** for the DUT motor used. For the DUT side, use
+`ACT57BLF_blue_wedge_V1_00.stl <https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/blob/main/3Dparts/STL/ACT57BLF_blue_wedge_V1_00.stl>`_.
+Print one bracket for the DUT motor.
+There are two bracket sizes available: small for portable demonstrators (blue wedge) and standard
+size (unified). Before printing, decide the motor brackets versions that matches best your setup.
+You can also find the **openSCAD files for the brackets**
+in there, so if you would like to **modify** this model to fit a **different motor**, you're welcome to do so.
+
+.. figure:: _static/images/ACT57BLF02-Sliced-Bambu.png
+   :alt: ACT57BLF02 bracket slicing preview
+   :align: center
+   :width: 80%
+
+   ACT57BLF02 bracket -- slicing preview (PLA, 100% infill).
+
+2.1 Step 1: Mount DUT Motor to 3D printed braket, align and fix
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As a first step, mount the DUT motor in the **mounting bracket** that you have 3D printed.
+
+After that, fix the motor bracket to the T-Slot or your base support.
+
+If you are using different motors be sure to make the brackets in such a way that the motor
+shafts are aligned. This is very important. Align the DUT motor shaft with the dyno motor shaft
+using the shaft coupler to help you align them.
+
+Fix everything by tightening the different screws. If the shaft coupler spins freely, then the "hand alignment process" was
+correct, if you see wiggle or that the shaft requires different forces in different positions to rotate, that might mean that
+the motor shafts are not completely aligned. If that happens please untighten, move the brackets as needed and tighten
+the screws needed to guarantee the best alignment possible.
+
+.. figure:: _static/images/DUT-StandardConfiguration.jpg
+   :alt: DUT Standard Configuration
+   :align: center
+   :width: 70%
+
+   DUT Standard Configuration
+
+.. tip::
+
+   The shaft coupler can handle some small misalignment but will add unnecessary force to the Motor
+   shafts, making the control not reliable, for this reason try to ensure shaft alignment between motors.
+
+2.2 Setup Boards and wire them to the motor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**2.2.1 Wiring the Device-Under-Test side**
+
+For Wiring the ACT motor to the MCLV-48V-300W board follow the image below as reference.
+
+For phase A connect the yelow wire, for phase B connect the green wire and for phase C connect the BLU wire
+
+.. list-table::
+   :widths: 50 50
+   :align: center
+
+   * - .. figure:: _static/images/MCLV-Encoder-Wiring.png
+          :alt: HurstMotorWiring
+          :width: 95%
+
+          Enocder ACT Motor Wiring to MCLV-48V-300W
+     - .. figure:: _static/images/ConnectionDiagrams.png
+          :alt: Connection Diagrams
+          :width: 95%
+
+          Connection Diagrams
+
+**2.2.2 Configure MCLV-48V-300W (DUT)**
+
+For the MCLV-48V-300W you should follow the conenction shown below.
+
+Note that this board hosts the DIM for motor-control algorithms. The motor-side HEX downloads are listed below.
+
+.. tip::
+
+   The `MCLV48_300_DIMhold.stl <https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/blob/main/3Dparts/STL/MCLV48_300_DIMhold.stl>`_ is not necessary,
+   but to guarantee better connection of the **DIM** boards to the MCLV-48V-300W board the suggestion is to 3D print one and use it.
+
+.. figure:: _static/images/MCLV-48V-wiring.png
+   :alt: MCLV-48V-300W board configuration
+   :align: center
+   :width: 70%
+
+   MCLV-48V-300W board configuration
+
+The DUT board shares the DC-link with the dyno board. Follow the warning and wiring notes on
+:doc:`Make Your MC-Dyno <make_your_MC_Dyno>`.
+
+3. Monitor motor behavior with pyX2Cscope
+-----------------------------------------
 
 To view motor behavior on the DUT side, you can use `pyX2Cscope <https://x2cscope.github.io/pyx2cscope/>`_ through Python.
 There are also standalone apps you can download and run directly without installing anything beyond the app itself.
-To download the Standlaone App this is the up-to-date link: `pyX2Cscope releases <https://github.com/X2Cscope/pyx2cscope/releases>`_.
+To download the Standalone App this is the up-to-date link: `pyX2Cscope releases <https://github.com/X2Cscope/pyx2cscope/releases>`_.
 
 .. tip::
 
@@ -44,6 +172,9 @@ To download the Standlaone App this is the up-to-date link: `pyX2Cscope releases
 
           Downloading and using pyX2Cscope Standalone (2)
 
+These HEX files target the motor-side control DIM installed on the
+MCLV-48V-300W Development Board (EV18H47A). They are used to showcase different
+motor-control algorithms on the dyno.
 
 Example DIM: dsPIC33CK256MP508 Motor Control DIM (EV62P66A)
 https://www.microchip.com/en-us/development-tool/ev62p66a

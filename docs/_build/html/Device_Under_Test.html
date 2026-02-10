@@ -49,6 +49,13 @@
 <li class="toctree-l1"><a class="reference internal" href="make_your_MC_Dyno.html">Make Your MC-Dyno</a></li>
 <li class="toctree-l1"><a class="reference internal" href="igat.html">IGaT Display (EV14C17A)</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Motor Side (Device Under Test)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hardware">1. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assembling-the-hardware">2. Assembling the hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-mount-dut-motor-to-3d-printed-braket-align-and-fix">2.1 Step 1: Mount DUT Motor to 3D printed braket, align and fix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-boards-and-wire-them-to-the-motor">2.2 Setup Boards and wire them to the motor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#monitor-motor-behavior-with-pyx2cscope">3. Monitor motor behavior with pyX2Cscope</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hex-location">HEX Location</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#downloads">Downloads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#algorithm-notes">Algorithm Notes</a></li>
@@ -86,13 +93,149 @@
              
   <section id="motor-side-device-under-test">
 <h1>Motor Side (Device Under Test)<a class="headerlink" href="#motor-side-device-under-test" title="Link to this heading"></a></h1>
-<p>These HEX files target the motor-side control DIM installed on the
-MCLV-48V-300W Development Board (EV18H47A). They are used to showcase different
-motor-control algorithms on the dyno.</p>
-<p><strong>2.2.5 Monitor motor behavior with pyX2Cscope</strong></p>
+<p>This page covers the motor-side (DUT) hardware, assembly, and control firmware.
+For the dynamometer side, see <a class="reference internal" href="make_your_MC_Dyno.html"><span class="doc">Make Your MC-Dyno</span></a>.</p>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#hardware" id="id13">1. Hardware</a></p></li>
+<li><p><a class="reference internal" href="#assembling-the-hardware" id="id14">2. Assembling the hardware</a></p>
+<ul>
+<li><p><a class="reference internal" href="#step-1-mount-dut-motor-to-3d-printed-braket-align-and-fix" id="id15">2.1 Step 1: Mount DUT Motor to 3D printed braket, align and fix</a></p></li>
+<li><p><a class="reference internal" href="#setup-boards-and-wire-them-to-the-motor" id="id16">2.2 Setup Boards and wire them to the motor</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#monitor-motor-behavior-with-pyx2cscope" id="id17">3. Monitor motor behavior with pyX2Cscope</a></p></li>
+<li><p><a class="reference internal" href="#hex-location" id="id18">HEX Location</a></p></li>
+<li><p><a class="reference internal" href="#downloads" id="id19">Downloads</a></p></li>
+<li><p><a class="reference internal" href="#algorithm-notes" id="id20">Algorithm Notes</a></p></li>
+</ul>
+</nav>
+<section id="hardware">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">1. Hardware</a><a class="headerlink" href="#hardware" title="Link to this heading"></a></h2>
+<div class="admonition-for-a-smooth-mc-dyno-build admonition">
+<p class="admonition-title">For a smooth MC-Dyno build…</p>
+<p>If you want the most up-to-date DUT-side hardware that is currently used in the majority
+of the MC-Dyno projects is:</p>
+<ul class="simple">
+<li><p>One <a class="reference external" href="https://www.microchip.com/en-us/development-tool/ev18h47a">MCLV-48V-300W Development Board</a> for the Device-Under-Test side</p></li>
+<li><p>One <a class="reference external" href="https://www.act-motor.com/brushless-dc-motor-57blf-product/">ACT57BLF02 Motor</a> for the Device-Under-Test side</p></li>
+</ul>
+</div>
+<p><strong>Required hardware (DUT side)</strong></p>
+<ul class="simple">
+<li><p>One <a class="reference external" href="https://www.microchip.com/en-us/development-tool/ev18h47a">MCLV-48V-300W Development Board</a> for the DUT side.</p></li>
+<li><p>One <a class="reference external" href="https://www.act-motor.com/brushless-dc-motor-57blf-product/">ACT57BLF02 Motor</a> for the DUT side.</p></li>
+<li><p>One <a class="reference external" href="https://www.microchipdirect.com/dev-tools/AC002013">3A 24V Power Supply</a> (shared with the dyno side).</p></li>
+<li><p>Flexible aluminum jaw shaft coupling (if the above suggested motors are used, then 8mm bore should be selected).</p></li>
+<li><p>Eight M4 x 10 mm hex-socket screws</p></li>
+<li><p>3D printed brackets, which can be found in the <a class="reference external" href="https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/tree/main/3Dparts">3Dparts</a> folder (OpenSCAD + STL).</p></li>
+<li><p>Wood mounting base or 4 (20x20) T-slot aluminum profiles, minimum length 500 mm</p></li>
+<li><p>For T-slot mounting Eight M5 socket-head cap screws (M5 SHCS) - 16 mm</p></li>
+<li><p>For T-slot mounting Eight M5 T-slot nuts</p></li>
+<li><p>Windows PC running Windows 10.</p></li>
+</ul>
+<p><strong>Alternative Hardware (DUT side)</strong></p>
+<ul class="simple">
+<li><p>For High Voltage Motor Testing - One <a class="reference external" href="https://www.microchip.com/en-us/development-tool/ev78u65a">MCHV-230V-1.5kW Development Board</a> for the DUT side.</p></li>
+<li><p>An alternative motor that can be used for the DUT side is the <a class="reference external" href="https://www.microchip.com/en-us/development-tool/ac300022">AC300022 - 24V 3-PHASE BRUSHLESS DC MOTOR WITH ENCODER</a>.</p></li>
+</ul>
+</section>
+<section id="assembling-the-hardware">
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">2. Assembling the hardware</a><a class="headerlink" href="#assembling-the-hardware" title="Link to this heading"></a></h2>
+<p>In this section the steps to build the MC-Dyno motor side (DUT) will be described.</p>
+<p>Before starting this guide, navigate to the file section <a class="reference external" href="https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/tree/main/3Dparts">3Dparts</a>
+and <strong>3D print the motor mounts</strong> for the DUT motor used. For the DUT side, use
+<a class="reference external" href="https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/blob/main/3Dparts/STL/ACT57BLF_blue_wedge_V1_00.stl">ACT57BLF_blue_wedge_V1_00.stl</a>.
+Print one bracket for the DUT motor.
+There are two bracket sizes available: small for portable demonstrators (blue wedge) and standard
+size (unified). Before printing, decide the motor brackets versions that matches best your setup.
+You can also find the <strong>openSCAD files for the brackets</strong>
+in there, so if you would like to <strong>modify</strong> this model to fit a <strong>different motor</strong>, you’re welcome to do so.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="_images/ACT57BLF02-Sliced-Bambu.png"><img alt="ACT57BLF02 bracket slicing preview" src="_images/ACT57BLF02-Sliced-Bambu.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">ACT57BLF02 bracket – slicing preview (PLA, 100% infill).</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="step-1-mount-dut-motor-to-3d-printed-braket-align-and-fix">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">2.1 Step 1: Mount DUT Motor to 3D printed braket, align and fix</a><a class="headerlink" href="#step-1-mount-dut-motor-to-3d-printed-braket-align-and-fix" title="Link to this heading"></a></h3>
+<p>As a first step, mount the DUT motor in the <strong>mounting bracket</strong> that you have 3D printed.</p>
+<p>After that, fix the motor bracket to the T-Slot or your base support.</p>
+<p>If you are using different motors be sure to make the brackets in such a way that the motor
+shafts are aligned. This is very important. Align the DUT motor shaft with the dyno motor shaft
+using the shaft coupler to help you align them.</p>
+<p>Fix everything by tightening the different screws. If the shaft coupler spins freely, then the “hand alignment process” was
+correct, if you see wiggle or that the shaft requires different forces in different positions to rotate, that might mean that
+the motor shafts are not completely aligned. If that happens please untighten, move the brackets as needed and tighten
+the screws needed to guarantee the best alignment possible.</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="_images/DUT-StandardConfiguration.jpg"><img alt="DUT Standard Configuration" src="_images/DUT-StandardConfiguration.jpg" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">DUT Standard Configuration</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The shaft coupler can handle some small misalignment but will add unnecessary force to the Motor
+shafts, making the control not reliable, for this reason try to ensure shaft alignment between motors.</p>
+</div>
+</section>
+<section id="setup-boards-and-wire-them-to-the-motor">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">2.2 Setup Boards and wire them to the motor</a><a class="headerlink" href="#setup-boards-and-wire-them-to-the-motor" title="Link to this heading"></a></h3>
+<p><strong>2.2.1 Wiring the Device-Under-Test side</strong></p>
+<p>For Wiring the ACT motor to the MCLV-48V-300W board follow the image below as reference.</p>
+<p>For phase A connect the yelow wire, for phase B connect the green wire and for phase C connect the BLU wire</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="_images/MCLV-Encoder-Wiring.png"><img alt="HurstMotorWiring" src="_images/MCLV-Encoder-Wiring.png" style="width: 95%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Enocder ACT Motor Wiring to MCLV-48V-300W</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="_images/ConnectionDiagrams.png"><img alt="Connection Diagrams" src="_images/ConnectionDiagrams.png" style="width: 95%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Connection Diagrams</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2.2.2 Configure MCLV-48V-300W (DUT)</strong></p>
+<p>For the MCLV-48V-300W you should follow the conenction shown below.</p>
+<p>Note that this board hosts the DIM for motor-control algorithms. The motor-side HEX downloads are listed below.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The <a class="reference external" href="https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/blob/main/3Dparts/STL/MCLV48_300_DIMhold.stl">MCLV48_300_DIMhold.stl</a> is not necessary,
+but to guarantee better connection of the <strong>DIM</strong> boards to the MCLV-48V-300W board the suggestion is to 3D print one and use it.</p>
+</div>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="_images/MCLV-48V-wiring.png"><img alt="MCLV-48V-300W board configuration" src="_images/MCLV-48V-wiring.png" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">MCLV-48V-300W board configuration</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The DUT board shares the DC-link with the dyno board. Follow the warning and wiring notes on
+<a class="reference internal" href="make_your_MC_Dyno.html"><span class="doc">Make Your MC-Dyno</span></a>.</p>
+</section>
+</section>
+<section id="monitor-motor-behavior-with-pyx2cscope">
+<h2><a class="toc-backref" href="#id17" role="doc-backlink">3. Monitor motor behavior with pyX2Cscope</a><a class="headerlink" href="#monitor-motor-behavior-with-pyx2cscope" title="Link to this heading"></a></h2>
 <p>To view motor behavior on the DUT side, you can use <a class="reference external" href="https://x2cscope.github.io/pyx2cscope/">pyX2Cscope</a> through Python.
 There are also standalone apps you can download and run directly without installing anything beyond the app itself.
-To download the Standlaone App this is the up-to-date link: <a class="reference external" href="https://github.com/X2Cscope/pyx2cscope/releases">pyX2Cscope releases</a>.</p>
+To download the Standalone App this is the up-to-date link: <a class="reference external" href="https://github.com/X2Cscope/pyx2cscope/releases">pyX2Cscope releases</a>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>To actually being able to monitor the board, you will need to load to pyX2Cscope the <em>.elf</em> file related to the project that is loaded to the board.
@@ -106,50 +249,54 @@ All motor control examples by Microchip are already compatible with X2Cscope, so
 <col style="width: 50.0%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><figure class="align-default" id="id1">
+<tr class="row-odd"><td><figure class="align-default" id="id9">
 <a class="reference internal image-reference" href="_images/pyX2CscopeStandalone-WebInterface.png"><img alt="pyX2Cscope Standalone Web Interface" src="_images/pyX2CscopeStandalone-WebInterface.png" style="width: 95%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">pyX2Cscope Standalone Web Interface</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+<p><span class="caption-text">pyX2Cscope Standalone Web Interface</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </td>
-<td><figure class="align-default" id="id2">
+<td><figure class="align-default" id="id10">
 <a class="reference internal image-reference" href="_images/pyX2Cscope-Standalone-App.png"><img alt="pyX2Cscope Standalone App" src="_images/pyX2Cscope-Standalone-App.png" style="width: 95%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">pyX2Cscope Standalone App</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+<p><span class="caption-text">pyX2Cscope Standalone App</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </td>
 </tr>
-<tr class="row-even"><td><figure class="align-default" id="id3">
+<tr class="row-even"><td><figure class="align-default" id="id11">
 <a class="reference internal image-reference" href="_images/DownloadingAndUsingpyX2CscopeStandalone.png"><img alt="Downloading and using pyX2Cscope Standalone" src="_images/DownloadingAndUsingpyX2CscopeStandalone.png" style="width: 95%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Downloading and using pyX2Cscope Standalone</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+<p><span class="caption-text">Downloading and using pyX2Cscope Standalone</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </td>
-<td><figure class="align-default" id="id4">
+<td><figure class="align-default" id="id12">
 <a class="reference internal image-reference" href="_images/DownloadingAndUsingpyX2CscopeStandalone2.png"><img alt="Downloading and using pyX2Cscope Standalone (2)" src="_images/DownloadingAndUsingpyX2CscopeStandalone2.png" style="width: 95%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Downloading and using pyX2Cscope Standalone (2)</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+<p><span class="caption-text">Downloading and using pyX2Cscope Standalone (2)</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </td>
 </tr>
 </tbody>
 </table>
+<p>These HEX files target the motor-side control DIM installed on the
+MCLV-48V-300W Development Board (EV18H47A). They are used to showcase different
+motor-control algorithms on the dyno.</p>
 <p>Example DIM: dsPIC33CK256MP508 Motor Control DIM (EV62P66A)
 <a class="reference external" href="https://www.microchip.com/en-us/development-tool/ev62p66a">https://www.microchip.com/en-us/development-tool/ev62p66a</a></p>
+</section>
 <section id="hex-location">
-<h2>HEX Location<a class="headerlink" href="#hex-location" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id18" role="doc-backlink">HEX Location</a><a class="headerlink" href="#hex-location" title="Link to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">motor_ACT57BLF02/mclv48v300w_dim_hex/doc/standalone/</span></code></p>
 </section>
 <section id="downloads">
-<h2>Downloads<a class="headerlink" href="#downloads" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id19" role="doc-backlink">Downloads</a><a class="headerlink" href="#downloads" title="Link to this heading"></a></h2>
 <div class="motor-dim-downloads docutils container">
 <p><a class="reference download internal" download="" href="_downloads/89ed091c89ad9e95735c2d0b7e07ec0e/dsPIC33AK128MC106_MC_Dyno_08_01_2026_SingleShunt_DIM.hex"><code class="xref download docutils literal notranslate"><span class="pre">Single-shunt</span> <span class="pre">(dsPIC33AK128MC106</span> <span class="pre">DIM)</span></code></a></p>
 <p><a class="reference download internal" download="" href="_downloads/119d4028e83ab3677624be35c54ea268/dsPIC33CK256MP508_MC_Dyno_08_01_2026_ZSMT_DIM.hex"><code class="xref download docutils literal notranslate"><span class="pre">ZS/MT</span> <span class="pre">(dsPIC33CK256MP508</span> <span class="pre">DIM)</span></code></a></p>
@@ -159,7 +306,7 @@ All motor control examples by Microchip are already compatible with X2Cscope, so
 </div>
 </section>
 <section id="algorithm-notes">
-<h2>Algorithm Notes<a class="headerlink" href="#algorithm-notes" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">Algorithm Notes</a><a class="headerlink" href="#algorithm-notes" title="Link to this heading"></a></h2>
 <p>DIM mapping:</p>
 <ul class="simple">
 <li><p>Single-shunt demo runs on the dsPIC33AK128MC106 DIM.</p></li>
