@@ -1,4 +1,9 @@
 # MC-Dyno: Motor Control Dynamometer  
+
+<p align="center">
+  <img src="docs/source/_static/images/MC-DYNO-LOGO-OUTLINE.png" alt="MC-DYNO Logo" width="300">
+</p>
+
 Last updated: December 2025
 
 MC-Dyno is a compact, X2C-enabled motor dynamometer designed for load testing, algorithm validation, sensorless control development, and AI/ML data capture.  
@@ -239,6 +244,19 @@ Printing recommendations in a standard FDM printer:
 ## Want to contribute?
 This project is open source and contributions are welcome. 
 If you are new to GitHub, Github pages, and so on... don't worry, here is a small video that tries to explain how to get a setup for contributions ready: https://youtu.be/irQH9ktzQAw
+
+## Official Logos
+
+The MC-Dyno logos are available for use in documentation, presentations, and related projects. The following variants are provided:
+
+| Logo | File | Best for |
+|------|------|----------|
+| <img src="docs/source/_static/images/MC-DYNO-LOGO-OUTLINE.png" width="100"> | `MC-DYNO-LOGO-OUTLINE.png` | Light backgrounds |
+| <img src="docs/source/_static/images/MC-DYNO-LOGO-COLOR.png" width="100"> | `MC-DYNO-LOGO-COLOR.png` | General use |
+| <img src="docs/source/_static/images/MC-DYNO-LOGO-BLACK.png" width="100"> | `MC-DYNO-LOGO-BLACK.png` | Print / monochrome |
+| <img src="docs/source/_static/images/MC-DYNO-LOGO-WHITE.png" width="100"> | `MC-DYNO-LOGO-WHITE.png` | Dark backgrounds |
+
+All logos are located in `docs/source/_static/images/`.
 
 ----------------------------------------------------------------------
 REFERENCE & DISCLAIMER
