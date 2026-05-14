@@ -233,12 +233,16 @@ want to modify the code.
 
 To program the HEX file onto your board:
 
-1. Connect your programmer (ICD4, PICkit4, or SNAP) to the board
+1. Connect the board to your PC via USB (the MCLV-48V-300W has an on-board PKOB4 programmer, no external programmer needed)
 2. Open **MPLAB X IPE** (Integrated Programming Environment)
 3. Select the device: **ATSAME54P20A**
 4. Load the HEX file you downloaded
 5. Click **Program**
-6. Disconnect the programmer and reset the board
+6. Reset the board
+
+.. note::
+
+   If using an MCLV-2, you will need an external programmer (ICD4, PICkit4, or SNAP) connected to the board.
 
 .. tip::
 
