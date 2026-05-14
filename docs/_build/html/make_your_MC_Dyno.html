@@ -57,7 +57,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#setup-boards-and-wire-them-to-the-motors">2.2 Setup Boards and wire them to the motors</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#load-the-software">3. Load the software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#load-the-software">3. Load the software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#programming-the-firmware">3.1 Programming the firmware</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#run-the-mc-dyno-step-by-step">4. Run the MC-Dyno - step-by-step</a></li>
 </ul>
 </li>
@@ -107,8 +110,12 @@
 <li><p><a class="reference internal" href="#setup-boards-and-wire-them-to-the-motors" id="id19">2.2 Setup Boards and wire them to the motors</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#load-the-software" id="id20">3. Load the software</a></p></li>
-<li><p><a class="reference internal" href="#run-the-mc-dyno-step-by-step" id="id21">4. Run the MC-Dyno - step-by-step</a></p></li>
+<li><p><a class="reference internal" href="#load-the-software" id="id20">3. Load the software</a></p>
+<ul>
+<li><p><a class="reference internal" href="#programming-the-firmware" id="id21">3.1 Programming the firmware</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#run-the-mc-dyno-step-by-step" id="id22">4. Run the MC-Dyno - step-by-step</a></p></li>
 </ul>
 </nav>
 <section id="introduction">
@@ -301,14 +308,41 @@ to share the DC-Link and guaranteeing not being able to dissipate the energy cre
 </section>
 <section id="load-the-software">
 <h2><a class="toc-backref" href="#id20" role="doc-backlink">3. Load the software</a><a class="headerlink" href="#load-the-software" title="Link to this heading"></a></h2>
-<p>Dyno-side firmware is provided for both boards in this repository:</p>
+<p>Dyno-side firmware is provided for both boards in this repository. You can download
+pre-compiled HEX files for standalone operation, or the full MPLAB X project if you
+want to modify the code.</p>
+<p><strong>MCLV-48V-300W (Preferred for new builds)</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">MCDyno/mc_foc_dyno_same54_mclv48v300w</span></code> (preferred for new builds, MCLV-48V-300W)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MCDyno/mc_foc_dyno_same54_mclv2</span></code> (use this if you already have an MCLV-2)</p></li>
+<li><p><a class="reference download external" download="" href="https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/raw/main/MCDyno/mc_foc_dyno_same54_mclv48v300w/doc/standalone/MC_FOC_DYNO_SAME54_MCLV48V300W.X.production.hex"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">HEX</span> <span class="pre">file</span></code></a></p></li>
+<li><p><a class="reference download external" download="" href="https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/raw/main/MCDyno/mc_foc_dyno_same54_mclv48v300w/doc/standalone/mc_foc_dyno_same54_mclv48v300w.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">full</span> <span class="pre">project</span> <span class="pre">(ZIP)</span></code></a></p></li>
+<li><p>Project folder: <code class="docutils literal notranslate"><span class="pre">MCDyno/mc_foc_dyno_same54_mclv48v300w</span></code></p></li>
 </ul>
+<p><strong>MCLV-2 (Legacy, use if you already have this board)</strong></p>
+<ul class="simple">
+<li><p>Project folder: <code class="docutils literal notranslate"><span class="pre">MCDyno/mc_foc_dyno_same54_mclv2</span></code></p></li>
+<li><p>Standalone files: <code class="docutils literal notranslate"><span class="pre">MCDyno/mc_foc_dyno_same54_mclv2/doc/standalone/</span></code></p></li>
+</ul>
+<section id="programming-the-firmware">
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">3.1 Programming the firmware</a><a class="headerlink" href="#programming-the-firmware" title="Link to this heading"></a></h3>
+<p>To program the HEX file onto your board:</p>
+<ol class="arabic simple">
+<li><p>Connect your programmer (ICD4, PICkit4, or SNAP) to the board</p></li>
+<li><p>Open <strong>MPLAB X IPE</strong> (Integrated Programming Environment)</p></li>
+<li><p>Select the device: <strong>ATSAME54P20A</strong></p></li>
+<li><p>Load the HEX file you downloaded</p></li>
+<li><p>Click <strong>Program</strong></p></li>
+<li><p>Disconnect the programmer and reset the board</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want to modify the firmware, download the full project ZIP, extract it,
+and open the <code class="docutils literal notranslate"><span class="pre">.X</span></code> project folder in MPLAB X IDE. You will need XC32 compiler
+installed to rebuild the project</p>
+</div>
+</section>
 </section>
 <section id="run-the-mc-dyno-step-by-step">
-<h2><a class="toc-backref" href="#id21" role="doc-backlink">4. Run the MC-Dyno - step-by-step</a><a class="headerlink" href="#run-the-mc-dyno-step-by-step" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id22" role="doc-backlink">4. Run the MC-Dyno - step-by-step</a><a class="headerlink" href="#run-the-mc-dyno-step-by-step" title="Link to this heading"></a></h2>
 <p>After both sides are assembled and programmed, follow the runtime steps in <a class="reference internal" href="usage.html"><span class="doc">Procedure for using the MC-Dyno:</span></a>.</p>
 </section>
 </section>

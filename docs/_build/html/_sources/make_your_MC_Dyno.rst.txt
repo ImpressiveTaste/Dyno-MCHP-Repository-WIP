@@ -213,10 +213,38 @@ to share the DC-Link and guaranteeing not being able to dissipate the energy cre
 3. Load the software
 --------------------
 
-Dyno-side firmware is provided for both boards in this repository:
+Dyno-side firmware is provided for both boards in this repository. You can download
+pre-compiled HEX files for standalone operation, or the full MPLAB X project if you
+want to modify the code.
 
-- ``MCDyno/mc_foc_dyno_same54_mclv48v300w`` (preferred for new builds, MCLV-48V-300W)
-- ``MCDyno/mc_foc_dyno_same54_mclv2`` (use this if you already have an MCLV-2)
+**MCLV-48V-300W (Preferred for new builds)**
+
+- :download:`Download HEX file <https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/raw/main/MCDyno/mc_foc_dyno_same54_mclv48v300w/doc/standalone/MC_FOC_DYNO_SAME54_MCLV48V300W.X.production.hex>`
+- :download:`Download full project (ZIP) <https://github.com/ImpressiveTaste/Dyno-MCHP-Repository-WIP/raw/main/MCDyno/mc_foc_dyno_same54_mclv48v300w/doc/standalone/mc_foc_dyno_same54_mclv48v300w.zip>`
+- Project folder: ``MCDyno/mc_foc_dyno_same54_mclv48v300w``
+
+**MCLV-2 (Legacy, use if you already have this board)**
+
+- Project folder: ``MCDyno/mc_foc_dyno_same54_mclv2``
+- Standalone files: ``MCDyno/mc_foc_dyno_same54_mclv2/doc/standalone/``
+
+3.1 Programming the firmware
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To program the HEX file onto your board:
+
+1. Connect your programmer (ICD4, PICkit4, or SNAP) to the board
+2. Open **MPLAB X IPE** (Integrated Programming Environment)
+3. Select the device: **ATSAME54P20A**
+4. Load the HEX file you downloaded
+5. Click **Program**
+6. Disconnect the programmer and reset the board
+
+.. tip::
+
+   If you want to modify the firmware, download the full project ZIP, extract it,
+   and open the ``.X`` project folder in MPLAB X IDE. You will need XC32 compiler
+   installed to rebuild the project
 
 4. Run the MC-Dyno - step-by-step
 -----------------------------------
