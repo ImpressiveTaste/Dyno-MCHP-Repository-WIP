@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2710 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	PI Controller with                                   **/
@@ -57,6 +57,7 @@ extern "C" {
 #if !defined(PILIMIT_FLOAT64_ISLINKED)
 #define PILIMIT_FLOAT64_ID ((uint16)3236)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In;
@@ -70,6 +71,21 @@ typedef struct {
     float64         i_old;
     bool            enable_old;
 } PILIMIT_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In;
+    FLOAT64_PTR     Init;
+    FLOAT64_PTR     max;
+    FLOAT64_PTR     min;
+    BOOL_PTR        Enable;
+    float64         Out;
+    float64         b0;
+    float64         b1;
+    float64         i_old;
+    bool            enable_old;
+} PILIMIT_FLOAT64;
+#endif
 
 #define PILIMIT_FLOAT64_FUNCTIONS { \
     PILIMIT_FLOAT64_ID, \

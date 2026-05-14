@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2710 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: */
@@ -46,6 +46,7 @@ extern "C" {
 #if !defined(PIDLIMIT_FLOAT64_ISLINKED)
 #define PIDLIMIT_FLOAT64_ID ((uint16)3268)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In;
@@ -64,6 +65,26 @@ typedef struct {
     float64         d_old;
     bool            enable_old;
 } PIDLIMIT_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In;
+    FLOAT64_PTR     Init;
+    FLOAT64_PTR     max;
+    FLOAT64_PTR     min;
+    BOOL_PTR        Enable;
+    float64         Out;
+    float64         b0;
+    float64         b1;
+    float64         b0d;
+    float64         b1d;
+    float64         a0d;
+    float64         in_old;
+    float64         i_old;
+    float64         d_old;
+    bool            enable_old;
+} PIDLIMIT_FLOAT64;
+#endif
 
 #define PIDLIMIT_FLOAT64_FUNCTIONS { \
     PIDLIMIT_FLOAT64_ID, \

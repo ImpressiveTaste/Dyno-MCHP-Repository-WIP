@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: */
@@ -46,6 +46,7 @@ extern "C" {
 #if !defined(SINGEN_FLOAT32_ISLINKED)
 #define SINGEN_FLOAT32_ID ((uint16)419)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float32         *A;
@@ -56,6 +57,18 @@ typedef struct {
     float32         offset;
     float32         phi;
 } SINGEN_FLOAT32;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT32_PTR     A;
+    FLOAT32_PTR     f;
+    float32         u;
+    float32         delta_phi;
+    float32         phase;
+    float32         offset;
+    float32         phi;
+} SINGEN_FLOAT32;
+#endif
 
 #define SINGEN_FLOAT32_FUNCTIONS { \
     SINGEN_FLOAT32_ID, \

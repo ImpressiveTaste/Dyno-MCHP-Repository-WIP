@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	Output change rate limitation                        **/
@@ -54,6 +54,7 @@ extern "C" {
 #if !defined(RATELIMITER_FLOAT64_ISLINKED)
 #define RATELIMITER_FLOAT64_ID ((uint16)100)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In;
@@ -64,6 +65,18 @@ typedef struct {
     float64         RateDown;
     bool            enable_old;
 } RATELIMITER_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In;
+    FLOAT64_PTR     Init;
+    BOOL_PTR        Enable;
+    float64         Out;
+    float64         RateUp;
+    float64         RateDown;
+    bool            enable_old;
+} RATELIMITER_FLOAT64;
+#endif
 
 #define RATELIMITER_FLOAT64_FUNCTIONS { \
     RATELIMITER_FLOAT64_ID, \

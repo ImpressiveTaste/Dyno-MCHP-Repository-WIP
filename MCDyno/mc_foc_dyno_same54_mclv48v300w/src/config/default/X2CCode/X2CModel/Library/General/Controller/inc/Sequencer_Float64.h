@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: Generation of time delayed (enable) sequence.                 */
@@ -46,6 +46,7 @@ extern "C" {
 #if !defined(SEQUENCER_FLOAT64_ISLINKED)
 #define SEQUENCER_FLOAT64_ID ((uint16)452)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *Start;
@@ -60,6 +61,22 @@ typedef struct {
     uint16          cnt;
     float64         start_old;
 } SEQUENCER_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     Start;
+    float64         Out1;
+    float64         Out2;
+    float64         Out3;
+    float64         Out4;
+    uint16          delay1;
+    uint16          delay2;
+    uint16          delay3;
+    uint16          delay4;
+    uint16          cnt;
+    float64         start_old;
+} SEQUENCER_FLOAT64;
+#endif
 
 #define SEQUENCER_FLOAT64_FUNCTIONS { \
     SEQUENCER_FLOAT64_ID, \

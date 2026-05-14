@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: Block does nothing except breaking algebraic loops. */
@@ -46,11 +46,19 @@ extern "C" {
 #if !defined(LOOPBREAKER_BOOL_ISLINKED)
 #define LOOPBREAKER_BOOL_ID ((uint16)495)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     bool            *In;
     bool            Out;
 } LOOPBREAKER_BOOL;
+#else
+typedef struct {
+    uint16          ID;
+    BOOL_PTR        In;
+    bool            Out;
+} LOOPBREAKER_BOOL;
+#endif
 
 #define LOOPBREAKER_BOOL_FUNCTIONS { \
     LOOPBREAKER_BOOL_ID, \

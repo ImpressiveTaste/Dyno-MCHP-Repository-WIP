@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1658 $
+ * $LastChangedRevision: 3363 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: One dimensional look-up table with selectable number of entries */
@@ -46,15 +46,37 @@ extern "C" {
 #if !defined(LOOKUPTABLE1D_FIP16_ISLINKED)
 #define LOOKUPTABLE1D_FIP16_ID ((uint16)497)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int16           *x;
     int16           Out;
-    const int16     *Table;
+const int16         *Table;
     int8            sfrX;
     uint16          maskX;
     uint16          idxOffsetX;
+    int16           gainX;
+    int8            gainXsfr;
+    int16           offsetX;
+    int16           minX;
+    int16           maxX;
 } LOOKUPTABLE1D_FIP16;
+#else
+typedef struct {
+    uint16          ID;
+    INT16_PTR       x;
+    int16           Out;
+const INT16_PTR     Table;
+    int8            sfrX;
+    uint16          maskX;
+    uint16          idxOffsetX;
+    int16           gainX;
+    int8            gainXsfr;
+    int16           offsetX;
+    int16           minX;
+    int16           maxX;
+} LOOKUPTABLE1D_FIP16;
+#endif
 
 #define LOOKUPTABLE1D_FIP16_FUNCTIONS { \
     LOOKUPTABLE1D_FIP16_ID, \

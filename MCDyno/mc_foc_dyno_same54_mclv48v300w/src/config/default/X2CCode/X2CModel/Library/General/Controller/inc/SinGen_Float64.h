@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: */
@@ -46,6 +46,7 @@ extern "C" {
 #if !defined(SINGEN_FLOAT64_ISLINKED)
 #define SINGEN_FLOAT64_ID ((uint16)420)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *A;
@@ -56,6 +57,18 @@ typedef struct {
     float64         offset;
     float64         phi;
 } SINGEN_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     A;
+    FLOAT64_PTR     f;
+    float64         u;
+    float64         delta_phi;
+    float64         phase;
+    float64         offset;
+    float64         phi;
+} SINGEN_FLOAT64;
+#endif
 
 #define SINGEN_FLOAT64_FUNCTIONS { \
     SINGEN_FLOAT64_ID, \

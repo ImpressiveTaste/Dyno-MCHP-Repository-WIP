@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /*      Description:	Subtraction of Input 2 from Input 1 with output wrap- */
@@ -50,12 +50,21 @@ extern "C" {
 #if !defined(USUB_FLOAT64_ISLINKED)
 #define USUB_FLOAT64_ID ((uint16)5012)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *Plus;
     float64         *Minus;
     float64         Out;
 } USUB_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     Plus;
+    FLOAT64_PTR     Minus;
+    float64         Out;
+} USUB_FLOAT64;
+#endif
 
 #define USUB_FLOAT64_FUNCTIONS { \
     USUB_FLOAT64_ID, \

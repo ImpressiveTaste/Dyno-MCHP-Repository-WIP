@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: 	Makes the incoming signal accessible for reading with parameter numbers.						  */
@@ -47,10 +47,17 @@ extern "C" {
 #if !defined(SAVESIGNAL_FIP8_ISLINKED)
 #define SAVESIGNAL_FIP8_ID ((uint16)320)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int8            *In;
 } SAVESIGNAL_FIP8;
+#else
+typedef struct {
+    uint16          ID;
+    INT8_PTR        In;
+} SAVESIGNAL_FIP8;
+#endif
 
 #define SAVESIGNAL_FIP8_FUNCTIONS { \
     SAVESIGNAL_FIP8_ID, \

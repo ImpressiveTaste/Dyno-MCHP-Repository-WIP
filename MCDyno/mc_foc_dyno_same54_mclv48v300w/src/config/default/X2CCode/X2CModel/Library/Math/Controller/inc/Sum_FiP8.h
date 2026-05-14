@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	Sum of all inputs.                                   										 **/
@@ -52,6 +52,7 @@ extern "C" {
 #if !defined(SUM_FIP8_ISLINKED)
 #define SUM_FIP8_ID ((uint16)4800)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int8            *In1;
@@ -65,6 +66,21 @@ typedef struct {
     int8            Out;
     uint16          sign;
 } SUM_FIP8;
+#else
+typedef struct {
+    uint16          ID;
+    INT8_PTR        In1;
+    INT8_PTR        In2;
+    INT8_PTR        In3;
+    INT8_PTR        In4;
+    INT8_PTR        In5;
+    INT8_PTR        In6;
+    INT8_PTR        In7;
+    INT8_PTR        In8;
+    int8            Out;
+    uint16          sign;
+} SUM_FIP8;
+#endif
 
 #define SUM_FIP8_FUNCTIONS { \
     SUM_FIP8_ID, \

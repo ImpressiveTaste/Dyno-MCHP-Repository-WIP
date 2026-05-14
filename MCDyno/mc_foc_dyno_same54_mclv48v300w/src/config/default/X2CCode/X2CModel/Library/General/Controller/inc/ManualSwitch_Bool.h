@@ -29,8 +29,8 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
- * $LastChangedDate:: 2019-01-21 19:02:13 +0100#$
+ * $LastChangedRevision: 2584 $
+ * $LastChangedDate:: 2022-05-03 15:06:23 +0200#$
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**
@@ -50,6 +50,7 @@ extern "C" {
 #if !defined(MANUALSWITCH_BOOL_ISLINKED)
 #define MANUALSWITCH_BOOL_ID ((uint16)159)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     bool            *In1;
@@ -57,6 +58,15 @@ typedef struct {
     bool            Out;
     uint8           Toggle;
 } MANUALSWITCH_BOOL;
+#else
+typedef struct {
+    uint16          ID;
+    BOOL_PTR        In1;
+    BOOL_PTR        In2;
+    bool            Out;
+    uint8           Toggle;
+} MANUALSWITCH_BOOL;
+#endif
 
 #define MANUALSWITCH_BOOL_FUNCTIONS { \
     MANUALSWITCH_BOOL_ID, \

@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description:	  Conversion from floating point to fixed point.		      */
@@ -47,12 +47,21 @@ extern "C" {
 #if !defined(REAL2INT_FLOAT64_FIP16_ISLINKED)
 #define REAL2INT_FLOAT64_FIP16_ID ((uint16)212)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In;
     int16           Out;
     float64         scale;
 } REAL2INT_FLOAT64_FIP16;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In;
+    int16           Out;
+    float64         scale;
+} REAL2INT_FLOAT64_FIP16;
+#endif
 
 #define REAL2INT_FLOAT64_FIP16_FUNCTIONS { \
     REAL2INT_FLOAT64_FIP16_ID, \

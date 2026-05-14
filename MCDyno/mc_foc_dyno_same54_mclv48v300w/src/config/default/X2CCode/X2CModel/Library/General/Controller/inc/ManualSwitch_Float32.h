@@ -29,8 +29,8 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
- * $LastChangedDate:: 2019-01-21 19:02:13 +0100#$
+ * $LastChangedRevision: 2584 $
+ * $LastChangedDate:: 2022-05-03 15:06:23 +0200#$
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	Toggling between the 2 inputs                        **/
@@ -48,6 +48,7 @@ extern "C" {
 #if !defined(MANUALSWITCH_FLOAT32_ISLINKED)
 #define MANUALSWITCH_FLOAT32_ID ((uint16)147)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float32         *In1;
@@ -55,6 +56,15 @@ typedef struct {
     float32         Out;
     uint8           Toggle;
 } MANUALSWITCH_FLOAT32;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT32_PTR     In1;
+    FLOAT32_PTR     In2;
+    float32         Out;
+    uint8           Toggle;
+} MANUALSWITCH_FLOAT32;
+#endif
 
 #define MANUALSWITCH_FLOAT32_FUNCTIONS { \
     MANUALSWITCH_FLOAT32_ID, \

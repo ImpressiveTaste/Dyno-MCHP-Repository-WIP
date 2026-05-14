@@ -29,15 +29,16 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
-/**     Description:	Signum function				                         **/
-/**						Calculation:										 **/
-/**							u >= 0: 										 **/
-/**								y = +1										 **/
-/**							u < 0:											 **/
-/**								y = -1 										 **/
+/*     Description: Signum function
+ *     Calculation:
+ *              u >= 0:
+ *                  y = +1
+ *              u < 0:
+ *                  y = -1
+ */
 /* USERCODE-END:Description                                                                                           */
 #ifndef SIGN_FIP8_H
 #define SIGN_FIP8_H
@@ -51,11 +52,19 @@ extern "C" {
 #if !defined(SIGN_FIP8_ISLINKED)
 #define SIGN_FIP8_ID ((uint16)4896)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int8            *In;
     int8            Out;
 } SIGN_FIP8;
+#else
+typedef struct {
+    uint16          ID;
+    INT8_PTR        In;
+    int8            Out;
+} SIGN_FIP8;
+#endif
 
 #define SIGN_FIP8_FUNCTIONS { \
     SIGN_FIP8_ID, \

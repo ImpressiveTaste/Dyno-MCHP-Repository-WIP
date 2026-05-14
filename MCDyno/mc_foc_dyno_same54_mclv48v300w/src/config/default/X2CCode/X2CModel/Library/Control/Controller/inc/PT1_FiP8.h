@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:    First order proportional element                     **/
@@ -55,6 +55,7 @@ extern "C" {
 #if !defined(PT1_FIP8_ISLINKED)
 #define PT1_FIP8_ID ((uint16)3312)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int8            *In;
@@ -66,6 +67,19 @@ typedef struct {
     int8            sfra;
     int8            in_old;
 } PT1_FIP8;
+#else
+typedef struct {
+    uint16          ID;
+    INT8_PTR        In;
+    int8            Out;
+    int8            b0;
+    int8            b1;
+    int8            a0;
+    int8            sfrb;
+    int8            sfra;
+    int8            in_old;
+} PT1_FIP8;
+#endif
 
 #define PT1_FIP8_FUNCTIONS { \
     PT1_FIP8_ID, \

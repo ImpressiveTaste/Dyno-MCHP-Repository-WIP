@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	Second order transfer function                      										 **/
@@ -53,6 +53,7 @@ extern "C" {
 #if !defined(TF2_FLOAT32_ISLINKED)
 #define TF2_FLOAT32_ID ((uint16)3299)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float32         *In;
@@ -67,6 +68,22 @@ typedef struct {
     float32         out_old;
     float32         out_veryold;
 } TF2_FLOAT32;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT32_PTR     In;
+    float32         Out;
+    float32         b0;
+    float32         b1;
+    float32         b2;
+    float32         a0;
+    float32         a1;
+    float32         in_old;
+    float32         in_veryold;
+    float32         out_old;
+    float32         out_veryold;
+} TF2_FLOAT32;
+#endif
 
 #define TF2_FLOAT32_FUNCTIONS { \
     TF2_FLOAT32_ID, \

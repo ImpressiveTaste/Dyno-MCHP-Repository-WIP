@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	First order transfer function                        **/
@@ -52,6 +52,7 @@ extern "C" {
 #if !defined(TF1_FLOAT64_ISLINKED)
 #define TF1_FLOAT64_ID ((uint16)3284)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In;
@@ -61,6 +62,17 @@ typedef struct {
     float64         a0;
     float64         in_old;
 } TF1_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In;
+    float64         Out;
+    float64         b0;
+    float64         b1;
+    float64         a0;
+    float64         in_old;
+} TF1_FLOAT64;
+#endif
 
 #define TF1_FLOAT64_FUNCTIONS { \
     TF1_FLOAT64_ID, \

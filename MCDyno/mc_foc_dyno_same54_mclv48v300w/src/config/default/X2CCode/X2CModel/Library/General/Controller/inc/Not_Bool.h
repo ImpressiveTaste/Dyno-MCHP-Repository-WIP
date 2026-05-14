@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: */
@@ -46,11 +46,19 @@ extern "C" {
 #if !defined(NOT_BOOL_ISLINKED)
 #define NOT_BOOL_ID ((uint16)239)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     bool            *In;
     bool            Out;
 } NOT_BOOL;
+#else
+typedef struct {
+    uint16          ID;
+    BOOL_PTR        In;
+    bool            Out;
+} NOT_BOOL;
+#endif
 
 #define NOT_BOOL_FUNCTIONS { \
     NOT_BOOL_ID, \

@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description: 	Addition of input 1 and input 2.					 **/	
@@ -49,12 +49,21 @@ extern "C" {
 #if !defined(ADD_FIP32_ISLINKED)
 #define ADD_FIP32_ID ((uint16)4962)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int32           *In1;
     int32           *In2;
     int32           Out;
 } ADD_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    INT32_PTR       In1;
+    INT32_PTR       In2;
+    int32           Out;
+} ADD_FIP32;
+#endif
 
 #define ADD_FIP32_FUNCTIONS { \
     ADD_FIP32_ID, \

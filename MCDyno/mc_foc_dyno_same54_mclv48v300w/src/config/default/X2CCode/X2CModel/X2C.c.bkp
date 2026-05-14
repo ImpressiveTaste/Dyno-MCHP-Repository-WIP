@@ -1,9 +1,9 @@
 /* This file is part of X2C. http://x2c.lcm.at/                                                                       */
 
 /* Model: MC_FOC_DYNO_SAME54_MCLV_48V_300W                                                                            */
-/* Date:  2024-09-11 10:53                                                                                            */
+/* Date:  2026-05-14 12:41                                                                                            */
 
-/* X2C-Version: 6.4.3073                                                                                              */
+/* X2C-Version: 6.5.3439                                                                                              */
 /* X2C-Edition: Free                                                                                                  */
 
 /* Common includes                                                                                                    */
@@ -18,6 +18,9 @@
 /**                                                       Model                                                      **/
 /**********************************************************************************************************************/
 struct x2cModel x2cModel;
+
+/* Model identifier                                                                                                   */
+const uint32 x2cModelIdentifier = 0x8AC0378BU;
 
 /**********************************************************************************************************************/
 /**                                                       Scope                                                      **/
@@ -224,8 +227,8 @@ void X2C_Init(void)
     x2cModel.blocks.sDyno.bt_load_rate.enable_old = 0;
 
     /* Block: Dyno/torque_mode                                                                                        */
-    /* Value = 1.0                                                                                                    */
-    x2cModel.blocks.sDyno.btorque_mode.K = 1;
+    /* Value = 0.0                                                                                                    */
+    x2cModel.blocks.sDyno.btorque_mode.K = 0;
 
     /* Block: DynoMotor                                                                                               */
     /* Toggle = 1.0                                                                                                   */

@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1623 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /*     Description:  Switch between In1 and In3 dependent on Switch signal:   */
@@ -49,6 +49,7 @@ extern "C" {
 #if !defined(AUTOSWITCH_FLOAT64_ISLINKED)
 #define AUTOSWITCH_FLOAT64_ID ((uint16)132)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In1;
@@ -59,6 +60,18 @@ typedef struct {
     float64         Thresh_down;
     float64         *Status;
 } AUTOSWITCH_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In1;
+    FLOAT64_PTR     Switch;
+    FLOAT64_PTR     In3;
+    float64         Out;
+    float64         Thresh_up;
+    float64         Thresh_down;
+    FLOAT64_PTR     Status;
+} AUTOSWITCH_FLOAT64;
+#endif
 
 #define AUTOSWITCH_FLOAT64_FUNCTIONS { \
     AUTOSWITCH_FLOAT64_ID, \

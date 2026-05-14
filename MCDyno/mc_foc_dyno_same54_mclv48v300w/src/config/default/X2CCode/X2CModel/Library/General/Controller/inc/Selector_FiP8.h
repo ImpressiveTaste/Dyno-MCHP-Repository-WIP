@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: 															  */
@@ -52,6 +52,7 @@ extern "C" {
 #if !defined(SELECTOR_FIP8_ISLINKED)
 #define SELECTOR_FIP8_ID ((uint16)400)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int8            *In0;
@@ -65,6 +66,21 @@ typedef struct {
     int8            *Select;
     int8            Out;
 } SELECTOR_FIP8;
+#else
+typedef struct {
+    uint16          ID;
+    INT8_PTR        In0;
+    INT8_PTR        In1;
+    INT8_PTR        In2;
+    INT8_PTR        In3;
+    INT8_PTR        In4;
+    INT8_PTR        In5;
+    INT8_PTR        In6;
+    INT8_PTR        In7;
+    INT8_PTR        Select;
+    int8            Out;
+} SELECTOR_FIP8;
+#endif
 
 #define SELECTOR_FIP8_FUNCTIONS { \
     SELECTOR_FIP8_ID, \

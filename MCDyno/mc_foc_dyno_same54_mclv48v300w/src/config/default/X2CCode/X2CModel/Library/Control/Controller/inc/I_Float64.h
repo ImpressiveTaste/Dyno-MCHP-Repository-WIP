@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2800 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	I Controller with                                   **/
@@ -55,16 +55,29 @@ extern "C" {
 #if !defined(I_FLOAT64_ISLINKED)
 #define I_FLOAT64_ID ((uint16)3204)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In;
-    float64         *Init;
+    float32         *I0;
     bool            *Enable;
     float64         Out;
     float64         b0;
     float64         i_old;
     bool            enable_old;
 } I_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In;
+    FLOAT32_PTR     I0;
+    BOOL_PTR        Enable;
+    float64         Out;
+    float64         b0;
+    float64         i_old;
+    bool            enable_old;
+} I_FLOAT64;
+#endif
 
 #define I_FLOAT64_FUNCTIONS { \
     I_FLOAT64_ID, \

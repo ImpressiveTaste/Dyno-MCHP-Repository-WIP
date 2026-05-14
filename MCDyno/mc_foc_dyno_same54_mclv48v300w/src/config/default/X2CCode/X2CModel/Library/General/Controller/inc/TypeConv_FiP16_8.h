@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	Data Type Conversion from 16 to 8 Bit                **/
@@ -47,11 +47,19 @@ extern "C" {
 #if !defined(TYPECONV_FIP16_8_ISLINKED)
 #define TYPECONV_FIP16_8_ID ((uint16)178)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int16           *In;
     int8            Out;
 } TYPECONV_FIP16_8;
+#else
+typedef struct {
+    uint16          ID;
+    INT16_PTR       In;
+    int8            Out;
+} TYPECONV_FIP16_8;
+#endif
 
 #define TYPECONV_FIP16_8_FUNCTIONS { \
     TYPECONV_FIP16_8_ID, \

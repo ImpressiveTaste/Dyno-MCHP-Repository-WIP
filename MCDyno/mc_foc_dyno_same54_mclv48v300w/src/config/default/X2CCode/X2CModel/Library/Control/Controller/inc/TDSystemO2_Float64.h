@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description: 2nd Order Time Discrete System with 2 in- and outputs. 										 **/
@@ -50,6 +50,7 @@ extern "C" {
 #if !defined(TDSYSTEMO2_FLOAT64_ISLINKED)
 #define TDSYSTEMO2_FLOAT64_ID ((uint16)3364)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In1;
@@ -67,6 +68,25 @@ typedef struct {
     float64         x1;
     float64         x2;
 } TDSYSTEMO2_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In1;
+    FLOAT64_PTR     In2;
+    float64         Out1;
+    float64         Out2;
+    float64         a11;
+    float64         a12;
+    float64         a21;
+    float64         a22;
+    float64         b11;
+    float64         b12;
+    float64         b21;
+    float64         b22;
+    float64         x1;
+    float64         x2;
+} TDSYSTEMO2_FLOAT64;
+#endif
 
 #define TDSYSTEMO2_FLOAT64_FUNCTIONS { \
     TDSYSTEMO2_FLOAT64_ID, \

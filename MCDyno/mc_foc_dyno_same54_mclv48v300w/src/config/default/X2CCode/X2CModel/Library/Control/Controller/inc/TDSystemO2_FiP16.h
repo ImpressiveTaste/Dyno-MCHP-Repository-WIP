@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description: 2nd Order Time Discrete System with 2 in- and outputs. 										 **/
@@ -50,6 +50,7 @@ extern "C" {
 #if !defined(TDSYSTEMO2_FIP16_ISLINKED)
 #define TDSYSTEMO2_FIP16_ID ((uint16)3361)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int16           *In1;
@@ -75,6 +76,33 @@ typedef struct {
     int16           x1;
     int16           x2;
 } TDSYSTEMO2_FIP16;
+#else
+typedef struct {
+    uint16          ID;
+    INT16_PTR       In1;
+    INT16_PTR       In2;
+    int16           Out1;
+    int16           Out2;
+    int16           a11;
+    int16           a12;
+    int16           a21;
+    int16           a22;
+    int16           b11;
+    int16           b12;
+    int16           b21;
+    int16           b22;
+    uint8           sfra11;
+    uint8           sfra12;
+    uint8           sfra21;
+    uint8           sfra22;
+    uint8           sfrb11;
+    uint8           sfrb12;
+    uint8           sfrb21;
+    uint8           sfrb22;
+    int16           x1;
+    int16           x2;
+} TDSYSTEMO2_FIP16;
+#endif
 
 #define TDSYSTEMO2_FIP16_FUNCTIONS { \
     TDSYSTEMO2_FIP16_ID, \

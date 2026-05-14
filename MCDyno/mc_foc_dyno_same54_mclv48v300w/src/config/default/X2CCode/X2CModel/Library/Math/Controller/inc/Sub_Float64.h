@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description: Subtraction of Input Plus from Input Minus									                     **/
@@ -49,12 +49,21 @@ extern "C" {
 #if !defined(SUB_FLOAT64_ISLINKED)
 #define SUB_FLOAT64_ID ((uint16)4996)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *Plus;
     float64         *Minus;
     float64         Out;
 } SUB_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     Plus;
+    FLOAT64_PTR     Minus;
+    float64         Out;
+} SUB_FLOAT64;
+#endif
 
 #define SUB_FLOAT64_FUNCTIONS { \
     SUB_FLOAT64_ID, \

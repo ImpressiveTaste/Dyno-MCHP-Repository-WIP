@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1658 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: Two dimensional look-up table with selectable number of entries */
@@ -46,20 +46,57 @@ extern "C" {
 #if !defined(LOOKUPTABLE2D_FIP32_ISLINKED)
 #define LOOKUPTABLE2D_FIP32_ID ((uint16)306)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int32           *x;
     int32           *y;
     int32           Out;
-    const int32     *Table;
+const  int32        *Table;
     int8            sfrX;
-    int8            sfrY;
     uint32          maskX;
-    uint32          maskY;
     uint16          idxOffsetX;
-    uint16          idxOffsetY;
     uint16          sizeX;
+    int32           gainX;
+    int8            gainXsfr;
+    int32           offsetX;
+    int32           minX;
+    int32           maxX;
+    int8            sfrY;
+    uint32          maskY;
+    uint16          idxOffsetY;
+    int32           gainY;
+    int8            gainYsfr;
+    int32           offsetY;
+    int32           minY;
+    int32           maxY;
 } LOOKUPTABLE2D_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    INT32_PTR       x;
+    INT32_PTR       y;
+    int32           Out;
+const  INT32_PTR    Table;
+    int8            sfrX;
+    uint32          maskX;
+    uint16          idxOffsetX;
+    uint16          sizeX;
+    int32           gainX;
+    int8            gainXsfr;
+    int32           offsetX;
+    int32           minX;
+    int32           maxX;
+    int8            sfrY;
+    uint32          maskY;
+    uint16          idxOffsetY;
+    int32           gainY;
+    int8            gainYsfr;
+    int32           offsetY;
+    int32           minY;
+    int32           maxY;
+} LOOKUPTABLE2D_FIP32;
+#endif
 
 #define LOOKUPTABLE2D_FIP32_FUNCTIONS { \
     LOOKUPTABLE2D_FIP32_ID, \

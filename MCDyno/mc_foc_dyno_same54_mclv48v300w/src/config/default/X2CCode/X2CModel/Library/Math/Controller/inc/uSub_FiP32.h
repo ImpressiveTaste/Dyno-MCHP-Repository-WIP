@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /*      Description:	Subtraction of Input Minus from Input Plus with output wrapping.							  */
@@ -49,12 +49,21 @@ extern "C" {
 #if !defined(USUB_FIP32_ISLINKED)
 #define USUB_FIP32_ID ((uint16)5010)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int32           *Plus;
     int32           *Minus;
     int32           Out;
 } USUB_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    INT32_PTR       Plus;
+    INT32_PTR       Minus;
+    int32           Out;
+} USUB_FIP32;
+#endif
 
 #define USUB_FIP32_FUNCTIONS { \
     USUB_FIP32_ID, \

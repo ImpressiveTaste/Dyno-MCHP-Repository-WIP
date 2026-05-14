@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1948 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**
@@ -49,11 +49,19 @@ extern "C" {
 #if !defined(TYPECONV_BOOL_FIP32_ISLINKED)
 #define TYPECONV_BOOL_FIP32_ID ((uint16)183)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     bool            *In;
     int32           Out;
 } TYPECONV_BOOL_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    BOOL_PTR        In;
+    int32           Out;
+} TYPECONV_BOOL_FIP32;
+#endif
 
 #define TYPECONV_BOOL_FIP32_FUNCTIONS { \
     TYPECONV_BOOL_FIP32_ID, \

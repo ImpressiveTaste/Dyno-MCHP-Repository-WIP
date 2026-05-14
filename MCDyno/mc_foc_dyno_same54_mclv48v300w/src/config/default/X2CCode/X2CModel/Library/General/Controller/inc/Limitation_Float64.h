@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* 		Description:	Limitation of input signal to min and max             */
@@ -47,6 +47,7 @@ extern "C" {
 #if !defined(LIMITATION_FLOAT64_ISLINKED)
 #define LIMITATION_FLOAT64_ID ((uint16)388)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In;
@@ -54,6 +55,15 @@ typedef struct {
     float64         *min;
     float64         Out;
 } LIMITATION_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In;
+    FLOAT64_PTR     max;
+    FLOAT64_PTR     min;
+    float64         Out;
+} LIMITATION_FLOAT64;
+#endif
 
 #define LIMITATION_FLOAT64_FUNCTIONS { \
     LIMITATION_FLOAT64_ID, \

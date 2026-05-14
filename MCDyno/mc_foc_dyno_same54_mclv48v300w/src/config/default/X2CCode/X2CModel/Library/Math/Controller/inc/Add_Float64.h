@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description: 	Addition of input 1 and input 2.					 **/
@@ -49,12 +49,21 @@ extern "C" {
 #if !defined(ADD_FLOAT64_ISLINKED)
 #define ADD_FLOAT64_ID ((uint16)4964)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In1;
     float64         *In2;
     float64         Out;
 } ADD_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In1;
+    FLOAT64_PTR     In2;
+    float64         Out;
+} ADD_FLOAT64;
+#endif
 
 #define ADD_FLOAT64_FUNCTIONS { \
     ADD_FLOAT64_ID, \

@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**
@@ -49,12 +49,21 @@ extern "C" {
 #if !defined(REAL2INT_FLOAT64_BOOL_ISLINKED)
 #define REAL2INT_FLOAT64_BOOL_ID ((uint16)215)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In;
     bool            Out;
     float64         scale;
 } REAL2INT_FLOAT64_BOOL;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In;
+    bool            Out;
+    float64         scale;
+} REAL2INT_FLOAT64_BOOL;
+#endif
 
 #define REAL2INT_FLOAT64_BOOL_FUNCTIONS { \
     REAL2INT_FLOAT64_BOOL_ID, \

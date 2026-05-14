@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description:	  Delay the input signal by one sample time interval.   	  */
@@ -47,12 +47,21 @@ extern "C" {
 #if !defined(DELAY_FIP32_ISLINKED)
 #define DELAY_FIP32_ID ((uint16)3426)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int32           *In;
     int32           Out;
     int32           In_old;
 } DELAY_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    INT32_PTR       In;
+    int32           Out;
+    int32           In_old;
+} DELAY_FIP32;
+#endif
 
 #define DELAY_FIP32_FUNCTIONS { \
     DELAY_FIP32_ID, \

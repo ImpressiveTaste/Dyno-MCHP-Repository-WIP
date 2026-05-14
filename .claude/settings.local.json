@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/LocalWork/Git/MC-Dyno/Dyno-MCHP-Repository-WIP -name \"*.md\" -exec wc -l {} \\\\;)",
+      "Bash(grep -r \"^\\\\s*//\" /c/LocalWork/Git/MC-Dyno/Dyno-MCHP-Repository-WIP/MCDyno/mc_foc_dyno_same54_mclv2/firmware/src/*.c)",
+      "Bash(grep -r \"///\" /c/LocalWork/Git/MC-Dyno/Dyno-MCHP-Repository-WIP --include=\"*.c\" --include=\"*.h\")",
+      "Bash(xargs -I {} sh -c 'echo \"=== {} ===\" && head -50 {}')",
+      "Bash(wc -l /c/LocalWork/Git/MC-Dyno/Dyno-MCHP-Repository-WIP/docs/source/*.rst)",
+      "Bash(xargs -I {} sh -c 'echo \"=== {} ===\" && head -80 {} | tail -40')",
+      "Bash(ls -lh /c/LocalWork/Git/MC-Dyno/Dyno-MCHP-Repository-WIP/*.docx)",
+      "Bash(xargs wc *)",
+      "Bash(xargs grep -l \"libCortexM4\\\\|X2CModel\\\\|Control\\\\.a\")",
+      "Read(//c/Program Files/Microchip/**)",
+      "Read(//c//**)",
+      "Bash(where scilab *)",
+      "Bash(where x2c *)",
+      "Bash(cp /c/LCM/X2C/v6.5.3439/Library/Control/Controller/lib/libCortexM4-ATSAM_Control.a /c/LocalWork/Git/MC-Dyno/Dyno-MCHP-Repository-WIP/MCDyno/mc_foc_dyno_same54_mclv48v300w/src/config/default/X2CCode/X2CModel/Library/Control/Controller/lib/)",
+      "Bash(cp /c/LCM/X2C/v6.5.3439/Library/General/Controller/lib/libCortexM4-ATSAM_General.a /c/LocalWork/Git/MC-Dyno/Dyno-MCHP-Repository-WIP/MCDyno/mc_foc_dyno_same54_mclv48v300w/src/config/default/X2CCode/X2CModel/Library/General/Controller/lib/)",
+      "Bash(cp /c/LCM/X2C/v6.5.3439/Library/Math/Controller/lib/libCortexM4-ATSAM_Math.a /c/LocalWork/Git/MC-Dyno/Dyno-MCHP-Repository-WIP/MCDyno/mc_foc_dyno_same54_mclv48v300w/src/config/default/X2CCode/X2CModel/Library/Math/Controller/lib/)",
+      "Bash(cp /c/LCM/X2C/v6.5.3439/Library/MCHP/Controller/lib/libCORTEXM4-ATSAM_MCHP.a /c/LocalWork/Git/MC-Dyno/Dyno-MCHP-Repository-WIP/MCDyno/mc_foc_dyno_same54_mclv48v300w/src/config/default/X2CCode/X2CModel/Library/MCHP/Controller/lib/libCortexM4-ATSAM_MCHP.a)",
+      "Bash(make -f nbproject/Makefile-default.mk SUBPROJECTS= .build-conf)",
+      "Bash(cp -r /c/LCM/X2C/v6.5.3439/Library/Control/Controller/src /c/LocalWork/Git/MC-Dyno/Dyno-MCHP-Repository-WIP/MCDyno/mc_foc_dyno_same54_mclv48v300w/src/config/default/X2CCode/X2CModel/Library/Control/Controller/)",
+      "Bash(cp -r /c/LCM/X2C/v6.5.3439/Library/General/Controller/src /c/LocalWork/Git/MC-Dyno/Dyno-MCHP-Repository-WIP/MCDyno/mc_foc_dyno_same54_mclv48v300w/src/config/default/X2CCode/X2CModel/Library/General/Controller/)",
+      "Bash(cp -r /c/LCM/X2C/v6.5.3439/Library/Math/Controller/src /c/LocalWork/Git/MC-Dyno/Dyno-MCHP-Repository-WIP/MCDyno/mc_foc_dyno_same54_mclv48v300w/src/config/default/X2CCode/X2CModel/Library/Math/Controller/)",
+      "Bash(cp -r '/c/LCM/X2C/v6.5.3439/Library/Control/Controller/inc/*' /c/LocalWork/Git/MC-Dyno/Dyno-MCHP-Repository-WIP/MCDyno/mc_foc_dyno_same54_mclv48v300w/src/config/default/X2CCode/X2CModel/Library/Control/Controller/inc/)",
+      "Bash(cp -r '/c/LCM/X2C/v6.5.3439/Library/General/Controller/inc/*' /c/LocalWork/Git/MC-Dyno/Dyno-MCHP-Repository-WIP/MCDyno/mc_foc_dyno_same54_mclv48v300w/src/config/default/X2CCode/X2CModel/Library/General/Controller/inc/)",
+      "Bash(cp -r '/c/LCM/X2C/v6.5.3439/Library/Math/Controller/inc/*' /c/LocalWork/Git/MC-Dyno/Dyno-MCHP-Repository-WIP/MCDyno/mc_foc_dyno_same54_mclv48v300w/src/config/default/X2CCode/X2CModel/Library/Math/Controller/inc/)",
+      "Bash(sed -i 's| \\\\.\\\\./src/config/default/X2CCode/X2CModel/Scope_Main\\\\.c||g' Makefile-default.mk)",
+      "Bash(sed -i 's| build/default/production/_ext/546984198/Scope_Main\\\\.o||g' Makefile-default.mk)",
+      "Bash(sed -i 's| \\\\${OBJECTDIR}/_ext/546984198/Scope_Main\\\\.o||g' Makefile-default.mk)",
+      "Bash(sed -i '/\\\\${OBJECTDIR}\\\\/_ext\\\\/546984198\\\\/Scope_Main\\\\.o:/,/^\\\\${OBJECTDIR}\\\\/_ext\\\\/[0-9]*\\\\/[^S]/{ /Scope_Main/d }' Makefile-default.mk)",
+      "Bash(sed -i '/_ext\\\\/546984198\\\\/Scope_Main/d' Makefile-default.mk)",
+      "Bash(zip -r mc_foc_dyno_same54_mclv48v300w/doc/standalone/mc_foc_dyno_same54_mclv48v300w.zip mc_foc_dyno_same54_mclv48v300w -x 'mc_foc_dyno_same54_mclv48v300w/mc_foc_dyno_fip_same54_mclv48v300w.X/build/*' -x 'mc_foc_dyno_same54_mclv48v300w/mc_foc_dyno_fip_same54_mclv48v300w.X/dist/*' -x 'mc_foc_dyno_same54_mclv48v300w/mc_foc_dyno_fip_same54_mclv48v300w.X/.generated_files/*' -x 'mc_foc_dyno_same54_mclv48v300w/mc_foc_dyno_fip_same54_mclv48v300w.X/nbproject/private/*' -x 'mc_foc_dyno_same54_mclv48v300w/doc/standalone/*.zip')",
+      "Bash(git check-ignore *)"
+    ]
+  }
+}

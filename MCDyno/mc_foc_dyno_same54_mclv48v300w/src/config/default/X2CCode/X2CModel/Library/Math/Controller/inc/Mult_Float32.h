@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description: 	Multiplication of input 1 with input 2.				 **/
@@ -49,12 +49,21 @@ extern "C" {
 #if !defined(MULT_FLOAT32_ISLINKED)
 #define MULT_FLOAT32_ID ((uint16)4947)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float32         *In1;
     float32         *In2;
     float32         Out;
 } MULT_FLOAT32;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT32_PTR     In1;
+    FLOAT32_PTR     In2;
+    float32         Out;
+} MULT_FLOAT32;
+#endif
 
 #define MULT_FLOAT32_FUNCTIONS { \
     MULT_FLOAT32_ID, \

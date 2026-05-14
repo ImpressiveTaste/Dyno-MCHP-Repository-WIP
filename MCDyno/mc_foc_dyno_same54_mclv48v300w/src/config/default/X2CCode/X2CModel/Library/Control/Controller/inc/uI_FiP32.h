@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	Integrator for angle signals                         **/
@@ -53,6 +53,7 @@ extern "C" {
 #if !defined(UI_FIP32_ISLINKED)
 #define UI_FIP32_ID ((uint16)3378)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int32           *In;
@@ -64,6 +65,19 @@ typedef struct {
     int64           i_old;
     bool            enable_old;
 } UI_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    INT32_PTR       In;
+    INT32_PTR       Init;
+    BOOL_PTR        Enable;
+    int32           Out;
+    int32           b0;
+    int8            sfr;
+    int64           i_old;
+    bool            enable_old;
+} UI_FIP32;
+#endif
 
 #define UI_FIP32_FUNCTIONS { \
     UI_FIP32_ID, \

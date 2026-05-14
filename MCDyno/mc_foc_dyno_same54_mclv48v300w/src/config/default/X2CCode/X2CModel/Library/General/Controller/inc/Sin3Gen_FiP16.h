@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: */
@@ -46,6 +46,7 @@ extern "C" {
 #if !defined(SIN3GEN_FIP16_ISLINKED)
 #define SIN3GEN_FIP16_ID ((uint16)433)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int16           *A;
@@ -57,6 +58,19 @@ typedef struct {
     int16           offset;
     int16           phi;
 } SIN3GEN_FIP16;
+#else
+typedef struct {
+    uint16          ID;
+    INT16_PTR       A;
+    INT16_PTR       f;
+    int16           u;
+    int16           v;
+    int16           w;
+    int16           delta_phi;
+    int16           offset;
+    int16           phi;
+} SIN3GEN_FIP16;
+#endif
 
 #define SIN3GEN_FIP16_FUNCTIONS { \
     SIN3GEN_FIP16_ID, \

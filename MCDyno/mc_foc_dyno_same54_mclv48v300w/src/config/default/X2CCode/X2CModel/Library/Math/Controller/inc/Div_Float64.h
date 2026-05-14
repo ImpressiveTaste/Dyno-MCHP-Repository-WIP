@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description: Division of input Num by input Den																 **/
@@ -49,12 +49,21 @@ extern "C" {
 #if !defined(DIV_FLOAT64_ISLINKED)
 #define DIV_FLOAT64_ID ((uint16)4932)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *Num;
     float64         *Den;
     float64         Out;
 } DIV_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     Num;
+    FLOAT64_PTR     Den;
+    float64         Out;
+} DIV_FLOAT64;
+#endif
 
 #define DIV_FLOAT64_FUNCTIONS { \
     DIV_FLOAT64_ID, \

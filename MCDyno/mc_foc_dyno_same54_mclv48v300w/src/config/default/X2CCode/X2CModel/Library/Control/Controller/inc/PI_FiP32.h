@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2710 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	PI Controller with                                  **/
@@ -59,6 +59,7 @@ extern "C" {
 #if !defined(PI_FIP32_ISLINKED)
 #define PI_FIP32_ID ((uint16)3218)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int32           *In;
@@ -72,6 +73,21 @@ typedef struct {
     int64           i_old;
     bool            enable_old;
 } PI_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    INT32_PTR       In;
+    INT32_PTR       Init;
+    BOOL_PTR        Enable;
+    int32           Out;
+    int32           b0;
+    int32           b1;
+    int8            sfrb0;
+    int8            sfrb1;
+    int64           i_old;
+    bool            enable_old;
+} PI_FIP32;
+#endif
 
 #define PI_FIP32_FUNCTIONS { \
     PI_FIP32_ID, \

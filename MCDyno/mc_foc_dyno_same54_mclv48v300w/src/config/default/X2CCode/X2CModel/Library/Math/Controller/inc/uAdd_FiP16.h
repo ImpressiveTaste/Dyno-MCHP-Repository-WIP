@@ -29,8 +29,8 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1894 $
- * $LastChangedDate:: 2020-04-28 23:26:04 +0200#$
+ * $LastChangedRevision: 2584 $
+ * $LastChangedDate:: 2022-05-03 15:06:23 +0200#$
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /*      Description:	Addition of Input 1 and Input 2 with output wrapping. */
@@ -50,12 +50,21 @@ extern "C" {
 #if !defined(UADD_FIP16_ISLINKED)
 #define UADD_FIP16_ID ((uint16)4977)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int16           *In1;
     int16           *In2;
     int16           Out;
 } UADD_FIP16;
+#else
+typedef struct {
+    uint16          ID;
+    INT16_PTR       In1;
+    INT16_PTR       In2;
+    int16           Out;
+} UADD_FIP16;
+#endif
 
 #define UADD_FIP16_FUNCTIONS { \
     UADD_FIP16_ID, \

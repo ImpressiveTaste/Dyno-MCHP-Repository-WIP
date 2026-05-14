@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description:	  Delay the input signal by one sample time interval.   	  */
@@ -46,12 +46,21 @@ extern "C" {
 #if !defined(DELAY_BOOL_ISLINKED)
 #define DELAY_BOOL_ID ((uint16)3439)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     bool            *In;
     bool            Out;
     bool            In_old;
 } DELAY_BOOL;
+#else
+typedef struct {
+    uint16          ID;
+    BOOL_PTR        In;
+    bool            Out;
+    bool            In_old;
+} DELAY_BOOL;
+#endif
 
 #define DELAY_BOOL_FUNCTIONS { \
     DELAY_BOOL_ID, \

@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: Generation of time delayed (enable) sequence.                 */
@@ -46,6 +46,7 @@ extern "C" {
 #if !defined(SEQUENCER_FIP8_ISLINKED)
 #define SEQUENCER_FIP8_ID ((uint16)448)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int8            *Start;
@@ -60,6 +61,22 @@ typedef struct {
     uint16          cnt;
     int8            start_old;
 } SEQUENCER_FIP8;
+#else
+typedef struct {
+    uint16          ID;
+    INT8_PTR        Start;
+    int8            Out1;
+    int8            Out2;
+    int8            Out3;
+    int8            Out4;
+    uint16          delay1;
+    uint16          delay2;
+    uint16          delay3;
+    uint16          delay4;
+    uint16          cnt;
+    int8            start_old;
+} SEQUENCER_FIP8;
+#endif
 
 #define SEQUENCER_FIP8_FUNCTIONS { \
     SEQUENCER_FIP8_ID, \

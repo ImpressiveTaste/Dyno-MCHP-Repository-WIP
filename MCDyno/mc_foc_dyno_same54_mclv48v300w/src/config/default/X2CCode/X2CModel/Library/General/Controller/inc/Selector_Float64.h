@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: 															  */
@@ -52,6 +52,7 @@ extern "C" {
 #if !defined(SELECTOR_FLOAT64_ISLINKED)
 #define SELECTOR_FLOAT64_ID ((uint16)404)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In0;
@@ -65,6 +66,21 @@ typedef struct {
     int8            *Select;
     float64         Out;
 } SELECTOR_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In0;
+    FLOAT64_PTR     In1;
+    FLOAT64_PTR     In2;
+    FLOAT64_PTR     In3;
+    FLOAT64_PTR     In4;
+    FLOAT64_PTR     In5;
+    FLOAT64_PTR     In6;
+    FLOAT64_PTR     In7;
+    INT8_PTR        Select;
+    float64         Out;
+} SELECTOR_FLOAT64;
+#endif
 
 #define SELECTOR_FLOAT64_FUNCTIONS { \
     SELECTOR_FLOAT64_ID, \

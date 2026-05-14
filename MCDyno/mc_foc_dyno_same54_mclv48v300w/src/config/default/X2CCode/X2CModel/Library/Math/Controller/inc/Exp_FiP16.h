@@ -29,15 +29,15 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
-/**     Description:	Exponential Function                                 **/
-/**                     Calculation:                                         **/
-/**							y =  exp(u)										 **/
-/**                                                                          **/
-/**						Caution: u > 0 leads to y = 1!						 **/
-/**																			 **/
+/*     Description: Exponential Function
+ *     Calculation:
+ *              y =  exp(u)
+ *
+ *              Caution: u > 0 leads to y = 1!
+ */
 /* USERCODE-END:Description                                                                                           */
 #ifndef EXP_FIP16_H
 #define EXP_FIP16_H
@@ -51,11 +51,19 @@ extern "C" {
 #if !defined(EXP_FIP16_ISLINKED)
 #define EXP_FIP16_ID ((uint16)4849)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int16           *In;
     int16           Out;
 } EXP_FIP16;
+#else
+typedef struct {
+    uint16          ID;
+    INT16_PTR       In;
+    int16           Out;
+} EXP_FIP16;
+#endif
 
 #define EXP_FIP16_FUNCTIONS { \
     EXP_FIP16_ID, \

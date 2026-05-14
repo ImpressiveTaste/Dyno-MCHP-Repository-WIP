@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: */
@@ -46,6 +46,7 @@ extern "C" {
 #if !defined(SINGEN_FIP32_ISLINKED)
 #define SINGEN_FIP32_ID ((uint16)418)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int32           *A;
@@ -56,6 +57,18 @@ typedef struct {
     int32           offset;
     int32           phi;
 } SINGEN_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    INT32_PTR       A;
+    INT32_PTR       f;
+    int32           u;
+    int32           delta_phi;
+    int32           phase;
+    int32           offset;
+    int32           phi;
+} SINGEN_FIP32;
+#endif
 
 #define SINGEN_FIP32_FUNCTIONS { \
     SINGEN_FIP32_ID, \

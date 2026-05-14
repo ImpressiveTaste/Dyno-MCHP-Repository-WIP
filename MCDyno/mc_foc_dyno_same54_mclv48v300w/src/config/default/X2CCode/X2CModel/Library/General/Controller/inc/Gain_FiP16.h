@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: */
@@ -46,6 +46,7 @@ extern "C" {
 #if !defined(GAIN_FIP16_ISLINKED)
 #define GAIN_FIP16_ID ((uint16)17)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int16           *In;
@@ -53,6 +54,15 @@ typedef struct {
     int16           V;
     int8            sfr;
 } GAIN_FIP16;
+#else
+typedef struct {
+    uint16          ID;
+    INT16_PTR       In;
+    int16           Out;
+    int16           V;
+    int8            sfr;
+} GAIN_FIP16;
+#endif
 
 #define GAIN_FIP16_FUNCTIONS { \
     GAIN_FIP16_ID, \

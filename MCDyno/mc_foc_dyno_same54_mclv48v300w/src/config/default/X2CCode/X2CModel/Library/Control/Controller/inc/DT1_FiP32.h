@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:    First order differential element                     **/
@@ -55,6 +55,7 @@ extern "C" {
 #if !defined(DT1_FIP32_ISLINKED)
 #define DT1_FIP32_ID ((uint16)3330)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int32           *In;
@@ -66,6 +67,19 @@ typedef struct {
     int8            sfra;
     int32           in_old;
 } DT1_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    INT32_PTR       In;
+    int32           Out;
+    int32           b0;
+    int32           b1;
+    int32           a0;
+    int8            sfrb;
+    int8            sfra;
+    int32           in_old;
+} DT1_FIP32;
+#endif
 
 #define DT1_FIP32_FUNCTIONS { \
     DT1_FIP32_ID, \

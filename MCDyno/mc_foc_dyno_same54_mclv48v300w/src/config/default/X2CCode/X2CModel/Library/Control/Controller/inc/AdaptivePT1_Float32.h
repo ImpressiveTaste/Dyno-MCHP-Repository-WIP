@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:    First order proportional element with adjustable cut-off frequency							 **/
@@ -54,6 +54,7 @@ extern "C" {
 #if !defined(ADAPTIVEPT1_FLOAT32_ISLINKED)
 #define ADAPTIVEPT1_FLOAT32_ID ((uint16)3411)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float32         *In;
@@ -63,6 +64,17 @@ typedef struct {
     float32         gain;
     float32         in_old;
 } ADAPTIVEPT1_FLOAT32;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT32_PTR     In;
+    FLOAT32_PTR     fc;
+    float32         Out;
+    float32         w_scale;
+    float32         gain;
+    float32         in_old;
+} ADAPTIVEPT1_FLOAT32;
+#endif
 
 #define ADAPTIVEPT1_FLOAT32_FUNCTIONS { \
     ADAPTIVEPT1_FLOAT32_ID, \

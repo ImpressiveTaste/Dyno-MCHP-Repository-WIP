@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description:
@@ -48,12 +48,21 @@ extern "C" {
 #if !defined(L2NORM_FLOAT32_ISLINKED)
 #define L2NORM_FLOAT32_ID ((uint16)5059)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float32         *u1;
     float32         *u2;
     float32         Out;
 } L2NORM_FLOAT32;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT32_PTR     u1;
+    FLOAT32_PTR     u2;
+    float32         Out;
+} L2NORM_FLOAT32;
+#endif
 
 #define L2NORM_FLOAT32_FUNCTIONS { \
     L2NORM_FLOAT32_ID, \

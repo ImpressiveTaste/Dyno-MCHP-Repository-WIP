@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2800 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	PI Controller with                                   **/
@@ -57,13 +57,14 @@ extern "C" {
 #if !defined(PILIMIT_FIP8_ISLINKED)
 #define PILIMIT_FIP8_ID ((uint16)3232)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int8            *In;
     int8            *Init;
     int8            *max;
     int8            *min;
-    int8            *Enable;
+    bool            *Enable;
     int8            Out;
     int8            b0;
     int8            b1;
@@ -72,6 +73,23 @@ typedef struct {
     int16           i_old;
     int8            enable_old;
 } PILIMIT_FIP8;
+#else
+typedef struct {
+    uint16          ID;
+    INT8_PTR        In;
+    INT8_PTR        Init;
+    INT8_PTR        max;
+    INT8_PTR        min;
+    BOOL_PTR        Enable;
+    int8            Out;
+    int8            b0;
+    int8            b1;
+    int8            sfrb0;
+    int8            sfrb1;
+    int16           i_old;
+    int8            enable_old;
+} PILIMIT_FIP8;
+#endif
 
 #define PILIMIT_FIP8_FUNCTIONS { \
     PILIMIT_FIP8_ID, \

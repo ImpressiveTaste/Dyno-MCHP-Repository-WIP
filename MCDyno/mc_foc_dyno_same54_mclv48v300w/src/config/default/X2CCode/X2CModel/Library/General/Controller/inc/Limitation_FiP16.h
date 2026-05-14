@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* 		Description:	Limitation of input signal to min and max             */
@@ -47,6 +47,7 @@ extern "C" {
 #if !defined(LIMITATION_FIP16_ISLINKED)
 #define LIMITATION_FIP16_ID ((uint16)385)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int16           *In;
@@ -54,6 +55,15 @@ typedef struct {
     int16           *min;
     int16           Out;
 } LIMITATION_FIP16;
+#else
+typedef struct {
+    uint16          ID;
+    INT16_PTR       In;
+    INT16_PTR       max;
+    INT16_PTR       min;
+    int16           Out;
+} LIMITATION_FIP16;
+#endif
 
 #define LIMITATION_FIP16_FUNCTIONS { \
     LIMITATION_FIP16_ID, \

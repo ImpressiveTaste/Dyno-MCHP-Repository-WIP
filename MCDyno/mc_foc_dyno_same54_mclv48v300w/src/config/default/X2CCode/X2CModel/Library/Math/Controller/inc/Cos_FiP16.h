@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /*      Description:    Cosine Calculation						              */
@@ -50,11 +50,19 @@ extern "C" {
 #if !defined(COS_FIP16_ISLINKED)
 #define COS_FIP16_ID ((uint16)4865)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int16           *In;
     int16           Out;
 } COS_FIP16;
+#else
+typedef struct {
+    uint16          ID;
+    INT16_PTR       In;
+    int16           Out;
+} COS_FIP16;
+#endif
 
 #define COS_FIP16_FUNCTIONS { \
     COS_FIP16_ID, \

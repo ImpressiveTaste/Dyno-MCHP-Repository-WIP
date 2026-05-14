@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /*      Description: With lookup table approximated arc tangent function	  */
@@ -54,12 +54,21 @@ extern "C" {
 #if !defined(ATAN2_FIP32_ISLINKED)
 #define ATAN2_FIP32_ID ((uint16)4882)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int32           *y;
     int32           *x;
     int32           Out;
 } ATAN2_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    INT32_PTR       y;
+    INT32_PTR       x;
+    int32           Out;
+} ATAN2_FIP32;
+#endif
 
 #define ATAN2_FIP32_FUNCTIONS { \
     ATAN2_FIP32_ID, \

@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description: 1st Order Time Discrete System                         										 **/
@@ -50,6 +50,7 @@ extern "C" {
 #if !defined(TDSYSTEMO1_FLOAT64_ISLINKED)
 #define TDSYSTEMO1_FLOAT64_ID ((uint16)3348)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In;
@@ -60,6 +61,18 @@ typedef struct {
     float64         d11;
     float64         x1;
 } TDSYSTEMO1_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In;
+    float64         Out;
+    float64         a11;
+    float64         b11;
+    float64         c11;
+    float64         d11;
+    float64         x1;
+} TDSYSTEMO1_FLOAT64;
+#endif
 
 #define TDSYSTEMO1_FLOAT64_FUNCTIONS { \
     TDSYSTEMO1_FLOAT64_ID, \

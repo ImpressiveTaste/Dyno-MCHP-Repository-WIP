@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	Calculation of moving average value over n numbers.  **/
@@ -47,6 +47,7 @@ extern "C" {
 #if !defined(AVERAGE_FLOAT64_ISLINKED)
 #define AVERAGE_FLOAT64_ID ((uint16)5028)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In;
@@ -56,6 +57,17 @@ typedef struct {
     uint16          count;
     float64         *avg;
 } AVERAGE_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In;
+    float64         Out;
+    uint16          n;
+    float64         sum;
+    uint16          count;
+    FLOAT64_PTR     avg;
+} AVERAGE_FLOAT64;
+#endif
 
 #define AVERAGE_FLOAT64_FUNCTIONS { \
     AVERAGE_FLOAT64_ID, \

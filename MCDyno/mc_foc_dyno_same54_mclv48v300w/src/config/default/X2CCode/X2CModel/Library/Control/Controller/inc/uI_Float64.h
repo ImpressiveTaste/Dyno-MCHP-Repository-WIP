@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	Integrator for angle signals                         **/
@@ -53,6 +53,7 @@ extern "C" {
 #if !defined(UI_FLOAT64_ISLINKED)
 #define UI_FLOAT64_ID ((uint16)3380)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In;
@@ -63,6 +64,18 @@ typedef struct {
     float64         i_old;
     bool            enable_old;
 } UI_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In;
+    FLOAT64_PTR     Init;
+    BOOL_PTR        Enable;
+    float64         Out;
+    float64         b0;
+    float64         i_old;
+    bool            enable_old;
+} UI_FLOAT64;
+#endif
 
 #define UI_FLOAT64_FUNCTIONS { \
     UI_FLOAT64_ID, \

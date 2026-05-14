@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* 		Description:	Minimum of two values                                 */
@@ -47,12 +47,21 @@ extern "C" {
 #if !defined(MINIMUM_FIP32_ISLINKED)
 #define MINIMUM_FIP32_ID ((uint16)354)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int32           *In1;
     int32           *In2;
     int32           Out;
 } MINIMUM_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    INT32_PTR       In1;
+    INT32_PTR       In2;
+    int32           Out;
+} MINIMUM_FIP32;
+#endif
 
 #define MINIMUM_FIP32_FUNCTIONS { \
     MINIMUM_FIP32_ID, \

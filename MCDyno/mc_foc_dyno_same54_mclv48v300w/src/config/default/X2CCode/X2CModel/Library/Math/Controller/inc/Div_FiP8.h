@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description: Division of input Num by input Den																 **/
@@ -49,12 +49,21 @@ extern "C" {
 #if !defined(DIV_FIP8_ISLINKED)
 #define DIV_FIP8_ID ((uint16)4928)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int8            *Num;
     int8            *Den;
     int8            Out;
 } DIV_FIP8;
+#else
+typedef struct {
+    uint16          ID;
+    INT8_PTR        Num;
+    INT8_PTR        Den;
+    int8            Out;
+} DIV_FIP8;
+#endif
 
 #define DIV_FIP8_FUNCTIONS { \
     DIV_FIP8_ID, \

@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	Look-up Table with 256+1 entries                     **/
@@ -47,12 +47,21 @@ extern "C" {
 #if !defined(LOOKUPTABLE_FIP32_ISLINKED)
 #define LOOKUPTABLE_FIP32_ID ((uint16)162)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int32           *In;
     int32           Out;
-    const int32     *Table;
+const  int32        *Table;
 } LOOKUPTABLE_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    INT32_PTR       In;
+    int32           Out;
+const  INT32_PTR    Table;
+} LOOKUPTABLE_FIP32;
+#endif
 
 #define LOOKUPTABLE_FIP32_FUNCTIONS { \
     LOOKUPTABLE_FIP32_ID, \

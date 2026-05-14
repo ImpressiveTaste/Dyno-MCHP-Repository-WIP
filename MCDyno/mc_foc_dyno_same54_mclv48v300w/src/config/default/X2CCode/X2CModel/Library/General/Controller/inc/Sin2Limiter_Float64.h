@@ -29,8 +29,8 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1894 $
- * $LastChangedDate:: 2020-04-28 23:26:04 +0200#$
+ * $LastChangedRevision: 2584 $
+ * $LastChangedDate:: 2022-05-03 15:06:23 +0200#$
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	Continuously differentiable output change rate limitation with	sin^2 shape                  **/
@@ -56,6 +56,7 @@ extern "C" {
 #if !defined(SIN2LIMITER_FLOAT64_ISLINKED)
 #define SIN2LIMITER_FLOAT64_ID ((uint16)116)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In;
@@ -72,6 +73,24 @@ typedef struct {
     int8            State;
     bool            Enable_old;
 } SIN2LIMITER_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In;
+    FLOAT64_PTR     Init;
+    BOOL_PTR        Enable;
+    float64         Out;
+    float64         RateUp;
+    float64         RateDown;
+    float64         Scaled_RateUp;
+    float64         Scaled_RateDown;
+    float64         Out_end;
+    float64         Level;
+    float64         Step_Height;
+    int8            State;
+    bool            Enable_old;
+} SIN2LIMITER_FLOAT64;
+#endif
 
 #define SIN2LIMITER_FLOAT64_FUNCTIONS { \
     SIN2LIMITER_FLOAT64_ID, \

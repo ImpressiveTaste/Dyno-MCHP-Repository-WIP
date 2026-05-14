@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1693 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: */
@@ -46,11 +46,19 @@ extern "C" {
 #if !defined(UCONSTANT_INT8_ISLINKED)
 #define UCONSTANT_INT8_ID ((uint16)69)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int8            Out;
     int8            K;
 } UCONSTANT_INT8;
+#else
+typedef struct {
+    uint16          ID;
+    int8            Out;
+    int8            K;
+} UCONSTANT_INT8;
+#endif
 
 #define UCONSTANT_INT8_FUNCTIONS { \
     UCONSTANT_INT8_ID, \

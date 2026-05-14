@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	Saturation of output to adjustable upper and lower	 **/
@@ -56,6 +56,7 @@ extern "C" {
 #if !defined(SATURATION_FIP16_ISLINKED)
 #define SATURATION_FIP16_ID ((uint16)81)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int16           *In;
@@ -63,6 +64,15 @@ typedef struct {
     int16           max;
     int16           min;
 } SATURATION_FIP16;
+#else
+typedef struct {
+    uint16          ID;
+    INT16_PTR       In;
+    int16           Out;
+    int16           max;
+    int16           min;
+} SATURATION_FIP16;
+#endif
 
 #define SATURATION_FIP16_FUNCTIONS { \
     SATURATION_FIP16_ID, \

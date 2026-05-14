@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:    Square Root Computation                              										 **/
@@ -49,11 +49,19 @@ extern "C" {
 #if !defined(SQRT_FIP32_ISLINKED)
 #define SQRT_FIP32_ID ((uint16)4818)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int32           *In;
     int32           Out;
 } SQRT_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    INT32_PTR       In;
+    int32           Out;
+} SQRT_FIP32;
+#endif
 
 #define SQRT_FIP32_FUNCTIONS { \
     SQRT_FIP32_ID, \

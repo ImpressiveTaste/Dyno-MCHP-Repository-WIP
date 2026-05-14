@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /*      Description:    Sine Calculation						              */
@@ -49,11 +49,19 @@ extern "C" {
 #if !defined(SIN_FLOAT64_ISLINKED)
 #define SIN_FLOAT64_ID ((uint16)4836)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In;
     float64         Out;
 } SIN_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In;
+    float64         Out;
+} SIN_FLOAT64;
+#endif
 
 #define SIN_FLOAT64_FUNCTIONS { \
     SIN_FLOAT64_ID, \

@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: */
@@ -46,6 +46,7 @@ extern "C" {
 #if !defined(UGAIN_FIP8_ISLINKED)
 #define UGAIN_FIP8_ID ((uint16)32)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int8            *In;
@@ -53,6 +54,15 @@ typedef struct {
     int8            V;
     int8            sfr;
 } UGAIN_FIP8;
+#else
+typedef struct {
+    uint16          ID;
+    INT8_PTR        In;
+    int8            Out;
+    int8            V;
+    int8            sfr;
+} UGAIN_FIP8;
+#endif
 
 #define UGAIN_FIP8_FUNCTIONS { \
     UGAIN_FIP8_ID, \

@@ -38,6 +38,7 @@
 !docs/source/_downloads/*.hex
 !MCHPDyno/igat_ev14c17a/doc/standalone/*.hex
 !motor_ACT57BLF02/mclv48v300w_dim_hex/doc/standalone/*.hex
+!MCDyno/*/doc/standalone/*.hex
 
 # Debug files
 *.dSYM/

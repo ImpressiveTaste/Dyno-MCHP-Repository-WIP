@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /*      Description:	Absolute Value of Input                               */
@@ -49,11 +49,19 @@ extern "C" {
 #if !defined(ABS_FLOAT64_ISLINKED)
 #define ABS_FLOAT64_ID ((uint16)4916)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In;
     float64         Out;
 } ABS_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In;
+    float64         Out;
+} ABS_FLOAT64;
+#endif
 
 #define ABS_FLOAT64_FUNCTIONS { \
     ABS_FLOAT64_ID, \

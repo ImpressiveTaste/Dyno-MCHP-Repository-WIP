@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: */
@@ -46,12 +46,21 @@ extern "C" {
 #if !defined(XOR_BOOL_ISLINKED)
 #define XOR_BOOL_ID ((uint16)287)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     bool            *In1;
     bool            *In2;
     bool            Out;
 } XOR_BOOL;
+#else
+typedef struct {
+    uint16          ID;
+    BOOL_PTR        In1;
+    BOOL_PTR        In2;
+    bool            Out;
+} XOR_BOOL;
+#endif
 
 #define XOR_BOOL_FUNCTIONS { \
     XOR_BOOL_ID, \

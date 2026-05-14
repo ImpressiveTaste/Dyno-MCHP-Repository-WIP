@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	Sum of all inputs.                                   										 **/
@@ -52,6 +52,7 @@ extern "C" {
 #if !defined(SUM_FLOAT64_ISLINKED)
 #define SUM_FLOAT64_ID ((uint16)4804)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In1;
@@ -65,6 +66,21 @@ typedef struct {
     float64         Out;
     uint16          sign;
 } SUM_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In1;
+    FLOAT64_PTR     In2;
+    FLOAT64_PTR     In3;
+    FLOAT64_PTR     In4;
+    FLOAT64_PTR     In5;
+    FLOAT64_PTR     In6;
+    FLOAT64_PTR     In7;
+    FLOAT64_PTR     In8;
+    float64         Out;
+    uint16          sign;
+} SUM_FLOAT64;
+#endif
 
 #define SUM_FLOAT64_FUNCTIONS { \
     SUM_FLOAT64_ID, \

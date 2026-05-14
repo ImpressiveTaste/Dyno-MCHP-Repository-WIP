@@ -29,8 +29,8 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
- * $LastChangedDate:: 2019-01-21 19:02:13 +0100#$
+ * $LastChangedRevision: 2584 $
+ * $LastChangedDate:: 2022-05-03 15:06:23 +0200#$
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: */
@@ -47,11 +47,19 @@ extern "C" {
 #if !defined(CONSTANT_BOOL_ISLINKED)
 #define CONSTANT_BOOL_ID ((uint16)63)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     bool            Out;
     bool            K;
 } CONSTANT_BOOL;
+#else
+typedef struct {
+    uint16          ID;
+    bool            Out;
+    bool            K;
+} CONSTANT_BOOL;
+#endif
 
 #define CONSTANT_BOOL_FUNCTIONS { \
     CONSTANT_BOOL_ID, \

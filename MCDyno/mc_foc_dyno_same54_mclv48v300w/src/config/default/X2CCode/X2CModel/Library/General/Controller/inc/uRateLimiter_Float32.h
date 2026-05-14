@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /*      Description:	Output change rate limitation of angle signals        */
@@ -54,6 +54,7 @@ extern "C" {
 #if !defined(URATELIMITER_FLOAT32_ISLINKED)
 #define URATELIMITER_FLOAT32_ID ((uint16)291)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float32         *In;
@@ -64,6 +65,18 @@ typedef struct {
     float32         RateDown;
     bool            enable_old;
 } URATELIMITER_FLOAT32;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT32_PTR     In;
+    FLOAT32_PTR     Init;
+    BOOL_PTR        Enable;
+    float32         Out;
+    float32         RateUp;
+    float32         RateDown;
+    bool            enable_old;
+} URATELIMITER_FLOAT32;
+#endif
 
 #define URATELIMITER_FLOAT32_FUNCTIONS { \
     URATELIMITER_FLOAT32_ID, \

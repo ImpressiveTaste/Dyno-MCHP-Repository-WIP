@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: */
@@ -46,6 +46,7 @@ extern "C" {
 #if !defined(SIN3GEN_FLOAT64_ISLINKED)
 #define SIN3GEN_FLOAT64_ID ((uint16)436)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *A;
@@ -57,6 +58,19 @@ typedef struct {
     float64         offset;
     float64         phi;
 } SIN3GEN_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     A;
+    FLOAT64_PTR     f;
+    float64         u;
+    float64         v;
+    float64         w;
+    float64         delta_phi;
+    float64         offset;
+    float64         phi;
+} SIN3GEN_FLOAT64;
+#endif
 
 #define SIN3GEN_FLOAT64_FUNCTIONS { \
     SIN3GEN_FLOAT64_ID, \

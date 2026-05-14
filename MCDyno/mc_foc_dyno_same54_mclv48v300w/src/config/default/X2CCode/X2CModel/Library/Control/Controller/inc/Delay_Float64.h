@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: */
@@ -46,12 +46,21 @@ extern "C" {
 #if !defined(DELAY_FLOAT64_ISLINKED)
 #define DELAY_FLOAT64_ID ((uint16)3428)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float64         *In;
     float64         Out;
     float64         In_old;
 } DELAY_FLOAT64;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT64_PTR     In;
+    float64         Out;
+    float64         In_old;
+} DELAY_FLOAT64;
+#endif
 
 #define DELAY_FLOAT64_FUNCTIONS { \
     DELAY_FLOAT64_ID, \

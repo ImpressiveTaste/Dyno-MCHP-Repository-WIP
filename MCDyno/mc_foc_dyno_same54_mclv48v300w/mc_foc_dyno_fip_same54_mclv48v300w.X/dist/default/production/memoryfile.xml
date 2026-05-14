@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production/MC_FOC_DYNO_SAMe54_MCLV48V300W.X.production.elf">
+  <executable name="dist/default/production/mc_foc_dyno_fip_same54_mclv48v300w.X.production.elf">
     <memory name="program">
       <units>bytes</units>
       <length>1048576</length>
-      <used>45348</used>
-      <free>1003228</free>
+      <used>138310</used>
+      <free>910266</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>262144</length>
-      <used>12034</used>
-      <free>250110</free>
+      <used>12038</used>
+      <free>250106</free>
     </memory>
   </executable>
 </project>

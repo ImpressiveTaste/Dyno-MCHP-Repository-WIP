@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* 		Description:	Maximum of two values                                 */
@@ -47,12 +47,21 @@ extern "C" {
 #if !defined(MAXIMUM_FIP32_ISLINKED)
 #define MAXIMUM_FIP32_ID ((uint16)370)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int32           *In1;
     int32           *In2;
     int32           Out;
 } MAXIMUM_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    INT32_PTR       In1;
+    INT32_PTR       In2;
+    int32           Out;
+} MAXIMUM_FIP32;
+#endif
 
 #define MAXIMUM_FIP32_FUNCTIONS { \
     MAXIMUM_FIP32_ID, \

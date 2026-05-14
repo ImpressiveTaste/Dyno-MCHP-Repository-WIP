@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2800 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /**     Description:	I Controller with                                   **/
@@ -55,10 +55,11 @@ extern "C" {
 #if !defined(I_FIP32_ISLINKED)
 #define I_FIP32_ID ((uint16)3202)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int32           *In;
-    int32           *Init;
+    int32           *I0;
     bool            *Enable;
     int32           Out;
     int32           b0;
@@ -66,6 +67,19 @@ typedef struct {
     int64           i_old;
     bool            enable_old;
 } I_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    INT32_PTR       In;
+    INT32_PTR       I0;
+    BOOL_PTR        Enable;
+    int32           Out;
+    int32           b0;
+    int8            sfr;
+    int64           i_old;
+    bool            enable_old;
+} I_FIP32;
+#endif
 
 #define I_FIP32_FUNCTIONS { \
     I_FIP32_ID, \

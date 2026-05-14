@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description: 	Makes the incoming signal accessible for reading with parameter numbers.						  */
@@ -47,10 +47,17 @@ extern "C" {
 #if !defined(SAVESIGNAL_FLOAT32_ISLINKED)
 #define SAVESIGNAL_FLOAT32_ID ((uint16)323)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     float32         *In;
 } SAVESIGNAL_FLOAT32;
+#else
+typedef struct {
+    uint16          ID;
+    FLOAT32_PTR     In;
+} SAVESIGNAL_FLOAT32;
+#endif
 
 #define SAVESIGNAL_FLOAT32_FUNCTIONS { \
     SAVESIGNAL_FLOAT32_ID, \

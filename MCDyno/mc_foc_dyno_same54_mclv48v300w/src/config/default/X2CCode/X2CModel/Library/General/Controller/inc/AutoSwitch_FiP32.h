@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1623 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /*     Description:  Switch between In1 and In3 dependent on Switch signal:   */
@@ -49,6 +49,7 @@ extern "C" {
 #if !defined(AUTOSWITCH_FIP32_ISLINKED)
 #define AUTOSWITCH_FIP32_ID ((uint16)130)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int32           *In1;
@@ -59,6 +60,18 @@ typedef struct {
     int32           Thresh_down;
     int32           *Status;
 } AUTOSWITCH_FIP32;
+#else
+typedef struct {
+    uint16          ID;
+    INT32_PTR       In1;
+    INT32_PTR       Switch;
+    INT32_PTR       In3;
+    int32           Out;
+    int32           Thresh_up;
+    int32           Thresh_down;
+    INT32_PTR       Status;
+} AUTOSWITCH_FIP32;
+#endif
 
 #define AUTOSWITCH_FIP32_FUNCTIONS { \
     AUTOSWITCH_FIP32_ID, \

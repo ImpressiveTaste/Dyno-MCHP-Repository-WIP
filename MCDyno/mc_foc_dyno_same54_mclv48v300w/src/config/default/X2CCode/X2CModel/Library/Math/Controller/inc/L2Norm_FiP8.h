@@ -29,7 +29,7 @@
  */
 /*
  * This file is part of X2C. http://x2c.lcm.at/
- * $LastChangedRevision: 1603 $
+ * $LastChangedRevision: 2584 $
  */
 /* USERCODE-BEGIN:Description                                                                                         */
 /* Description:
@@ -48,12 +48,21 @@ extern "C" {
 #if !defined(L2NORM_FIP8_ISLINKED)
 #define L2NORM_FIP8_ID ((uint16)5056)
 
+#if !defined(X2C_USE_UNION_FOR_POINTER)
 typedef struct {
     uint16          ID;
     int8            *u1;
     int8            *u2;
     int8            Out;
 } L2NORM_FIP8;
+#else
+typedef struct {
+    uint16          ID;
+    INT8_PTR        u1;
+    INT8_PTR        u2;
+    int8            Out;
+} L2NORM_FIP8;
+#endif
 
 #define L2NORM_FIP8_FUNCTIONS { \
     L2NORM_FIP8_ID, \
